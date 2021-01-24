@@ -1,0 +1,57 @@
+#Build: Synplify Pro (R) N-2018.03L-SP1-1, Build 443R, Apr  1 2019
+#install: /usr/local/diamond/3.11_x64/synpbase
+#OS: Linux 
+#Hostname: 7d57305c73d0
+
+# Sat Jan 23 01:14:03 2021
+
+#Implementation: impl1
+
+
+Copyright (C) 1994-2018 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: N-2018.03L-SP1-1
+Install: /usr/local/diamond/3.11_x64/synpbase
+OS: CentOS Linux 7 (Core)
+Hostname: 7d57305c73d0
+
+Implementation : impl1
+Synopsys HDL Compiler, Version comp2018q2p1, Build 461R, Built Apr  1 2019 09:26:38
+
+@N|Running in 64-bit mode
+
+Copyright (C) 1994-2018 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: N-2018.03L-SP1-1
+Install: /usr/local/diamond/3.11_x64/synpbase
+OS: CentOS Linux 7 (Core)
+Hostname: 7d57305c73d0
+
+Implementation : impl1
+Synopsys VHDL Compiler, Version comp2018q2p1, Build 461R, Built Apr  1 2019 09:26:38
+
+@N|Running in 64-bit mode
+@N:"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":7:7:7:15|Top entity is set to TOP_LEVEL.
+VHDL syntax check successful!
+@N: CD630 :"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":4:7:4:15|Synthesizing work.top_level.arc.
+@W: CD286 :"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":4:7:4:15|Creating black box for empty architecture TOP_LEVEL 
+Post processing for work.top_level.arc
+Running optimization stage 1 on TOP_LEVEL .......
+@E: CD755 :"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":4:7:4:15|Selected top-level module TOP_LEVEL is a black box 
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Sat Jan 23 01:14:04 2021
+
+###########################################################]
+@END
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Sat Jan 23 01:14:04 2021
+
+###########################################################]

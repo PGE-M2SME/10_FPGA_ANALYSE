@@ -1,0 +1,8 @@
+/usr/local/diamond/3.11_x64/synpbase/bin/syn_nfilter  -link  -top  TOP_LEVEL  -multisrs  /home/diamond/SharedFolder/SDI2/impl1/synwork/SDI2_impl1_comp.srs  -osyn  /home/diamond/SharedFolder/SDI2/impl1/synwork/SDI2_impl1_mult.srs  -log  /home/diamond/SharedFolder/SDI2/impl1/synlog/SDI2_impl1_multi_srs_gen.srr 
+relcom:/usr/local/diamond/3.11_x64/synpbase/bin/syn_nfilter -link -top TOP_LEVEL -multisrs ../synwork/SDI2_impl1_comp.srs -osyn ../synwork/SDI2_impl1_mult.srs -log ../synlog/SDI2_impl1_multi_srs_gen.srr
+rc:0 success:1 runtime:0
+file:../synwork/SDI2_impl1_comp.srs|io:i|time:1611509853|size:30030|exec:0|csum:57F4DF5A937BA73B1856AD616D21612B
+file:../synwork/SDI2_impl1_mult.srs|io:o|time:1611509855|size:4090|exec:0|csum:
+file:../synlog/SDI2_impl1_multi_srs_gen.srr|io:o|time:1611509855|size:1102|exec:0|csum:
+file:/usr/local/diamond/3.11_x64/synpbase/linux_a_64/syn_nfilter|io:i|time:1554136095|size:13311896|exec:1|csum:98436EBE5B2063E67A0107F26BF96360
+file:/usr/local/diamond/3.11_x64/synpbase/bin/syn_nfilter|io:i|time:1554135608|size:366|exec:1|csum:FA02E240C38072139DDDFB111F4F0C5E

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaliProject version="2.0" title="SDI_IP_top" device="LFE3-70E-8FN672C" synthesis="synplify" default_implementation="impl1">
+    <Options/>
+    <Implementation title="impl1" dir="impl1" description="impl1" default_strategy="Strategy1">
+        <Options>
+            <Option name="HDL type" value="VHDL"/>
+            <Option name="def_top" value="SDI_IP_top"/>
+            <Option name="top" value="SDI_IP_top"/>
+        </Options>
+        <Source name="../../../src/rtl/top/ecp3/SDI_IP_top.vhd" type="VHDL"/>
+        <Source name="SDI_IP_top.lpf" type="Logic Preference" type_short="LPF">
+            <Options/>
+        </Source>
+    </Implementation>
+    <Strategy name="Strategy1" file="Strategy1.sty"/>
+</BaliProject>

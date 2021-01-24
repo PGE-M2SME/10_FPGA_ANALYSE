@@ -1,0 +1,11 @@
+NOTE Copyright (C), 1992-2010, Lattice Semiconductor Corporation *
+NOTE All Rights Reserved *
+NOTE DATE CREATED: Sun Jan 24 17:38:49 2021 *
+NOTE DESIGN NAME: TOP_LEVEL *
+NOTE DEVICE NAME: LFE3-70E-8FPBGA672 *
+NOTE PIN ASSIGNMENTS *
+NOTE PINS vid_format[0] : U2 : out *
+NOTE PINS clk : M3 : in *
+NOTE PINS vid_format[1] : V1 : out *
+NOTE CONFIGURATION MODE: SPI *
+NOTE COMPRESSION: off *

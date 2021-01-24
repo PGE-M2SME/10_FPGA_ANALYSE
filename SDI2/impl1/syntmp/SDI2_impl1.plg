@@ -1,0 +1,22 @@
+@P:  Worst Slack : 2.829
+@P:  PCS_IP|refclkdiv2_rx_ch3_derived_clock - Estimated Frequency : 510.7 MHz
+@P:  PCS_IP|refclkdiv2_rx_ch3_derived_clock - Requested Frequency : 200.0 MHz
+@P:  PCS_IP|refclkdiv2_rx_ch3_derived_clock - Estimated Period : 1.958
+@P:  PCS_IP|refclkdiv2_rx_ch3_derived_clock - Requested Period : 5.000
+@P:  PCS_IP|refclkdiv2_rx_ch3_derived_clock - Slack : 6.084
+@P:  PLL_IP|CLKOP_inferred_clock - Estimated Frequency : 460.7 MHz
+@P:  PLL_IP|CLKOP_inferred_clock - Requested Frequency : 200.0 MHz
+@P:  PLL_IP|CLKOP_inferred_clock - Estimated Period : 2.171
+@P:  PLL_IP|CLKOP_inferred_clock - Requested Period : 5.000
+@P:  PLL_IP|CLKOP_inferred_clock - Slack : 2.829
+@P:  System - Estimated Frequency : 1556.9 MHz
+@P:  System - Requested Frequency : 200.0 MHz
+@P:  System - Estimated Period : 0.642
+@P:  System - Requested Period : 5.000
+@P:  System - Slack : 4.358
+@P:  Total Area : 19.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  CPU Time : 0h:00m:01s

@@ -1,0 +1,42 @@
+@W: CG309 :"/home/diamond/SharedFolder/SDI2/SDI_IP.v":2:7:2:12|Could not find module with name sdi_core, performing a case compare ...
+
+@W: CG311 :"/home/diamond/SharedFolder/SDI2/SDI_IP.v":2:7:2:12|Module with name sdi_core could not be found even with a case compare
+
+@N: CG364 :"/home/diamond/SharedFolder/SDI2/SDI_IP.v":2:7:2:12|Synthesizing module SDI_IP in library work.
+@W: CG309 :"/home/diamond/SharedFolder/SDI2/SDI_IP.v":107:3:107:13|Could not find module with name sdi_core, performing a case compare ...
+
+@W: CG311 :"/home/diamond/SharedFolder/SDI2/SDI_IP.v":107:3:107:13|Module with name sdi_core could not be found even with a case compare
+
+@W: CG309 :"/home/diamond/SharedFolder/SDI2/SDI_IP.v":107:3:107:13|Could not find module with name sdi_core, performing a case compare ...
+
+@W: CG311 :"/home/diamond/SharedFolder/SDI2/SDI_IP.v":107:3:107:13|Module with name sdi_core could not be found even with a case compare
+
+@W: CG309 :"/home/diamond/SharedFolder/SDI2/SDI_IP.v":107:3:107:13|Could not find module with name sdi_core, performing a case compare ...
+
+@W: CG311 :"/home/diamond/SharedFolder/SDI2/SDI_IP.v":107:3:107:13|Module with name sdi_core could not be found even with a case compare
+
+@W: CG309 :"/home/diamond/SharedFolder/SDI2/SDI_IP.v":107:3:107:13|Could not find module with name sdi_core, performing a case compare ...
+
+@W: CG311 :"/home/diamond/SharedFolder/SDI2/SDI_IP.v":107:3:107:13|Module with name sdi_core could not be found even with a case compare
+
+@W: CG141 :"/home/diamond/SharedFolder/SDI2/SDI_IP.v":107:3:107:13|Creating black box for sdi_core
+Making port rx_clk a bidir
+Making port rxdata a bidir
+Making port rx_rate a bidir
+Making port pd_out a bidir
+Making port vid_active a bidir
+Making port trs_out a bidir
+Making port rx_tg_hdn a bidir
+Making port rx_hd_sdn a bidir
+Making port vid_format a bidir
+Making port frame_format a bidir
+Making port field a bidir
+Making port vblank a bidir
+Making port hblank a bidir
+Making port ln1_out a bidir
+Making port eav_error a bidir
+Making port sav_error a bidir
+Making port y1_crc_error a bidir
+Making port c1_crc_error a bidir
+Making port rstn a bidir
+@E: CG389 :"/home/diamond/SharedFolder/SDI2/SDI_IP.v":107:3:107:13|Reference to undefined module sdi_core

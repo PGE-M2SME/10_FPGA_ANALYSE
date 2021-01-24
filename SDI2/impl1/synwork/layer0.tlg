@@ -1,0 +1,91 @@
+@N: CD630 :"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":4:7:4:15|Synthesizing work.top_level.arc.
+@W: CD326 :"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":99:2:99:4|Port c1_crc_error of entity work.sdi_ip_top is unconnected. If a port needs to remain unconnected, use the keyword open.
+@W: CD326 :"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":99:2:99:4|Port y1_crc_error of entity work.sdi_ip_top is unconnected. If a port needs to remain unconnected, use the keyword open.
+@W: CD326 :"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":99:2:99:4|Port sav_error of entity work.sdi_ip_top is unconnected. If a port needs to remain unconnected, use the keyword open.
+@W: CD326 :"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":99:2:99:4|Port eav_error of entity work.sdi_ip_top is unconnected. If a port needs to remain unconnected, use the keyword open.
+@W: CD326 :"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":99:2:99:4|Port ln1_out of entity work.sdi_ip_top is unconnected. If a port needs to remain unconnected, use the keyword open.
+@W: CD326 :"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":99:2:99:4|Port hblank of entity work.sdi_ip_top is unconnected. If a port needs to remain unconnected, use the keyword open.
+@W: CD326 :"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":99:2:99:4|Port vblank of entity work.sdi_ip_top is unconnected. If a port needs to remain unconnected, use the keyword open.
+@W: CD326 :"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":99:2:99:4|Port field of entity work.sdi_ip_top is unconnected. If a port needs to remain unconnected, use the keyword open.
+@W: CD326 :"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":99:2:99:4|Port frame_format of entity work.sdi_ip_top is unconnected. If a port needs to remain unconnected, use the keyword open.
+@W: CD326 :"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":99:2:99:4|Port rx_hd_sdn of entity work.sdi_ip_top is unconnected. If a port needs to remain unconnected, use the keyword open.
+@W: CD326 :"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":99:2:99:4|Port rx_tg_hdn of entity work.sdi_ip_top is unconnected. If a port needs to remain unconnected, use the keyword open.
+@W: CD326 :"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":99:2:99:4|Port trs_out of entity work.sdi_ip_top is unconnected. If a port needs to remain unconnected, use the keyword open.
+@W: CD326 :"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":99:2:99:4|Port vid_active of entity work.sdi_ip_top is unconnected. If a port needs to remain unconnected, use the keyword open.
+@W: CD326 :"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":99:2:99:4|Port pd_out of entity work.sdi_ip_top is unconnected. If a port needs to remain unconnected, use the keyword open.
+@W: CD326 :"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":108:2:108:4|Port refclk2fpga of entity work.pcs_ip is unconnected. If a port needs to remain unconnected, use the keyword open.
+@W: CD326 :"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":108:2:108:4|Port rxd_ldr_ch3 of entity work.pcs_ip is unconnected. If a port needs to remain unconnected, use the keyword open.
+@W: CD326 :"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":108:2:108:4|Port rx_cdr_lol_ch3_s of entity work.pcs_ip is unconnected. If a port needs to remain unconnected, use the keyword open.
+@W: CD326 :"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":108:2:108:4|Port rx_los_low_ch3_s of entity work.pcs_ip is unconnected. If a port needs to remain unconnected, use the keyword open.
+@W: CD326 :"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":108:2:108:4|Port rx_full_clk_ch3 of entity work.pcs_ip is unconnected. If a port needs to remain unconnected, use the keyword open.
+@W: CD638 :"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":86:14:86:21|Signal pll_lock is undriven. Either assign the signal a value or remove the signal declaration.
+@N: CD630 :"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":1738:7:1738:12|Synthesizing work.pcs_ip.pcs_ip_arch.
+@N: CD630 :"/usr/local/diamond/3.11_x64/cae_library/synthesis/vhdl/ecp3.vhd":5221:10:5221:13|Synthesizing work.pcsd.syn_black_box.
+Post processing for work.pcsd.syn_black_box
+Running optimization stage 1 on PCSD .......
+@W: CD638 :"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":2336:7:2336:20|Signal refclk_from_nq is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":2339:7:2339:9|Signal cin is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":2340:7:2340:10|Signal cout is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":2343:10:2343:26|Signal tx_pll_lol_qd_sig is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":2344:10:2344:27|Signal rx_los_low_ch0_sig is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":2345:10:2345:27|Signal rx_los_low_ch1_sig is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":2346:10:2346:27|Signal rx_los_low_ch2_sig is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":2348:10:2348:27|Signal rx_cdr_lol_ch0_sig is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":2349:10:2349:27|Signal rx_cdr_lol_ch1_sig is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":2350:10:2350:27|Signal rx_cdr_lol_ch2_sig is undriven. Either assign the signal a value or remove the signal declaration.
+@N: CD630 :"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":1528:7:1528:23|Synthesizing work.pcs_iprx_reset_sm.rx_reset_sm_arch.
+@N: CD231 :"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":1543:15:1543:16|Using onehot encoding for type statetype. For example, enumeration wait_for_plol is mapped to "100000".
+@N: CD604 :"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":1716:6:1716:19|OTHERS clause is not synthesized.
+@W: CG296 :"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":1653:0:1653:6|Incomplete sensitivity list; assuming completeness. Make sure all referenced variables in message CG290 are included in the sensitivity list.
+@W: CG290 :"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":1693:29:1693:42|Referenced variable rx_lol_los_del is not in sensitivity list.
+@W: CD638 :"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":1553:9:1553:20|Signal plol_los_int is undriven. Either assign the signal a value or remove the signal declaration.
+Post processing for work.pcs_iprx_reset_sm.rx_reset_sm_arch
+Running optimization stage 1 on PCS_IPrx_reset_sm .......
+@N: CD630 :"/usr/local/diamond/3.11_x64/cae_library/synthesis/vhdl/ecp3.vhd":1361:10:1361:12|Synthesizing work.vhi.syn_black_box.
+Post processing for work.vhi.syn_black_box
+Running optimization stage 1 on VHI .......
+@N: CD630 :"/usr/local/diamond/3.11_x64/cae_library/synthesis/vhdl/ecp3.vhd":1368:10:1368:12|Synthesizing work.vlo.syn_black_box.
+Post processing for work.vlo.syn_black_box
+Running optimization stage 1 on VLO .......
+Post processing for work.pcs_ip.pcs_ip_arch
+Running optimization stage 1 on PCS_IP .......
+@W: CL168 :"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":2364:0:2364:7|Removing instance vhi_inst because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@N: CD630 :"/home/diamond/SharedFolder/SDI2/sdi_eval/SDI_IP/src/rtl/top/ecp3/SDI_IP_top.vhd":9:7:9:16|Synthesizing work.sdi_ip_top.arch.
+@W: CD280 :"/home/diamond/SharedFolder/SDI2/sdi_eval/SDI_IP/src/rtl/top/ecp3/SDI_IP_top.vhd":46:10:46:15|Unbound component SDI_IP mapped to black box
+@N: CD630 :"/home/diamond/SharedFolder/SDI2/sdi_eval/SDI_IP/src/rtl/top/ecp3/SDI_IP_top.vhd":46:10:46:15|Synthesizing work.sdi_ip.syn_black_box.
+Post processing for work.sdi_ip.syn_black_box
+Running optimization stage 1 on SDI_IP .......
+Post processing for work.sdi_ip_top.arch
+Running optimization stage 1 on SDI_IP_top .......
+@N: CD630 :"/home/diamond/SharedFolder/SDI2/PLL_IP.vhd":14:7:14:12|Synthesizing work.pll_ip.structure.
+@N: CD630 :"/usr/local/diamond/3.11_x64/cae_library/synthesis/vhdl/ecp3.vhd":1967:10:1967:16|Synthesizing work.ehxpllf.syn_black_box.
+Post processing for work.ehxpllf.syn_black_box
+Running optimization stage 1 on EHXPLLF .......
+Post processing for work.pll_ip.structure
+Running optimization stage 1 on PLL_IP .......
+Post processing for work.top_level.arc
+Running optimization stage 1 on TOP_LEVEL .......
+Running optimization stage 2 on EHXPLLF .......
+Running optimization stage 2 on PLL_IP .......
+Running optimization stage 2 on SDI_IP .......
+Running optimization stage 2 on SDI_IP_top .......
+Running optimization stage 2 on VLO .......
+Running optimization stage 2 on VHI .......
+Running optimization stage 2 on PCS_IPrx_reset_sm .......
+@N: CL201 :"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":1591:3:1591:4|Trying to extract state machine for register cs.
+Extracted state machine for register cs
+State machine has 6 reachable states with original encodings of:
+   000001
+   000010
+   000100
+   001000
+   010000
+   100000
+Running optimization stage 2 on PCSD .......
+Running optimization stage 2 on PCS_IP .......
+Running optimization stage 2 on TOP_LEVEL .......
+
+For a summary of runtime and memory usage per design unit, please see file:
+==========================================================
+@L: /home/diamond/SharedFolder/SDI2/impl1/synwork/layer0.rt.csv
+

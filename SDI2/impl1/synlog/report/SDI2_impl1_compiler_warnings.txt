@@ -1,0 +1,36 @@
+@W: CD326 :"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":99:2:99:4|Port c1_crc_error of entity work.sdi_ip_top is unconnected. If a port needs to remain unconnected, use the keyword open.
+@W: CD326 :"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":99:2:99:4|Port y1_crc_error of entity work.sdi_ip_top is unconnected. If a port needs to remain unconnected, use the keyword open.
+@W: CD326 :"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":99:2:99:4|Port sav_error of entity work.sdi_ip_top is unconnected. If a port needs to remain unconnected, use the keyword open.
+@W: CD326 :"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":99:2:99:4|Port eav_error of entity work.sdi_ip_top is unconnected. If a port needs to remain unconnected, use the keyword open.
+@W: CD326 :"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":99:2:99:4|Port ln1_out of entity work.sdi_ip_top is unconnected. If a port needs to remain unconnected, use the keyword open.
+@W: CD326 :"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":99:2:99:4|Port hblank of entity work.sdi_ip_top is unconnected. If a port needs to remain unconnected, use the keyword open.
+@W: CD326 :"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":99:2:99:4|Port vblank of entity work.sdi_ip_top is unconnected. If a port needs to remain unconnected, use the keyword open.
+@W: CD326 :"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":99:2:99:4|Port field of entity work.sdi_ip_top is unconnected. If a port needs to remain unconnected, use the keyword open.
+@W: CD326 :"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":99:2:99:4|Port frame_format of entity work.sdi_ip_top is unconnected. If a port needs to remain unconnected, use the keyword open.
+@W: CD326 :"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":99:2:99:4|Port rx_hd_sdn of entity work.sdi_ip_top is unconnected. If a port needs to remain unconnected, use the keyword open.
+@W: CD326 :"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":99:2:99:4|Port rx_tg_hdn of entity work.sdi_ip_top is unconnected. If a port needs to remain unconnected, use the keyword open.
+@W: CD326 :"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":99:2:99:4|Port trs_out of entity work.sdi_ip_top is unconnected. If a port needs to remain unconnected, use the keyword open.
+@W: CD326 :"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":99:2:99:4|Port vid_active of entity work.sdi_ip_top is unconnected. If a port needs to remain unconnected, use the keyword open.
+@W: CD326 :"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":99:2:99:4|Port pd_out of entity work.sdi_ip_top is unconnected. If a port needs to remain unconnected, use the keyword open.
+@W: CD326 :"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":108:2:108:4|Port refclk2fpga of entity work.pcs_ip is unconnected. If a port needs to remain unconnected, use the keyword open.
+@W: CD326 :"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":108:2:108:4|Port rxd_ldr_ch3 of entity work.pcs_ip is unconnected. If a port needs to remain unconnected, use the keyword open.
+@W: CD326 :"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":108:2:108:4|Port rx_cdr_lol_ch3_s of entity work.pcs_ip is unconnected. If a port needs to remain unconnected, use the keyword open.
+@W: CD326 :"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":108:2:108:4|Port rx_los_low_ch3_s of entity work.pcs_ip is unconnected. If a port needs to remain unconnected, use the keyword open.
+@W: CD326 :"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":108:2:108:4|Port rx_full_clk_ch3 of entity work.pcs_ip is unconnected. If a port needs to remain unconnected, use the keyword open.
+@W: CD638 :"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":86:14:86:21|Signal pll_lock is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":2336:7:2336:20|Signal refclk_from_nq is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":2339:7:2339:9|Signal cin is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":2340:7:2340:10|Signal cout is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":2343:10:2343:26|Signal tx_pll_lol_qd_sig is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":2344:10:2344:27|Signal rx_los_low_ch0_sig is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":2345:10:2345:27|Signal rx_los_low_ch1_sig is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":2346:10:2346:27|Signal rx_los_low_ch2_sig is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":2348:10:2348:27|Signal rx_cdr_lol_ch0_sig is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":2349:10:2349:27|Signal rx_cdr_lol_ch1_sig is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":2350:10:2350:27|Signal rx_cdr_lol_ch2_sig is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CG296 :"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":1653:0:1653:6|Incomplete sensitivity list; assuming completeness. Make sure all referenced variables in message CG290 are included in the sensitivity list.
+@W: CG290 :"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":1693:29:1693:42|Referenced variable rx_lol_los_del is not in sensitivity list.
+@W: CD638 :"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":1553:9:1553:20|Signal plol_los_int is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CL168 :"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":2364:0:2364:7|Removing instance vhi_inst because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CD280 :"/home/diamond/SharedFolder/SDI2/sdi_eval/SDI_IP/src/rtl/top/ecp3/SDI_IP_top.vhd":46:10:46:15|Unbound component SDI_IP mapped to black box
+

@@ -1,0 +1,88 @@
+----------------------------------------------------------------------
+Report for cell TOP_LEVEL.arc
+
+Register bits: 34 of 62640 (0%)
+PIC Latch:       0
+I/O cells:       3
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                              CCU2C       10       100.0
+                            EHXPLLF        1       100.0
+                            FD1S3AX        6       100.0
+                            FD1S3DX        3       100.0
+                            FD1S3IX       22       100.0
+                            FD1S3JX        3       100.0
+                                GSR        1       100.0
+                                 IB        1       100.0
+                                INV        4       100.0
+                                 OB        2       100.0
+                           ORCALUT4       15       100.0
+                               PCSD        1       100.0
+                              PFUMX        2       100.0
+                                PUR        1       100.0
+                             SDI_IP        1       100.0
+                                VHI        4       100.0
+                                VLO        5       100.0
+SUB MODULES 
+                             PCS_IP        1       100.0
+                  PCS_IPrx_reset_sm        1       100.0
+                             PLL_IP        1       100.0
+                         SDI_IP_top        1       100.0
+                            
+                         TOTAL            86           
+----------------------------------------------------------------------
+Report for cell PCS_IP.netlist
+     Instance path:  PCS
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                              CCU2C       10       100.0
+                            FD1S3AX        6       100.0
+                            FD1S3DX        3       100.0
+                            FD1S3IX       22       100.0
+                            FD1S3JX        3       100.0
+                                INV        4       100.0
+                           ORCALUT4       15       100.0
+                               PCSD        1       100.0
+                              PFUMX        2       100.0
+                                VHI        2        50.0
+                                VLO        2        40.0
+SUB MODULES 
+                  PCS_IPrx_reset_sm        1       100.0
+                            
+                         TOTAL            71           
+----------------------------------------------------------------------
+Report for cell PCS_IPrx_reset_sm.netlist
+     Instance path:  PCS.rx_reset_sm_ch3
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                              CCU2C       10       100.0
+                            FD1S3AX        5        83.3
+                            FD1S3DX        3       100.0
+                            FD1S3IX       22       100.0
+                            FD1S3JX        3       100.0
+                                INV        3        75.0
+                           ORCALUT4       15       100.0
+                              PFUMX        2       100.0
+                                VHI        1        25.0
+                                VLO        1        20.0
+                            
+                         TOTAL            65           
+----------------------------------------------------------------------
+Report for cell SDI_IP_top.netlist
+     Instance path:  SDI
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                             SDI_IP        1       100.0
+                                VHI        1        25.0
+                                VLO        1        20.0
+                            
+                         TOTAL             3           
+----------------------------------------------------------------------
+Report for cell PLL_IP.netlist
+     Instance path:  PLL1
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                            EHXPLLF        1       100.0
+                                VLO        1        20.0
+                            
+                         TOTAL             2           

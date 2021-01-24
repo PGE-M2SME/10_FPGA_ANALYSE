@@ -1,0 +1,9 @@
+
+
+
+
+-g CfgMode:Disable
+-g RamCfg:Reset
+-path "/home/diamond/SharedFolder/SDI2" 
+-path "/home/diamond/SharedFolder/SDI2"
+-g ES:No

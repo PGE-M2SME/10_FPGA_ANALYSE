@@ -1,0 +1,2 @@
+@E: CD326 :"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":108:2:108:4|Port refclkn of entity work.pcs_ip is unconnected. If a port needs to remain unconnected, use the keyword open.
+

@@ -1,0 +1,4 @@
+@W: MO129 :"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":1575:3:1575:4|Sequential instance PCS.rx_reset_sm_ch3.rstn_m1 is reduced to a combinational gate by constant propagation.
+@W: MO129 :"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":1575:3:1575:4|Sequential instance PCS.rx_reset_sm_ch3.rstn_m2 is reduced to a combinational gate by constant propagation.
+@W: MO129 :"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":1591:3:1591:4|Sequential instance PCS.rx_reset_sm_ch3.tx_pll_lol_qd_s_int is reduced to a combinational gate by constant propagation.
+@W: MT529 :"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":2884:5:2884:6|Found inferred clock PLL_IP|CLKOP_inferred_clock which controls 1 sequential elements including PCS.refclkdiv2_rx_ch3. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 

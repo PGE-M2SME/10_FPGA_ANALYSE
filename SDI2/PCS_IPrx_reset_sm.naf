@@ -1,0 +1,7 @@
+rst_n  i
+refclkdiv2  i
+tx_pll_lol_qd_s  i
+rx_serdes_rst_ch_c  o
+rx_cdr_lol_ch_s  i
+rx_los_low_ch_s  i
+rx_pcs_rst_ch_c  o

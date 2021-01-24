@@ -1,0 +1,23 @@
+Resource Usage Report
+Part: lfe3_70e-8
+
+Register bits: 34 of 62640 (0%)
+PIC Latch:       0
+I/O cells:       3
+
+Details:
+CCU2C:          10
+FD1S3AX:        6
+FD1S3DX:        3
+FD1S3IX:        22
+FD1S3JX:        3
+GSR:            1
+IB:             1
+INV:            4
+OB:             2
+ORCALUT4:       15
+PFUMX:          2
+PUR:            1
+VHI:            4
+VLO:            5
+true:           1

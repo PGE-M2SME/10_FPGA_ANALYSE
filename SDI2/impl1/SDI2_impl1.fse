@@ -1,0 +1,16 @@
+
+fsm_encoding {111591315911} sequential
+
+fsm_state_encoding {111591315911} wait_for_plol {000}
+
+fsm_state_encoding {111591315911} rx_serdes_reset {001}
+
+fsm_state_encoding {111591315911} wait_for_timer1 {010}
+
+fsm_state_encoding {111591315911} check_lol_los {011}
+
+fsm_state_encoding {111591315911} wait_for_timer2 {100}
+
+fsm_state_encoding {111591315911} normal {101}
+
+fsm_registers {111591315911} {cs[2]}  {cs[1]}  {cs[0]} 

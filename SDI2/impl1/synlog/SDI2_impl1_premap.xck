@@ -1,0 +1,2 @@
+ckid0_0:@|S:PCS.refclkdiv2_rx_ch3.Q[0]@|E:PCS.rx_reset_sm_ch3.cs[2]@|F:@syn_dgcc_clockid0_0==1@|M:ClockId_0_0
+ckid0_2:@|S:PLL1.PLLInst_0.CLKOP@|E:PCS.refclkdiv2_rx_ch3@|F:@syn_dgcc_clockid0_2==1@|M:ClockId_0_2

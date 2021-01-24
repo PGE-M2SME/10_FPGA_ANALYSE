@@ -1,0 +1,3306 @@
+
+          Lattice Mapping Report File for Design Module 'TOP_LEVEL'
+
+
+Design Information
+------------------
+
+Command line:   map -a LatticeECP3 -p LFE3-70E -t FPBGA672 -s 8 -oc Commercial
+     SDI2_impl1.ngd -o SDI2_impl1_map.ncd -pr SDI2_impl1.prf -mp SDI2_impl1.mrp
+     -lpf /home/diamond/SharedFolder/SDI2/impl1/SDI2_impl1_synplify.lpf -lpf
+     /home/diamond/SharedFolder/SDI2/SDI2.lpf -gui 
+Target Vendor:  LATTICE
+Target Device:  LFE3-70EFPBGA672
+Target Performance:   8
+Mapper:  ep5c00,  version:  Diamond (64-bit) 3.11.3.469
+Mapped on:  01/24/21  17:37:41
+
+Design Summary
+--------------
+
+   Number of registers:    357 out of 52176 (1%)
+      PFU registers:          357 out of 49896 (1%)
+      PIO registers:            0 out of  2280 (0%)
+   Number of SLICEs:       487 out of 33264 (1%)
+      SLICEs as Logic/ROM:    487 out of 33264 (1%)
+      SLICEs as RAM:            0 out of  6804 (0%)
+      SLICEs as Carry:         37 out of 33264 (0%)
+   Number of LUT4s:        693 out of 66528 (1%)
+      Number used as logic LUTs:        619
+      Number used as distributed RAM:     0
+      Number used as ripple logic:       74
+      Number used as shift registers:     0
+   Number of PIO sites used: 3 out of 380 (1%)
+   Number of PIO FIXEDDELAY:    0
+   Number of PCS (SerDes):  1 out of 2 (50%) with bonded PIO sites
+   Number of DQSDLLs:  0 out of 2 (0%)
+   Number of PLLs:  1 out of 10 (10%)
+   Number of DLLs:  0 out of 2 (0%)
+   Number of block RAMs:  0 out of 240 (0%)
+   Number of CLKDIVs:  0 out of 2 (0%)
+   Number of GSRs:  1 out of 1 (100%)
+   JTAG used :      No
+   Readback used :  No
+   Oscillator used :  No
+   Startup used :   No
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
+     distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and
+     ripple logic.
+
+        Number Of Mapped DSP Components:
+   --------------------------------
+   MULT18X18C          0
+   MULT9X9C            0
+   ALU54A              0
+   ALU24A              0
+   --------------------------------
+   Number of Used DSP MULT Sites:  0 out of 256 (0 %)
+   Number of Used DSP ALU Sites:  0 out of 128 (0 %)
+   Number of clocks:  4
+     Net clk_c: 1 loads, 1 rising, 0 falling (Driver: PIO clk )
+
+                                    Page 1
+
+
+
+
+Design:  TOP_LEVEL                                     Date:  01/24/21  17:37:41
+
+Design Summary (cont)
+---------------------
+     Net CLKOP: 3 loads, 3 rising, 0 falling (Driver: PLL1/PLLInst_0 )
+     Net PCS/refclkdiv2_rx_ch3: 23 loads, 22 rising, 1 falling (Driver:
+     PCS/refclkdiv2_rx_ch3 )
+     Net rx_hlfClk: 197 loads, 197 rising, 0 falling (Driver: PCS/PCSD_INST )
+   Number of Clock Enables:  7
+     Net SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/y_eav: 4 loads, 4 LSLICEs
+     Net SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/y_sav_1_r4: 1 loads, 1
+     LSLICEs
+     Net SDI/vblank: 3 loads, 3 LSLICEs
+     Net SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/match_cnte: 5
+     loads, 5 LSLICEs
+     Net SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/vblank1to0: 2
+     loads, 2 LSLICEs
+     Net SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/inst_xyz_i_m3: 2 loads, 2
+     LSLICEs
+     Net
+     SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/un1_sd_trs_p1[0]: 4
+     loads, 4 LSLICEs
+   Number of local set/reset loads for net PCS/rx_reset_sm_ch3/cs_illegalpipe2
+     merged into GSR:  3
+   Number of LSRs:  7
+     Net PCS/rx_cdr_lol_ch3_s: 1 loads, 1 LSLICEs
+     Net PCS/rx_reset_sm_ch3/cs_d[4]: 2 loads, 2 LSLICEs
+     Net PCS/rx_reset_sm_ch3/cs_dup[2]: 1 loads, 1 LSLICEs
+     Net PCS/rx_reset_sm_ch3/N_59: 1 loads, 1 LSLICEs
+     Net PCS/rx_serdes_rst_ch3_c: 1 loads, 0 LSLICEs
+     Net PCS/rx_pcs_rst_ch3_c: 1 loads, 0 LSLICEs
+     Net PCS/rx_reset_sm_ch3/i7_mux: 10 loads, 10 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/VCC: 34 loads
+     Net
+     SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/timeout_cnt[9]: 25
+     loads
+     Net SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/y_eav: 25 loads
+     Net
+     SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/timeout_cnt[2]: 24
+     loads
+     Net
+     SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/timeout_cnt[7]: 24
+     loads
+     Net
+     SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/timeout_cnt[3]: 23
+     loads
+     Net
+     SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/timeout_cnt[4]: 22
+     loads
+     Net
+     SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/timeout_cnt[8]: 22
+     loads
+     Net PCS/rx_reset_sm_ch3/VCC: 20 loads
+     Net
+     SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/timeout_cnt[5]: 20
+     loads
+
+
+
+                                    Page 2
+
+
+
+
+Design:  TOP_LEVEL                                     Date:  01/24/21  17:37:41
+
+
+
+
+   Number of warnings:  1
+   Number of errors:    0
+     
+
+Design Errors/Warnings
+----------------------
+
+WARNING - map: Using local reset signal 'PCS/rx_reset_sm_ch3/cs_illegalpipe2' to
+     infer global GSR net.
+
+IO (PIO) Attributes
+-------------------
+
++---------------------+-----------+-----------+------------+------------+
+| IO Name             | Direction | Levelmode | IO         | FIXEDDELAY |
+|                     |           |  IO_TYPE  | Register   |            |
++---------------------+-----------+-----------+------------+------------+
+| vid_format[0]       | OUTPUT    | LVCMOS25  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| clk                 | INPUT     | LVCMOS25  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| vid_format[1]       | OUTPUT    | LVCMOS25  |            |            |
++---------------------+-----------+-----------+------------+------------+
+
+Removed logic
+-------------
+
+Block VCC undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/VCC_0 undriven or does not drive anything - clipped.
+Block GND undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/GND_0 undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/rstn_RNI7UU_8 undriven or does not drive
+     anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/rstn_RNI7UU_4 undriven or does not drive
+     anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/rstn_RNI7UU_5 undriven or does not drive
+     anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/rstn_RNI7UU_2 undriven or does not drive
+     anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/rstn_RNI7UU_3 undriven or does not drive
+     anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/rstn_RNI7UU_1 undriven or does not drive
+     anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/rstn_RNI7UU_25 undriven or does not drive
+     anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/rstn_RNI7UU undriven or does not drive
+     anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/rstn_RNI7UU_0 undriven or does not drive
+     anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/rstn_RNI7UU_28 undriven or does not drive
+     anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/rstn_RNI7UU_26 undriven or does not drive
+     anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/rstn_RNI7UU_20 undriven or does not drive
+     anything - clipped.
+
+                                    Page 3
+
+
+
+
+Design:  TOP_LEVEL                                     Date:  01/24/21  17:37:41
+
+Removed logic (cont)
+--------------------
+Block SDI/SDI_IP_inst/SDI_IP_inst/VCC_0 undriven or does not drive anything -
+     clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/GND_0 undriven or does not drive anything -
+     clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/GND_0 undriven or does not
+     drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/VCC_0 undriven or does not
+     drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_mis_y_17_1 undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_mis_c_17 undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_mis_c_17_1 undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/ln1_out_4[10] undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/ln1_out_4[9] undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/ln1_out_4[8] undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/ln1_out_4[7] undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/ln1_out_4[6] undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/ln1_out_4[5] undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/ln1_out_4[4] undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/ln1_out_4[3] undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/ln1_out_4[2] undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/ln1_out_4[1] undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/ln1_out_4[0] undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/un1_eav_p4 undriven or does not
+     drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/dout_4[8] undriven or does not
+     drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/dout_4[9] undriven or does not
+     drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/dout_4[10] undriven or does not
+     drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/dout_4[11] undriven or does not
+     drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/dout_4[13] undriven or does not
+     drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/dout_4[14] undriven or does not
+     drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/dout_4[15] undriven or does not
+     drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/dout_4[17] undriven or does not
+     drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/dout_4[18] undriven or does not
+     drive anything - clipped.
+
+                                    Page 4
+
+
+
+
+Design:  TOP_LEVEL                                     Date:  01/24/21  17:37:41
+
+Removed logic (cont)
+--------------------
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/dout_4[19] undriven or does not
+     drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/dout_4[16] undriven or does not
+     drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/dout_4[12] undriven or does not
+     drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/dout_4[7] undriven or does not
+     drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/dout_4[6] undriven or does not
+     drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/dout_4[5] undriven or does not
+     drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/dout_4[4] undriven or does not
+     drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/dout_4[3] undriven or does not
+     drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/dout_4[2] undriven or does not
+     drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/dout_4[1] undriven or does not
+     drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/dout_4[0] undriven or does not
+     drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/hblank_2 undriven or does not
+     drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_mis_c_7 undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_mis_c_6 undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_mis_c_5 undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_mis_c_4 undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_mis_c_3 undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_mis_c_2 undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_mis_c_1 undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_mis_c_0 undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_mis_y_7 undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_mis_y_6 undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_mis_y_5 undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_mis_y_4 undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_mis_y_3 undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_mis_y_2 undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_mis_y_1 undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_mis_y_0 undriven or does
+     not drive anything - clipped.
+
+                                    Page 5
+
+
+
+
+Design:  TOP_LEVEL                                     Date:  01/24/21  17:37:41
+
+Removed logic (cont)
+--------------------
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_mis_c_16 undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_mis_c_15 undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_mis_y_16 undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_mis_y_15 undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/y1_crc_error_3 undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/c1_crc_error_3 undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr1[18] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr1[17] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr1[16] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr1[15] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr1[14] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr1[13] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr1[12] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr1[11] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr1[10] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr1[9] undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr1[8] undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr1[7] undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr1[6] undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr1[5] undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr1[4] undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr1[3] undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr1[2] undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr1[1] undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr1[0] undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr2[19] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr2[18] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr2[17] undriven or
+     does not drive anything - clipped.
+
+                                    Page 6
+
+
+
+
+Design:  TOP_LEVEL                                     Date:  01/24/21  17:37:41
+
+Removed logic (cont)
+--------------------
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr2[16] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr2[15] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr2[14] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr2[13] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr2[12] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr2[11] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr2[10] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr2[9] undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr2[8] undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr2[7] undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr2[6] undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr2[5] undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr2[4] undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr2[3] undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr2[2] undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr2[1] undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr2[0] undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr3[19] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr3[18] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr3[17] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr3[16] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr3[15] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr3[14] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr3[13] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr3[12] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr3[11] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr3[10] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr3[9] undriven or does
+     not drive anything - clipped.
+
+                                    Page 7
+
+
+
+
+Design:  TOP_LEVEL                                     Date:  01/24/21  17:37:41
+
+Removed logic (cont)
+--------------------
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr3[8] undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr3[7] undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr3[6] undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr3[5] undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr3[4] undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr3[3] undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr3[2] undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr3[1] undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr3[0] undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/c1_crc_error undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_enable undriven or does not
+     drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/data_p3[11] undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/data_p3[5] undriven or does not
+     drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/dout[19] undriven or does not
+     drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/dout[18] undriven or does not
+     drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/dout[17] undriven or does not
+     drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/dout[16] undriven or does not
+     drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/dout[15] undriven or does not
+     drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/dout[14] undriven or does not
+     drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/dout[13] undriven or does not
+     drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/dout[12] undriven or does not
+     drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/dout[11] undriven or does not
+     drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/dout[10] undriven or does not
+     drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/dout[9] undriven or does not
+     drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/dout[8] undriven or does not
+     drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/dout[7] undriven or does not
+     drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/dout[6] undriven or does not
+     drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/dout[5] undriven or does not
+     drive anything - clipped.
+
+                                    Page 8
+
+
+
+
+Design:  TOP_LEVEL                                     Date:  01/24/21  17:37:41
+
+Removed logic (cont)
+--------------------
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/dout[4] undriven or does not
+     drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/dout[3] undriven or does not
+     drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/dout[2] undriven or does not
+     drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/dout[1] undriven or does not
+     drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/dout[0] undriven or does not
+     drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/eav_p2 undriven or does not
+     drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/eav_p3 undriven or does not
+     drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/eav_p4 undriven or does not
+     drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/eav_p5 undriven or does not
+     drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/hblank undriven or does not
+     drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/ln1_out[9] undriven or does not
+     drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/ln1_out[8] undriven or does not
+     drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/ln1_out[7] undriven or does not
+     drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/ln1_out[6] undriven or does not
+     drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/ln1_out[5] undriven or does not
+     drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/ln1_out[4] undriven or does not
+     drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/ln1_out[3] undriven or does not
+     drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/ln1_out[2] undriven or does not
+     drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/ln1_out[1] undriven or does not
+     drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/ln1_out[0] undriven or does not
+     drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_bot_0[9] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_bot_0[8] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_bot_0[7] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_bot_0[6] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_bot_0[5] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_bot_0[4] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_bot_0[3] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_bot_0[2] undriven or
+     does not drive anything - clipped.
+
+                                    Page 9
+
+
+
+
+Design:  TOP_LEVEL                                     Date:  01/24/21  17:37:41
+
+Removed logic (cont)
+--------------------
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_bot_0[1] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_bot_0[0] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_bot_1[9] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_bot_1[8] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_bot_1[7] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_bot_1[6] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_bot_1[5] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_bot_1[4] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_bot_1[3] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_bot_1[2] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_bot_1[1] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_bot_1[0] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_top_0[9] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_top_0[8] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_top_0[7] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_top_0[6] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_top_0[5] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_top_0[4] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_top_0[3] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_top_0[2] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_top_0[1] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_top_0[0] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_top_1[9] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_top_1[8] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_top_1[7] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_top_1[6] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_top_1[5] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_top_1[4] undriven or
+     does not drive anything - clipped.
+
+                                   Page 10
+
+
+
+
+Design:  TOP_LEVEL                                     Date:  01/24/21  17:37:41
+
+Removed logic (cont)
+--------------------
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_top_1[3] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_top_1[2] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_top_1[1] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_top_1[0] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/trs_p3 undriven or does not
+     drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/y1_crc_error undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/y_hblank_p1 undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/y_hblank_p2 undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/y_lnword0[8] undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/y_lnword0[7] undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/y_lnword0[6] undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/y_lnword0[5] undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/y_lnword0[4] undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/y_lnword0[3] undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/y_lnword0[2] undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/y_lnword1[5] undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/y_lnword1[4] undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/y_lnword1[3] undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/y_lnword1[2] undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_descrambler/GND_0 undriven
+     or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_descrambler/VCC_0 undriven
+     or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/VCC_0 undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/GND_0 undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/offset[2] undriven
+     or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/GND_0 undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/VCC_0 undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_12[19]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_11[3]
+     undriven or does not drive anything - clipped.
+
+                                   Page 11
+
+
+
+
+Design:  TOP_LEVEL                                     Date:  01/24/21  17:37:41
+
+Removed logic (cont)
+--------------------
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_11[2]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_11[1]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_11[0]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_4[3]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_2[9]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_1[8]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_1[7]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_18[19]/
+     GATE undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_18_bm[1
+     9] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_18_am[1
+     9] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_18[7]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_13[19]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_13[7]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_13[3]/G
+     ATE undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_13_bm[3
+     ] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_13_am[3
+     ] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_13[2]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_10[9]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_10[8]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_10[7]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_10[6]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_10[4]/G
+     ATE undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_10_bm[4
+     ] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_10_am[4
+     ] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_10[2]/G
+     ATE undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_10_bm[2
+     ] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_10_am[2
+     ] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_10[1]/G
+     ATE undriven or does not drive anything - clipped.
+
+                                   Page 12
+
+
+
+
+Design:  TOP_LEVEL                                     Date:  01/24/21  17:37:41
+
+Removed logic (cont)
+--------------------
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_10_bm[1
+     ] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_10_am[1
+     ] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_10[0]/G
+     ATE undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_10_bm[0
+     ] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_10_am[0
+     ] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_6[19]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_3[9]/GA
+     TE undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_3_bm[9]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_3_am[9]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_3[3]/GA
+     TE undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_3_bm[3]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_3_am[3]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_3[2]/GA
+     TE undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_3_bm[2]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_3_am[2]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_3[1]/GA
+     TE undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_3_bm[1]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_3_am[1]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_3[0]/GA
+     TE undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_3_bm[0]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_3_am[0]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_14[19]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_14[15]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_14[11]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_14[10]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_14[9]/G
+     ATE undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_14_bm[9
+     ] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_14_am[9
+     ] undriven or does not drive anything - clipped.
+
+                                   Page 13
+
+
+
+
+Design:  TOP_LEVEL                                     Date:  01/24/21  17:37:41
+
+Removed logic (cont)
+--------------------
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_14[8]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_14[7]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_14[6]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_14[5]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_7[8]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_7[7]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_7[6]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_7[5]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_7[4]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_7[3]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_7[2]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_7[1]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_7[0]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21[19]/
+     GATE undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21_bm[1
+     9] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21_am[1
+     9] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21[15]/
+     GATE undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21_bm[1
+     5] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21_am[1
+     5] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21[14]/
+     GATE undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21_bm[1
+     4] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21_am[1
+     4] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21[13]/
+     GATE undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21_bm[1
+     3] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21_am[1
+     3] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21[12]/
+     GATE undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21_bm[1
+     2] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21_am[1
+     2] undriven or does not drive anything - clipped.
+
+                                   Page 14
+
+
+
+
+Design:  TOP_LEVEL                                     Date:  01/24/21  17:37:41
+
+Removed logic (cont)
+--------------------
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21[11]/
+     GATE undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21_bm[1
+     1] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21_am[1
+     1] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21[10]/
+     GATE undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21_bm[1
+     0] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21_am[1
+     0] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21[9]/G
+     ATE undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21_bm[9
+     ] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21_am[9
+     ] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21[8]/G
+     ATE undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21_bm[8
+     ] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21_am[8
+     ] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21[7]/G
+     ATE undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21_bm[7
+     ] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21_am[7
+     ] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21[6]/G
+     ATE undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21_bm[6
+     ] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21_am[6
+     ] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21[5]/G
+     ATE undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21_bm[5
+     ] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21_am[5
+     ] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21[4]/G
+     ATE undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21_bm[4
+     ] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21_am[4
+     ] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21[3]/G
+     ATE undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21_bm[3
+     ] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21_am[3
+     ] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21[2]/G
+     ATE undriven or does not drive anything - clipped.
+
+                                   Page 15
+
+
+
+
+Design:  TOP_LEVEL                                     Date:  01/24/21  17:37:41
+
+Removed logic (cont)
+--------------------
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21_bm[2
+     ] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21_am[2
+     ] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21[1]/G
+     ATE undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21_bm[1
+     ] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21_am[1
+     ] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21[0]/G
+     ATE undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21_bm[0
+     ] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21_am[0
+     ] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int[19]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int[15]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int[14]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int[13]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int[12]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int[11]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int[10]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int[9]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int[8]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int[7]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int[6]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int[5]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int[4]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int[3]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int[2]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int[1]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int[0]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_10[3]/G
+     ATE undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/y_xyzword/VCC_0 undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/y_xyzword/hblanking undriven or
+     does not drive anything - clipped.
+
+                                   Page 16
+
+
+
+
+Design:  TOP_LEVEL                                     Date:  01/24/21  17:37:41
+
+Removed logic (cont)
+--------------------
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/y_xyzword/sav_1 undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/y_xyzword/sav_1_r2 undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/VCC_0 undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/GND_0 undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/dout_int_21[3] undriven
+     or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/dout_int_21[16] undriven
+     or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/dout_int_21[0] undriven
+     or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/dout_int_21[1] undriven
+     or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/dout_int_21[2] undriven
+     or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/dout_int_14_0_a3[12]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/dout_int_13_0_a3[11]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/dout_int_12_0_a3[10]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/dout_int_11_0_a3[9]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/dout_int_11_0_a3_0[9]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/dout_int_10_0_a3[8]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/sig7_i_o2 undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/sig8_i_o2 undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/sig9_i_o2 undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/sig10_i_o2 undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/dout_int_21[4] undriven
+     or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/dout_int_21[5] undriven
+     or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/dout_int_21[6] undriven
+     or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/dout_int_21[7] undriven
+     or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/dout_int_21[8] undriven
+     or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/dout_int_21[9] undriven
+     or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/dout_int_21[10] undriven
+     or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/dout_int_21[11] undriven
+     or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/dout_int_21[12] undriven
+     or does not drive anything - clipped.
+
+                                   Page 17
+
+
+
+
+Design:  TOP_LEVEL                                     Date:  01/24/21  17:37:41
+
+Removed logic (cont)
+--------------------
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/dout_int[17] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/dout_int[16] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/dout_int[15] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/dout_int[14] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/dout_int[13] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/dout_int[12] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/dout_int[11] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/dout_int[10] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/dout_int[9] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/dout_int[8] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/dout_int[7] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/dout_int[6] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/dout_int[5] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/dout_int[4] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/dout_int[3] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/dout_int[2] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/dout_int[1] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/dout_int[0] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/dout_int_RNO[13]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/dout_int_RNO[17]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/dout_int_RNO[15]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/dout_int_RNO[14]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/VCC_0 undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/GND_0 undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/dout_int_21[3] undriven
+     or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/dout_int_21[16] undriven
+     or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/un1_init_1 undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/dout_int_21[2] undriven
+     or does not drive anything - clipped.
+
+                                   Page 18
+
+
+
+
+Design:  TOP_LEVEL                                     Date:  01/24/21  17:37:41
+
+Removed logic (cont)
+--------------------
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/un1_init undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/dout_int_21[0] undriven
+     or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/dout_int_21[1] undriven
+     or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/dout_int_14_0_a3[12]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/dout_int_13_0_a3[11]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/dout_int_12_0_a3[10]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/dout_int_11_0_a3[9]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/dout_int_11_0_a3_0[9]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/dout_int_10_0_a3[8]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/sig7_i_o2 undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/sig8_i_o2 undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/sig9_i_o2 undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/sig10_i_o2 undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/dout_int_21[4] undriven
+     or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/dout_int_21[5] undriven
+     or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/dout_int_21[6] undriven
+     or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/dout_int_21[7] undriven
+     or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/dout_int_21[8] undriven
+     or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/dout_int_21[9] undriven
+     or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/dout_int_21[10] undriven
+     or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/dout_int_21[11] undriven
+     or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/dout_int_21[12] undriven
+     or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/dout_int[17] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/dout_int[16] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/dout_int[15] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/dout_int[14] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/dout_int[13] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/dout_int[12] undriven or
+     does not drive anything - clipped.
+
+                                   Page 19
+
+
+
+
+Design:  TOP_LEVEL                                     Date:  01/24/21  17:37:41
+
+Removed logic (cont)
+--------------------
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/dout_int[11] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/dout_int[10] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/dout_int[9] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/dout_int[8] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/dout_int[7] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/dout_int[6] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/dout_int[5] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/dout_int[4] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/dout_int[3] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/dout_int[2] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/dout_int[1] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/dout_int[0] undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/dout_int_RNO[13]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/dout_int_RNO[17]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/dout_int_RNO[15]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/dout_int_RNO[14]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/frame_format_RNO_
+     4[0] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/frame_format_RNO_
+     7[2] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/frame_format_RNO_
+     14[2] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/un19_e2s_1650_ins
+     t_RNIPM066 undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/un19_e2s_1650_tg_
+     inst_1_RNIV60D1 undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/un19_e2s_1650_ins
+     t_7_RNI1P713 undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/un19_e2s_1650_ins
+     t_12_0_RNIDMO92 undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/un19_e2s_1650_ins
+     t_7_RNIM71G3 undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/un19_e2s_1980_ins
+     t_8_RNI8U033 undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/frame_format_RNO_
+     13[2] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/frame_format_RNO_
+     3[0] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/frame_format_RNO_
+     4[2] undriven or does not drive anything - clipped.
+
+                                   Page 20
+
+
+
+
+Design:  TOP_LEVEL                                     Date:  01/24/21  17:37:41
+
+Removed logic (cont)
+--------------------
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/frame_format_RNO[
+     2] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/frame_format_RNO_
+     1[2] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/frame_format_RNO_
+     9[1] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/frame_format_RNO_
+     6[1] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/frame_format_RNO_
+     3[1] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/un1_sav_2640_matc
+     h_1 undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/un1_sav_2640_matc
+     h_1_1 undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/frame_format_RNO_
+     3[2] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/frame_format_RNO_
+     1[0] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/frame_format_RNO_
+     2[0] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/frame_format_RNO[
+     0] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/frame_format_RNO_
+     11[1] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/frame_format_RNO_
+     12[1] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/frame_format_RNO[
+     1] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/frame_format_RNO_
+     0[1] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/frame_format_RNO_
+     16[2] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/frame_format_RNO_
+     2[2] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/frame_format_RNO_
+     5[2] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/frame_format_RNO_
+     0[2] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/frame_format_RNO_
+     6[2] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/un1_sav_2376_matc
+     h_1_N_2L1 undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/frame_format_RNO_
+     7[1] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/frame_format_RNO_
+     1[1] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/frame_format_RNO_
+     5[1] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/ilaced_RNIMAB21
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/timeout_cnt_RNIC9
+     OR1[5] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/timeout_cnt_1_RNI
+     0TJM1[6] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/un19_e2s_1650_ins
+     t_7_RNI0C7J2 undriven or does not drive anything - clipped.
+
+                                   Page 21
+
+
+
+
+Design:  TOP_LEVEL                                     Date:  01/24/21  17:37:41
+
+Removed logic (cont)
+--------------------
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/un19_e2s_2640_ins
+     t_RNI7LFD5 undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/eav_1280_matchr_R
+     NI1V14_0 undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/un19_e2s_1980_ins
+     t_1_RNI8H284 undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/frame_format_RNO_
+     17[2] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/frame_format_RNO_
+     8[2] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/timeout_cnt_RNIGD
+     OR1[5] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/timeout_cnt_1_RNI
+     4INO[6] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/eav_1920_tg_match
+     r_RNIJJM81 undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/un19_e2s_1650_ins
+     t_7_RNI833R1 undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/un19_e2s_1650_ins
+     t_2_RNIPBQV4 undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/frame_format_RNO_
+     4[1] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/timeout_cnt_1_RNI
+     S7R82[6] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/un20_e2s_525_inst
+     _1_RNIU6471 undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/frame_format_RNO_
+     2[1] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/eav_1280_tg_match
+     r_RNIRRLG_0 undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/eav_1280_tg_match
+     r_RNIRRLG undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/eav_1280_matchr_R
+     NI1V14 undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/eav_1920_matchr_R
+     NIA33A1 undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/frame_format_RNO_
+     10[1] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/frame_format_RNO_
+     8[1] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/timeout_cnt_1_RNI
+     5JNO[6] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/eav_found_RNIFMQF
+     1 undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/frame_format_RNO_
+     10[2] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/frame_format_RNO_
+     9[2] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/frame_format_RNO_
+     15[2] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/un19_e2s_2640_tg_
+     inst_1_RNITCHJ1 undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/frame_format_RNO_
+     11[2] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/un19_e2s_1650_ins
+     t_7_RNIQ0CM3 undriven or does not drive anything - clipped.
+
+                                   Page 22
+
+
+
+
+Design:  TOP_LEVEL                                     Date:  01/24/21  17:37:41
+
+Removed logic (cont)
+--------------------
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/N_172_i undriven
+     or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/locki_RNO
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/eav_1920_tg_match
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/un19_e2s_2376_ins
+     t_8_RNILSRA2 undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/frame_format_2_0_
+     0[1] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/eav_1920_tg_match
+     r undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/frame_format[2]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/frame_format[1]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/frame_format[0]
+     undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/hdorsd undriven
+     or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/lock undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/locki undriven or
+     does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/un19_e2s_3300_ins
+     t_2_0_RNI96CG undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/eav_1920_matchr_R
+     NIL6CC1 undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/frame_format_RNO_
+     12[2] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/frame_format_RNO_
+     0[0] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/timeout_cnt_RNISF
+     HN1[0] undriven or does not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_mis_y_17 undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/ln1_out[10] undriven or does
+     not drive anything - clipped.
+Block SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr1[19] undriven or
+     does not drive anything - clipped.
+Signal PCS/rx_reset_sm_ch3/CN was merged into signal PCS/refclkdiv2_rx_ch3
+Signal PCS/rx_reset_sm_ch3/cs_i[2] was merged into signal
+     PCS/rx_reset_sm_ch3/cs_dup[2]
+Signal SDI/VCC undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/rstn_i_r46 undriven or does not drive
+     anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/rstn_i_r0 undriven or does not drive anything
+     - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/rstn_i_r4 undriven or does not drive anything
+     - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/rstn_i_r6 undriven or does not drive anything
+     - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/rstn_i_r8 undriven or does not drive anything
+     - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/rstn_i_r9 undriven or does not drive anything
+     - clipped.
+
+                                   Page 23
+
+
+
+
+Design:  TOP_LEVEL                                     Date:  01/24/21  17:37:41
+
+Removed logic (cont)
+--------------------
+Signal SDI/SDI_IP_inst/SDI_IP_inst/rstn_i_r10 undriven or does not drive
+     anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/rstn_i_r11 undriven or does not drive
+     anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/rstn_i_r12 undriven or does not drive
+     anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/rstn_i_r13 undriven or does not drive
+     anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/rstn_i_r14 undriven or does not drive
+     anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/rstn_i_r15 undriven or does not drive
+     anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/rstn_i_r16 undriven or does not drive
+     anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/rstn_i_r17 undriven or does not drive
+     anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/rstn_i_r18 undriven or does not drive
+     anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/rstn_i_r19 undriven or does not drive
+     anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/rstn_i_r21 undriven or does not drive
+     anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/rstn_i_r22 undriven or does not drive
+     anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/rstn_i_r24 undriven or does not drive
+     anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/rstn_i_r25 undriven or does not drive
+     anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/rstn_i_r26 undriven or does not drive
+     anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/rstn_i_r27 undriven or does not drive
+     anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/rstn_i_r32 undriven or does not drive
+     anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/rstn_i_r33 undriven or does not drive
+     anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/rstn_i_r34 undriven or does not drive
+     anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/rstn_i_r35 undriven or does not drive
+     anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/rstn_i_r36 undriven or does not drive
+     anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/rstn_i_r37 undriven or does not drive
+     anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/rstn_i_r38 undriven or does not drive
+     anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/rstn_i_r39 undriven or does not drive
+     anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/rstn_i_r40 undriven or does not drive
+     anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/rstn_i_r41 undriven or does not drive
+     anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/rstn_i_r42 undriven or does not drive
+     anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/rstn_i_r43 undriven or does not drive
+     anything - clipped.
+
+                                   Page 24
+
+
+
+
+Design:  TOP_LEVEL                                     Date:  01/24/21  17:37:41
+
+Removed logic (cont)
+--------------------
+Signal SDI/SDI_IP_inst/SDI_IP_inst/rstn_i_r44 undriven or does not drive
+     anything - clipped.
+Signal PCS/GND undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/VCC undriven or does not drive anything - clipped.
+Signal VCC undriven or does not drive anything - clipped.
+Signal PLL1/CLKINTFB undriven or does not drive anything - clipped.
+Signal PLL1/LOCK undriven or does not drive anything - clipped.
+Signal PLL1/CLKOK2 undriven or does not drive anything - clipped.
+Signal PLL1/CLKOK undriven or does not drive anything - clipped.
+Signal PLL1/CLKOS undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/GND undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_mis_c_17_1 undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_mis_c_7 undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_mis_c_6 undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_mis_c_5 undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_mis_c_4 undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_mis_c_15 undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_mis_c_3 undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_mis_c_2 undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_mis_c_1 undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_mis_c_0 undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_mis_y_7 undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_mis_y_6 undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_mis_y_5 undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_mis_y_4 undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_mis_y_15 undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_mis_y_3 undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_mis_y_2 undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_mis_y_1 undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_mis_y_0 undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_mis_y_16 undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_mis_c_17 undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_mis_c_16 undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/rstn_i_r2 undriven or does not drive anything
+
+                                   Page 25
+
+
+
+
+Design:  TOP_LEVEL                                     Date:  01/24/21  17:37:41
+
+Removed logic (cont)
+--------------------
+     - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr3[19] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr2[19] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr3[18] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr2[18] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr3[17] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr2[17] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr3[16] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr2[16] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr3[15] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr2[15] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr3[14] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr2[14] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr3[13] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr2[13] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr3[12] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr2[12] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr3[11] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr2[11] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr3[10] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr2[10] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr3[9] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr2[9] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr3[8] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr2[8] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr3[7] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr2[7] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr3[6] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr2[6] undriven or
+
+                                   Page 26
+
+
+
+
+Design:  TOP_LEVEL                                     Date:  01/24/21  17:37:41
+
+Removed logic (cont)
+--------------------
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr3[5] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr2[5] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr3[4] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr2[4] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr3[3] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr2[3] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr3[2] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr2[2] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr3[1] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr2[1] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr3[0] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/rstn_i_r3 undriven or does not drive anything
+     - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr2[0] undriven or
+     does not drive anything - clipped.
+Signal SDI/c1_crc_error undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/c1_crc_error_3 undriven or
+     does not drive anything - clipped.
+Signal SDI/pd_out[19] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/dout_4[19] undriven or does
+     not drive anything - clipped.
+Signal SDI/pd_out[18] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/dout_4[18] undriven or does
+     not drive anything - clipped.
+Signal SDI/pd_out[17] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/dout_4[17] undriven or does
+     not drive anything - clipped.
+Signal SDI/pd_out[16] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/dout_4[16] undriven or does
+     not drive anything - clipped.
+Signal SDI/pd_out[15] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/dout_4[15] undriven or does
+     not drive anything - clipped.
+Signal SDI/pd_out[14] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/dout_4[14] undriven or does
+     not drive anything - clipped.
+Signal SDI/pd_out[13] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/dout_4[13] undriven or does
+     not drive anything - clipped.
+Signal SDI/pd_out[12] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/dout_4[12] undriven or does
+     not drive anything - clipped.
+Signal SDI/pd_out[11] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/dout_4[11] undriven or does
+
+                                   Page 27
+
+
+
+
+Design:  TOP_LEVEL                                     Date:  01/24/21  17:37:41
+
+Removed logic (cont)
+--------------------
+     not drive anything - clipped.
+Signal SDI/pd_out[10] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/dout_4[10] undriven or does
+     not drive anything - clipped.
+Signal SDI/pd_out[9] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/dout_4[9] undriven or does not
+     drive anything - clipped.
+Signal SDI/pd_out[8] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/dout_4[8] undriven or does not
+     drive anything - clipped.
+Signal SDI/pd_out[7] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/dout_4[7] undriven or does not
+     drive anything - clipped.
+Signal SDI/pd_out[6] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/dout_4[6] undriven or does not
+     drive anything - clipped.
+Signal SDI/pd_out[5] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/dout_4[5] undriven or does not
+     drive anything - clipped.
+Signal SDI/pd_out[4] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/dout_4[4] undriven or does not
+     drive anything - clipped.
+Signal SDI/pd_out[3] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/dout_4[3] undriven or does not
+     drive anything - clipped.
+Signal SDI/pd_out[2] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/dout_4[2] undriven or does not
+     drive anything - clipped.
+Signal SDI/pd_out[1] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/dout_4[1] undriven or does not
+     drive anything - clipped.
+Signal SDI/pd_out[0] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/rstn_i_r20 undriven or does not drive
+     anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/dout_4[0] undriven or does not
+     drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/eav_p5 undriven or does not
+     drive anything - clipped.
+Signal SDI/hblank undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/hblank_2 undriven or does not
+     drive anything - clipped.
+Signal SDI/ln1_out[9] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/ln1_out_4[9] undriven or does
+     not drive anything - clipped.
+Signal SDI/ln1_out[8] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/ln1_out_4[8] undriven or does
+     not drive anything - clipped.
+Signal SDI/ln1_out[7] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/ln1_out_4[7] undriven or does
+     not drive anything - clipped.
+Signal SDI/ln1_out[6] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/ln1_out_4[6] undriven or does
+     not drive anything - clipped.
+Signal SDI/ln1_out[5] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/ln1_out_4[5] undriven or does
+     not drive anything - clipped.
+
+                                   Page 28
+
+
+
+
+Design:  TOP_LEVEL                                     Date:  01/24/21  17:37:41
+
+Removed logic (cont)
+--------------------
+Signal SDI/ln1_out[4] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/ln1_out_4[4] undriven or does
+     not drive anything - clipped.
+Signal SDI/ln1_out[3] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/ln1_out_4[3] undriven or does
+     not drive anything - clipped.
+Signal SDI/ln1_out[2] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/ln1_out_4[2] undriven or does
+     not drive anything - clipped.
+Signal SDI/ln1_out[1] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/ln1_out_4[1] undriven or does
+     not drive anything - clipped.
+Signal SDI/ln1_out[0] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/ln1_out_4[0] undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_bot_0[9] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_bot_0[8] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_bot_0[7] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_bot_0[6] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_bot_0[5] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_bot_0[4] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_bot_0[3] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_bot_0[2] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_bot_0[1] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_bot_0[0] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/rstn_i_r28 undriven or does not drive
+     anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_bot_1[9] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_bot_1[8] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_bot_1[7] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_bot_1[6] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_bot_1[5] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_bot_1[4] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_bot_1[3] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_bot_1[2] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_bot_1[1] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_bot_1[0] undriven or
+
+                                   Page 29
+
+
+
+
+Design:  TOP_LEVEL                                     Date:  01/24/21  17:37:41
+
+Removed logic (cont)
+--------------------
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/rstn_i_r29 undriven or does not drive
+     anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_top_0[9] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_top_0[8] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_top_0[7] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_top_0[6] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_top_0[5] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_top_0[4] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_top_0[3] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_top_0[2] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_top_0[1] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_top_0[0] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/rstn_i_r30 undriven or does not drive
+     anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/eav_p3 undriven or does not
+     drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_top_1[7] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_top_1[6] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_top_1[5] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_top_1[4] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_top_1[3] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_top_1[2] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_top_1[1] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_top_1[0] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/rstn_i_r31 undriven or does not drive
+     anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/eav_p4 undriven or does not
+     drive anything - clipped.
+Signal SDI/trs_out undriven or does not drive anything - clipped.
+Signal SDI/y1_crc_error undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/y1_crc_error_3 undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/y_hblank_p2 undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/y_hblank_p1 undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/y_lnword0[8] undriven or does
+
+                                   Page 30
+
+
+
+
+Design:  TOP_LEVEL                                     Date:  01/24/21  17:37:41
+
+Removed logic (cont)
+--------------------
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/y_lnword0[7] undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/y_lnword0[6] undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/y_lnword0[5] undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/y_lnword0[4] undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/y_lnword0[3] undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/y_lnword0[2] undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/rstn_i_r45 undriven or does not drive
+     anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/y_lnword1[5] undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/y_lnword1[4] undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/y_lnword1[3] undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/y_lnword1[2] undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_18_bm[
+     19] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_18_am[
+     19] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_12[19]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_13_bm[
+     3] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_13_am[
+     3] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_11[3]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_11[0]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_4[3]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_2[9]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_10_bm[
+     4] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_10_am[
+     4] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_10_bm[
+     2] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_10_am[
+     2] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_10_bm[
+     1] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_10_am[
+     1] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_10_bm[
+     0] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_10_am[
+
+                                   Page 31
+
+
+
+
+Design:  TOP_LEVEL                                     Date:  01/24/21  17:37:41
+
+Removed logic (cont)
+--------------------
+     0] undriven or does not drive anything - clipped.
+Signal
+     SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_3_bm[9]
+     undriven or does not drive anything - clipped.
+Signal
+     SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_3_am[9]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/data_p3[11] undriven or does
+     not drive anything - clipped.
+Signal
+     SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_3_bm[3]
+     undriven or does not drive anything - clipped.
+Signal
+     SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_3_am[3]
+     undriven or does not drive anything - clipped.
+Signal
+     SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_3_bm[2]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/data_p3[5] undriven or does
+     not drive anything - clipped.
+Signal
+     SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_3_am[2]
+     undriven or does not drive anything - clipped.
+Signal
+     SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_3_bm[1]
+     undriven or does not drive anything - clipped.
+Signal
+     SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_3_am[1]
+     undriven or does not drive anything - clipped.
+Signal
+     SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_3_bm[0]
+     undriven or does not drive anything - clipped.
+Signal
+     SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_3_am[0]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_14_bm[
+     9] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_14_am[
+     9] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_11[2]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_11[1]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_13[3]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_13[2]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_10[2]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_10[9]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_10[1]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_10[8]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_10[0]
+
+                                   Page 32
+
+
+
+
+Design:  TOP_LEVEL                                     Date:  01/24/21  17:37:41
+
+Removed logic (cont)
+--------------------
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_10[7]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_3[3]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_10[6]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_3[2]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_3[9]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_3[1]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_10[4]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_3[0]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21_bm[
+     19] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_18[19]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21_am[
+     19] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_14[19]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21_bm[
+     15] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_13[19]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21_am[
+     15] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_14[15]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21_bm[
+     14] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21_am[
+     14] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21_bm[
+     13] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21_am[
+     13] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21_bm[
+     12] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21_am[
+     12] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21_bm[
+     11] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_6[19]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21_am[
+     11] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_14[11]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21_bm[
+     10] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21_am[
+
+                                   Page 33
+
+
+
+
+Design:  TOP_LEVEL                                     Date:  01/24/21  17:37:41
+
+Removed logic (cont)
+--------------------
+     10] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_14[10]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21_bm[
+     9] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21_am[
+     9] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_14[9]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21_bm[
+     8] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21_am[
+     8] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_14[8]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21_bm[
+     7] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_18[7]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21_am[
+     7] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_14[7]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21_bm[
+     6] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21_am[
+     6] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_14[6]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21_bm[
+     5] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21_am[
+     5] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_14[5]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21_bm[
+     4] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21_am[
+     4] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_7[8]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21_bm[
+     3] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_13[7]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21_am[
+     3] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_7[7]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_7[3]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21_bm[
+     2] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21_am[
+     2] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_7[6]
+
+                                   Page 34
+
+
+
+
+Design:  TOP_LEVEL                                     Date:  01/24/21  17:37:41
+
+Removed logic (cont)
+--------------------
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_7[2]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21_bm[
+     1] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21_am[
+     1] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_7[5]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_7[1]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21_bm[
+     0] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_21_am[
+     0] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_7[4]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_7[0]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offset[2] undriven or does not
+     drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22[19]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_out[15] undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22[15]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_out[14] undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22[14]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_out[13] undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22[13]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_out[12] undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22[12]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_out[11] undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22[11]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_out[10] undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22[10]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_out[9] undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22[9]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_out[8] undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22[8]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_out[7] undriven or does
+
+                                   Page 35
+
+
+
+
+Design:  TOP_LEVEL                                     Date:  01/24/21  17:37:41
+
+Removed logic (cont)
+--------------------
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22[7]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_out[6] undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22[6]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_out[5] undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22[5]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_out[4] undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22[4]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_out[3] undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22[3]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_out[2] undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22[2]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_out[1] undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22[1]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_out[0] undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22[0]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_10[3]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_1[8]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter/dout_int_22_1[7]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/y_hblank undriven or does not
+     drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr1[14] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr1[13] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr1[12] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr1[15] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr1[11] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr1[10] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr1[18] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/N_102 undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/N_101 undriven or does
+
+                                   Page 36
+
+
+
+
+Design:  TOP_LEVEL                                     Date:  01/24/21  17:37:41
+
+Removed logic (cont)
+--------------------
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/sig7 undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/N_99 undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/sig8 undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/N_98 undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/sig10 undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/sig9 undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/N_97 undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/tl_crcdata[16] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/dout_int_21[16]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/tl_crcdata[15] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/tl_crcdata[14] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/tl_crcdata[13] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/tl_crcdata[12] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/dout_int_21[12]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/tl_crcdata[11] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/dout_int_21[11]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/tl_crcdata[10] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/dout_int_21[10]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/dout_int_21[9] undriven
+     or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/tl_crcdata[8] undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/dout_int_21[8] undriven
+     or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/dout_int_21[7] undriven
+     or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/dout_int_21[6] undriven
+     or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/tl_crcdata[5] undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/dout_int_21[5] undriven
+     or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/tl_crcdata[4] undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/dout_int_21[4] undriven
+     or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/tl_crcdata[3] undriven or does
+
+                                   Page 37
+
+
+
+
+Design:  TOP_LEVEL                                     Date:  01/24/21  17:37:41
+
+Removed logic (cont)
+--------------------
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/dout_int_21[3] undriven
+     or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/tl_crcdata[2] undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/dout_int_21[2] undriven
+     or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/tl_crcdata[1] undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/dout_int_21[1] undriven
+     or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/tl_crcdata[0] undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/rstn_i_r7 undriven or does not drive anything
+     - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/dout_int_21[0] undriven
+     or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/dout_int_21[13]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/N_100 undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/dout_int_21[17]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/tl_crcdata[9] undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/dout_int_21[15]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr1[17] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/tl_crcdata[7] undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl/dout_int_21[14]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr1[16] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/tl_crcdata[6] undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/y_sav_1_r0 undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/un1_init undriven or does not
+     drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/y_sav_1_r2 undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr1[4] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr1[3] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr1[2] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr1[5] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr1[1] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr1[0] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr1[8] undriven or
+
+                                   Page 38
+
+
+
+
+Design:  TOP_LEVEL                                     Date:  01/24/21  17:37:41
+
+Removed logic (cont)
+--------------------
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/N_110 undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/N_109 undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/sig7 undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/N_107 undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/sig8 undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/N_106 undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/sig10 undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/sig9 undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/N_105 undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bl_crcdata[17] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bl_crcdata[16] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/dout_int_21[16]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bl_crcdata[15] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bl_crcdata[14] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bl_crcdata[13] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bl_crcdata[12] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/dout_int_21[12]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bl_crcdata[11] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/dout_int_21[11]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bl_crcdata[10] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/dout_int_21[10]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/dout_int_21[9] undriven
+     or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bl_crcdata[8] undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/dout_int_21[8] undriven
+     or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/dout_int_21[7] undriven
+     or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/dout_int_21[6] undriven
+     or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bl_crcdata[5] undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/dout_int_21[5] undriven
+
+                                   Page 39
+
+
+
+
+Design:  TOP_LEVEL                                     Date:  01/24/21  17:37:41
+
+Removed logic (cont)
+--------------------
+     or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bl_crcdata[4] undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/dout_int_21[4] undriven
+     or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bl_crcdata[3] undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/dout_int_21[3] undriven
+     or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bl_crcdata[2] undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/dout_int_21[2] undriven
+     or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bl_crcdata[1] undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/dout_int_21[1] undriven
+     or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bl_crcdata[0] undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/rstn_i_r5 undriven or does not drive anything
+     - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/un1_init_1 undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/dout_int_21[0] undriven
+     or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/dout_int_21[13]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/N_108 undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/dout_int_21[17]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bl_crcdata[9] undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr1[9] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/dout_int_21[15]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bl_crcdata[7] undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr1[7] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl/dout_int_21[14]
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bl_crcdata[6] undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr1[6] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/timeoutreached_0
+     _I_39_0_S1 undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/timeoutreached_0
+     _I_39_0_S0 undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/timeoutreached_0
+     _I_27_0_S1 undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/timeoutreached_0
+     _I_27_0_S0 undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/timeoutreached_0
+
+                                   Page 40
+
+
+
+
+Design:  TOP_LEVEL                                     Date:  01/24/21  17:37:41
+
+Removed logic (cont)
+--------------------
+     _I_15_0_S1 undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/timeoutreached_0
+     _I_15_0_S0 undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/timeoutreached_0
+     _I_1_0_S1 undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/timeoutreached_0
+     _I_1_0_S0 undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/N_1 undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/timeout_cnt_s_0_
+     S1[13] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/timeout_cnt_s_0_
+     COUT[13] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/timeout_cnt_cry_
+     0_S0[0] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/N_2 undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/err_cnt_cry_0_CO
+     UT[6] undriven or does not drive anything - clipped.
+Signal
+     SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/err_cnt_lcry_0_S1
+     undriven or does not drive anything - clipped.
+Signal
+     SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/err_cnt_lcry_0_S0
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/N_3 undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/match_cnt_s_0_S1
+     [7] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/match_cnt_s_0_CO
+     UT[7] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/match_cnt_cry_0_
+     S0[0] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/N_14 undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/blnk_lines_cry_0
+     _COUT[4] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/blnk_lines_lcry_
+     0_S1 undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/blnk_lines_lcry_
+     0_S0 undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/N_15 undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/g1_sx undriven
+     or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/g0_23_sx
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/g0_9_1 undriven
+     or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/g0_18_1 undriven
+     or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/g0_1_0 undriven
+     or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/g1_0_0 undriven
+     or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/frame_format_RNO
+
+                                   Page 41
+
+
+
+
+Design:  TOP_LEVEL                                     Date:  01/24/21  17:37:41
+
+Removed logic (cont)
+--------------------
+     _9[1] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/frame_format_RNO
+     _6[1] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/un1_sav_2640_mat
+     ch_1 undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/un1_sav_2640_mat
+     ch_1_1 undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/frame_format_RNO
+     _3[2] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/frame_format_RNO
+     _4[0] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/frame_format_RNO
+     _2[0] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/frame_format_RNO
+     _1[0] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/g0_0_i_a6_2_1
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/un1_sav_1650_mat
+     ch_1 undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/g0_4_1 undriven
+     or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/N_8 undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/frame_format_RNO
+     _2[2] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/un1_sav_1980_mat
+     ch undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/frame_format_RNO
+     _5[2] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/g0_1 undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/frame_format_RNO
+     _4[2] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/frame_format_RNO
+     _6[2] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/frame_format_RNO
+     _13[2] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/un1_sav_2376_mat
+     ch_1_N_2L1 undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/frame_format_RNO
+     _1[1] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/frame_format_RNO
+     _5[1] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/frame_format_RNO
+     _7[1] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/timeout_cnt_RNIC
+     9OR1[5] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/N_114 undriven
+     or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/un19_e2s_1650_in
+     st_7_RNI0C7J2 undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/timeout_cnt_1_RN
+     I0TJM1[6] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/ilaced_RNIMAB21
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/g0_23_1 undriven
+
+                                   Page 42
+
+
+
+
+Design:  TOP_LEVEL                                     Date:  01/24/21  17:37:41
+
+Removed logic (cont)
+--------------------
+     or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/g2_2 undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/g0_5_2 undriven
+     or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/g1 undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/g0_2_3_1
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/g0_2_3_0
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/g0_2_7 undriven
+     or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/g0_2_4_0
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/N_107 undriven
+     or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/un1_sav_2200_mat
+     ch_6 undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/un1_sav_2200_tg_
+     match_1_0 undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/un1_sav_2200_mat
+     ch_0 undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/g2_1_5 undriven
+     or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/g2_1_4 undriven
+     or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/g1_0_0_0
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/g0_2_3 undriven
+     or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/g0_9_2 undriven
+     or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/g2_0_1 undriven
+     or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/N_11 undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/g1_9 undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/g1_8 undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/g0_1_3 undriven
+     or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/g1_12 undriven
+     or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/g1_7 undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/un1_sav_2640_tg_
+     match_1_0 undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/g0_1_6 undriven
+     or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/g0_1_5 undriven
+     or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/N_172_i undriven or does not
+     drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/eav_p2 undriven or does not
+
+                                   Page 43
+
+
+
+
+Design:  TOP_LEVEL                                     Date:  01/24/21  17:37:41
+
+Removed logic (cont)
+--------------------
+     drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_enable undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/un1_sav_3300_tg_
+     match undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/frame_format_2_0
+     _0[1] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/un1_sav_3300_mat
+     ch_1 undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/un1_sav_1650_tg_
+     match_1 undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/eav_1920_tg_matc
+     hr undriven or does not drive anything - clipped.
+Signal
+     SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/eav_1920_tg_match
+     undriven or does not drive anything - clipped.
+Signal SDI/frame_format[2] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/N_45_i undriven
+     or does not drive anything - clipped.
+Signal SDI/frame_format[1] undriven or does not drive anything - clipped.
+Signal
+     SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/frame_format_2[1]
+     undriven or does not drive anything - clipped.
+Signal SDI/frame_format[0] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/N_46_i undriven
+     or does not drive anything - clipped.
+Signal SDI/rx_hd_sdn undriven or does not drive anything - clipped.
+Signal SDI/vid_active undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/locki undriven
+     or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/N_108_i undriven
+     or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/un1_sav_3300_mat
+     ch undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/g2_4_1 undriven
+     or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/frame_format_RNO
+     _12[2] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/frame_format_RNO
+     _16[2] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/frame_format_RNO
+     _0[0] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/N_46_i_N_7L11_1
+     undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/g0_2_8 undriven
+     or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/timeoutreached_0
+     _I_33_0_S1 undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/timeoutreached_0
+     _I_33_0_COUT undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_mis_y_17 undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/tl_crcdata[17] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_top_1[9] undriven or
+     does not drive anything - clipped.
+
+                                   Page 44
+
+
+
+
+Design:  TOP_LEVEL                                     Date:  01/24/21  17:37:41
+
+Removed logic (cont)
+--------------------
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/recd_crc_top_1[8] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_mis_y_17_1 undriven or
+     does not drive anything - clipped.
+Signal SDI/ln1_out[10] undriven or does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/rstn_i_r23 undriven or does not drive
+     anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/un1_eav_p4 undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/ln1_out_4[10] undriven or does
+     not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_outr1[19] undriven or
+     does not drive anything - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/rstn_i_r1 undriven or does not drive anything
+     - clipped.
+Signal SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/bshft_out[19] undriven or does
+     not drive anything - clipped.
+Signal PCS/rxd_ldr_ch3 undriven or does not drive anything - clipped.
+Signal PCS/LDR_RX2CORE_2 undriven or does not drive anything - clipped.
+Signal PCS/LDR_RX2CORE_1 undriven or does not drive anything - clipped.
+Signal PCS/LDR_RX2CORE_0 undriven or does not drive anything - clipped.
+Signal PCS/REFCLK_TO_NQ undriven or does not drive anything - clipped.
+Signal PCS/FFS_CDR_TRAIN_DONE_3 undriven or does not drive anything - clipped.
+Signal PCS/FFS_CDR_TRAIN_DONE_2 undriven or does not drive anything - clipped.
+Signal PCS/FFS_CDR_TRAIN_DONE_1 undriven or does not drive anything - clipped.
+Signal PCS/FFS_CDR_TRAIN_DONE_0 undriven or does not drive anything - clipped.
+Signal PCS/PCIE_RXVALID_3 undriven or does not drive anything - clipped.
+Signal PCS/PCIE_RXVALID_2 undriven or does not drive anything - clipped.
+Signal PCS/PCIE_RXVALID_1 undriven or does not drive anything - clipped.
+Signal PCS/PCIE_RXVALID_0 undriven or does not drive anything - clipped.
+Signal PCS/PCIE_PHYSTATUS_3 undriven or does not drive anything - clipped.
+Signal PCS/PCIE_PHYSTATUS_2 undriven or does not drive anything - clipped.
+Signal PCS/PCIE_PHYSTATUS_1 undriven or does not drive anything - clipped.
+Signal PCS/PCIE_PHYSTATUS_0 undriven or does not drive anything - clipped.
+Signal PCS/FFS_SKP_DELETED_3 undriven or does not drive anything - clipped.
+Signal PCS/FFS_SKP_DELETED_2 undriven or does not drive anything - clipped.
+Signal PCS/FFS_SKP_DELETED_1 undriven or does not drive anything - clipped.
+Signal PCS/FFS_SKP_DELETED_0 undriven or does not drive anything - clipped.
+Signal PCS/FFS_SKP_ADDED_3 undriven or does not drive anything - clipped.
+Signal PCS/FFS_SKP_ADDED_2 undriven or does not drive anything - clipped.
+Signal PCS/FFS_SKP_ADDED_1 undriven or does not drive anything - clipped.
+Signal PCS/FFS_SKP_ADDED_0 undriven or does not drive anything - clipped.
+Signal PCS/COUT19 undriven or does not drive anything - clipped.
+Signal PCS/COUT18 undriven or does not drive anything - clipped.
+Signal PCS/COUT17 undriven or does not drive anything - clipped.
+Signal PCS/COUT16 undriven or does not drive anything - clipped.
+Signal PCS/COUT15 undriven or does not drive anything - clipped.
+Signal PCS/COUT14 undriven or does not drive anything - clipped.
+Signal PCS/COUT13 undriven or does not drive anything - clipped.
+Signal PCS/COUT12 undriven or does not drive anything - clipped.
+Signal PCS/COUT11 undriven or does not drive anything - clipped.
+Signal PCS/COUT10 undriven or does not drive anything - clipped.
+Signal PCS/COUT9 undriven or does not drive anything - clipped.
+Signal PCS/COUT8 undriven or does not drive anything - clipped.
+Signal PCS/COUT7 undriven or does not drive anything - clipped.
+Signal PCS/COUT6 undriven or does not drive anything - clipped.
+
+                                   Page 45
+
+
+
+
+Design:  TOP_LEVEL                                     Date:  01/24/21  17:37:41
+
+Removed logic (cont)
+--------------------
+Signal PCS/COUT5 undriven or does not drive anything - clipped.
+Signal PCS/COUT4 undriven or does not drive anything - clipped.
+Signal PCS/COUT3 undriven or does not drive anything - clipped.
+Signal PCS/COUT2 undriven or does not drive anything - clipped.
+Signal PCS/COUT1 undriven or does not drive anything - clipped.
+Signal PCS/COUT0 undriven or does not drive anything - clipped.
+Signal PCS/FFS_PLOL undriven or does not drive anything - clipped.
+Signal PCS/refclk2fpga undriven or does not drive anything - clipped.
+Signal PCS/FF_TX_H_CLK_3 undriven or does not drive anything - clipped.
+Signal PCS/FF_TX_H_CLK_2 undriven or does not drive anything - clipped.
+Signal PCS/FF_TX_H_CLK_1 undriven or does not drive anything - clipped.
+Signal PCS/FF_TX_H_CLK_0 undriven or does not drive anything - clipped.
+Signal PCS/FF_TX_F_CLK_3 undriven or does not drive anything - clipped.
+Signal PCS/FF_TX_F_CLK_2 undriven or does not drive anything - clipped.
+Signal PCS/FF_TX_F_CLK_1 undriven or does not drive anything - clipped.
+Signal PCS/FF_TX_F_CLK_0 undriven or does not drive anything - clipped.
+Signal PCS/SCIINT undriven or does not drive anything - clipped.
+Signal PCS/SCIRDATA7 undriven or does not drive anything - clipped.
+Signal PCS/SCIRDATA6 undriven or does not drive anything - clipped.
+Signal PCS/SCIRDATA5 undriven or does not drive anything - clipped.
+Signal PCS/SCIRDATA4 undriven or does not drive anything - clipped.
+Signal PCS/SCIRDATA3 undriven or does not drive anything - clipped.
+Signal PCS/SCIRDATA2 undriven or does not drive anything - clipped.
+Signal PCS/SCIRDATA1 undriven or does not drive anything - clipped.
+Signal PCS/SCIRDATA0 undriven or does not drive anything - clipped.
+Signal PCS/FFS_TXFBFIFO_ERROR_3 undriven or does not drive anything - clipped.
+Signal PCS/FFS_RXFBFIFO_ERROR_3 undriven or does not drive anything - clipped.
+Signal PCS/FFS_CC_OVERRUN_3 undriven or does not drive anything - clipped.
+Signal PCS/FFS_CC_UNDERRUN_3 undriven or does not drive anything - clipped.
+Signal PCS/FFS_LS_SYNC_STATUS_3 undriven or does not drive anything - clipped.
+Signal PCS/FFS_PCIE_CON_3 undriven or does not drive anything - clipped.
+Signal PCS/FFS_PCIE_DONE_3 undriven or does not drive anything - clipped.
+Signal PCS/FFS_RLOS_HI_3 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_3_23 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_3_22 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_3_11 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_3_10 undriven or does not drive anything - clipped.
+Signal PCS/rx_full_clk_ch3 undriven or does not drive anything - clipped.
+Signal PCS/FFS_TXFBFIFO_ERROR_2 undriven or does not drive anything - clipped.
+Signal PCS/FFS_RXFBFIFO_ERROR_2 undriven or does not drive anything - clipped.
+Signal PCS/FFS_RLOL_2 undriven or does not drive anything - clipped.
+Signal PCS/FFS_CC_OVERRUN_2 undriven or does not drive anything - clipped.
+Signal PCS/FFS_CC_UNDERRUN_2 undriven or does not drive anything - clipped.
+Signal PCS/FFS_LS_SYNC_STATUS_2 undriven or does not drive anything - clipped.
+Signal PCS/FFS_PCIE_CON_2 undriven or does not drive anything - clipped.
+Signal PCS/FFS_PCIE_DONE_2 undriven or does not drive anything - clipped.
+Signal PCS/FFS_RLOS_HI_2 undriven or does not drive anything - clipped.
+Signal PCS/FFS_RLOS_LO_2 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_2_23 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_2_22 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_2_21 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_2_20 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_2_19 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_2_18 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_2_17 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_2_16 undriven or does not drive anything - clipped.
+
+                                   Page 46
+
+
+
+
+Design:  TOP_LEVEL                                     Date:  01/24/21  17:37:41
+
+Removed logic (cont)
+--------------------
+Signal PCS/FF_RX_D_2_15 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_2_14 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_2_13 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_2_12 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_2_11 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_2_10 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_2_9 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_2_8 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_2_7 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_2_6 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_2_5 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_2_4 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_2_3 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_2_2 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_2_1 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_2_0 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_H_CLK_2 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_F_CLK_2 undriven or does not drive anything - clipped.
+Signal PCS/FFS_TXFBFIFO_ERROR_1 undriven or does not drive anything - clipped.
+Signal PCS/FFS_RXFBFIFO_ERROR_1 undriven or does not drive anything - clipped.
+Signal PCS/FFS_RLOL_1 undriven or does not drive anything - clipped.
+Signal PCS/FFS_CC_OVERRUN_1 undriven or does not drive anything - clipped.
+Signal PCS/FFS_CC_UNDERRUN_1 undriven or does not drive anything - clipped.
+Signal PCS/FFS_LS_SYNC_STATUS_1 undriven or does not drive anything - clipped.
+Signal PCS/FFS_PCIE_CON_1 undriven or does not drive anything - clipped.
+Signal PCS/FFS_PCIE_DONE_1 undriven or does not drive anything - clipped.
+Signal PCS/FFS_RLOS_HI_1 undriven or does not drive anything - clipped.
+Signal PCS/FFS_RLOS_LO_1 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_1_23 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_1_22 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_1_21 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_1_20 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_1_19 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_1_18 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_1_17 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_1_16 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_1_15 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_1_14 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_1_13 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_1_12 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_1_11 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_1_10 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_1_9 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_1_8 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_1_7 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_1_6 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_1_5 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_1_4 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_1_3 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_1_2 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_1_1 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_1_0 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_H_CLK_1 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_F_CLK_1 undriven or does not drive anything - clipped.
+Signal PCS/FFS_TXFBFIFO_ERROR_0 undriven or does not drive anything - clipped.
+Signal PCS/FFS_RXFBFIFO_ERROR_0 undriven or does not drive anything - clipped.
+
+                                   Page 47
+
+
+
+
+Design:  TOP_LEVEL                                     Date:  01/24/21  17:37:41
+
+Removed logic (cont)
+--------------------
+Signal PCS/FFS_RLOL_0 undriven or does not drive anything - clipped.
+Signal PCS/FFS_CC_OVERRUN_0 undriven or does not drive anything - clipped.
+Signal PCS/FFS_CC_UNDERRUN_0 undriven or does not drive anything - clipped.
+Signal PCS/FFS_LS_SYNC_STATUS_0 undriven or does not drive anything - clipped.
+Signal PCS/FFS_PCIE_CON_0 undriven or does not drive anything - clipped.
+Signal PCS/FFS_PCIE_DONE_0 undriven or does not drive anything - clipped.
+Signal PCS/FFS_RLOS_HI_0 undriven or does not drive anything - clipped.
+Signal PCS/FFS_RLOS_LO_0 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_0_23 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_0_22 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_0_21 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_0_20 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_0_19 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_0_18 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_0_17 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_0_16 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_0_15 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_0_14 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_0_13 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_0_12 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_0_11 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_0_10 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_0_9 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_0_8 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_0_7 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_0_6 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_0_5 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_0_4 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_0_3 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_0_2 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_0_1 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_D_0_0 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_H_CLK_0 undriven or does not drive anything - clipped.
+Signal PCS/FF_RX_F_CLK_0 undriven or does not drive anything - clipped.
+Signal PCS/rx_reset_sm_ch3/un1_counter2_1_cry_0_0_S0 undriven or does not drive
+     anything - clipped.
+Signal PCS/rx_reset_sm_ch3/N_1 undriven or does not drive anything - clipped.
+Signal PCS/rx_reset_sm_ch3/un1_counter2_1_cry_17_0_COUT undriven or does not
+     drive anything - clipped.
+Block PCS/rx_reset_sm_ch3/cs_illegalpipe2.CN was optimized away.
+Block PCS/rx_reset_sm_ch3/rx_pcs_rst_ch_c_RNO_0 was optimized away.
+Block SDI/VCC was optimized away.
+Block SDI/SDI_IP_inst/SDI_IP_inst/rstn_RNI7UU_7 was optimized away.
+Block SDI/SDI_IP_inst/SDI_IP_inst/rstn_RNI7UU_14 was optimized away.
+Block SDI/SDI_IP_inst/SDI_IP_inst/rstn_RNI7UU_38 was optimized away.
+Block SDI/SDI_IP_inst/SDI_IP_inst/rstn_RNI7UU_15 was optimized away.
+Block SDI/SDI_IP_inst/SDI_IP_inst/rstn_RNI7UU_21 was optimized away.
+Block SDI/SDI_IP_inst/SDI_IP_inst/rstn_RNI7UU_39 was optimized away.
+Block SDI/SDI_IP_inst/SDI_IP_inst/rstn_RNI7UU_31 was optimized away.
+Block SDI/SDI_IP_inst/SDI_IP_inst/rstn_RNI7UU_18 was optimized away.
+Block SDI/SDI_IP_inst/SDI_IP_inst/rstn_RNI7UU_45 was optimized away.
+Block SDI/SDI_IP_inst/SDI_IP_inst/rstn_RNI7UU_37 was optimized away.
+Block SDI/SDI_IP_inst/SDI_IP_inst/rstn_RNI7UU_42 was optimized away.
+Block SDI/SDI_IP_inst/SDI_IP_inst/rstn_RNI7UU_29 was optimized away.
+Block SDI/SDI_IP_inst/SDI_IP_inst/rstn_RNI7UU_19 was optimized away.
+Block SDI/SDI_IP_inst/SDI_IP_inst/rstn_RNI7UU_40 was optimized away.
+
+                                   Page 48
+
+
+
+
+Design:  TOP_LEVEL                                     Date:  01/24/21  17:37:41
+
+Removed logic (cont)
+--------------------
+Block SDI/SDI_IP_inst/SDI_IP_inst/rstn_RNI7UU_27 was optimized away.
+Block SDI/SDI_IP_inst/SDI_IP_inst/rstn_RNI7UU_23 was optimized away.
+Block SDI/SDI_IP_inst/SDI_IP_inst/rstn_RNI7UU_35 was optimized away.
+Block SDI/SDI_IP_inst/SDI_IP_inst/rstn_RNI7UU_16 was optimized away.
+Block SDI/SDI_IP_inst/SDI_IP_inst/rstn_RNI7UU_44 was optimized away.
+Block SDI/SDI_IP_inst/SDI_IP_inst/rstn_RNI7UU_10 was optimized away.
+Block SDI/SDI_IP_inst/SDI_IP_inst/rstn_RNI7UU_43 was optimized away.
+Block SDI/SDI_IP_inst/SDI_IP_inst/rstn_RNI7UU_17 was optimized away.
+Block SDI/SDI_IP_inst/SDI_IP_inst/rstn_RNI7UU_24 was optimized away.
+Block SDI/SDI_IP_inst/SDI_IP_inst/rstn_RNI7UU_22 was optimized away.
+Block SDI/SDI_IP_inst/SDI_IP_inst/rstn_RNI7UU_11 was optimized away.
+Block SDI/SDI_IP_inst/SDI_IP_inst/rstn_RNI7UU_34 was optimized away.
+Block SDI/SDI_IP_inst/SDI_IP_inst/rstn_RNI7UU_9 was optimized away.
+Block SDI/SDI_IP_inst/SDI_IP_inst/rstn_RNI7UU_32 was optimized away.
+Block SDI/SDI_IP_inst/SDI_IP_inst/rstn_RNI7UU_13 was optimized away.
+Block SDI/SDI_IP_inst/SDI_IP_inst/rstn_RNI7UU_36 was optimized away.
+Block SDI/SDI_IP_inst/SDI_IP_inst/rstn_RNI7UU_12 was optimized away.
+Block SDI/SDI_IP_inst/SDI_IP_inst/rstn_RNI7UU_33 was optimized away.
+Block SDI/SDI_IP_inst/SDI_IP_inst/rstn_RNI7UU_6 was optimized away.
+Block SDI/SDI_IP_inst/SDI_IP_inst/rstn_RNI7UU_30 was optimized away.
+Block SDI/SDI_IP_inst/SDI_IP_inst/rstn_RNI7UU_41 was optimized away.
+Block PCS/GND was optimized away.
+
+PLL/DLL Summary
+---------------
+
+PLL 1:                                     Pin/Node Value
+  PLL Instance Name:                                PLL1/PLLInst_0
+  PLL Type:                                         EHXPLLF
+  Input Clock:                             PIN      clk_c
+  Output Clock(P):                         NODE     CLKOP
+  Output Clock(K2):                                 NONE
+  Output Clock(S):                                  NONE
+  Output Clock(K):                                  NONE
+  PLL Feedback Signal:                     NODE     CLKOP
+  PLL Reset Signal:                                 NONE
+  PLL K Divider Reset Signal:                       NONE
+  PLL LOCK Signal:                                  NONE
+  Dynamic Phase Adjust Input 0:            NODE     PLL1/GND
+  Dynamic Phase Adjust Input 1:            NODE     PLL1/GND
+  Dynamic Phase Adjust Input 2:            NODE     PLL1/GND
+  Dynamic Phase Adjust Input 3:            NODE     PLL1/GND
+  Dynamic Duty Adjust Input 0:             NODE     PLL1/GND
+  Dynamic Duty Adjust Input 1:             NODE     PLL1/GND
+  Dynamic Duty Adjust Input 2:             NODE     PLL1/GND
+  Dynamic Duty Adjust Input 3:             NODE     PLL1/GND
+  Dynamic CLKOS Delay Adjust Input 0:      NODE     PLL1/GND
+  Dynamic CLKOS Delay Adjust Input 1:      NODE     PLL1/GND
+  Dynamic CLKOS Delay Adjust Input 2:      NODE     PLL1/GND
+  Dynamic CLKOS Delay Adjust Input 3:      NODE     PLL1/GND
+  Dynamic CLKOS Single Step Delay Adjust:  NODE     PLL1/GND
+  Input Clock Frequency (MHz):                      125.0000
+  Output Clock(P) Frequency (MHz):                  148.4375
+  Output Clock(K2) Frequency (MHz):                 NA
+  Output Clock(K) Frequency (MHz):                  NA
+  Output Clock(P) Actual Frequency:                 148.4375
+
+                                   Page 49
+
+
+
+
+Design:  TOP_LEVEL                                     Date:  01/24/21  17:37:41
+
+PLL/DLL Summary (cont)
+----------------------
+  Output Clock(P) Frequency Tolerance:              NONE
+  CLKOP BYPASS:                                     DISABLED
+  CLKOS BYPASS:                                     DISABLED
+  CLKOK BYPASS:                                     DISABLED
+  CLKOK Input:                                      CLKOP
+  FB_MODE:                                          CLKOP
+  CLKI Divider:                                     16
+  CLKFB Divider:                                    19
+  CLKOP Divider:                                    4
+  CLKOK Divider:                                    2
+  Phase_Duty Control:                               STATIC
+  CLKOS Phase Shift (degree):                       0.0
+  CLKOS Duty Cycle:                                 8
+  CLKOS Delay Adjust:                               NONE
+  CLKOS Delay Adjust Power Down:                    DISABLED
+  CLKOS Delay Adjust Static Delay (ps):             0
+  CLKOP Duty Trim Polarity:                         RISING
+  CLKOP Duty Trim Polarity Delay (ps):              0
+  CLKOS Duty Trim Polarity:                         RISING
+  CLKOS Duty Trim Polarity Delay (ps):              0
+
+ASIC Components
+---------------
+
+Instance Name: PCS/PCSD_INST
+         Type: PCSD
+Instance Name: PLL1/PLLInst_0
+         Type: EHXPLLF
+
+GSR Usage
+---------
+
+GSR Component:
+   The local reset signal 'PCS/rx_reset_sm_ch3/cs_illegalpipe2' of the design
+        has been inferred as Global Set Reset (GSR). The reset signal used for
+        GSR control is 'PCS/rx_reset_sm_ch3/cs_illegalpipe2'.
+        
+
+     GSR Property:
+   The design components with GSR property set to ENABLED will respond to global
+        set reset while the components with GSR property set to DISABLED will
+        not.
+        
+
+Run Time and Memory Usage
+-------------------------
+
+   Total CPU Time: 2 secs  
+   Total REAL Time: 3 secs  
+   Peak Memory Usage: 551 MB
+        
+
+
+
+
+
+
+                                   Page 50
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+     Copyright (c) 1995 AT&T Corp.   All rights reserved.
+     Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+     Copyright (c) 2001 Agere Systems   All rights reserved.
+     Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights
+     reserved.

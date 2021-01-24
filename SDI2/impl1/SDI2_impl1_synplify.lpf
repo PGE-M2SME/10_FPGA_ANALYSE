@@ -1,0 +1,23 @@
+#
+# Logical Preferences generated for Lattice by Synplify maplat2018q2p1, Build 055R.
+#
+
+# Period Constraints 
+#FREQUENCY NET "PLL1/CLKOP" 200.0 MHz;
+#FREQUENCY NET "PCS/refclkdiv2_rx_ch3" 200.0 MHz;
+
+
+# Output Constraints 
+
+# Input Constraints 
+
+# Point-to-point Delay Constraints 
+
+#MULTICYCLE FROM CLKNET "PCS/refclkdiv2_rx_ch3"  TO CLKNET "PCS/refclkdiv2_rx_ch3"  2X;
+
+
+# Block Path Constraints 
+
+BLOCK ASYNCPATHS;
+
+# End of generated Logical Preferences.

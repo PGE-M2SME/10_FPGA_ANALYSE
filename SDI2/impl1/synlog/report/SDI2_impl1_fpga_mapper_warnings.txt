@@ -1,0 +1,4 @@
+@W: MT246 :"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":2371:0:2371:8|Blackbox PCSD is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results)
+@W: MT246 :"/home/diamond/SharedFolder/SDI2/sdi_eval/SDI_IP/src/rtl/top/ecp3/SDI_IP_top.vhd":83:3:83:13|Blackbox SDI_IP is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results)
+@W: MT246 :"/home/diamond/SharedFolder/SDI2/PLL_IP.vhd":65:4:65:12|Blackbox EHXPLLF is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results)
+@W: MT420 |Found inferred clock PLL_IP|CLKOP_inferred_clock with period 5.00ns. Please declare a user-defined clock on net PLL1.CLKOP.

@@ -1,0 +1,13 @@
+Logfile for Reveal Analyzer
+Version: Diamond 3.11.3.469
+Platform: Linux 64bit
+Filename: /home/diamond/SharedFolder/SDI2/impl1/reveal_debug.log
+First created: Sat Jan 23 04:47:32 2021
+[04:47:41] Detect USB port
+[04:47:41] Connecting cableserver to detect cable port....
+[04:47:46] @Connect
+[04:47:46] @QueryCable
+[04:47:46] @Read
+[04:47:46] failed to read cable list (error=-1001)
+[04:47:46] @Disconnect
+Last closed: Sat Jan 23 04:48:46 2021

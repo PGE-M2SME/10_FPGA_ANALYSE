@@ -1,0 +1,429 @@
+# Sun Jan 24 17:37:37 2021
+
+
+Copyright (C) 1994-2018 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: N-2018.03L-SP1-1
+Install: /usr/local/diamond/3.11_x64/synpbase
+OS: CentOS Linux 7 (Core)
+Hostname: 15acaac0c3d8
+
+Implementation : impl1
+Synopsys Lattice Technology Mapper, Version maplat2018q2p1, Build 055R, Built Apr  3 2019 09:24:52
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 98MB peak: 99MB)
+
+@N: MF284 |Setting synthesis effort to medium for the design
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 98MB peak: 100MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 98MB peak: 100MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 111MB peak: 111MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 111MB peak: 113MB)
+
+@N: MF284 |Setting synthesis effort to medium for the design
+
+
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 139MB peak: 142MB)
+
+
+Available hyper_sources - for debug and ip models
+	None Found
+
+
+Finished RTL optimizations (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 140MB peak: 142MB)
+
+
+Starting factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 140MB peak: 142MB)
+
+
+Finished factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 141MB peak: 142MB)
+
+
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 141MB peak: 142MB)
+
+
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 141MB peak: 142MB)
+
+
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 141MB peak: 142MB)
+
+
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 141MB peak: 142MB)
+
+
+Finished preparing to map (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 141MB peak: 142MB)
+
+
+Finished technology mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 141MB peak: 142MB)
+
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+   1		0h:00m:00s		     3.31ns		  19 /        34
+
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 141MB peak: 142MB)
+
+@N: FX164 |The option to pack registers in the IOB has not been specified. Please set syn_useioff attribute.  
+
+Finished restoring hierarchy (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 141MB peak: 142MB)
+
+
+Start Writing Netlists (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 106MB peak: 142MB)
+
+Writing Analyst data base /home/diamond/SharedFolder/SDI2/impl1/synwork/SDI2_impl1_m.srm
+
+Finished Writing Netlist Databases (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 139MB peak: 142MB)
+
+Writing EDIF Netlist and constraint files
+@N: FX1056 |Writing EDF file: /home/diamond/SharedFolder/SDI2/impl1/SDI2_impl1.edi
+N-2018.03L-SP1-1
+@N: BW106 |Synplicity Constraint File capacitance units using default value of 1pF 
+
+Finished Writing EDIF Netlist and constraint files (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 144MB peak: 146MB)
+
+
+Start final timing analysis (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 145MB peak: 146MB)
+
+@W: MT246 :"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":2371:0:2371:8|Blackbox PCSD is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results)
+@W: MT246 :"/home/diamond/SharedFolder/SDI2/sdi_eval/SDI_IP/src/rtl/top/ecp3/SDI_IP_top.vhd":83:3:83:13|Blackbox SDI_IP is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results)
+@W: MT246 :"/home/diamond/SharedFolder/SDI2/PLL_IP.vhd":65:4:65:12|Blackbox EHXPLLF is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results)
+@W: MT420 |Found inferred clock PLL_IP|CLKOP_inferred_clock with period 5.00ns. Please declare a user-defined clock on net PLL1.CLKOP.
+@N: MT615 |Found clock PCS_IP|refclkdiv2_rx_ch3_derived_clock with period 5.00ns 
+
+
+##### START OF TIMING REPORT #####[
+# Timing Report written on Sun Jan 24 17:37:38 2021
+#
+
+
+Top view:               TOP_LEVEL
+Requested Frequency:    200.0 MHz
+Wire load mode:         top
+Paths requested:        5
+Constraint File(s):    
+@N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
+
+@N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.
+
+
+
+Performance Summary
+*******************
+
+
+Worst slack in design: 2.829
+
+@N: MT286 |System clock period 0.000 stretches to negative invalid value -- ignoring stretching.
+                                           Requested     Estimated      Requested     Estimated               Clock                                          Clock              
+Starting Clock                             Frequency     Frequency      Period        Period        Slack     Type                                           Group              
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+PCS_IP|refclkdiv2_rx_ch3_derived_clock     200.0 MHz     510.7 MHz      5.000         1.958         6.084     derived (from PLL_IP|CLKOP_inferred_clock)     Inferred_clkgroup_0
+PLL_IP|CLKOP_inferred_clock                200.0 MHz     460.7 MHz      5.000         2.171         2.829     inferred                                       Inferred_clkgroup_0
+System                                     200.0 MHz     1556.9 MHz     5.000         0.642         4.358     system                                         system_clkgroup    
+================================================================================================================================================================================
+
+
+
+
+
+Clock Relationships
+*******************
+
+Clocks                                                                          |    rise  to  rise   |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Starting                                Ending                                  |  constraint  slack  |  constraint  slack  |  constraint  slack  |  constraint  slack
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+System                                  System                                  |  5.000       5.000  |  No paths    -      |  No paths    -      |  No paths    -    
+System                                  PCS_IP|refclkdiv2_rx_ch3_derived_clock  |  5.000       4.358  |  No paths    -      |  No paths    -      |  No paths    -    
+PLL_IP|CLKOP_inferred_clock             PLL_IP|CLKOP_inferred_clock             |  5.000       2.829  |  No paths    -      |  No paths    -      |  No paths    -    
+PCS_IP|refclkdiv2_rx_ch3_derived_clock  System                                  |  5.000       4.018  |  No paths    -      |  No paths    -      |  No paths    -    
+PCS_IP|refclkdiv2_rx_ch3_derived_clock  PCS_IP|refclkdiv2_rx_ch3_derived_clock  |  5.000       6.084  |  No paths    -      |  2.500       6.433  |  No paths    -    
+======================================================================================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+No IO constraint found
+
+
+
+====================================
+Detailed Report for Clock: PCS_IP|refclkdiv2_rx_ch3_derived_clock
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                           Starting                                                                               Arrival          
+Instance                                   Reference                                  Type        Pin     Net                     Time        Slack
+                                           Clock                                                                                                   
+---------------------------------------------------------------------------------------------------------------------------------------------------
+PCS.rx_reset_sm_ch3.rx_pcs_rst_ch_c        PCS_IP|refclkdiv2_rx_ch3_derived_clock     FD1S3JX     Q       rx_pcs_rst_ch3_c        0.982       4.018
+PCS.rx_reset_sm_ch3.rx_serdes_rst_ch_c     PCS_IP|refclkdiv2_rx_ch3_derived_clock     FD1S3JX     Q       rx_serdes_rst_ch3_c     0.982       4.018
+PCS.rx_reset_sm_ch3.counter2[18]           PCS_IP|refclkdiv2_rx_ch3_derived_clock     FD1S3IX     Q       counter2[18]            1.145       6.084
+PCS.rx_reset_sm_ch3.counter2[0]            PCS_IP|refclkdiv2_rx_ch3_derived_clock     FD1S3IX     Q       counter2[0]             0.982       6.247
+PCS.rx_reset_sm_ch3.counter2[1]            PCS_IP|refclkdiv2_rx_ch3_derived_clock     FD1S3IX     Q       counter2[1]             0.982       6.297
+PCS.rx_reset_sm_ch3.counter2[2]            PCS_IP|refclkdiv2_rx_ch3_derived_clock     FD1S3IX     Q       counter2[2]             0.982       6.297
+PCS.rx_reset_sm_ch3.counter2[3]            PCS_IP|refclkdiv2_rx_ch3_derived_clock     FD1S3IX     Q       counter2[3]             0.982       6.347
+PCS.rx_reset_sm_ch3.counter2[4]            PCS_IP|refclkdiv2_rx_ch3_derived_clock     FD1S3IX     Q       counter2[4]             0.982       6.347
+PCS.rx_reset_sm_ch3.counter2[5]            PCS_IP|refclkdiv2_rx_ch3_derived_clock     FD1S3IX     Q       counter2[5]             0.982       6.397
+PCS.rx_reset_sm_ch3.counter2[6]            PCS_IP|refclkdiv2_rx_ch3_derived_clock     FD1S3IX     Q       counter2[6]             0.982       6.397
+===================================================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                     Starting                                                                                             Required          
+Instance                             Reference                                  Type        Pin                   Net                     Time         Slack
+                                     Clock                                                                                                                  
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+PCS.PCSD_INST                        PCS_IP|refclkdiv2_rx_ch3_derived_clock     PCSD        FFC_LANE_RX_RST_3     rx_pcs_rst_ch3_c        5.000        4.018
+PCS.PCSD_INST                        PCS_IP|refclkdiv2_rx_ch3_derived_clock     PCSD        FFC_RRST_3            rx_serdes_rst_ch3_c     5.000        4.018
+PCS.rx_reset_sm_ch3.counter2[17]     PCS_IP|refclkdiv2_rx_ch3_derived_clock     FD1S3IX     D                     un1_counter2_1[18]      9.915        6.084
+PCS.rx_reset_sm_ch3.counter2[18]     PCS_IP|refclkdiv2_rx_ch3_derived_clock     FD1S3IX     D                     un1_counter2_1[19]      9.915        6.084
+PCS.rx_reset_sm_ch3.counter2[15]     PCS_IP|refclkdiv2_rx_ch3_derived_clock     FD1S3IX     D                     un1_counter2_1[16]      9.915        6.134
+PCS.rx_reset_sm_ch3.counter2[16]     PCS_IP|refclkdiv2_rx_ch3_derived_clock     FD1S3IX     D                     un1_counter2_1[17]      9.915        6.134
+PCS.rx_reset_sm_ch3.counter2[13]     PCS_IP|refclkdiv2_rx_ch3_derived_clock     FD1S3IX     D                     un1_counter2_1[14]      9.915        6.184
+PCS.rx_reset_sm_ch3.counter2[14]     PCS_IP|refclkdiv2_rx_ch3_derived_clock     FD1S3IX     D                     un1_counter2_1[15]      9.915        6.184
+PCS.rx_reset_sm_ch3.counter2[11]     PCS_IP|refclkdiv2_rx_ch3_derived_clock     FD1S3IX     D                     un1_counter2_1[12]      9.915        6.234
+PCS.rx_reset_sm_ch3.counter2[12]     PCS_IP|refclkdiv2_rx_ch3_derived_clock     FD1S3IX     D                     un1_counter2_1[13]      9.915        6.234
+============================================================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      5.000
+    - Setup time:                            0.000
+    + Clock delay at ending point:           0.000 (ideal)
+    + Estimated clock delay at ending point: 0.000
+    = Required time:                         5.000
+
+    - Propagation time:                      0.982
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 4.018
+
+    Number of logic level(s):                0
+    Starting point:                          PCS.rx_reset_sm_ch3.rx_pcs_rst_ch_c / Q
+    Ending point:                            PCS.PCSD_INST / FFC_LANE_RX_RST_3
+    The start point is clocked by            PCS_IP|refclkdiv2_rx_ch3_derived_clock [rising] on pin CK
+    The end   point is clocked by            System [rising]
+
+Instance / Net                                      Pin                   Pin               Arrival     No. of    
+Name                                    Type        Name                  Dir     Delay     Time        Fan Out(s)
+------------------------------------------------------------------------------------------------------------------
+PCS.rx_reset_sm_ch3.rx_pcs_rst_ch_c     FD1S3JX     Q                     Out     0.982     0.982       -         
+rx_pcs_rst_ch3_c                        Net         -                     -       -         -           1         
+PCS.PCSD_INST                           PCSD        FFC_LANE_RX_RST_3     In      0.000     0.982       -         
+==================================================================================================================
+
+
+
+
+====================================
+Detailed Report for Clock: PLL_IP|CLKOP_inferred_clock
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                          Starting                                                                    Arrival          
+Instance                  Reference                       Type        Pin     Net                     Time        Slack
+                          Clock                                                                                        
+-----------------------------------------------------------------------------------------------------------------------
+PCS.refclkdiv2_rx_ch3     PLL_IP|CLKOP_inferred_clock     FD1S3AX     Q       refclkdiv2_rx_ch3_i     1.405       2.829
+=======================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                          Starting                                                                      Required          
+Instance                  Reference                       Type        Pin     Net                       Time         Slack
+                          Clock                                                                                           
+--------------------------------------------------------------------------------------------------------------------------
+PCS.refclkdiv2_rx_ch3     PLL_IP|CLKOP_inferred_clock     FD1S3AX     D       refclkdiv2_rx_ch3_i_i     4.915        2.829
+==========================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      5.000
+    - Setup time:                            0.085
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.915
+
+    - Propagation time:                      2.086
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     2.829
+
+    Number of logic level(s):                1
+    Starting point:                          PCS.refclkdiv2_rx_ch3 / Q
+    Ending point:                            PCS.refclkdiv2_rx_ch3 / D
+    The start point is clocked by            PLL_IP|CLKOP_inferred_clock [rising] on pin CK
+    The end   point is clocked by            PLL_IP|CLKOP_inferred_clock [rising] on pin CK
+
+Instance / Net                            Pin      Pin               Arrival     No. of    
+Name                          Type        Name     Dir     Delay     Time        Fan Out(s)
+-------------------------------------------------------------------------------------------
+PCS.refclkdiv2_rx_ch3         FD1S3AX     Q        Out     1.405     1.405       -         
+refclkdiv2_rx_ch3_i           Net         -        -       -         -           34        
+PCS.refclkdiv2_rx_ch3_i_i     INV         A        In      0.000     1.405       -         
+PCS.refclkdiv2_rx_ch3_i_i     INV         Z        Out     0.682     2.086       -         
+refclkdiv2_rx_ch3_i_i         Net         -        -       -         -           1         
+PCS.refclkdiv2_rx_ch3         FD1S3AX     D        In      0.000     2.086       -         
+===========================================================================================
+
+
+
+
+====================================
+Detailed Report for Clock: System
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                  Starting                                                      Arrival          
+Instance          Reference     Type     Pin               Net                  Time        Slack
+                  Clock                                                                          
+-------------------------------------------------------------------------------------------------
+PCS.PCSD_INST     System        PCSD     FFS_RLOL_3        rx_cdr_lol_ch3_s     0.000       4.358
+PCS.PCSD_INST     System        PCSD     FFS_RLOS_LO_3     rx_los_low_ch3_s     0.000       4.915
+PCS.PCSD_INST     System        PCSD     FF_RX_D_3_0       rxdata[0]            0.000       5.000
+PCS.PCSD_INST     System        PCSD     FF_RX_D_3_1       rxdata[1]            0.000       5.000
+PCS.PCSD_INST     System        PCSD     FF_RX_D_3_2       rxdata[2]            0.000       5.000
+PCS.PCSD_INST     System        PCSD     FF_RX_D_3_3       rxdata[3]            0.000       5.000
+PCS.PCSD_INST     System        PCSD     FF_RX_D_3_4       rxdata[4]            0.000       5.000
+PCS.PCSD_INST     System        PCSD     FF_RX_D_3_5       rxdata[5]            0.000       5.000
+PCS.PCSD_INST     System        PCSD     FF_RX_D_3_6       rxdata[6]            0.000       5.000
+PCS.PCSD_INST     System        PCSD     FF_RX_D_3_7       rxdata[7]            0.000       5.000
+=================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                       Starting                                                        Required          
+Instance                               Reference     Type        Pin              Net                  Time         Slack
+                                       Clock                                                                             
+-------------------------------------------------------------------------------------------------------------------------
+PCS.rx_reset_sm_ch3.rx_lol_los_del     System        FD1S3JX     PD               rx_cdr_lol_ch3_s     4.358        4.358
+PCS.rx_reset_sm_ch3.rx_lol_los_del     System        FD1S3JX     D                rx_los_low_ch3_s     4.915        4.915
+PCS.rx_reset_sm_ch3.rx_los_low_int     System        FD1S3AX     D                rx_los_low_ch3_s     4.915        4.915
+PCS.PCSD_INST                          System        PCSD        FF_RXI_CLK_3     rx_hlfClk            5.000        5.000
+SDI.SDI_IP_inst                        System        SDI_IP      rx_clk           rx_hlfClk            5.000        5.000
+SDI.SDI_IP_inst                        System        SDI_IP      rxdata[0]        rxdata[0]            5.000        5.000
+SDI.SDI_IP_inst                        System        SDI_IP      rxdata[1]        rxdata[1]            5.000        5.000
+SDI.SDI_IP_inst                        System        SDI_IP      rxdata[2]        rxdata[2]            5.000        5.000
+SDI.SDI_IP_inst                        System        SDI_IP      rxdata[3]        rxdata[3]            5.000        5.000
+SDI.SDI_IP_inst                        System        SDI_IP      rxdata[4]        rxdata[4]            5.000        5.000
+=========================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      5.000
+    - Setup time:                            0.642
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.358
+
+    - Propagation time:                      0.000
+    - Clock delay at starting point:         0.000 (ideal)
+    - Estimated clock delay at start point:  -0.000
+    = Slack (non-critical) :                 4.358
+
+    Number of logic level(s):                0
+    Starting point:                          PCS.PCSD_INST / FFS_RLOL_3
+    Ending point:                            PCS.rx_reset_sm_ch3.rx_lol_los_del / PD
+    The start point is clocked by            System [rising]
+    The end   point is clocked by            PCS_IP|refclkdiv2_rx_ch3_derived_clock [rising] on pin CK
+
+Instance / Net                                     Pin            Pin               Arrival     No. of    
+Name                                   Type        Name           Dir     Delay     Time        Fan Out(s)
+----------------------------------------------------------------------------------------------------------
+PCS.PCSD_INST                          PCSD        FFS_RLOL_3     Out     0.000     0.000       -         
+rx_cdr_lol_ch3_s                       Net         -              -       -         -           1         
+PCS.rx_reset_sm_ch3.rx_lol_los_del     FD1S3JX     PD             In      0.000     0.000       -         
+==========================================================================================================
+
+
+
+##### END OF TIMING REPORT #####]
+
+Timing exceptions that could not be applied
+None
+
+Finished final timing analysis (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 145MB peak: 146MB)
+
+
+Finished timing report (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 145MB peak: 146MB)
+
+---------------------------------------
+Resource Usage Report
+Part: lfe3_70e-8
+
+Register bits: 34 of 62640 (0%)
+PIC Latch:       0
+I/O cells:       3
+
+
+Details:
+CCU2C:          10
+FD1S3AX:        6
+FD1S3DX:        3
+FD1S3IX:        22
+FD1S3JX:        3
+GSR:            1
+IB:             1
+INV:            4
+OB:             2
+ORCALUT4:       15
+PFUMX:          2
+PUR:            1
+VHI:            4
+VLO:            5
+true:           1
+Mapper successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 32MB peak: 146MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Sun Jan 24 17:37:38 2021
+
+###########################################################]

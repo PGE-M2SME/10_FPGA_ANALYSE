@@ -1,0 +1,134 @@
+# Sun Jan 24 17:37:35 2021
+
+
+Copyright (C) 1994-2018 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: N-2018.03L-SP1-1
+Install: /usr/local/diamond/3.11_x64/synpbase
+OS: CentOS Linux 7 (Core)
+Hostname: 15acaac0c3d8
+
+Implementation : impl1
+Synopsys Lattice Technology Pre-mapping, Version maplat2018q2p1, Build 055R, Built Apr  3 2019 09:24:52
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 98MB peak: 99MB)
+
+@A: MF827 |No constraint file specified.
+@N: MF284 |Setting synthesis effort to medium for the design
+@L: /home/diamond/SharedFolder/SDI2/impl1/SDI2_impl1_scck.rpt 
+Printing clock  summary report in "/home/diamond/SharedFolder/SDI2/impl1/SDI2_impl1_scck.rpt" file 
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 100MB peak: 101MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 100MB peak: 101MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 112MB peak: 112MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 112MB peak: 114MB)
+
+@N: MF284 |Setting synthesis effort to medium for the design
+@N: MH105 |UMR3 is only supported for HAPS-80.
+@N: MH105 |UMR3 is only supported for HAPS-80.
+@W: MO129 :"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":1575:3:1575:4|Sequential instance PCS.rx_reset_sm_ch3.rstn_m1 is reduced to a combinational gate by constant propagation.
+@W: MO129 :"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":1575:3:1575:4|Sequential instance PCS.rx_reset_sm_ch3.rstn_m2 is reduced to a combinational gate by constant propagation.
+@W: MO129 :"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":1591:3:1591:4|Sequential instance PCS.rx_reset_sm_ch3.tx_pll_lol_qd_s_int is reduced to a combinational gate by constant propagation.
+Encoding state machine cs[0:5] (in view: work.PCS_IPrx_reset_sm(rx_reset_sm_arch))
+original code -> new code
+   000001 -> 000
+   000010 -> 001
+   000100 -> 010
+   001000 -> 011
+   010000 -> 100
+   100000 -> 101
+@N: MO195 :"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":1591:3:1591:4|Using syn_encoding = safe, FSM error recovery to reset state is enabled for cs[0:5].  
+syn_allowed_resources : blockrams=240  set on top level netlist TOP_LEVEL
+
+Finished netlist restructuring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 141MB peak: 142MB)
+
+
+
+Clock Summary
+******************
+
+          Start                                        Requested     Requested     Clock                                          Clock                   Clock
+Level     Clock                                        Frequency     Period        Type                                           Group                   Load 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+0 -       System                                       200.0 MHz     5.000         system                                         system_clkgroup         0    
+                                                                                                                                                               
+0 -       PLL_IP|CLKOP_inferred_clock                  200.0 MHz     5.000         inferred                                       Inferred_clkgroup_0     1    
+1 .         PCS_IP|refclkdiv2_rx_ch3_derived_clock     200.0 MHz     5.000         derived (from PLL_IP|CLKOP_inferred_clock)     Inferred_clkgroup_0     33   
+===============================================================================================================================================================
+
+
+
+Clock Load Summary
+***********************
+
+                                           Clock     Source                              Clock Pin                                Non-clock Pin     Non-clock Pin                     
+Clock                                      Load      Pin                                 Seq Example                              Seq Example       Comb Example                      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+System                                     0         -                                   -                                        -                 -                                 
+                                                                                                                                                                                      
+PLL_IP|CLKOP_inferred_clock                1         PLL1.PLLInst_0.CLKOP(EHXPLLF)       PCS.refclkdiv2_rx_ch3.C                  -                 -                                 
+PCS_IP|refclkdiv2_rx_ch3_derived_clock     33        PCS.refclkdiv2_rx_ch3.Q[0](dff)     PCS.rx_reset_sm_ch3.rx_lol_los_int.C     -                 PCS.rx_reset_sm_ch3.cs_4.I[0](inv)
+======================================================================================================================================================================================
+
+@W: MT529 :"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":2884:5:2884:6|Found inferred clock PLL_IP|CLKOP_inferred_clock which controls 1 sequential elements including PCS.refclkdiv2_rx_ch3. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 
+
+ICG Latch Removal Summary:
+Number of ICG latches removed: 0
+Number of ICG latches not removed:	0
+
+
+@S |Clock Optimization Summary
+
+
+
+#### START OF PREMAP CLOCK OPTIMIZATION REPORT #####[
+
+0 non-gated/non-generated clock tree(s) driving 0 clock pin(s) of sequential element(s)
+2 gated/generated clock tree(s) driving 34 clock pin(s) of sequential element(s)
+0 instances converted, 34 sequential instances remain driven by gated/generated clocks
+
+======================================================================= Gated/Generated Clocks ========================================================================
+Clock Tree ID     Driving Element                Drive Element Type     Unconverted Fanout     Sample Instance               Explanation                               
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@KP:ckid0_0       PCS.refclkdiv2_rx_ch3.Q[0]     dff                    33                     PCS.rx_reset_sm_ch3.cs[2]     Derived clock on input (not legal for GCC)
+@KP:ckid0_2       PLL1.PLLInst_0.CLKOP           EHXPLLF                1                      PCS.refclkdiv2_rx_ch3         Black box on clock path                   
+=======================================================================================================================================================================
+
+
+##### END OF CLOCK OPTIMIZATION REPORT ######
+
+@N: FX1143 |Skipping assigning INTERNAL_VREF to iobanks, because the table of mapping from pin to iobank is not initialized.
+Finished Pre Mapping Phase.
+
+Starting constraint checker (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 140MB peak: 142MB)
+
+
+Finished constraint checker preprocessing (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 140MB peak: 142MB)
+
+None
+None
+
+Finished constraint checker (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 140MB peak: 142MB)
+
+Pre-mapping successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 56MB peak: 142MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Sun Jan 24 17:37:36 2021
+
+###########################################################]

@@ -1,0 +1,1362 @@
+<HTML>
+<HEAD><TITLE>Lattice TRACE Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Par_Twr"></A><B><U><big>Place & Route TRACE Report</big></U></B>
+
+Loading design for application trce from file SDI2_impl1.ncd.
+Design name: TOP_LEVEL
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE3-70E
+Package:     FPBGA672
+Performance: 8
+Loading device for application trce from file 'ep5c97x146.nph' in environment: /usr/local/diamond/3.11_x64/ispfpga.
+Package Status:                     Final          Version 1.65.
+Performance Hardware Data Status:   Final          Version 35.22.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+<A name="Par_Twr_setup"></A><B><U><big>Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.11.3.469</big></U></B>
+Sun Jan 24 17:38:19 2021
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+<A name="ptwr_set_ri"></A><B><U><big>Report Information</big></U></B>
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 8 -sphld m -o SDI2_impl1.twr -gui SDI2_impl1.ncd SDI2_impl1.prf 
+Design file:     SDI2_impl1.ncd
+Preference file: SDI2_impl1.prf
+Device,speed:    LFE3-70E,8
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+<A name="ptwr_set_ps"></A><B><U><big>Preference Summary</big></U></B>
+
+<LI><A href='#par_twr_pref_0_0' Target='right'>FREQUENCY NET "clk_c" 125.000000 MHz (0 errors)</A></LI>            0 items scored, 0 timing errors detected.
+
+<LI><A href='#par_twr_pref_0_1' Target='right'>FREQUENCY NET "CLKOP" 148.437500 MHz (0 errors)</A></LI>            1 item scored, 0 timing errors detected.
+Report:  500.000MHz is the maximum frequency for this preference.
+
+<LI><A href='#par_twr_pref_0_2' Target='right'>FREQUENCY NET "rx_hlfClk" 148.500000 MHz (0 errors)</A></LI>            4096 items scored, 0 timing errors detected.
+Report:  190.295MHz is the maximum frequency for this preference.
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+<A name="par_twr_pref_0_0"></A>Preference: FREQUENCY NET "clk_c" 125.000000 MHz ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+<A name="par_twr_pref_0_1"></A>Preference: FREQUENCY NET "CLKOP" 148.437500 MHz ;
+            1 item scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed:  The following path meets requirements by 4.737ns
+         The internal maximum frequency of the following component is 500.000 MHz
+
+ Logical Details:  Cell type  Pin name       Component name
+
+   Destination:    FSLICE     CLK            PCS/SLICE_37
+
+   Delay:               2.000ns -- based on Minimum Pulse Width
+
+
+Passed: The following path meets requirements by 6.141ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              PCS/refclkdiv2_rx_ch3  (from CLKOP +)
+   Destination:    FF         Data in        PCS/refclkdiv2_rx_ch3  (to CLKOP +)
+
+   Delay:               0.535ns  (72.9% logic, 27.1% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.535ns physical path delay PCS/SLICE_37 to PCS/SLICE_37 meets
+      6.737ns delay constraint less
+      0.000ns skew and
+      0.061ns DIN_SET requirement (totaling 6.676ns) by 6.141ns
+
+ Physical Path Details:
+
+      Data path PCS/SLICE_37 to PCS/SLICE_37:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.243     R41C2A.CLK to      R41C2A.Q0 PCS/SLICE_37 (from CLKOP)
+ROUTE        24     0.145      R41C2A.Q0 to      R41C2A.D0 PCS/refclkdiv2_rx_ch3
+CTOF_DEL    ---     0.147      R41C2A.D0 to      R41C2A.F0 PCS/SLICE_37
+ROUTE         1     0.000      R41C2A.F0 to     R41C2A.DI0 PCS/refclkdiv2_rx_ch3_i_i (to CLKOP)
+                  --------
+                    0.535   (72.9% logic, 27.1% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PLL1/PLLInst_0 to PCS/SLICE_37:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         3     1.072 *L_R43C5.CLKOP to     R41C2A.CLK CLKOP
+                  --------
+                    1.072   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PLL1/PLLInst_0 to PCS/SLICE_37:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         3     1.072 *L_R43C5.CLKOP to     R41C2A.CLK CLKOP
+                  --------
+                    1.072   (0.0% logic, 100.0% route), 0 logic levels.
+
+Report:  500.000MHz is the maximum frequency for this preference.
+
+
+================================================================================
+<A name="par_twr_pref_0_2"></A>Preference: FREQUENCY NET "rx_hlfClk" 148.500000 MHz ;
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 1.479ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/data_p2_fast[19]  (from rx_hlfClk +)
+   Destination:    FF         Data in        SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/hd_offset_p1[0]  (to rx_hlfClk +)
+
+   Delay:               5.194ns  (18.8% logic, 81.2% route), 6 logic levels.
+
+ Constraint Details:
+
+      5.194ns physical path delay SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/SLICE_101 to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_152 meets
+      6.734ns delay constraint less
+      0.000ns skew and
+      0.061ns DIN_SET requirement (totaling 6.673ns) by 1.479ns
+
+ Physical Path Details:
+
+      Data path SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/SLICE_101 to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_152:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.243    R77C55B.CLK to     R77C55B.Q1 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/SLICE_101 (from rx_hlfClk)
+ROUTE         1     0.922     R77C55B.Q1 to     R75C56A.D0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/data_p2_fast[19]
+CTOF_DEL    ---     0.147     R75C56A.D0 to     R75C56A.F0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_406
+ROUTE         1     0.725     R75C56A.F0 to     R73C56D.A1 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/g0_5_N_2L1
+CTOF_DEL    ---     0.147     R73C56D.A1 to     R73C56D.F1 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_310
+ROUTE        15     0.886     R73C56D.F1 to     R76C56B.C0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/g0_5
+CTOF_DEL    ---     0.147     R76C56B.C0 to     R76C56B.F0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_316
+ROUTE         8     0.775     R76C56B.F0 to     R76C52B.A0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/hd_offset_0_a2_i_0_a2_14[3]
+CTOF_DEL    ---     0.147     R76C52B.A0 to     R76C52B.F0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_304
+ROUTE         1     0.908     R76C52B.F0 to     R74C56B.D0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/hd_offset_0_a2_i_0_1_tz[0]
+CTOF_DEL    ---     0.147     R74C56B.D0 to     R74C56B.F0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_152
+ROUTE         1     0.000     R74C56B.F0 to    R74C56B.DI0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/N_227_i (to rx_hlfClk)
+                  --------
+                    5.194   (18.8% logic, 81.2% route), 6 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PCS/PCSD_INST to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/SLICE_101:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       197     3.980 *FF_RX_H_CLK_3 to    R77C55B.CLK rx_hlfClk
+                  --------
+                    3.980   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PCS/PCSD_INST to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_152:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       197     3.980 *FF_RX_H_CLK_3 to    R74C56B.CLK rx_hlfClk
+                  --------
+                    3.980   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 1.517ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/data_p2_fast[19]  (from rx_hlfClk +)
+   Destination:    FF         Data in        SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/hd_offset_p1[1]  (to rx_hlfClk +)
+
+   Delay:               5.156ns  (19.0% logic, 81.0% route), 6 logic levels.
+
+ Constraint Details:
+
+      5.156ns physical path delay SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/SLICE_101 to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_152 meets
+      6.734ns delay constraint less
+      0.000ns skew and
+      0.061ns DIN_SET requirement (totaling 6.673ns) by 1.517ns
+
+ Physical Path Details:
+
+      Data path SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/SLICE_101 to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_152:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.243    R77C55B.CLK to     R77C55B.Q1 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/SLICE_101 (from rx_hlfClk)
+ROUTE         1     0.922     R77C55B.Q1 to     R75C56A.D0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/data_p2_fast[19]
+CTOF_DEL    ---     0.147     R75C56A.D0 to     R75C56A.F0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_406
+ROUTE         1     0.725     R75C56A.F0 to     R73C56D.A1 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/g0_5_N_2L1
+CTOF_DEL    ---     0.147     R73C56D.A1 to     R73C56D.F1 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_310
+ROUTE        15     0.886     R73C56D.F1 to     R76C56B.C0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/g0_5
+CTOF_DEL    ---     0.147     R76C56B.C0 to     R76C56B.F0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_316
+ROUTE         8     0.904     R76C56B.F0 to     R74C55C.C0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/hd_offset_0_a2_i_0_a2_14[3]
+CTOF_DEL    ---     0.147     R74C55C.C0 to     R74C55C.F0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_372
+ROUTE         1     0.741     R74C55C.F0 to     R74C56B.B1 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/g0_i_0
+CTOF_DEL    ---     0.147     R74C56B.B1 to     R74C56B.F1 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_152
+ROUTE         1     0.000     R74C56B.F1 to    R74C56B.DI1 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/N_226_i (to rx_hlfClk)
+                  --------
+                    5.156   (19.0% logic, 81.0% route), 6 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PCS/PCSD_INST to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/SLICE_101:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       197     3.980 *FF_RX_H_CLK_3 to    R77C55B.CLK rx_hlfClk
+                  --------
+                    3.980   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PCS/PCSD_INST to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_152:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       197     3.980 *FF_RX_H_CLK_3 to    R74C56B.CLK rx_hlfClk
+                  --------
+                    3.980   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 1.558ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/data_p1_fast[8]  (from rx_hlfClk +)
+   Destination:    FF         Data in        SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/hd_offset_p1[0]  (to rx_hlfClk +)
+
+   Delay:               5.115ns  (19.1% logic, 80.9% route), 6 logic levels.
+
+ Constraint Details:
+
+      5.115ns physical path delay SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/SLICE_72 to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_152 meets
+      6.734ns delay constraint less
+      0.000ns skew and
+      0.061ns DIN_SET requirement (totaling 6.673ns) by 1.558ns
+
+ Physical Path Details:
+
+      Data path SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/SLICE_72 to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_152:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.243    R76C53A.CLK to     R76C53A.Q0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/SLICE_72 (from rx_hlfClk)
+ROUTE         1     0.843     R76C53A.Q0 to     R75C56A.C0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/data_p1_fast[8]
+CTOF_DEL    ---     0.147     R75C56A.C0 to     R75C56A.F0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_406
+ROUTE         1     0.725     R75C56A.F0 to     R73C56D.A1 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/g0_5_N_2L1
+CTOF_DEL    ---     0.147     R73C56D.A1 to     R73C56D.F1 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_310
+ROUTE        15     0.886     R73C56D.F1 to     R76C56B.C0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/g0_5
+CTOF_DEL    ---     0.147     R76C56B.C0 to     R76C56B.F0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_316
+ROUTE         8     0.775     R76C56B.F0 to     R76C52B.A0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/hd_offset_0_a2_i_0_a2_14[3]
+CTOF_DEL    ---     0.147     R76C52B.A0 to     R76C52B.F0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_304
+ROUTE         1     0.908     R76C52B.F0 to     R74C56B.D0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/hd_offset_0_a2_i_0_1_tz[0]
+CTOF_DEL    ---     0.147     R74C56B.D0 to     R74C56B.F0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_152
+ROUTE         1     0.000     R74C56B.F0 to    R74C56B.DI0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/N_227_i (to rx_hlfClk)
+                  --------
+                    5.115   (19.1% logic, 80.9% route), 6 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PCS/PCSD_INST to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/SLICE_72:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       197     3.980 *FF_RX_H_CLK_3 to    R76C53A.CLK rx_hlfClk
+                  --------
+                    3.980   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PCS/PCSD_INST to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_152:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       197     3.980 *FF_RX_H_CLK_3 to    R74C56B.CLK rx_hlfClk
+                  --------
+                    3.980   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 1.596ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/data_p1_fast[8]  (from rx_hlfClk +)
+   Destination:    FF         Data in        SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/hd_offset_p1[1]  (to rx_hlfClk +)
+
+   Delay:               5.077ns  (19.3% logic, 80.7% route), 6 logic levels.
+
+ Constraint Details:
+
+      5.077ns physical path delay SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/SLICE_72 to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_152 meets
+      6.734ns delay constraint less
+      0.000ns skew and
+      0.061ns DIN_SET requirement (totaling 6.673ns) by 1.596ns
+
+ Physical Path Details:
+
+      Data path SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/SLICE_72 to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_152:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.243    R76C53A.CLK to     R76C53A.Q0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/SLICE_72 (from rx_hlfClk)
+ROUTE         1     0.843     R76C53A.Q0 to     R75C56A.C0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/data_p1_fast[8]
+CTOF_DEL    ---     0.147     R75C56A.C0 to     R75C56A.F0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_406
+ROUTE         1     0.725     R75C56A.F0 to     R73C56D.A1 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/g0_5_N_2L1
+CTOF_DEL    ---     0.147     R73C56D.A1 to     R73C56D.F1 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_310
+ROUTE        15     0.886     R73C56D.F1 to     R76C56B.C0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/g0_5
+CTOF_DEL    ---     0.147     R76C56B.C0 to     R76C56B.F0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_316
+ROUTE         8     0.904     R76C56B.F0 to     R74C55C.C0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/hd_offset_0_a2_i_0_a2_14[3]
+CTOF_DEL    ---     0.147     R74C55C.C0 to     R74C55C.F0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_372
+ROUTE         1     0.741     R74C55C.F0 to     R74C56B.B1 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/g0_i_0
+CTOF_DEL    ---     0.147     R74C56B.B1 to     R74C56B.F1 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_152
+ROUTE         1     0.000     R74C56B.F1 to    R74C56B.DI1 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/N_226_i (to rx_hlfClk)
+                  --------
+                    5.077   (19.3% logic, 80.7% route), 6 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PCS/PCSD_INST to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/SLICE_72:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       197     3.980 *FF_RX_H_CLK_3 to    R76C53A.CLK rx_hlfClk
+                  --------
+                    3.980   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PCS/PCSD_INST to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_152:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       197     3.980 *FF_RX_H_CLK_3 to    R74C56B.CLK rx_hlfClk
+                  --------
+                    3.980   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 1.642ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_descrambler/dout[1]  (from rx_hlfClk +)
+   Destination:    FF         Data in        SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/hd_offset_p1[0]  (to rx_hlfClk +)
+
+   Delay:               5.031ns  (22.4% logic, 77.6% route), 7 logic levels.
+
+ Constraint Details:
+
+      5.031ns physical path delay SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_descrambler/SLICE_116 to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_152 meets
+      6.734ns delay constraint less
+      0.000ns skew and
+      0.061ns DIN_SET requirement (totaling 6.673ns) by 1.642ns
+
+ Physical Path Details:
+
+      Data path SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_descrambler/SLICE_116 to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_152:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.243    R81C52B.CLK to     R81C52B.Q1 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_descrambler/SLICE_116 (from rx_hlfClk)
+ROUTE         8     1.057     R81C52B.Q1 to     R76C54A.B0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/descramblerout[1]
+CTOF_DEL    ---     0.147     R76C54A.B0 to     R76C54A.F0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_493
+ROUTE         1     0.637     R76C54A.F0 to     R77C54B.C1 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/sd_offset_0_a2_i_0_a2_12_sx[0]
+CTOF_DEL    ---     0.147     R77C54B.C1 to     R77C54B.F1 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_314
+ROUTE         5     0.702     R77C54B.F1 to     R72C54C.C0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/sd_offset_0_a2_i_0_a2_12[0]
+CTOF_DEL    ---     0.147     R72C54C.C0 to     R72C54C.F0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_307
+ROUTE         1     0.518     R72C54C.F0 to     R71C55B.D1 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/hd_offset_0_a2_i_0_a2_23[3]
+CTOF_DEL    ---     0.147     R71C55B.D1 to     R71C55B.F1 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_367
+ROUTE         1     0.518     R71C55B.F1 to     R72C56D.D0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/hd_offset_p1_RNO_2[0]
+CTOF_DEL    ---     0.147     R72C56D.D0 to     R72C56D.F0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_388
+ROUTE         1     0.474     R72C56D.F0 to     R74C56B.C0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/hd_offset_p1_RNO_0[0]
+CTOF_DEL    ---     0.147     R74C56B.C0 to     R74C56B.F0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_152
+ROUTE         1     0.000     R74C56B.F0 to    R74C56B.DI0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/N_227_i (to rx_hlfClk)
+                  --------
+                    5.031   (22.4% logic, 77.6% route), 7 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PCS/PCSD_INST to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_descrambler/SLICE_116:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       197     3.980 *FF_RX_H_CLK_3 to    R81C52B.CLK rx_hlfClk
+                  --------
+                    3.980   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PCS/PCSD_INST to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_152:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       197     3.980 *FF_RX_H_CLK_3 to    R74C56B.CLK rx_hlfClk
+                  --------
+                    3.980   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 1.674ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/data_p2_16_rep1  (from rx_hlfClk +)
+   Destination:    FF         Data in        SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/hd_offset_p1[0]  (to rx_hlfClk +)
+
+   Delay:               4.999ns  (19.6% logic, 80.4% route), 6 logic levels.
+
+ Constraint Details:
+
+      4.999ns physical path delay SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/SLICE_378 to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_152 meets
+      6.734ns delay constraint less
+      0.000ns skew and
+      0.061ns DIN_SET requirement (totaling 6.673ns) by 1.674ns
+
+ Physical Path Details:
+
+      Data path SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/SLICE_378 to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_152:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.243    R78C53A.CLK to     R78C53A.Q0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/SLICE_378 (from rx_hlfClk)
+ROUTE         3     1.149     R78C53A.Q0 to     R75C55D.B1 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/data_p2_16_rep1
+CTOF_DEL    ---     0.147     R75C55D.B1 to     R75C55D.F1 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_320
+ROUTE        10     0.820     R75C55D.F1 to     R76C56B.A1 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/un1_hd_offset65_1_18_i_0_a2_8
+CTOF_DEL    ---     0.147     R76C56B.A1 to     R76C56B.F1 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_316
+ROUTE         4     0.369     R76C56B.F1 to     R76C56B.B0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/hd_offset_0_a2_i_0_a2_13_0[3]
+CTOF_DEL    ---     0.147     R76C56B.B0 to     R76C56B.F0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_316
+ROUTE         8     0.775     R76C56B.F0 to     R76C52B.A0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/hd_offset_0_a2_i_0_a2_14[3]
+CTOF_DEL    ---     0.147     R76C52B.A0 to     R76C52B.F0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_304
+ROUTE         1     0.908     R76C52B.F0 to     R74C56B.D0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/hd_offset_0_a2_i_0_1_tz[0]
+CTOF_DEL    ---     0.147     R74C56B.D0 to     R74C56B.F0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_152
+ROUTE         1     0.000     R74C56B.F0 to    R74C56B.DI0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/N_227_i (to rx_hlfClk)
+                  --------
+                    4.999   (19.6% logic, 80.4% route), 6 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PCS/PCSD_INST to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/SLICE_378:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       197     3.980 *FF_RX_H_CLK_3 to    R78C53A.CLK rx_hlfClk
+                  --------
+                    3.980   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PCS/PCSD_INST to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_152:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       197     3.980 *FF_RX_H_CLK_3 to    R74C56B.CLK rx_hlfClk
+                  --------
+                    3.980   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 1.685ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/data_p2_fast[13]  (from rx_hlfClk +)
+   Destination:    FF         Data in        SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/hd_offset_p1[0]  (to rx_hlfClk +)
+
+   Delay:               4.988ns  (22.6% logic, 77.4% route), 7 logic levels.
+
+ Constraint Details:
+
+      4.988ns physical path delay SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/SLICE_99 to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_152 meets
+      6.734ns delay constraint less
+      0.000ns skew and
+      0.061ns DIN_SET requirement (totaling 6.673ns) by 1.685ns
+
+ Physical Path Details:
+
+      Data path SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/SLICE_99 to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_152:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.243    R75C53C.CLK to     R75C53C.Q0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/SLICE_99 (from rx_hlfClk)
+ROUTE         2     0.945     R75C53C.Q0 to     R73C54C.B0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/data_p2_fast[13]
+CTOF_DEL    ---     0.147     R73C54C.B0 to     R73C54C.F0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_357
+ROUTE        12     0.582     R73C54C.F0 to     R72C54C.B1 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/hd_offset_0_a2_i_0_a2_3_0[1]
+CTOF_DEL    ---     0.147     R72C54C.B1 to     R72C54C.F1 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_307
+ROUTE         5     0.604     R72C54C.F1 to     R71C53D.D0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/hd_offset_0_a2_i_0_a2_4[2]
+CTOF_DEL    ---     0.147     R71C53D.D0 to     R71C53D.F0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_462
+ROUTE         1     0.672     R71C53D.F0 to     R74C53B.C0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/hd_offset_0_a2_i_0_a2_4_0[0]
+CTOF_DEL    ---     0.147     R74C53B.C0 to     R74C53B.F0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_312
+ROUTE         1     0.518     R74C53B.F0 to     R74C56D.D0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/hd_offset_0_a2_i_0_a2_4_1[0]
+CTOF_DEL    ---     0.147     R74C56D.D0 to     R74C56D.F0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_303
+ROUTE         1     0.542     R74C56D.F0 to     R74C56B.B0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/hd_offset_0_a2_i_0_0[0]
+CTOF_DEL    ---     0.147     R74C56B.B0 to     R74C56B.F0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_152
+ROUTE         1     0.000     R74C56B.F0 to    R74C56B.DI0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/N_227_i (to rx_hlfClk)
+                  --------
+                    4.988   (22.6% logic, 77.4% route), 7 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PCS/PCSD_INST to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/SLICE_99:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       197     3.980 *FF_RX_H_CLK_3 to    R75C53C.CLK rx_hlfClk
+                  --------
+                    3.980   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PCS/PCSD_INST to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_152:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       197     3.980 *FF_RX_H_CLK_3 to    R74C56B.CLK rx_hlfClk
+                  --------
+                    3.980   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 1.686ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/data_p2_fast[19]  (from rx_hlfClk +)
+   Destination:    FF         Data in        SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/hd_offset_p1[3]  (to rx_hlfClk +)
+
+   Delay:               4.987ns  (19.6% logic, 80.4% route), 6 logic levels.
+
+ Constraint Details:
+
+      4.987ns physical path delay SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/SLICE_101 to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_153 meets
+      6.734ns delay constraint less
+      0.000ns skew and
+      0.061ns DIN_SET requirement (totaling 6.673ns) by 1.686ns
+
+ Physical Path Details:
+
+      Data path SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/SLICE_101 to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_153:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.243    R77C55B.CLK to     R77C55B.Q1 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/SLICE_101 (from rx_hlfClk)
+ROUTE         1     0.922     R77C55B.Q1 to     R75C56A.D0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/data_p2_fast[19]
+CTOF_DEL    ---     0.147     R75C56A.D0 to     R75C56A.F0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_406
+ROUTE         1     0.725     R75C56A.F0 to     R73C56D.A1 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/g0_5_N_2L1
+CTOF_DEL    ---     0.147     R73C56D.A1 to     R73C56D.F1 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_310
+ROUTE        15     0.964     R73C56D.F1 to     R78C52D.D1 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/g0_5
+CTOF_DEL    ---     0.147     R78C52D.D1 to     R78C52D.F1 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_377
+ROUTE         1     0.887     R78C52D.F1 to     R74C55A.C1 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/g0_11_1
+CTOF_DEL    ---     0.147     R74C55A.C1 to     R74C55A.F1 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_155
+ROUTE         3     0.511     R74C55A.F1 to     R74C56A.C1 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/hd_offset_0_a2_i_0_a2_7_s_RNIAHNBC[2]
+CTOF_DEL    ---     0.147     R74C56A.C1 to     R74C56A.F1 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_153
+ROUTE         1     0.000     R74C56A.F1 to    R74C56A.DI1 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/N_220_i (to rx_hlfClk)
+                  --------
+                    4.987   (19.6% logic, 80.4% route), 6 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PCS/PCSD_INST to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/SLICE_101:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       197     3.980 *FF_RX_H_CLK_3 to    R77C55B.CLK rx_hlfClk
+                  --------
+                    3.980   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PCS/PCSD_INST to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_153:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       197     3.980 *FF_RX_H_CLK_3 to    R74C56A.CLK rx_hlfClk
+                  --------
+                    3.980   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 1.695ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_descrambler/dout[0]  (from rx_hlfClk +)
+   Destination:    FF         Data in        SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/hd_offset_p1[1]  (to rx_hlfClk +)
+
+   Delay:               4.978ns  (22.6% logic, 77.4% route), 7 logic levels.
+
+ Constraint Details:
+
+      4.978ns physical path delay SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_descrambler/SLICE_116 to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_152 meets
+      6.734ns delay constraint less
+      0.000ns skew and
+      0.061ns DIN_SET requirement (totaling 6.673ns) by 1.695ns
+
+ Physical Path Details:
+
+      Data path SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_descrambler/SLICE_116 to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_152:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.243    R81C52B.CLK to     R81C52B.Q0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_descrambler/SLICE_116 (from rx_hlfClk)
+ROUTE         9     1.637     R81C52B.Q0 to     R71C56B.D0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/descramblerout[0]
+CTOF_DEL    ---     0.147     R71C56B.D0 to     R71C56B.F0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_379
+ROUTE         2     0.146     R71C56B.F0 to     R71C56B.D1 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/N_474_0
+CTOF_DEL    ---     0.147     R71C56B.D1 to     R71C56B.F1 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_379
+ROUTE         1     0.739     R71C56B.F1 to     R71C54D.A1 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/g0_33_N_6L9_1
+CTOF_DEL    ---     0.147     R71C54D.A1 to     R71C54D.F1 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_359
+ROUTE         1     0.680     R71C54D.F1 to     R74C56C.C1 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/hd_offset_0_a2_i_0_a2_18_1_RNIQUDA4[3]
+CTOF_DEL    ---     0.147     R74C56C.C1 to     R74C56C.F1 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_380
+ROUTE         4     0.379     R74C56C.F1 to     R74C56C.A0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/hd_offset_0_a2_i_0_a2_13_0_RNIM5EU7[3]
+CTOF_DEL    ---     0.147     R74C56C.A0 to     R74C56C.F0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_380
+ROUTE         1     0.272     R74C56C.F0 to     R74C56B.C1 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/g0_0
+CTOF_DEL    ---     0.147     R74C56B.C1 to     R74C56B.F1 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_152
+ROUTE         1     0.000     R74C56B.F1 to    R74C56B.DI1 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/N_226_i (to rx_hlfClk)
+                  --------
+                    4.978   (22.6% logic, 77.4% route), 7 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PCS/PCSD_INST to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_descrambler/SLICE_116:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       197     3.980 *FF_RX_H_CLK_3 to    R81C52B.CLK rx_hlfClk
+                  --------
+                    3.980   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PCS/PCSD_INST to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_152:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       197     3.980 *FF_RX_H_CLK_3 to    R74C56B.CLK rx_hlfClk
+                  --------
+                    3.980   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 1.710ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/data_p3_fast[15]  (from rx_hlfClk +)
+   Destination:    FF         Data in        SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/hd_offset_p1[0]  (to rx_hlfClk +)
+
+   Delay:               4.963ns  (22.7% logic, 77.3% route), 7 logic levels.
+
+ Constraint Details:
+
+      4.963ns physical path delay SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/SLICE_115 to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_152 meets
+      6.734ns delay constraint less
+      0.000ns skew and
+      0.061ns DIN_SET requirement (totaling 6.673ns) by 1.710ns
+
+ Physical Path Details:
+
+      Data path SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/SLICE_115 to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_152:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.243    R74C54C.CLK to     R74C54C.Q0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/SLICE_115 (from rx_hlfClk)
+ROUTE         3     0.949     R74C54C.Q0 to     R73C53D.A0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/data_p3_fast[15]
+CTOF_DEL    ---     0.147     R73C53D.A0 to     R73C53D.F0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_347
+ROUTE        10     0.553     R73C53D.F0 to     R72C54C.D1 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/hd_offset_0_a2_i_0_a2_11[0]
+CTOF_DEL    ---     0.147     R72C54C.D1 to     R72C54C.F1 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_307
+ROUTE         5     0.604     R72C54C.F1 to     R71C53D.D0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/hd_offset_0_a2_i_0_a2_4[2]
+CTOF_DEL    ---     0.147     R71C53D.D0 to     R71C53D.F0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_462
+ROUTE         1     0.672     R71C53D.F0 to     R74C53B.C0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/hd_offset_0_a2_i_0_a2_4_0[0]
+CTOF_DEL    ---     0.147     R74C53B.C0 to     R74C53B.F0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_312
+ROUTE         1     0.518     R74C53B.F0 to     R74C56D.D0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/hd_offset_0_a2_i_0_a2_4_1[0]
+CTOF_DEL    ---     0.147     R74C56D.D0 to     R74C56D.F0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_303
+ROUTE         1     0.542     R74C56D.F0 to     R74C56B.B0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/hd_offset_0_a2_i_0_0[0]
+CTOF_DEL    ---     0.147     R74C56B.B0 to     R74C56B.F0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_152
+ROUTE         1     0.000     R74C56B.F0 to    R74C56B.DI0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/N_227_i (to rx_hlfClk)
+                  --------
+                    4.963   (22.7% logic, 77.3% route), 7 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PCS/PCSD_INST to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/SLICE_115:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       197     3.980 *FF_RX_H_CLK_3 to    R74C54C.CLK rx_hlfClk
+                  --------
+                    3.980   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PCS/PCSD_INST to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1/SLICE_152:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       197     3.980 *FF_RX_H_CLK_3 to    R74C56B.CLK rx_hlfClk
+                  --------
+                    3.980   (0.0% logic, 100.0% route), 0 logic levels.
+
+Report:  190.295MHz is the maximum frequency for this preference.
+
+<A name="ptwr_set_rs"></A><B><U><big>Report Summary</big></U></B>
+--------------
+----------------------------------------------------------------------------
+Preference                              |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "clk_c" 125.000000 MHz ;  |            -|            -|   0  
+                                        |             |             |
+FREQUENCY NET "CLKOP" 148.437500 MHz ;  |  148.438 MHz|  500.000 MHz|   0  
+                                        |             |             |
+FREQUENCY NET "rx_hlfClk" 148.500000    |             |             |
+MHz ;                                   |  148.500 MHz|  190.295 MHz|   6  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+<A name="ptwr_set_clkda"></A><B><U><big>Clock Domains Analysis</big></U></B>
+------------------------
+
+Found 4 clocks:
+
+Clock Domain: rx_hlfClk   Source: PCS/PCSD_INST.FF_RX_H_CLK_3   Loads: 197
+   Covered under: FREQUENCY NET "rx_hlfClk" 148.500000 MHz ;
+
+Clock Domain: clk_c   Source: clk.PAD   Loads: 1
+   No transfer within this clock domain is found
+
+Clock Domain: PCS/refclkdiv2_rx_ch3   Source: PCS/SLICE_37.Q0   Loads: 24
+   No transfer within this clock domain is found
+
+Clock Domain: CLKOP   Source: PLL1/PLLInst_0.CLKOP   Loads: 3
+   Covered under: FREQUENCY NET "CLKOP" 148.437500 MHz ;
+
+
+<A name="ptwr_set_ts"></A><B><U><big>Timing summary (Setup):</big></U></B>
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 5178 paths, 3 nets, and 2868 connections (95.98% coverage)
+
+--------------------------------------------------------------------------------
+<A name="Par_Twr_hold"></A><B><U><big>Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.11.3.469</big></U></B>
+Sun Jan 24 17:38:20 2021
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+<A name="ptwr_hold_ri"></A><B><U><big>Report Information</big></U></B>
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 8 -sphld m -o SDI2_impl1.twr -gui SDI2_impl1.ncd SDI2_impl1.prf 
+Design file:     SDI2_impl1.ncd
+Preference file: SDI2_impl1.prf
+Device,speed:    LFE3-70E,m
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+<A name="ptwr_hold_ps"></A><B><U><big>Preference Summary</big></U></B>
+
+<LI><A href='#par_twr_pref_1_0' Target='right'>FREQUENCY NET "clk_c" 125.000000 MHz (0 errors)</A></LI>            0 items scored, 0 timing errors detected.
+
+<LI><A href='#par_twr_pref_1_1' Target='right'>FREQUENCY NET "CLKOP" 148.437500 MHz (0 errors)</A></LI>            1 item scored, 0 timing errors detected.
+
+<LI><A href='#par_twr_pref_1_2' Target='right'>FREQUENCY NET "rx_hlfClk" 148.500000 MHz (0 errors)</A></LI>            4096 items scored, 0 timing errors detected.
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+<A name="par_twr_pref_1_0"></A>Preference: FREQUENCY NET "clk_c" 125.000000 MHz ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+<A name="par_twr_pref_1_1"></A>Preference: FREQUENCY NET "CLKOP" 148.437500 MHz ;
+            1 item scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.203ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              PCS/refclkdiv2_rx_ch3  (from CLKOP +)
+   Destination:    FF         Data in        PCS/refclkdiv2_rx_ch3  (to CLKOP +)
+
+   Delay:               0.192ns  (78.1% logic, 21.9% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.192ns physical path delay PCS/SLICE_37 to PCS/SLICE_37 meets
+     -0.011ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.011ns) by 0.203ns
+
+ Physical Path Details:
+
+      Data path PCS/SLICE_37 to PCS/SLICE_37:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.094     R41C2A.CLK to      R41C2A.Q0 PCS/SLICE_37 (from CLKOP)
+ROUTE        24     0.042      R41C2A.Q0 to      R41C2A.D0 PCS/refclkdiv2_rx_ch3
+CTOF_DEL    ---     0.056      R41C2A.D0 to      R41C2A.F0 PCS/SLICE_37
+ROUTE         1     0.000      R41C2A.F0 to     R41C2A.DI0 PCS/refclkdiv2_rx_ch3_i_i (to CLKOP)
+                  --------
+                    0.192   (78.1% logic, 21.9% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PLL1/PLLInst_0 to PCS/SLICE_37:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         3     0.477 *L_R43C5.CLKOP to     R41C2A.CLK CLKOP
+                  --------
+                    0.477   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PLL1/PLLInst_0 to PCS/SLICE_37:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         3     0.477 *L_R43C5.CLKOP to     R41C2A.CLK CLKOP
+                  --------
+                    0.477   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+================================================================================
+<A name="par_twr_pref_1_2"></A>Preference: FREQUENCY NET "rx_hlfClk" 148.500000 MHz ;
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.204ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/eav_found  (from rx_hlfClk +)
+   Destination:    FF         Data in        SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/eav_found  (to rx_hlfClk +)
+
+   Delay:               0.193ns  (77.7% logic, 22.3% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.193ns physical path delay SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/SLICE_181_ppo_0 to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/SLICE_181_ppo_0 meets
+     -0.011ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.011ns) by 0.204ns
+
+ Physical Path Details:
+
+      Data path SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/SLICE_181_ppo_0 to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/SLICE_181_ppo_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.094    R60C67A.CLK to     R60C67A.Q0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/SLICE_181_ppo_0 (from rx_hlfClk)
+ROUTE         5     0.043     R60C67A.Q0 to     R60C67A.D0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/eav_found
+CTOF_DEL    ---     0.056     R60C67A.D0 to     R60C67A.F0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/SLICE_181_ppo_0
+ROUTE         1     0.000     R60C67A.F0 to    R60C67A.DI0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/eav_found_2 (to rx_hlfClk)
+                  --------
+                    0.193   (77.7% logic, 22.3% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PCS/PCSD_INST to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/SLICE_181_ppo_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       197     1.944 *FF_RX_H_CLK_3 to    R60C67A.CLK rx_hlfClk
+                  --------
+                    1.944   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PCS/PCSD_INST to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/SLICE_181_ppo_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       197     1.944 *FF_RX_H_CLK_3 to    R60C67A.CLK rx_hlfClk
+                  --------
+                    1.944   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.204ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/cur_st_1[0]  (from rx_hlfClk +)
+   Destination:    FF         Data in        SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/cur_st_1[0]  (to rx_hlfClk +)
+
+   Delay:               0.193ns  (77.7% logic, 22.3% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.193ns physical path delay SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/SLICE_169 to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/SLICE_169 meets
+     -0.011ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.011ns) by 0.204ns
+
+ Physical Path Details:
+
+      Data path SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/SLICE_169 to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/SLICE_169:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.094    R68C71B.CLK to     R68C71B.Q0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/SLICE_169 (from rx_hlfClk)
+ROUTE         5     0.043     R68C71B.Q0 to     R68C71B.D0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/cur_st_1[0]
+CTOF_DEL    ---     0.056     R68C71B.D0 to     R68C71B.F0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/SLICE_169
+ROUTE         1     0.000     R68C71B.F0 to    R68C71B.DI0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/cur_st_1_ns[0] (to rx_hlfClk)
+                  --------
+                    0.193   (77.7% logic, 22.3% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PCS/PCSD_INST to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/SLICE_169:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       197     1.944 *FF_RX_H_CLK_3 to    R68C71B.CLK rx_hlfClk
+                  --------
+                    1.944   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PCS/PCSD_INST to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/SLICE_169:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       197     1.944 *FF_RX_H_CLK_3 to    R68C71B.CLK rx_hlfClk
+                  --------
+                    1.944   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.204ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/cur_st_1[6]  (from rx_hlfClk +)
+   Destination:    FF         Data in        SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/cur_st_1[6]  (to rx_hlfClk +)
+
+   Delay:               0.193ns  (77.7% logic, 22.3% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.193ns physical path delay SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/SLICE_172 to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/SLICE_172 meets
+     -0.011ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.011ns) by 0.204ns
+
+ Physical Path Details:
+
+      Data path SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/SLICE_172 to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/SLICE_172:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.094    R67C70A.CLK to     R67C70A.Q0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/SLICE_172 (from rx_hlfClk)
+ROUTE         5     0.043     R67C70A.Q0 to     R67C70A.D0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/cur_st_1[6]
+CTOF_DEL    ---     0.056     R67C70A.D0 to     R67C70A.F0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/SLICE_172
+ROUTE         1     0.000     R67C70A.F0 to    R67C70A.DI0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/cur_st_1_ns[6] (to rx_hlfClk)
+                  --------
+                    0.193   (77.7% logic, 22.3% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PCS/PCSD_INST to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/SLICE_172:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       197     1.944 *FF_RX_H_CLK_3 to    R67C70A.CLK rx_hlfClk
+                  --------
+                    1.944   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PCS/PCSD_INST to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/SLICE_172:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       197     1.944 *FF_RX_H_CLK_3 to    R67C70A.CLK rx_hlfClk
+                  --------
+                    1.944   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.233ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/err_cnt[2]  (from rx_hlfClk +)
+   Destination:    FF         Data in        SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/err_cnt[2]  (to rx_hlfClk +)
+
+   Delay:               0.222ns  (67.6% logic, 32.4% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.222ns physical path delay SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/SLICE_22 to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/SLICE_22 meets
+     -0.011ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.011ns) by 0.233ns
+
+ Physical Path Details:
+
+      Data path SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/SLICE_22 to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/SLICE_22:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.094    R63C71C.CLK to     R63C71C.Q0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/SLICE_22 (from rx_hlfClk)
+ROUTE         2     0.072     R63C71C.Q0 to     R63C71C.C0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/err_cnt[2]
+CTOF_DEL    ---     0.056     R63C71C.C0 to     R63C71C.F0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/SLICE_22
+ROUTE         1     0.000     R63C71C.F0 to    R63C71C.DI0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/err_cnt_s[2] (to rx_hlfClk)
+                  --------
+                    0.222   (67.6% logic, 32.4% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PCS/PCSD_INST to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/SLICE_22:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       197     1.944 *FF_RX_H_CLK_3 to    R63C71C.CLK rx_hlfClk
+                  --------
+                    1.944   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PCS/PCSD_INST to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/SLICE_22:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       197     1.944 *FF_RX_H_CLK_3 to    R63C71C.CLK rx_hlfClk
+                  --------
+                    1.944   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.233ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/y_xyzword/field2or1  (from rx_hlfClk +)
+   Destination:    FF         Data in        SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/y_field_p1  (to rx_hlfClk +)
+
+   Delay:               0.185ns  (50.8% logic, 49.2% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.185ns physical path delay SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/y_xyzword/SLICE_222 to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/SLICE_223 meets
+     -0.048ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.048ns) by 0.233ns
+
+ Physical Path Details:
+
+      Data path SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/y_xyzword/SLICE_222 to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/SLICE_223:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.094    R69C66B.CLK to     R69C66B.Q0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/y_xyzword/SLICE_222 (from rx_hlfClk)
+ROUTE         1     0.091     R69C66B.Q0 to     R69C66C.M0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/y_field (to rx_hlfClk)
+                  --------
+                    0.185   (50.8% logic, 49.2% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PCS/PCSD_INST to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/y_xyzword/SLICE_222:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       197     1.944 *FF_RX_H_CLK_3 to    R69C66B.CLK rx_hlfClk
+                  --------
+                    1.944   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PCS/PCSD_INST to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/SLICE_223:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       197     1.944 *FF_RX_H_CLK_3 to    R69C66C.CLK rx_hlfClk
+                  --------
+                    1.944   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.235ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/data_p1[9]  (from rx_hlfClk +)
+   Destination:    FF         Data in        SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/data_p2[9]  (to rx_hlfClk +)
+
+   Delay:               0.187ns  (50.3% logic, 49.7% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.187ns physical path delay SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/SLICE_62 to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/SLICE_81 meets
+     -0.048ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.048ns) by 0.235ns
+
+ Physical Path Details:
+
+      Data path SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/SLICE_62 to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/SLICE_81:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.094    R75C52C.CLK to     R75C52C.Q1 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/SLICE_62 (from rx_hlfClk)
+ROUTE         3     0.093     R75C52C.Q1 to     R75C52B.M1 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/data_p1[9] (to rx_hlfClk)
+                  --------
+                    0.187   (50.3% logic, 49.7% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PCS/PCSD_INST to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/SLICE_62:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       197     1.945 *FF_RX_H_CLK_3 to    R75C52C.CLK rx_hlfClk
+                  --------
+                    1.945   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PCS/PCSD_INST to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/SLICE_81:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       197     1.945 *FF_RX_H_CLK_3 to    R75C52B.CLK rx_hlfClk
+                  --------
+                    1.945   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.235ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/data_p1[16]  (from rx_hlfClk +)
+   Destination:    FF         Data in        SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/data_p2[16]  (to rx_hlfClk +)
+
+   Delay:               0.187ns  (50.3% logic, 49.7% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.187ns physical path delay SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/SLICE_66 to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/SLICE_85 meets
+     -0.048ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.048ns) by 0.235ns
+
+ Physical Path Details:
+
+      Data path SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/SLICE_66 to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/SLICE_85:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.094    R78C51A.CLK to     R78C51A.Q0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/SLICE_66 (from rx_hlfClk)
+ROUTE         4     0.093     R78C51A.Q0 to     R78C51B.M0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/data_p1[16] (to rx_hlfClk)
+                  --------
+                    0.187   (50.3% logic, 49.7% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PCS/PCSD_INST to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/SLICE_66:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       197     1.945 *FF_RX_H_CLK_3 to    R78C51A.CLK rx_hlfClk
+                  --------
+                    1.945   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PCS/PCSD_INST to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/SLICE_85:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       197     1.945 *FF_RX_H_CLK_3 to    R78C51B.CLK rx_hlfClk
+                  --------
+                    1.945   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.235ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/data_p1[8]  (from rx_hlfClk +)
+   Destination:    FF         Data in        SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/data_p2[8]  (to rx_hlfClk +)
+
+   Delay:               0.187ns  (50.3% logic, 49.7% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.187ns physical path delay SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/SLICE_62 to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/SLICE_81 meets
+     -0.048ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.048ns) by 0.235ns
+
+ Physical Path Details:
+
+      Data path SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/SLICE_62 to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/SLICE_81:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.094    R75C52C.CLK to     R75C52C.Q0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/SLICE_62 (from rx_hlfClk)
+ROUTE        10     0.093     R75C52C.Q0 to     R75C52B.M0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/data_p1[8] (to rx_hlfClk)
+                  --------
+                    0.187   (50.3% logic, 49.7% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PCS/PCSD_INST to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/SLICE_62:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       197     1.945 *FF_RX_H_CLK_3 to    R75C52C.CLK rx_hlfClk
+                  --------
+                    1.945   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PCS/PCSD_INST to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/SLICE_81:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       197     1.945 *FF_RX_H_CLK_3 to    R75C52B.CLK rx_hlfClk
+                  --------
+                    1.945   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.235ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/trs_p1  (from rx_hlfClk +)
+   Destination:    FF         Data in        SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/trs_p2  (to rx_hlfClk +)
+
+   Delay:               0.187ns  (50.3% logic, 49.7% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.187ns physical path delay SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/SLICE_162 to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/SLICE_162 meets
+     -0.048ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.048ns) by 0.235ns
+
+ Physical Path Details:
+
+      Data path SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/SLICE_162 to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/SLICE_162:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.094    R64C65A.CLK to     R64C65A.Q0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/SLICE_162 (from rx_hlfClk)
+ROUTE         5     0.093     R64C65A.Q0 to     R64C65A.M1 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/trs_p1 (to rx_hlfClk)
+                  --------
+                    0.187   (50.3% logic, 49.7% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PCS/PCSD_INST to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/SLICE_162:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       197     1.944 *FF_RX_H_CLK_3 to    R64C65A.CLK rx_hlfClk
+                  --------
+                    1.944   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PCS/PCSD_INST to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/SLICE_162:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       197     1.944 *FF_RX_H_CLK_3 to    R64C65A.CLK rx_hlfClk
+                  --------
+                    1.944   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.235ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/y_xyzword/sav_1_r4  (from rx_hlfClk +)
+   Destination:    FF         Data in        SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect/sav_p1  (to rx_hlfClk +)
+
+   Delay:               0.187ns  (50.3% logic, 49.7% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.187ns physical path delay SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/SLICE_226 to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/SLICE_226 meets
+     -0.048ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.048ns) by 0.235ns
+
+ Physical Path Details:
+
+      Data path SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/SLICE_226 to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/SLICE_226:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.094    R60C66C.CLK to     R60C66C.Q0 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/SLICE_226 (from rx_hlfClk)
+ROUTE         2     0.093     R60C66C.Q0 to     R60C66C.M1 SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/y_sav_1_r4 (to rx_hlfClk)
+                  --------
+                    0.187   (50.3% logic, 49.7% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path PCS/PCSD_INST to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/SLICE_226:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       197     1.944 *FF_RX_H_CLK_3 to    R60C66C.CLK rx_hlfClk
+                  --------
+                    1.944   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path PCS/PCSD_INST to SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/SLICE_226:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       197     1.944 *FF_RX_H_CLK_3 to    R60C66C.CLK rx_hlfClk
+                  --------
+                    1.944   (0.0% logic, 100.0% route), 0 logic levels.
+
+<A name="ptwr_hold_rs"></A><B><U><big>Report Summary</big></U></B>
+--------------
+----------------------------------------------------------------------------
+Preference(MIN Delays)                  |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "clk_c" 125.000000 MHz ;  |            -|            -|   0  
+                                        |             |             |
+FREQUENCY NET "CLKOP" 148.437500 MHz ;  |     0.000 ns|     0.203 ns|   2  
+                                        |             |             |
+FREQUENCY NET "rx_hlfClk" 148.500000    |             |             |
+MHz ;                                   |     0.000 ns|     0.204 ns|   2  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+<A name="ptwr_hold_clkda"></A><B><U><big>Clock Domains Analysis</big></U></B>
+------------------------
+
+Found 4 clocks:
+
+Clock Domain: rx_hlfClk   Source: PCS/PCSD_INST.FF_RX_H_CLK_3   Loads: 197
+   Covered under: FREQUENCY NET "rx_hlfClk" 148.500000 MHz ;
+
+Clock Domain: clk_c   Source: clk.PAD   Loads: 1
+   No transfer within this clock domain is found
+
+Clock Domain: PCS/refclkdiv2_rx_ch3   Source: PCS/SLICE_37.Q0   Loads: 24
+   No transfer within this clock domain is found
+
+Clock Domain: CLKOP   Source: PLL1/PLLInst_0.CLKOP   Loads: 3
+   Covered under: FREQUENCY NET "CLKOP" 148.437500 MHz ;
+
+
+<A name="ptwr_hold_ts"></A><B><U><big>Timing summary (Hold):</big></U></B>
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 5178 paths, 3 nets, and 2868 connections (95.98% coverage)
+
+
+
+<A name="ptwr_ts"></A><B><U><big>Timing summary (Setup and Hold):</big></U></B>
+---------------
+
+Timing errors: 0 (setup), 0 (hold)
+Score: 0 (setup), 0 (hold)
+Cumulative negative slack: 0 (0+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

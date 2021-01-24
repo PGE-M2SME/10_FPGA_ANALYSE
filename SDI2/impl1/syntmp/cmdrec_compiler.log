@@ -1,0 +1,13 @@
+/usr/local/diamond/3.11_x64/synpbase/bin/c_hdl  -osyn  /home/diamond/SharedFolder/SDI2/impl1/synwork/SDI2_impl1_comp.srs  -top  TOP_LEVEL  -hdllog  /home/diamond/SharedFolder/SDI2/impl1/synlog/SDI2_impl1_compiler.srr  -encrypt  -mp  4  -verification_mode 0  -vhdl  -prodtype  synplify_pro  -dspmac -fixsmult -infer_seqShift -nram -sdff_counter -divnmod -nostructver  -encrypt  -pro  -dmgen  /home/diamond/SharedFolder/SDI2/impl1/dm  -lite -ui -fid2 -ram -sharing on -ll 2000 -autosm  -ignore_undefined_lib  -lib work /usr/local/diamond/3.11_x64/cae_library/synthesis/vhdl/ecp3.vhd -lib work /home/diamond/SharedFolder/SDI2/sdi_eval/SDI_IP/src/rtl/top/ecp3/SDI_IP_top.vhd -lib work /home/diamond/SharedFolder/SDI2/TOP_LEVEL/divFreq.vhd -lib work /home/diamond/SharedFolder/SDI2/PCS_IP.vhd -lib work /home/diamond/SharedFolder/SDI2/PLL_IP.vhd -lib work /home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd  -jobname  "compiler" 
+relcom:/usr/local/diamond/3.11_x64/synpbase/bin/c_hdl -osyn ../synwork/SDI2_impl1_comp.srs -top TOP_LEVEL -hdllog ../synlog/SDI2_impl1_compiler.srr -encrypt -mp 4 -verification_mode 0 -vhdl -prodtype synplify_pro -dspmac -fixsmult -infer_seqShift -nram -sdff_counter -divnmod -nostructver -encrypt -pro -dmgen ../dm -lite -ui -fid2 -ram -sharing on -ll 2000 -autosm -ignore_undefined_lib -lib work /usr/local/diamond/3.11_x64/cae_library/synthesis/vhdl/ecp3.vhd -lib work ../../sdi_eval/SDI_IP/src/rtl/top/ecp3/SDI_IP_top.vhd -lib work ../../TOP_LEVEL/divFreq.vhd -lib work ../../PCS_IP.vhd -lib work ../../PLL_IP.vhd -lib work ../../TOP_LEVEL/TOP_LEVEL.vhd -jobname "compiler"
+rc:0 success:1 runtime:3
+file:../synwork/SDI2_impl1_comp.srs|io:o|time:1611509853|size:30030|exec:0|csum:
+file:../synlog/SDI2_impl1_compiler.srr|io:o|time:1611509854|size:13588|exec:0|csum:
+file:/usr/local/diamond/3.11_x64/cae_library/synthesis/vhdl/ecp3.vhd|io:i|time:1542270737|size:196741|exec:0|csum:E34DA525EA0082AB2F0D3F5F81F24F0D
+file:../../sdi_eval/SDI_IP/src/rtl/top/ecp3/SDI_IP_top.vhd|io:i|time:1611362108|size:6083|exec:0|csum:1E9E9412703636D4137B4240CD4C1ED7
+file:../../TOP_LEVEL/divFreq.vhd|io:i|time:1611508966|size:1158|exec:0|csum:DE9E957F7F23ACB60EFEC79C5A1A1E37
+file:../../PCS_IP.vhd|io:i|time:1611362231|size:110372|exec:0|csum:41CF3D66DF232406AE873F79F9AED8F5
+file:../../PLL_IP.vhd|io:i|time:1611509542|size:3953|exec:0|csum:4A917B22D391029F361168858D8B277C
+file:../../TOP_LEVEL/TOP_LEVEL.vhd|io:i|time:1611509733|size:4575|exec:0|csum:F4E72B025A591DCED1CEDC1743E800E8
+file:/usr/local/diamond/3.11_x64/synpbase/linux_a_64/c_hdl|io:i|time:1554136089|size:8774632|exec:1|csum:C3E07530A8524987C42892A5146F1BC8
+file:/usr/local/diamond/3.11_x64/synpbase/bin/c_hdl|io:i|time:1554135608|size:365|exec:1|csum:4BFE636BF1E789CD3BE436D80F9E4F42
