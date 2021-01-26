@@ -2,17 +2,23 @@
 <BaliProject version="3.2" title="SDI2" device="LFE3-70E-8FN672C" default_implementation="impl1">
     <Options/>
     <Implementation title="impl1" dir="impl1" description="impl1" synthesis="synplify" default_strategy="Strategy1">
-        <Options def_top="TOP_LEVEL" top="TOP_LEVEL"/>
+        <Options def_top="PLL_2" top="TOP_LEVEL"/>
         <Source name="TOP_LEVEL/TOP_LEVEL.vhd" type="VHDL" type_short="VHDL">
             <Options top_module="TOP_LEVEL"/>
         </Source>
-        <Source name="PCS_IP.vhd" type="VHDL" type_short="VHDL">
+        <Source name="PCS_IP.ipx" type="IPX_Module" type_short="IPX">
             <Options/>
         </Source>
-        <Source name="sdi_eval/SDI_IP/src/rtl/top/ecp3/SDI_IP_top.vhd" type="VHDL" type_short="VHDL">
+        <Source name="SDI_IP.ipx" type="IPX_Module" type_short="IPX">
             <Options/>
         </Source>
-        <Source name="PLL_IP.vhd" type="VHDL" type_short="VHDL">
+        <Source name="PLL_1.ipx" type="IPX_Module" type_short="IPX">
+            <Options/>
+        </Source>
+        <Source name="PLL_2.ipx" type="IPX_Module" type_short="IPX">
+            <Options/>
+        </Source>
+        <Source name="Rvl1.rvl" type="Reveal" type_short="Reveal">
             <Options/>
         </Source>
         <Source name="SDI2.lpf" type="Logic Preference" type_short="LPF">

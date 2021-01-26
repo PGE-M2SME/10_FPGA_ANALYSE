@@ -1,26 +1,29 @@
+###########################################################[
 
-Copyright (C) 1994-2018 Synopsys, Inc.
+Copyright (C) 1994-2020 Synopsys, Inc.
 This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
 and may only be used pursuant to the terms and conditions of a written license agreement
 with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
 Synopsys software or the associated documentation is strictly prohibited.
 Tool: Synplify Pro (R)
-Build: N-2018.03L-SP1-1
-Install: /usr/local/diamond/3.11_x64/synpbase
-OS: CentOS Linux 7 (Core)
-Hostname: 15acaac0c3d8
+Build: Q-2020.03L-SP1
+Install: C:\lscc\diamond\3.12\synpbase
+OS: Windows 6.2
+
+Hostname: LAPTOP-QU0RURPA
 
 Implementation : impl1
-Synopsys VHDL Compiler, Version comp2018q2p1, Build 461R, Built Apr  1 2019 09:26:38
+Synopsys VHDL Compiler, Version comp202003synp2, Build 182R, Built Oct 29 2020 10:49:53, @
 
 @N|Running in 64-bit mode
-@N:"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":7:7:7:15|Top entity is set to TOP_LEVEL.
+@N:"C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\reveal_workspace\tmpreveal\TOP_LEVEL_rvl_top.vhd":112:7:112:15|Top entity is set to TOP_LEVEL.
+@W: CD266 :"C:\lscc\diamond\3.12\synpbase\lib\vhd\std_textio.vhd":208:6:208:9|good is not readable.  This may cause a simulation mismatch.
 
-At c_vhdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 70MB peak: 72MB)
+At c_vhdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 88MB peak: 88MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Sun Jan 24 17:37:31 2021
+# Tue Jan 26 07:54:50 2021
 
 ###########################################################]

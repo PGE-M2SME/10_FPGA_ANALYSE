@@ -1,5 +1,3 @@
-refclkp  i
-refclkn  i
 hdinp_ch3  i
 hdinn_ch3  i
 rxiclk_ch3  i
@@ -32,6 +30,7 @@ rx_cdr_lol_ch3_s  o
 rxd_ldr_ch3  o
 rx_div11_mode_ch3_c  i
 rx_div2_mode_ch3_c  i
+fpga_txrefclk  i
 refclk2fpga  o
 rst_n  i
 serdes_rst_qd_c  i

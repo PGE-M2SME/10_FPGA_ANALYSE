@@ -219,7 +219,7 @@ module pattern_control (
                        (std_select_r == 5'b10101) ? 11'd1920-2 : // HD #5, 1080i, 50
                        (std_select_r == 5'b10110) ? 11'd1920-2 : // HD #6, 1080p, 24
                        (std_select_r == 5'b10111) ? 11'd1280-2 : // HD #7,  720p, 60 
-                       (std_select_r == 5'b11000) ? 11'd2046 : // HD #8,  2K format         
+                       (std_select_r == 5'b11000) ? 11'd2048-2 : // HD #8,  2K format         
                        11'd0720-2;                             // SD #0,  525i, 60 and SD #1,  625i, 50
 
    assign reg_xc_sdi = (std_select_r == 5'b10000) ? 11'd0274-2 : // HD #0, 1035i, 60

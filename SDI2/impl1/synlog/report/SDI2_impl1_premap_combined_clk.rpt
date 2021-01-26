@@ -6,15 +6,20 @@
 
 #### START OF PREMAP CLOCK OPTIMIZATION REPORT #####[
 
-0 non-gated/non-generated clock tree(s) driving 0 clock pin(s) of sequential element(s)
-2 gated/generated clock tree(s) driving 34 clock pin(s) of sequential element(s)
-0 instances converted, 34 sequential instances remain driven by gated/generated clocks
+2 non-gated/non-generated clock tree(s) driving 430 clock pin(s) of sequential element(s)
+1 gated/generated clock tree(s) driving 33 clock pin(s) of sequential element(s)
+0 instances converted, 33 sequential instances remain driven by gated/generated clocks
 
+============================================= Non-Gated/Non-Generated Clocks =============================================
+Clock Tree ID     Driving Element                                  Drive Element Type     Fanout     Sample Instance      
+--------------------------------------------------------------------------------------------------------------------------
+@KP:ckid0_0       PLL2.CLKOP                                       PLL_1_uniq_1           215        PCS.refclkdiv2_rx_ch3
+@KP:ckid0_1       top_level_reveal_coretop_instance.jtag0.jtck     jtagconn16             215        ENCRYPTED            
+==========================================================================================================================
 ======================================================================= Gated/Generated Clocks ========================================================================
 Clock Tree ID     Driving Element                Drive Element Type     Unconverted Fanout     Sample Instance               Explanation                               
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-@KP:ckid0_0       PCS.refclkdiv2_rx_ch3.Q[0]     dff                    33                     PCS.rx_reset_sm_ch3.cs[2]     Derived clock on input (not legal for GCC)
-@KP:ckid0_2       PLL1.PLLInst_0.CLKOP           EHXPLLF                1                      PCS.refclkdiv2_rx_ch3         Black box on clock path                   
+@KP:ckid0_2       PCS.refclkdiv2_rx_ch3.Q[0]     dff                    33                     PCS.rx_reset_sm_ch3.cs[2]     Derived clock on input (not legal for GCC)
 =======================================================================================================================================================================
 
 

@@ -16,8 +16,8 @@ CoreRevision=5.8
 ModuleName=PLL_IP
 SourceFormat=VHDL
 ParameterFileVersion=1.0
-Date=01/24/2021
-Time=17:32:22
+Date=01/25/2021
+Time=14:27:30
 
 [Parameters]
 Verilog=0

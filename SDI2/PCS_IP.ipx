@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<DiamondModule name="PCS_IP" module="PCS" VendorName="Lattice Semiconductor Corporation" generator="IPexpress" date="2021 01 23 00:37:14.070" version="8.2" type="Module" synthesis="synplify" source_format="VHDL">
+<DiamondModule name="PCS_IP" module="PCS_IP" VendorName="Lattice Semiconductor Corporation" generator="IPexpress" date="2021 01 25 14:59:31.880" version="8.2" type="Module" synthesis="synplify" source_format="VHDL">
   <Package>
-		<File name="PCS_IP.lpc" type="lpc" modified="2021 01 23 00:37:11.000"/>
-		<File name="PCS_IP.pp" type="pp" modified="2021 01 23 00:37:11.000"/>
-		<File name="PCS_IP.sym" type="sym" modified="2021 01 23 00:37:11.000"/>
-		<File name="PCS_IP.tft" type="tft" modified="2021 01 23 00:37:11.000"/>
-		<File name="PCS_IP.txt" type="pcs_module" modified="2021 01 23 00:37:11.000"/>
-		<File name="PCS_IP.vhd" type="top_level_vhdl" modified="2021 01 23 00:37:11.000"/>
+		<File name="PCS_IP.lpc" type="lpc" modified="2021 01 25 14:59:28.136"/>
+		<File name="PCS_IP.pp" type="pp" modified="2021 01 25 14:59:28.138"/>
+		<File name="PCS_IP.sym" type="sym" modified="2021 01 25 14:59:28.425"/>
+		<File name="PCS_IP.tft" type="tft" modified="2021 01 25 14:59:28.161"/>
+		<File name="PCS_IP.txt" type="pcs_module" modified="2021 01 25 14:59:28.162"/>
+		<File name="PCS_IP.vhd" type="top_level_vhdl" modified="2021 01 25 14:59:28.160"/>
   </Package>
 </DiamondModule>

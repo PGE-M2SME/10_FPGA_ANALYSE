@@ -5,7 +5,7 @@ Max Top 5 critical clocks will be reported. For rest user needs to refer to Deta
 *******************************************************************************************-->
 <report_table display_priority="2" name="Timing Summary">
 <report_link name="Detailed report">
-<data>/home/diamond/SharedFolder/SDI2/impl1/synlog/SDI2_impl1_fpga_mapper.srr</data>
+<data>C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\synlog\SDI2_impl1_fpga_mapper.srr</data>
 <title>START OF TIMING REPORT</title>
 </report_link>
 <row>
@@ -15,21 +15,27 @@ Max Top 5 critical clocks will be reported. For rest user needs to refer to Deta
 <data tcl_name="slack">Slack</data>
 </row>
 <row>
-<data>PCS_IP|refclkdiv2_rx_ch3_derived_clock</data>
+<data>PCS_IP_uniq_0_work_top_level_arc_0layer0|refclkdiv2_rx_ch3_derived_clock</data>
 <data>200.0 MHz</data>
 <data>510.7 MHz</data>
 <data>6.084</data>
 </row>
 <row>
-<data>PLL_IP|CLKOP_inferred_clock</data>
+<data>PLL_1_uniq_1|CLKOP_inferred_clock</data>
 <data>200.0 MHz</data>
-<data>460.7 MHz</data>
-<data>2.829</data>
+<data>168.3 MHz</data>
+<data>-0.941</data>
+</row>
+<row>
+<data>reveal_coretop|jtck_inferred_clock[0]</data>
+<data>200.0 MHz</data>
+<data>136.8 MHz</data>
+<data>-2.308</data>
 </row>
 <row>
 <data>System</data>
 <data>200.0 MHz</data>
-<data>1556.9 MHz</data>
-<data>4.358</data>
+<data>280.3 MHz</data>
+<data>1.432</data>
 </row>
 </report_table>

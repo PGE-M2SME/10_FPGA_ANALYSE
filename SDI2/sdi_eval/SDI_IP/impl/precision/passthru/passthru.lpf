@@ -1,0 +1,96 @@
+# ------------ General
+COMMERCIAL ;
+BLOCK RESETPATHS ;
+BLOCK ASYNCPATHS ;
+SCHEMATIC START ;
+SCHEMATIC END ;
+BLOCK INTERCLOCKDOMAIN PATHS ;
+
+# ------------ Frequency constraints
+FREQUENCY NET "clk_pat_gen"       148.500000 MHz PAR_ADJ 50.000000 ;
+FREQUENCY NET "fpga_rxrefclk_ch1" 148.500000 MHz PAR_ADJ 50.000000 ;
+FREQUENCY NET "txiclk_ch0"        148.500000 MHz PAR_ADJ 50.000000 ;
+FREQUENCY NET "rxiclk_ch1"        148.500000 MHz PAR_ADJ 50.000000 ;
+FREQUENCY NET "rxfullclk"         297.000000 MHz PAR_ADJ 50.000000 ;
+FREQUENCY NET "clk_100_int"       100.000000 MHz PAR_ADJ 30.000000 ;
+
+# ------------ SERDES quad selection
+#PROHIBIT SITE "PCSB" ;
+#PROHIBIT SITE "PCSC" ;
+#PROHIBIT SITE "PCSD" ;
+LOCATE COMP "u1_ecp3pcs_pcsd_inst" SITE "PCSA" ;
+
+# ------------ IO pin locations
+# DIP Switches
+
+# Push button switches
+LOCATE COMP "pb1"              SITE "P2" ;  # rstn, pb1 (sw10)
+LOCATE COMP "pb2"              SITE "P1" ;  # rstn1, pb2 (sw9)
+LOCATE COMP "pb3"              SITE "U5" ;  # Error display reset, pb3 ()
+LOCATE COMP "pb4"              SITE "U4" ;  # Next display page, pb4 ()
+
+# Clocks and resets
+#LOCATE COMP "rx_4915_clkout_se_in" SITE "K16" ; # Not used if BYPASS_Rx_4911 defined
+LOCATE COMP "clk_100"          SITE "T26" ;
+LOCATE COMP "rxhalfclk_o"      SITE "AL27" ;
+#LOCATE COMP "tx_x1"           SITE "Y30" ; # Used only if BYPASS_TX_4911 is defined
+LOCATE COMP "rx_x1"            SITE "V34" ; # from 27 MHz oscillator
+LOCATE COMP "RX_GS4911_RESETn" SITE "D12" ; # Gennum RX4911 reset
+LOCATE COMP "TX_GS4911_RESETn" SITE "G11" ; # Gennum TX4911 reset
+
+# LEDs
+LOCATE COMP "rx_los"           SITE "AA31" ;# led_d10
+LOCATE COMP "rx_cdr_lol"       SITE "AN34" ;# led_d11
+LOCATE COMP "crc_error_o"      SITE "AN33" ;# led_d12
+LOCATE COMP "tx_pll_lol"       SITE "AP33" ;# led_d13
+LOCATE COMP "rx_hd_sdn_o"      SITE "AP32" ;# led_d14
+LOCATE COMP "rx_3g_hdn_o"      SITE "AL32" ;# led_d15
+LOCATE COMP "vid_format(0)"     SITE "AK32" ;# led_d16
+LOCATE COMP "vid_format(1)"     SITE "N32" ; # led_d17
+LOCATE COMP "frame_format(0)"   SITE "N31" ; # led_d22
+LOCATE COMP "frame_format(1)"   SITE "T29" ; # led_d23
+LOCATE COMP "frame_format(2)"   SITE "T28" ; # led_d24
+LOCATE COMP "vidactive"        SITE "T27" ; # led_d26
+
+# LCD display
+LOCATE COMP "lcd0"             SITE "A8" ;
+LOCATE COMP "lcd1"             SITE "A9" ;
+LOCATE COMP "lcd2"             SITE "A7" ;
+LOCATE COMP "lcd3"             SITE "E15" ;
+LOCATE COMP "lcd4"             SITE "D15" ;
+LOCATE COMP "lcd5"             SITE "H15" ;
+LOCATE COMP "lcd6"             SITE "E17" ;
+LOCATE COMP "lcd7"             SITE "B14" ;
+LOCATE COMP "lcd8"             SITE "A14" ;
+LOCATE COMP "lcd9"             SITE "E13" ;
+LOCATE COMP "lcd10"            SITE "E12" ;
+
+# ------------ IO buffer settings
+# DIP Switches
+
+# Clocks and resets
+#IOBUF PORT "rx_4915_clkout_se_in" IO_TYPE=LVCMOS33 ; # use this if Rx 4911 is used
+IOBUF PORT "rxhalfclk_o"       IO_TYPE=LVCMOS25 PULLMODE=NONE DRIVE=20 ;
+IOBUF PORT "RX_GS4911_RESETn"  IO_TYPE=LVCMOS33 ;
+IOBUF PORT "TX_GS4911_RESETn"  IO_TYPE=LVCMOS33 ;
+
+# LEDs
+IOBUF PORT "rx_cdr_lol"        IO_TYPE=LVCMOS25 ;
+IOBUF PORT "tx_pll_lol"        IO_TYPE=LVCMOS25 DRIVE=20 ;
+IOBUF PORT "rx_hd_sdn_o"       IO_TYPE=LVCMOS25 ;
+IOBUF PORT "rx_3g_hdn_o"       IO_TYPE=LVCMOS25 ;
+
+# LCD display
+IOBUF PORT "lcd0"              IO_TYPE=LVCMOS33 ;
+IOBUF PORT "lcd1"              IO_TYPE=LVCMOS33 ;
+IOBUF PORT "lcd10"             IO_TYPE=LVCMOS33 ;
+IOBUF PORT "lcd2"              IO_TYPE=LVCMOS33 ;
+IOBUF PORT "lcd3"              IO_TYPE=LVCMOS33 ;
+IOBUF PORT "lcd4"              IO_TYPE=LVCMOS33 ;
+IOBUF PORT "lcd5"              IO_TYPE=LVCMOS33 ;
+IOBUF PORT "lcd6"              IO_TYPE=LVCMOS33 ;
+IOBUF PORT "lcd7"              IO_TYPE=LVCMOS33 ;
+IOBUF PORT "lcd8"              IO_TYPE=LVCMOS33 ;
+IOBUF PORT "lcd9"              IO_TYPE=LVCMOS33 ;
+
+

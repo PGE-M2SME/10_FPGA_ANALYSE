@@ -1,15 +1,39 @@
+i Clk148_5Mhz
+m 0 0
+u 48 215
+p {t:Clk148_5Mhz.OUT[0]}{t:PCS.fpga_rxrefclk_ch3}{p:PCS.fpga_rxrefclk_ch3}{t:PCS.refclkdiv2_rx_ch3.C}
+e ckid0_0 {t:PCS.refclkdiv2_rx_ch3.C} dff
+c ckid0_0 {t:PLL2.CLKOP} PLL_1_uniq_1 Unsupported/too complex instance on clock path
+i top_level_reveal_coretop_instance.jtck_i[0]
+m 0 0
+u 46 215
+p {t:top_level_reveal_coretop_instance.jtag0.jtck}{t:top_level_reveal_coretop_instance.jtck_inferred_clock[0].I[0]}{t:top_level_reveal_coretop_instance.jtck_inferred_clock[0].OUT[0]}{t:top_level_reveal_coretop_instance.core0.jtck}{p:top_level_reveal_coretop_instance.core0.jtck}{t:top_level_reveal_coretop_instance.core0.tm_u.jtck}{p:ENCRYPTED}{t:ENCRYPTED}{t:ENCRYPTED}{t:ENCRYPTED}
+e ckid0_1 {t:ENCRYPTED} <ENCRYPTED>
+c ckid0_1 {t:top_level_reveal_coretop_instance.jtag0.jtck} jtagconn16 Unsupported/too complex instance on clock path
 i PCS.refclkdiv2_rx_ch3_i
 m 0 0
 u 14 33
-n ckid0_0 {t:PCS.rx_reset_sm_ch3.cs[2].C} Derived clock on input (not legal for GCC)
+n ckid0_2 {t:PCS.rx_reset_sm_ch3.cs[2].C} Derived clock on input (not legal for GCC)
 p {t:PCS.refclkdiv2_rx_ch3.Q[0]}{t:PCS.refclkdiv2_rx_ch3_derived_clock.I[0]}{t:PCS.refclkdiv2_rx_ch3_derived_clock.OUT[0]}{t:PCS.rx_reset_sm_ch3.refclkdiv2}{p:PCS.rx_reset_sm_ch3.refclkdiv2}{t:PCS.rx_reset_sm_ch3.cs[2].C}
-e ckid0_0 {t:PCS.rx_reset_sm_ch3.cs[2].C} dffr
-d ckid0_1 {t:PCS.refclkdiv2_rx_ch3.Q[0]} dff Potential generated clock but with a nonconvertable driver or an unknown conversion method
-i PLL1.CLKOP_i
+e ckid0_2 {t:PCS.rx_reset_sm_ch3.cs[2].C} dffr
+d ckid0_3 {t:PCS.refclkdiv2_rx_ch3.Q[0]} dff Potential generated clock but with a nonconvertable driver or an unknown conversion method
+i top_level_reveal_coretop_instance.ip_enable[0]
 m 0 0
-u 1 1
-n ckid0_2 {t:PCS.refclkdiv2_rx_ch3.C} Black box on clock path
-p {t:PLL1.PLLInst_0.CLKOP}{t:PLL1.CLKOP_inferred_clock.I[0]}{t:PLL1.CLKOP_inferred_clock.OUT[0]}{p:PLL1.CLKOP}{t:PLL1.CLKOP}{t:PCS.fpga_rxrefclk_ch3}{p:PCS.fpga_rxrefclk_ch3}{t:PCS.refclkdiv2_rx_ch3.C}
-e ckid0_2 {t:PCS.refclkdiv2_rx_ch3.C} dff
-d ckid0_2 {t:PLL1.PLLInst_0.CLKOP} EHXPLLF Black box on clock path
+u 0 0
+i top_level_reveal_coretop_instance.jce2[0]
+m 0 0
+u 0 0
+i top_level_reveal_coretop_instance.jrstn[0]
+m 0 0
+u 0 0
+i top_level_reveal_coretop_instance.jshift[0]
+m 0 0
+u 0 0
+i top_level_reveal_coretop_instance.jtdi[0]
+m 0 0
+u 0 0
+i PLL2.CLKOP_i
+m 0 0
+u 0 0
 l 0 0 0 0 0
+r 0 0 0 0 0 0 0 0

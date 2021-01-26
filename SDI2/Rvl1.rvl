@@ -1,0 +1,53 @@
+<Project ModBy="Inserter" SigType="0" Name="C:/Users/cypri/OneDrive/Documents/GIT/PGE/10_FPGA_ANALYSE/SDI2/Rvl1.rvl" Date="2021-01-26">
+    <IP Version="1_6_042617"/>
+    <Design DesignEntry="Schematic/VHDL" Synthesis="synplify" DeviceFamily="LatticeECP3" DesignName="SDI2"/>
+    <Core InsertDataset="0" Insert="1" Reveal_sig="343177905" Name="TOP_LEVEL_LA0" ID="0">
+        <Setting>
+            <Clock SampleClk="Clk148_5Mhz" SampleEnable="0" EnableClk="" EnableClk_Pri="0"/>
+            <TraceBuffer Implementation="0" BitTimeStamp="0" hasTimeStamp="0" IncTrigSig="0" BufferDepth="16384"/>
+            <Capture Mode="0" MinSamplesPerTrig="64"/>
+            <Event CntEnable="0" MaxEventCnt="8"/>
+            <TrigOut Polarity="0" MinPulseWidth="0" TrigOutNetType="1" EnableTrigOut="0" TrigOutNet="reveal_debug_TOP_LEVEL_LA0_net"/>
+            <DistRAM Disable="0"/>
+        </Setting>
+        <Dataset Name="Base">
+            <Trace>
+                <Bus Name="rxdata">
+                    <Sig Type="SIG" Name="rxdata:0"/>
+                    <Sig Type="SIG" Name="rxdata:1"/>
+                    <Sig Type="SIG" Name="rxdata:2"/>
+                    <Sig Type="SIG" Name="rxdata:3"/>
+                    <Sig Type="SIG" Name="rxdata:4"/>
+                    <Sig Type="SIG" Name="rxdata:5"/>
+                    <Sig Type="SIG" Name="rxdata:6"/>
+                    <Sig Type="SIG" Name="rxdata:7"/>
+                    <Sig Type="SIG" Name="rxdata:8"/>
+                    <Sig Type="SIG" Name="rxdata:9"/>
+                    <Sig Type="SIG" Name="rxdata:10"/>
+                    <Sig Type="SIG" Name="rxdata:11"/>
+                    <Sig Type="SIG" Name="rxdata:12"/>
+                    <Sig Type="SIG" Name="rxdata:13"/>
+                    <Sig Type="SIG" Name="rxdata:14"/>
+                    <Sig Type="SIG" Name="rxdata:15"/>
+                    <Sig Type="SIG" Name="rxdata:16"/>
+                    <Sig Type="SIG" Name="rxdata:17"/>
+                    <Sig Type="SIG" Name="rxdata:18"/>
+                    <Sig Type="SIG" Name="rxdata:19"/>
+                </Bus>
+                <Bus Name="vid_format">
+                    <Sig Type="SIG" Name="vid_format:0"/>
+                    <Sig Type="SIG" Name="vid_format:1"/>
+                </Bus>
+                <Sig Type="SIG" Name="pll2/clk"/>
+                <Sig Type="SIG" Name="pll2/clkop"/>
+                <Sig Type="SIG" Name="pll1/clk"/>
+                <Sig Type="SIG" Name="pll1/clkop"/>
+                <Sig Type="SIG" Name="pcs/fpga_rxrefclk_ch3"/>
+            </Trace>
+            <Trigger>
+                <TU Serialbits="0" Type="0" ID="1" Sig="(BUS)vid_format[1:0],"/>
+                <TE MaxSequence="1" MaxEvnCnt="1" ID="1" Resource="1"/>
+            </Trigger>
+        </Dataset>
+    </Core>
+</Project>

@@ -1,116 +1,171 @@
 
-Copyright (C) 1994-2018 Synopsys, Inc.
+Copyright (C) 1994-2020 Synopsys, Inc.
 This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
 and may only be used pursuant to the terms and conditions of a written license agreement
 with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
 Synopsys software or the associated documentation is strictly prohibited.
 Tool: Synplify Pro (R)
-Build: N-2018.03L-SP1-1
-Install: /usr/local/diamond/3.11_x64/synpbase
-OS: CentOS Linux 7 (Core)
-Hostname: 15acaac0c3d8
+Build: Q-2020.03L-SP1
+Install: C:\lscc\diamond\3.12\synpbase
+OS: Windows 6.2
+
+Hostname: LAPTOP-QU0RURPA
 
 Implementation : impl1
-Synopsys HDL Compiler, Version comp2018q2p1, Build 461R, Built Apr  1 2019 09:26:38
+Synopsys HDL Compiler, Version comp202003synp2, Build 182R, Built Oct 29 2020 10:49:53, @
 
 @N|Running in 64-bit mode
+###########################################################[
 
-Copyright (C) 1994-2018 Synopsys, Inc.
+Copyright (C) 1994-2020 Synopsys, Inc.
 This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
 and may only be used pursuant to the terms and conditions of a written license agreement
 with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
 Synopsys software or the associated documentation is strictly prohibited.
 Tool: Synplify Pro (R)
-Build: N-2018.03L-SP1-1
-Install: /usr/local/diamond/3.11_x64/synpbase
-OS: CentOS Linux 7 (Core)
-Hostname: 15acaac0c3d8
+Build: Q-2020.03L-SP1
+Install: C:\lscc\diamond\3.12\synpbase
+OS: Windows 6.2
+
+Hostname: LAPTOP-QU0RURPA
 
 Implementation : impl1
-Synopsys VHDL Compiler, Version comp2018q2p1, Build 461R, Built Apr  1 2019 09:26:38
+Synopsys VHDL Compiler, Version comp202003synp2, Build 182R, Built Oct 29 2020 10:49:53, @
 
 @N|Running in 64-bit mode
-@N:"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":7:7:7:15|Top entity is set to TOP_LEVEL.
-File /usr/local/diamond/3.11_x64/synpbase/lib/vhd/std_textio.vhd changed - recompiling
-File /home/diamond/SharedFolder/SDI2/PLL_IP.vhd changed - recompiling
-File /home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd changed - recompiling
+@N:"C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\reveal_workspace\tmpreveal\TOP_LEVEL_rvl_top.vhd":3235:7:3235:11|Top entity is set to PLL_2.
+@W: CD266 :"C:\lscc\diamond\3.12\synpbase\lib\vhd\std_textio.vhd":208:6:208:9|good is not readable.  This may cause a simulation mismatch.
 VHDL syntax check successful!
-File /home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd changed - recompiling
-@N: CD630 :"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":4:7:4:15|Synthesizing work.top_level.arc.
-@W: CD326 :"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":99:2:99:4|Port c1_crc_error of entity work.sdi_ip_top is unconnected. If a port needs to remain unconnected, use the keyword open.
-@W: CD326 :"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":99:2:99:4|Port y1_crc_error of entity work.sdi_ip_top is unconnected. If a port needs to remain unconnected, use the keyword open.
-@W: CD326 :"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":99:2:99:4|Port sav_error of entity work.sdi_ip_top is unconnected. If a port needs to remain unconnected, use the keyword open.
-@W: CD326 :"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":99:2:99:4|Port eav_error of entity work.sdi_ip_top is unconnected. If a port needs to remain unconnected, use the keyword open.
-@W: CD326 :"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":99:2:99:4|Port ln1_out of entity work.sdi_ip_top is unconnected. If a port needs to remain unconnected, use the keyword open.
-@W: CD326 :"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":99:2:99:4|Port hblank of entity work.sdi_ip_top is unconnected. If a port needs to remain unconnected, use the keyword open.
-@W: CD326 :"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":99:2:99:4|Port vblank of entity work.sdi_ip_top is unconnected. If a port needs to remain unconnected, use the keyword open.
-@W: CD326 :"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":99:2:99:4|Port field of entity work.sdi_ip_top is unconnected. If a port needs to remain unconnected, use the keyword open.
-@W: CD326 :"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":99:2:99:4|Port frame_format of entity work.sdi_ip_top is unconnected. If a port needs to remain unconnected, use the keyword open.
-@W: CD326 :"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":99:2:99:4|Port rx_hd_sdn of entity work.sdi_ip_top is unconnected. If a port needs to remain unconnected, use the keyword open.
-@W: CD326 :"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":99:2:99:4|Port rx_tg_hdn of entity work.sdi_ip_top is unconnected. If a port needs to remain unconnected, use the keyword open.
-@W: CD326 :"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":99:2:99:4|Port trs_out of entity work.sdi_ip_top is unconnected. If a port needs to remain unconnected, use the keyword open.
-@W: CD326 :"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":99:2:99:4|Port vid_active of entity work.sdi_ip_top is unconnected. If a port needs to remain unconnected, use the keyword open.
-@W: CD326 :"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":99:2:99:4|Port pd_out of entity work.sdi_ip_top is unconnected. If a port needs to remain unconnected, use the keyword open.
-@W: CD326 :"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":108:2:108:4|Port refclk2fpga of entity work.pcs_ip is unconnected. If a port needs to remain unconnected, use the keyword open.
-@W: CD326 :"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":108:2:108:4|Port rxd_ldr_ch3 of entity work.pcs_ip is unconnected. If a port needs to remain unconnected, use the keyword open.
-@W: CD326 :"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":108:2:108:4|Port rx_cdr_lol_ch3_s of entity work.pcs_ip is unconnected. If a port needs to remain unconnected, use the keyword open.
-@W: CD326 :"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":108:2:108:4|Port rx_los_low_ch3_s of entity work.pcs_ip is unconnected. If a port needs to remain unconnected, use the keyword open.
-@W: CD326 :"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":108:2:108:4|Port rx_full_clk_ch3 of entity work.pcs_ip is unconnected. If a port needs to remain unconnected, use the keyword open.
-@W: CD638 :"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":86:14:86:21|Signal pll_lock is undriven. Either assign the signal a value or remove the signal declaration.
-@N: CD630 :"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":1738:7:1738:12|Synthesizing work.pcs_ip.pcs_ip_arch.
-@N: CD630 :"/usr/local/diamond/3.11_x64/cae_library/synthesis/vhdl/ecp3.vhd":5221:10:5221:13|Synthesizing work.pcsd.syn_black_box.
-Post processing for work.pcsd.syn_black_box
-Running optimization stage 1 on PCSD .......
-@W: CD638 :"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":2336:7:2336:20|Signal refclk_from_nq is undriven. Either assign the signal a value or remove the signal declaration.
-@W: CD638 :"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":2339:7:2339:9|Signal cin is undriven. Either assign the signal a value or remove the signal declaration.
-@W: CD638 :"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":2340:7:2340:10|Signal cout is undriven. Either assign the signal a value or remove the signal declaration.
-@W: CD638 :"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":2343:10:2343:26|Signal tx_pll_lol_qd_sig is undriven. Either assign the signal a value or remove the signal declaration.
-@W: CD638 :"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":2344:10:2344:27|Signal rx_los_low_ch0_sig is undriven. Either assign the signal a value or remove the signal declaration.
-@W: CD638 :"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":2345:10:2345:27|Signal rx_los_low_ch1_sig is undriven. Either assign the signal a value or remove the signal declaration.
-@W: CD638 :"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":2346:10:2346:27|Signal rx_los_low_ch2_sig is undriven. Either assign the signal a value or remove the signal declaration.
-@W: CD638 :"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":2348:10:2348:27|Signal rx_cdr_lol_ch0_sig is undriven. Either assign the signal a value or remove the signal declaration.
-@W: CD638 :"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":2349:10:2349:27|Signal rx_cdr_lol_ch1_sig is undriven. Either assign the signal a value or remove the signal declaration.
-@W: CD638 :"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":2350:10:2350:27|Signal rx_cdr_lol_ch2_sig is undriven. Either assign the signal a value or remove the signal declaration.
-@N: CD630 :"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":1528:7:1528:23|Synthesizing work.pcs_iprx_reset_sm.rx_reset_sm_arch.
-@N: CD231 :"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":1543:15:1543:16|Using onehot encoding for type statetype. For example, enumeration wait_for_plol is mapped to "100000".
-@N: CD604 :"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":1716:6:1716:19|OTHERS clause is not synthesized.
-@W: CG296 :"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":1653:0:1653:6|Incomplete sensitivity list; assuming completeness. Make sure all referenced variables in message CG290 are included in the sensitivity list.
-@W: CG290 :"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":1693:29:1693:42|Referenced variable rx_lol_los_del is not in sensitivity list.
-@W: CD638 :"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":1553:9:1553:20|Signal plol_los_int is undriven. Either assign the signal a value or remove the signal declaration.
-Post processing for work.pcs_iprx_reset_sm.rx_reset_sm_arch
-Running optimization stage 1 on PCS_IPrx_reset_sm .......
-@N: CD630 :"/usr/local/diamond/3.11_x64/cae_library/synthesis/vhdl/ecp3.vhd":1361:10:1361:12|Synthesizing work.vhi.syn_black_box.
-Post processing for work.vhi.syn_black_box
-Running optimization stage 1 on VHI .......
-@N: CD630 :"/usr/local/diamond/3.11_x64/cae_library/synthesis/vhdl/ecp3.vhd":1368:10:1368:12|Synthesizing work.vlo.syn_black_box.
-Post processing for work.vlo.syn_black_box
-Running optimization stage 1 on VLO .......
-Post processing for work.pcs_ip.pcs_ip_arch
-Running optimization stage 1 on PCS_IP .......
-@W: CL168 :"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":2364:0:2364:7|Removing instance vhi_inst because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
-@N: CD630 :"/home/diamond/SharedFolder/SDI2/sdi_eval/SDI_IP/src/rtl/top/ecp3/SDI_IP_top.vhd":9:7:9:16|Synthesizing work.sdi_ip_top.arch.
-@W: CD280 :"/home/diamond/SharedFolder/SDI2/sdi_eval/SDI_IP/src/rtl/top/ecp3/SDI_IP_top.vhd":46:10:46:15|Unbound component SDI_IP mapped to black box
-@N: CD630 :"/home/diamond/SharedFolder/SDI2/sdi_eval/SDI_IP/src/rtl/top/ecp3/SDI_IP_top.vhd":46:10:46:15|Synthesizing work.sdi_ip.syn_black_box.
-Post processing for work.sdi_ip.syn_black_box
+File C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\reveal_workspace\tmpreveal\TOP_LEVEL_rvl_top.vhd changed - recompiling
+
+At c_vhdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 88MB peak: 89MB)
+
+
+Process completed successfully.
+# Tue Jan 26 07:54:50 2021
+
+###########################################################]
+###########################################################[
+
+Copyright (C) 1994-2020 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: Q-2020.03L-SP1
+Install: C:\lscc\diamond\3.12\synpbase
+OS: Windows 6.2
+
+Hostname: LAPTOP-QU0RURPA
+
+Implementation : impl1
+Synopsys Verilog Compiler, Version comp202003synp2, Build 182R, Built Oct 29 2020 10:49:53, @
+
+@N|Running in 64-bit mode
+@I::"C:\lscc\diamond\3.12\synpbase\lib\lucent\ecp3.v" (library work)
+@I::"C:\lscc\diamond\3.12\synpbase\lib\lucent\pmi_def.v" (library work)
+@I::"C:\lscc\diamond\3.12\synpbase\lib\vlog\hypermods.v" (library __hyper__lib__)
+@I::"C:\lscc\diamond\3.12\synpbase\lib\vlog\umr_capim.v" (library snps_haps)
+@I::"C:\lscc\diamond\3.12\synpbase\lib\vlog\scemi_objects.v" (library snps_haps)
+@I::"C:\lscc\diamond\3.12\synpbase\lib\vlog\scemi_pipes.svh" (library snps_haps)
+@I::"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v" (library work)
+@I::"C:\lscc\diamond\3.12\module\reveal\src\ertl\ertl.v" (library work)
+@I::"C:\lscc\diamond\3.12\module\reveal\src\rvl_j2w_module\rvl_j2w_module.v" (library work)
+@I::"C:\lscc\diamond\3.12\module\reveal\src\rvl_j2w_module\wb2sci.v" (library work)
+@I::"C:\lscc\diamond\3.12\module\reveal\src\ertl\JTAG_SOFT.v" (library work)
+@I::"C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\reveal_workspace\tmpreveal\top_level_la0_trig_gen.v" (library work)
+@I::"C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\reveal_workspace\tmpreveal\top_level_la0_gen.v" (library work)
+Verilog syntax check successful!
+
+At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 94MB peak: 95MB)
+
+
+Process completed successfully.
+# Tue Jan 26 07:54:50 2021
+
+###########################################################]
+###########################################################[
+@N:"C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\reveal_workspace\tmpreveal\TOP_LEVEL_rvl_top.vhd":112:7:112:15|Top entity is set to TOP_LEVEL.
+File C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\reveal_workspace\tmpreveal\TOP_LEVEL_rvl_top.vhd changed - recompiling
+File C:\lscc\diamond\3.12\synpbase\lib\vhd\std_textio.vhd changed - recompiling
+@W: CD266 :"C:\lscc\diamond\3.12\synpbase\lib\vhd\std_textio.vhd":208:6:208:9|good is not readable.  This may cause a simulation mismatch.
+VHDL syntax check successful!
+File C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\reveal_workspace\tmpreveal\TOP_LEVEL_rvl_top.vhd changed - recompiling
+@N: CD630 :"C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\reveal_workspace\tmpreveal\TOP_LEVEL_rvl_top.vhd":112:7:112:15|Synthesizing work.top_level.arc.
+@W: CD326 :"C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\reveal_workspace\tmpreveal\TOP_LEVEL_rvl_top.vhd":1779:17:1779:34|Port refclk2fpga of entity work.pcs_ip_uniq_0 is unconnected. If a port needs to remain unconnected, use the keyword open.
+@W: CD326 :"C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\reveal_workspace\tmpreveal\TOP_LEVEL_rvl_top.vhd":1779:17:1779:34|Port rxd_ldr_ch3 of entity work.pcs_ip_uniq_0 is unconnected. If a port needs to remain unconnected, use the keyword open.
+@W: CD326 :"C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\reveal_workspace\tmpreveal\TOP_LEVEL_rvl_top.vhd":1779:17:1779:34|Port rx_cdr_lol_ch3_s of entity work.pcs_ip_uniq_0 is unconnected. If a port needs to remain unconnected, use the keyword open.
+@W: CD326 :"C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\reveal_workspace\tmpreveal\TOP_LEVEL_rvl_top.vhd":1779:17:1779:34|Port rx_los_low_ch3_s of entity work.pcs_ip_uniq_0 is unconnected. If a port needs to remain unconnected, use the keyword open.
+@W: CD326 :"C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\reveal_workspace\tmpreveal\TOP_LEVEL_rvl_top.vhd":1779:17:1779:34|Port rx_full_clk_ch3 of entity work.pcs_ip_uniq_0 is unconnected. If a port needs to remain unconnected, use the keyword open.
+@W: CD326 :"C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\reveal_workspace\tmpreveal\TOP_LEVEL_rvl_top.vhd":1792:4:1792:6|Port c1_crc_error of entity work.sdi_ip is unconnected. If a port needs to remain unconnected, use the keyword open.
+@W: CD326 :"C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\reveal_workspace\tmpreveal\TOP_LEVEL_rvl_top.vhd":1792:4:1792:6|Port y1_crc_error of entity work.sdi_ip is unconnected. If a port needs to remain unconnected, use the keyword open.
+@W: CD326 :"C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\reveal_workspace\tmpreveal\TOP_LEVEL_rvl_top.vhd":1792:4:1792:6|Port sav_error of entity work.sdi_ip is unconnected. If a port needs to remain unconnected, use the keyword open.
+@W: CD326 :"C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\reveal_workspace\tmpreveal\TOP_LEVEL_rvl_top.vhd":1792:4:1792:6|Port eav_error of entity work.sdi_ip is unconnected. If a port needs to remain unconnected, use the keyword open.
+@W: CD326 :"C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\reveal_workspace\tmpreveal\TOP_LEVEL_rvl_top.vhd":1792:4:1792:6|Port ln1_out of entity work.sdi_ip is unconnected. If a port needs to remain unconnected, use the keyword open.
+@W: CD326 :"C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\reveal_workspace\tmpreveal\TOP_LEVEL_rvl_top.vhd":1792:4:1792:6|Port hblank of entity work.sdi_ip is unconnected. If a port needs to remain unconnected, use the keyword open.
+@W: CD326 :"C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\reveal_workspace\tmpreveal\TOP_LEVEL_rvl_top.vhd":1792:4:1792:6|Port vblank of entity work.sdi_ip is unconnected. If a port needs to remain unconnected, use the keyword open.
+@W: CD326 :"C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\reveal_workspace\tmpreveal\TOP_LEVEL_rvl_top.vhd":1792:4:1792:6|Port field of entity work.sdi_ip is unconnected. If a port needs to remain unconnected, use the keyword open.
+@W: CD326 :"C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\reveal_workspace\tmpreveal\TOP_LEVEL_rvl_top.vhd":1792:4:1792:6|Port frame_format of entity work.sdi_ip is unconnected. If a port needs to remain unconnected, use the keyword open.
+@W: CD326 :"C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\reveal_workspace\tmpreveal\TOP_LEVEL_rvl_top.vhd":1792:4:1792:6|Port rx_hd_sdn of entity work.sdi_ip is unconnected. If a port needs to remain unconnected, use the keyword open.
+@W: CD326 :"C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\reveal_workspace\tmpreveal\TOP_LEVEL_rvl_top.vhd":1792:4:1792:6|Port rx_tg_hdn of entity work.sdi_ip is unconnected. If a port needs to remain unconnected, use the keyword open.
+@W: CD326 :"C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\reveal_workspace\tmpreveal\TOP_LEVEL_rvl_top.vhd":1792:4:1792:6|Port trs_out of entity work.sdi_ip is unconnected. If a port needs to remain unconnected, use the keyword open.
+@W: CD326 :"C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\reveal_workspace\tmpreveal\TOP_LEVEL_rvl_top.vhd":1792:4:1792:6|Port vid_active of entity work.sdi_ip is unconnected. If a port needs to remain unconnected, use the keyword open.
+@W: CD326 :"C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\reveal_workspace\tmpreveal\TOP_LEVEL_rvl_top.vhd":1792:4:1792:6|Port pd_out of entity work.sdi_ip is unconnected. If a port needs to remain unconnected, use the keyword open.
+@W: CD638 :"C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\reveal_workspace\tmpreveal\TOP_LEVEL_rvl_top.vhd":1710:18:1710:25|Signal pll_lock is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\reveal_workspace\tmpreveal\TOP_LEVEL_rvl_top.vhd":1713:11:1713:19|Signal rx_hlfclk is undriven. Either assign the signal a value or remove the signal declaration.
+@N: CD630 :"C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\reveal_workspace\tmpreveal\TOP_LEVEL_rvl_top.vhd":4:7:4:20|Synthesizing work.reveal_coretop.one.
+@W: CD638 :"C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\reveal_workspace\tmpreveal\TOP_LEVEL_rvl_top.vhd":19:11:19:21|Signal trigger_out is undriven. Either assign the signal a value or remove the signal declaration.
+Running optimization stage 1 on jtagconn16 .......
+Running optimization stage 1 on top_level_la0 .......
+Post processing for work.reveal_coretop.one
+Running optimization stage 1 on reveal_coretop .......
 Running optimization stage 1 on SDI_IP .......
-Post processing for work.sdi_ip_top.arch
-Running optimization stage 1 on SDI_IP_top .......
-@N: CD630 :"/home/diamond/SharedFolder/SDI2/PLL_IP.vhd":14:7:14:12|Synthesizing work.pll_ip.structure.
-@N: CD630 :"/usr/local/diamond/3.11_x64/cae_library/synthesis/vhdl/ecp3.vhd":1967:10:1967:16|Synthesizing work.ehxpllf.syn_black_box.
-Post processing for work.ehxpllf.syn_black_box
+@N: CD630 :"C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\reveal_workspace\tmpreveal\TOP_LEVEL_rvl_top.vhd":377:7:377:19|Synthesizing work.pcs_ip_uniq_0.pcs_ip_arch.
+@W: CD638 :"C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\reveal_workspace\tmpreveal\TOP_LEVEL_rvl_top.vhd":1125:11:1125:24|Signal refclk_from_nq is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\reveal_workspace\tmpreveal\TOP_LEVEL_rvl_top.vhd":1128:11:1128:13|Signal cin is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\reveal_workspace\tmpreveal\TOP_LEVEL_rvl_top.vhd":1129:11:1129:14|Signal cout is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\reveal_workspace\tmpreveal\TOP_LEVEL_rvl_top.vhd":1131:11:1131:27|Signal tx_pll_lol_qd_sig is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\reveal_workspace\tmpreveal\TOP_LEVEL_rvl_top.vhd":1132:11:1132:28|Signal rx_los_low_ch0_sig is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\reveal_workspace\tmpreveal\TOP_LEVEL_rvl_top.vhd":1133:11:1133:28|Signal rx_los_low_ch1_sig is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\reveal_workspace\tmpreveal\TOP_LEVEL_rvl_top.vhd":1134:11:1134:28|Signal rx_los_low_ch2_sig is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\reveal_workspace\tmpreveal\TOP_LEVEL_rvl_top.vhd":1136:11:1136:28|Signal rx_cdr_lol_ch0_sig is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\reveal_workspace\tmpreveal\TOP_LEVEL_rvl_top.vhd":1137:11:1137:28|Signal rx_cdr_lol_ch1_sig is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\reveal_workspace\tmpreveal\TOP_LEVEL_rvl_top.vhd":1138:11:1138:28|Signal rx_cdr_lol_ch2_sig is undriven. Either assign the signal a value or remove the signal declaration.
+@N: CD630 :"C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\reveal_workspace\tmpreveal\TOP_LEVEL_rvl_top.vhd":407:7:407:30|Synthesizing work.pcs_iprx_reset_sm_uniq_0.rx_reset_sm_arch.
+@N: CD231 :"C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\reveal_workspace\tmpreveal\TOP_LEVEL_rvl_top.vhd":421:19:421:20|Using onehot encoding for type statetype. For example, enumeration wait_for_plol is mapped to "100000".
+@N: CD604 :"C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\reveal_workspace\tmpreveal\TOP_LEVEL_rvl_top.vhd":568:12:568:25|OTHERS clause is not synthesized.
+@W: CG296 :"C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\reveal_workspace\tmpreveal\TOP_LEVEL_rvl_top.vhd":513:4:513:10|Incomplete sensitivity list; assuming completeness. Make sure all referenced variables in message CG290 are included in the sensitivity list.
+@W: CG290 :"C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\reveal_workspace\tmpreveal\TOP_LEVEL_rvl_top.vhd":547:37:547:50|Referenced variable rx_lol_los_del is not in sensitivity list.
+@W: CD638 :"C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\reveal_workspace\tmpreveal\TOP_LEVEL_rvl_top.vhd":429:11:429:22|Signal plol_los_int is undriven. Either assign the signal a value or remove the signal declaration.
+Post processing for work.pcs_iprx_reset_sm_uniq_0.rx_reset_sm_arch
+Running optimization stage 1 on PCS_IPrx_reset_sm_uniq_0 .......
+Running optimization stage 1 on PCSD .......
+Running optimization stage 1 on VHI .......
+Running optimization stage 1 on VLO .......
+Post processing for work.pcs_ip_uniq_0.pcs_ip_arch
+Running optimization stage 1 on PCS_IP_uniq_0 .......
+@N: CD630 :"C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\reveal_workspace\tmpreveal\TOP_LEVEL_rvl_top.vhd":254:7:254:18|Synthesizing work.pll_1_uniq_1.structure.
 Running optimization stage 1 on EHXPLLF .......
-Post processing for work.pll_ip.structure
-Running optimization stage 1 on PLL_IP .......
+Post processing for work.pll_1_uniq_1.structure
+Running optimization stage 1 on PLL_1_uniq_1 .......
+@N: CD630 :"C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\reveal_workspace\tmpreveal\TOP_LEVEL_rvl_top.vhd":132:7:132:18|Synthesizing work.pll_1_uniq_0.structure.
+Post processing for work.pll_1_uniq_0.structure
+Running optimization stage 1 on PLL_1_uniq_0 .......
 Post processing for work.top_level.arc
 Running optimization stage 1 on TOP_LEVEL .......
+@W: CL240 :"C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\reveal_workspace\tmpreveal\TOP_LEVEL_rvl_top.vhd":1713:11:1713:19|Signal rx_hlfClk is floating; a simulation mismatch is possible.
+@W: CL167 :"C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\reveal_workspace\tmpreveal\TOP_LEVEL_rvl_top.vhd":1792:4:1792:6|Input rx_clk of instance SDI is floating
+@W: CL167 :"C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\reveal_workspace\tmpreveal\TOP_LEVEL_rvl_top.vhd":1779:17:1779:34|Input rxiclk_ch3 of instance PCS is floating
+@W: CL167 :"C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\reveal_workspace\tmpreveal\TOP_LEVEL_rvl_top.vhd":1779:17:1779:34|Input fpga_txrefclk of instance PCS is floating
+Running optimization stage 2 on PLL_1_uniq_0 .......
 Running optimization stage 2 on EHXPLLF .......
-Running optimization stage 2 on PLL_IP .......
-Running optimization stage 2 on SDI_IP .......
-Running optimization stage 2 on SDI_IP_top .......
+Running optimization stage 2 on PLL_1_uniq_1 .......
 Running optimization stage 2 on VLO .......
 Running optimization stage 2 on VHI .......
-Running optimization stage 2 on PCS_IPrx_reset_sm .......
-@N: CL201 :"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":1591:3:1591:4|Trying to extract state machine for register cs.
+Running optimization stage 2 on PCSD .......
+Running optimization stage 2 on PCS_IPrx_reset_sm_uniq_0_work_top_level_arc_0layer0 .......
+@N: CL201 :"C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\reveal_workspace\tmpreveal\TOP_LEVEL_rvl_top.vhd":461:8:461:9|Trying to extract state machine for register cs.
 Extracted state machine for register cs
 State machine has 6 reachable states with original encodings of:
    000001
@@ -119,61 +174,135 @@ State machine has 6 reachable states with original encodings of:
    001000
    010000
    100000
-Running optimization stage 2 on PCSD .......
-Running optimization stage 2 on PCS_IP .......
+Running optimization stage 2 on PCS_IP_uniq_0_work_top_level_arc_0layer0 .......
+Running optimization stage 2 on SDI_IP .......
+Running optimization stage 2 on top_level_la0 .......
+Running optimization stage 2 on jtagconn16 .......
+Running optimization stage 2 on reveal_coretop .......
 Running optimization stage 2 on TOP_LEVEL .......
 
 For a summary of runtime and memory usage per design unit, please see file:
 ==========================================================
-@L: /home/diamond/SharedFolder/SDI2/impl1/synwork/layer0.rt.csv
+@L: C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\synwork\layer0.rt.csv
 
 
-At c_vhdl Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 73MB peak: 74MB)
+At c_vhdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 92MB peak: 93MB)
 
-Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Sun Jan 24 17:37:33 2021
+# Tue Jan 26 07:54:51 2021
 
 ###########################################################]
+###########################################################[
+@I::"C:\lscc\diamond\3.12\synpbase\lib\lucent\ecp3.v" (library work)
+@I::"C:\lscc\diamond\3.12\synpbase\lib\lucent\pmi_def.v" (library work)
+@I::"C:\lscc\diamond\3.12\synpbase\lib\vlog\hypermods.v" (library __hyper__lib__)
+@I::"C:\lscc\diamond\3.12\synpbase\lib\vlog\umr_capim.v" (library snps_haps)
+@I::"C:\lscc\diamond\3.12\synpbase\lib\vlog\scemi_objects.v" (library snps_haps)
+@I::"C:\lscc\diamond\3.12\synpbase\lib\vlog\scemi_pipes.svh" (library snps_haps)
+@I::"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v" (library work)
+@I::"C:\lscc\diamond\3.12\module\reveal\src\ertl\ertl.v" (library work)
+@I::"C:\lscc\diamond\3.12\module\reveal\src\rvl_j2w_module\rvl_j2w_module.v" (library work)
+@I::"C:\lscc\diamond\3.12\module\reveal\src\rvl_j2w_module\wb2sci.v" (library work)
+@I::"C:\lscc\diamond\3.12\module\reveal\src\ertl\JTAG_SOFT.v" (library work)
+@I::"C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\reveal_workspace\tmpreveal\top_level_la0_trig_gen.v" (library work)
+@I::"C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\reveal_workspace\tmpreveal\top_level_la0_gen.v" (library work)
+Verilog syntax check successful!
+@N: CG364 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":1162:7:1162:16|Synthesizing module jtagconn16 in library work.
+Running optimization stage 1 on jtagconn16 .......
+Running optimization stage 1 on rvl_jtag_int_27s_2s_0s_0s_5s_27s_27s .......
+Running optimization stage 1 on rvl_decode_1s_1s .......
+Running optimization stage 1 on rvl_tu_2s_0s_0s_0s_1s .......
+Running optimization stage 1 on pmi_ram_dp_Z2_layer1 .......
+Running optimization stage 1 on rvl_te_Z1_layer1 .......
+Running optimization stage 1 on rvl_tcnt_1s_3s_1_0s .......
+@N: CG364 :"C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\reveal_workspace\tmpreveal\top_level_la0_trig_gen.v":11:7:11:24|Synthesizing module top_level_la0_trig in library work.
+Running optimization stage 1 on top_level_la0_trig .......
+Running optimization stage 1 on pmi_ram_dp_Z4_layer1 .......
+Running optimization stage 1 on rvl_tm_Z3_layer1 .......
+@N: CG364 :"C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\reveal_workspace\tmpreveal\top_level_la0_gen.v":12:7:12:19|Synthesizing module top_level_la0 in library work.
+Running optimization stage 1 on top_level_la0 .......
+Running optimization stage 2 on top_level_la0 .......
+@N: CL159 :"C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\reveal_workspace\tmpreveal\top_level_la0_gen.v":51:7:51:13|Input reset_n is unused.
+@N: CL159 :"C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\reveal_workspace\tmpreveal\top_level_la0_gen.v":62:7:62:16|Input trigger_en is unused.
+Running optimization stage 2 on pmi_ram_dp_Z4_layer1 .......
+Running optimization stage 2 on rvl_tm_Z3_layer1 .......
+Running optimization stage 2 on top_level_la0_trig .......
+Running optimization stage 2 on rvl_tcnt_1s_3s_1_0s .......
+Running optimization stage 2 on pmi_ram_dp_Z2_layer1 .......
+Running optimization stage 2 on rvl_te_Z1_layer1 .......
+Running optimization stage 2 on rvl_tu_2s_0s_0s_0s_1s .......
+Running optimization stage 2 on rvl_decode_1s_1s .......
+Running optimization stage 2 on rvl_jtag_int_27s_2s_0s_0s_5s_27s_27s .......
+Running optimization stage 2 on jtagconn16 .......
 
-Copyright (C) 1994-2018 Synopsys, Inc.
+For a summary of runtime and memory usage per design unit, please see file:
+==========================================================
+@L: C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\synwork\layer1.rt.csv
+
+
+At c_ver Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 109MB peak: 114MB)
+
+
+Process completed successfully.
+# Tue Jan 26 07:54:52 2021
+
+###########################################################]
+###########################################################[
+
+Copyright (C) 1994-2020 Synopsys, Inc.
 This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
 and may only be used pursuant to the terms and conditions of a written license agreement
 with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
 Synopsys software or the associated documentation is strictly prohibited.
 Tool: Synplify Pro (R)
-Build: N-2018.03L-SP1-1
-Install: /usr/local/diamond/3.11_x64/synpbase
-OS: CentOS Linux 7 (Core)
-Hostname: 15acaac0c3d8
+Build: Q-2020.03L-SP1
+Install: C:\lscc\diamond\3.12\synpbase
+OS: Windows 6.2
+
+Hostname: LAPTOP-QU0RURPA
 
 Implementation : impl1
-Synopsys Synopsys Netlist Linker, Version comp2018q2p1, Build 461R, Built Apr  1 2019 09:26:38
+Synopsys Synopsys Netlist Linker, Version comp202003synp2, Build 182R, Built Oct 29 2020 10:49:53, @
 
 @N|Running in 64-bit mode
-File /home/diamond/SharedFolder/SDI2/impl1/synwork/layer0.srs changed - recompiling
+File C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\synwork\layer0.srs changed - recompiling
+File C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\synwork\layer1.srs changed - recompiling
+@W: Z198 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_rvl_top.vhd":1792:4:1792:6|Unbound component SDI_IP of instance SDI 
+@W: Z198 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_rvl_top.vhd":204:4:204:17|Unbound component VLO of instance scuba_vlo_inst 
+@W: Z198 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_rvl_top.vhd":206:4:206:12|Unbound component EHXPLLF of instance PLLInst_0 
+@W: Z198 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_rvl_top.vhd":326:4:326:17|Unbound component VLO of instance scuba_vlo_inst 
+@W: Z198 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_rvl_top.vhd":328:4:328:12|Unbound component EHXPLLF of instance PLLInst_0 
+@W: Z198 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_rvl_top.vhd":1144:4:1144:11|Unbound component VLO of instance vlo_inst 
+@W: Z198 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_rvl_top.vhd":1146:4:1146:11|Unbound component VHI of instance vhi_inst 
+@W: Z198 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_rvl_top.vhd":1151:4:1151:12|Unbound component PCSD of instance PCSD_INST 
 
-At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 67MB peak: 68MB)
+=======================================================================================
+For a summary of linker messages for components that did not bind, please see log file:
+@L: C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\synwork\SDI2_impl1_comp.linkerlog
+=======================================================================================
+
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 93MB peak: 93MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Sun Jan 24 17:37:33 2021
+# Tue Jan 26 07:54:53 2021
 
 ###########################################################]
 
 For a summary of runtime and memory usage for all design units, please see file:
 ==========================================================
-@L: /home/diamond/SharedFolder/SDI2/impl1/synwork/SDI2_impl1_comp.rt.csv
+@L: C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\synwork\SDI2_impl1_comp.rt.csv
 
 @END
 
-At c_hdl Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 3MB peak: 4MB)
+At c_hdl Exit (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 22MB peak: 23MB)
 
-Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+Process took 0h:00m:02s realtime, 0h:00m:02s cputime
 
 Process completed successfully.
-# Sun Jan 24 17:37:34 2021
+# Tue Jan 26 07:54:53 2021
 
 ###########################################################]

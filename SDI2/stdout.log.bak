@@ -1,0 +1,74 @@
+Running in Lattice mode
+
+Starting:    C:\lscc\diamond\3.12\synpbase\bin64\mbin\synbatch.exe
+Install:     C:\lscc\diamond\3.12\synpbase
+Hostname:    LAPTOP-QU0RURPA
+Date:        Mon Jan 25 14:30:10 2021
+Version:     Q-2020.03L-SP1
+
+Arguments:   -product synplify_pro -batch C:/Users/cypri/OneDrive/Documents/GIT/PGE/10_FPGA_ANALYSE/SDI2/syn_results/SDI_IP.prj
+ProductType: synplify_pro
+
+
+
+
+log file: "C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\syn_results\SDI_IP.srr"
+Running: syn_results in foreground
+
+Running SDI_IP|syn_results
+
+Running Flow: compile (Compile) on SDI_IP|syn_results
+# Mon Jan 25 14:30:11 2021
+
+Running Flow: compile_flow (Compile Process) on SDI_IP|syn_results
+# Mon Jan 25 14:30:11 2021
+
+Running: compiler (Compile Input) on SDI_IP|syn_results
+# Mon Jan 25 14:30:11 2021
+Copied C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\syn_results\synwork\SDI_IP_comp.srs to C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\syn_results\SDI_IP.srs
+
+compiler completed
+# Mon Jan 25 14:30:14 2021
+
+Return Code: 0
+Run Time:00h:00m:03s
+
+Running: multi_srs_gen (Multi-srs Generator) on SDI_IP|syn_results
+# Mon Jan 25 14:30:14 2021
+
+multi_srs_gen completed
+# Mon Jan 25 14:30:14 2021
+
+Return Code: 0
+Run Time:00h:00m:00s
+Copied C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\syn_results\synwork\SDI_IP_mult.srs to C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\syn_results\SDI_IP.srs
+Copied C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\syn_results\SDI_IP.srr to C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\syn_results\SDI_IP.srf
+Complete: Compile Process on SDI_IP|syn_results
+
+Running: premap (Premap) on SDI_IP|syn_results
+# Mon Jan 25 14:30:14 2021
+
+premap completed with warnings
+# Mon Jan 25 14:30:16 2021
+
+Return Code: 1
+Run Time:00h:00m:02s
+Complete: Compile on SDI_IP|syn_results
+
+Running Flow: map (Map) on SDI_IP|syn_results
+# Mon Jan 25 14:30:16 2021
+
+Running: fpga_mapper (Map & Optimize) on SDI_IP|syn_results
+# Mon Jan 25 14:30:16 2021
+Copied C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\syn_results\synwork\SDI_IP_m.srm to C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\syn_results\SDI_IP.srm
+
+fpga_mapper completed with warnings
+# Mon Jan 25 14:30:22 2021
+
+Return Code: 1
+Run Time:00h:00m:06s
+Complete: Map on SDI_IP|syn_results
+Copied C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\syn_results\SDI_IP.srr to C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\syn_results\SDI_IP.srf
+Complete: Logic Synthesis on SDI_IP|syn_results
+exit status=0
+exit status=0

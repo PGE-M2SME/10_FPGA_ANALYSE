@@ -172,7 +172,7 @@
 #define _ch3_rx_lol_port "INTERNAL"
 
 #define _datarange "HIGH"
-#define _pll_txsrc "REFCLK_EXT"
+#define _pll_txsrc "REFCLK_CORE"
 #define _refclk_mult "20X"
 #define _refclk_rate 148.5
 #define _pll_term "50"

@@ -1,26 +1,28 @@
 #--  Synopsys, Inc.
-#--  Version N-2018.03L-SP1-1
-#--  Project file /home/diamond/SharedFolder/SDI2/impl1/scratchproject.prs
+#--  Version Q-2020.03L-SP1
+#--  Project file C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\scratchproject.prs
 
 #project files
-add_file -vhdl -lib work "/usr/local/diamond/3.11_x64/cae_library/synthesis/vhdl/ecp3.vhd"
-add_file -vhdl -lib work "/home/diamond/SharedFolder/SDI2/sdi_eval/SDI_IP/src/rtl/top/ecp3/SDI_IP_top.vhd"
-add_file -vhdl -lib work "/home/diamond/SharedFolder/SDI2/TOP_LEVEL/divFreq.vhd"
-add_file -vhdl -lib work "/home/diamond/SharedFolder/SDI2/PCS_IP.vhd"
-add_file -vhdl -lib work "/home/diamond/SharedFolder/SDI2/PLL_IP.vhd"
-add_file -vhdl -lib work "/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd"
-
+add_file -verilog "C:/lscc/diamond/3.12/cae_library/synthesis/verilog/pmi_def.v"
+add_file -verilog "C:/lscc/diamond/3.12/module/reveal/src/ertl/ertl.v"
+add_file -verilog "C:/lscc/diamond/3.12/module/reveal/src/rvl_j2w_module/rvl_j2w_module.v"
+add_file -verilog "C:/lscc/diamond/3.12/module/reveal/src/rvl_j2w_module/wb2sci.v"
+add_file -verilog "C:/lscc/diamond/3.12/module/reveal/src/ertl/JTAG_SOFT.v"
+add_file -verilog -vlog_std v2001 "C:/Users/cypri/OneDrive/Documents/GIT/PGE/10_FPGA_ANALYSE/SDI2/impl1/reveal_workspace/tmpreveal/top_level_la0_trig_gen.v"
+add_file -verilog -vlog_std v2001 "C:/Users/cypri/OneDrive/Documents/GIT/PGE/10_FPGA_ANALYSE/SDI2/impl1/reveal_workspace/tmpreveal/top_level_la0_gen.v"
+add_file -vhdl -lib work "C:/Users/cypri/OneDrive/Documents/GIT/PGE/10_FPGA_ANALYSE/SDI2/impl1/reveal_workspace/tmpreveal/TOP_LEVEL_rvl_top.vhd"
 
 
 #implementation: "impl1"
-impl -add /home/diamond/SharedFolder/SDI2/impl1 -type fpga
+impl -add C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1 -type fpga
 
 #
 #implementation attributes
 
 set_option -vlog_std v2001
 set_option -project_relative_includes 1
-set_option -include_path {/home/diamond/SharedFolder/SDI2/impl1/}
+set_option -include_path {C:/Users/cypri/OneDrive/Documents/GIT/PGE/10_FPGA_ANALYSE/SDI2/impl1/}
+set_option -include_path {C:/Users/cypri/OneDrive/Documents/GIT/PGE/10_FPGA_ANALYSE/SDI2}
 
 #device options
 set_option -technology LATTICE-ECP3
@@ -34,6 +36,7 @@ set_option -top_module "TOP_LEVEL"
 
 # hdl_compiler_options
 set_option -distributed_compile 0
+set_option -hdl_strict_syntax 0
 
 # mapper_without_write_options
 set_option -frequency 200
@@ -54,6 +57,7 @@ set_option -rw_check_on_ram 1
 set_option -update_models_cp 0
 set_option -syn_edif_array_rename 1
 set_option -Write_declared_clocks_only 1
+set_option -seqshift_no_replicate 0
 
 # NFilter
 set_option -no_sequential_opt 0
@@ -67,14 +71,15 @@ set_option -resource_sharing 1
 set_option -multi_file_compilation_unit 1
 
 # Compiler Options
+set_option -allow_duplicate_modules 1
 set_option -auto_infer_blackbox 0
 
 #automatic place and route (vendor) options
 set_option -write_apr_constraint 1
 
 #set result format/file last
-project -result_file "/home/diamond/SharedFolder/SDI2/impl1/SDI2_impl1.edi"
+project -result_file "C:/Users/cypri/OneDrive/Documents/GIT/PGE/10_FPGA_ANALYSE/SDI2/impl1/SDI2_impl1.edi"
 
 #set log file 
-set_option log_file "/home/diamond/SharedFolder/SDI2/impl1/SDI2_impl1.srf" 
+set_option log_file "C:/Users/cypri/OneDrive/Documents/GIT/PGE/10_FPGA_ANALYSE/SDI2/impl1/SDI2_impl1.srf" 
 impl -active "impl1"

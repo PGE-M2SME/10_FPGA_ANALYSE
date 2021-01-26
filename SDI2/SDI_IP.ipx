@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<DiamondModule name="SDI_IP" module="Tri-Rate SDI PHY" VendorName="Lattice Semiconductor Corporation" generator="IPexpress" date="2021 01 23 00:35:33.132" version="1.5" type="IP" synthesis="synplify" source_format="VHDL">
+<DiamondModule name="SDI_IP" module="Tri-Rate SDI PHY" VendorName="Lattice Semiconductor Corporation" generator="IPexpress" date="2021 01 25 16:50:18.643" version="1.4" type="IP" synthesis="synplify" source_format="VHDL">
   <Package>
-		<File name="SDI_IP.lpc" type="lpc" modified="2021 01 23 00:35:05.000"/>
-		<File name="SDI_IP.ngo" type="database" modified="2021 01 23 00:35:28.000"/>
-		<File name="SDI_IP_bb.v" type="black_box_verilog" modified="2021 01 23 00:35:08.000"/>
-		<File name="SDI_IP_beh.v" type="behavioral_verilog" modified="2021 01 23 00:35:08.000"/>
-		<File name="SDI_IP_inst.v" type="instantiation_verilog" modified="2021 01 23 00:35:08.000"/>
+		<File name="SDI_IP.lpc" type="lpc" modified="2021 01 25 16:49:57.324"/>
+		<File name="SDI_IP.ngo" type="database" modified="2021 01 25 16:50:12.511"/>
+		<File name="SDI_IP_bb.v" type="black_box_verilog" modified="2021 01 25 16:49:57.625"/>
+		<File name="SDI_IP_beh.v" type="behavioral_verilog" modified="2021 01 25 16:49:57.528"/>
+		<File name="SDI_IP_inst.v" type="instantiation_verilog" modified="2021 01 25 16:49:57.611"/>
+		<File name="pmi_distributed_dpramEbnoner10416pb3dfa6d.ngo" type="database" modified="2021 01 25 16:50:13.045"/>
+		<File name="pmi_distributed_dpramEbnoner10416pb3dfa6d_0.ngo" type="database" modified="2021 01 25 16:50:13.174"/>
+		<File name="pmi_distributed_dpramEbnoner13416pb3e07b7.ngo" type="database" modified="2021 01 25 16:50:12.786"/>
+		<File name="pmi_distributed_dpramEbnoner13416pb3e07b7_0.ngo" type="database" modified="2021 01 25 16:50:12.914"/>
+		<File name="pmi_distributed_dpramEbnoner16416pb3e1501.ngo" type="database" modified="2021 01 25 16:50:12.652"/>
   </Package>
 </DiamondModule>

@@ -34,40 +34,40 @@
          </tr>
   <tr>
   <td class="optionTitle"> (compiler)</td><td>Complete</td>
- <td>17</td>
- <td>35</td>
+ <td>20</td>
+ <td>49</td>
 <td>0</td>
 <td>-</td>
-<td>00m:02s</td>
+<td>00m:03s</td>
 <td>-</td>
-<td><font size="-1">24 Jan 2021</font><br/><font size="-2">17:37:34</font></td>
+<td><font size="-1">26/01/2021</font><br/><font size="-2">07:54:53</font></td>
 </tr> 
 
  <tr>
   <td class="optionTitle"> (premap)</td><td>Complete</td>
- <td>9</td>
- <td>4</td>
+ <td>6</td>
+ <td>62</td>
 <td>0</td>
-<td>0m:00s</td>
-<td>0m:00s</td>
-<td>142MB</td>
-<td><font size="-1">24 Jan 2021</font><br/><font size="-2">17:37:36</font></td>
+<td>0m:01s</td>
+<td>0m:01s</td>
+<td>177MB</td>
+<td><font size="-1">26/01/2021</font><br/><font size="-2">07:54:55</font></td>
 </tr> 
 
  <tr>
   <td class="optionTitle"> (fpga_mapper)</td><td>Complete</td>
- <td>12</td>
- <td>4</td>
+ <td>9</td>
+ <td>8</td>
 <td>0</td>
-<td>0m:01s</td>
-<td>0m:01s</td>
-<td>146MB</td>
-<td><font size="-1">24 Jan 2021</font><br/><font size="-2">17:37:38</font></td>
+<td>0m:04s</td>
+<td>0m:04s</td>
+<td>203MB</td>
+<td><font size="-1">26/01/2021</font><br/><font size="-2">07:55:00</font></td>
 </tr> 
 
 <tr>
   <td class="optionTitle">Multi-srs Generator</td>
-  <td>Complete</td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td></td><td class="empty"></td><td class="empty"></td><td><font size="-1">24 Jan 2021</font><br/><font size="-2">17:37:35</font></td> 		</tbody>
+  <td>Complete</td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td></td><td class="empty"></td><td class="empty"></td><td><font size="-1">26/01/2021</font><br/><font size="-2">07:54:54</font></td> 		</tbody>
      </table>
  <br> 
  <table width="100%" border="1" cellspacing= "0" cellpadding= "0" >
@@ -75,7 +75,7 @@
 <tfoot> <tr> <td class="optionTitle" colspan="4"></td></tr> 
  </tfoot> 
  <tbody> <tr> 
-<td title ="Total Register bits used" class="optionTitle" align="left">Register bits</td> <td>34</td>
+<td title ="Total Register bits used" class="optionTitle" align="left">Register bits</td> <td>467</td>
 <td title ="Total I/O cells used" class="optionTitle" align="left">I/O cells</td> <td>3</td>
 </tr>
 <tr> 
@@ -86,22 +86,30 @@
 </tr>
 <tr> 
 <td title ="Total ORCA LUTs used" class="optionTitle" align="left">ORCA LUTs
-(total_luts)</td> <td>15</td>
+(total_luts)</td> <td>544</td>
 <td class="optionTitle"></td><td></td></tr> 
 </tbody>
     </table><br>
  <table width="100%" border="1" cellspacing= "0" cellpadding= "0" >
  				   <thead class="tablehead"><tr><th   colspan="4">Timing Summary</th></tr></thead>
-<tfoot> <tr> <td class="optionTitle" colspan="2"></td></tr> 
+<tfoot> <tr> <td class="optionTitle" colspan="4"></td></tr> 
  </tfoot> 
 <tbody> 
    <tr><th class="optionTitle" align= "left ">Clock Name</th><th class="optionTitle" align= "left ">Req Freq</th><th class="optionTitle" align= "left ">Est Freq</th><th class="optionTitle" align= "left ">Slack</th></tr> 
-<tr> <td  align="left">PCS_IP|refclkdiv2_rx_ch3_derived_clock</td><td  align="left">200.0 MHz</td><td  align="left">510.7 MHz</td><td  align="left">6.084</td></tr> 
-<tr> <td  align="left">PLL_IP|CLKOP_inferred_clock</td><td  align="left">200.0 MHz</td><td  align="left">460.7 MHz</td><td  align="left">2.829</td></tr> 
-<tr> <td  align="left">System</td><td  align="left">200.0 MHz</td><td  align="left">1556.9 MHz</td><td  align="left">4.358</td></tr> 
+<tr> <td  align="left">PCS_IP_uniq_0_work_top_level_arc_0layer0|refclkdiv2_rx_ch3_derived_clock</td><td  align="left">200.0 MHz</td><td  align="left">510.7 MHz</td><td  align="left">6.084</td></tr> 
+<tr> <td  align="left">PLL_1_uniq_1|CLKOP_inferred_clock</td><td  align="left">200.0 MHz</td><td  align="left">168.3 MHz</td><td  align="left">-0.941</td></tr> 
+<tr> <td  align="left">reveal_coretop|jtck_inferred_clock[0]</td><td  align="left">200.0 MHz</td><td  align="left">136.8 MHz</td><td  align="left">-2.308</td></tr> 
+<tr> <td  align="left">System</td><td  align="left">200.0 MHz</td><td  align="left">280.3 MHz</td><td  align="left">1.432</td></tr> 
 </tbody> 
  </table>
 <br>
+ <table width="100%" border="1" cellspacing= "0" cellpadding= "0" >
+ 				   <thead class="tablehead"><tr><th   colspan="4">Optimizations Summary</th></tr></thead>
+ <tbody> <tr> 
+<td title ="Non-gated/non-generated clock trees / Gated/generated clock trees" class="optionTitle" align="left">Combined Clock Conversion</td> <td>2 / 1</td>
+<td class="optionTitle"></td><td></td></tr> 
+</tbody>
+    </table><br>
 <br> 
 </td></tr></table></body> 
  </html>

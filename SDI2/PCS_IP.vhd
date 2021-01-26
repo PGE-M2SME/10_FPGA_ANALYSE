@@ -23,7 +23,7 @@ GENERIC(
 --  CH1_CDR_SRC   : String := "REFCLK_EXT";
 --  CH2_CDR_SRC   : String := "REFCLK_EXT";
 --  CH3_CDR_SRC   : String := "REFCLK_CORE";
---  PLL_SRC   : String := "REFCLK_EXT"
+--  PLL_SRC   : String := "REFCLK_CORE"
   );
 port (
   HDINN0             : in std_logic;
@@ -1739,7 +1739,6 @@ entity PCS_IP is
    GENERIC (USER_CONFIG_FILE    :  String := "PCS_IP.txt");
  port (
 ------------------
-    refclkp, refclkn  :   in std_logic;
 -- CH0 --
 -- CH1 --
 -- CH2 --
@@ -1757,6 +1756,7 @@ entity PCS_IP is
     rx_div11_mode_ch3_c   : in std_logic;
     rx_div2_mode_ch3_c   : in std_logic;
 ---- Miscillaneous ports
+    fpga_txrefclk  :   in std_logic;
     refclk2fpga   :   out std_logic;
     rst_n      :   in std_logic;
     serdes_rst_qd_c    :   in std_logic);
@@ -2293,7 +2293,7 @@ end component;
    attribute QUAD_MODE: string;
    attribute QUAD_MODE of PCSD_INST : label is "SINGLE";
    attribute PLL_SRC: string;
-   attribute PLL_SRC of PCSD_INST : label is "REFCLK_EXT";
+   attribute PLL_SRC of PCSD_INST : label is "REFCLK_CORE";
    attribute CH3_CDR_SRC: string;
    attribute CH3_CDR_SRC of PCSD_INST : label is "REFCLK_CORE";
    attribute FREQUENCY_PIN_FF_RX_F_CLK_0: string;
@@ -2373,12 +2373,12 @@ PCSD_INST : PCSD
   generic map (CONFIG_FILE => USER_CONFIG_FILE,
                QUAD_MODE => "SINGLE",
                CH3_CDR_SRC => "REFCLK_CORE",
-               PLL_SRC  => "REFCLK_EXT"
+               PLL_SRC  => "REFCLK_CORE"
   )
 --synopsys translate_on
 port map  (
-  REFCLKP => refclkp,
-  REFCLKN => refclkn,
+  REFCLKP => fpsc_vlo,
+  REFCLKN => fpsc_vlo,
 
 ----- CH0 -----
   HDOUTP0 => open,
@@ -2833,7 +2833,7 @@ port map  (
   SCIWSTN => fpsc_vlo,
   CYAWSTN => fpsc_vlo,
   SCIINT => open,
-  FFC_CK_CORE_TX => fpsc_vlo,
+  FFC_CK_CORE_TX => fpga_txrefclk,
   FFC_MACRO_RST => serdes_rst_qd_c,
   FFC_QUAD_RST => fpsc_vlo,
   FFC_TRST => fpsc_vlo,

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DiamondModule name="ecp3pcs" module="PCS" VendorName="Lattice Semiconductor Corporation" generator="IPexpress" date="2011 12 05 10:01:48.380" version="8.1" type="Module" synthesis="" source_format="Verilog">
+  <Package>
+		<File name="ecp3pcs.lpc" type="lpc" modified="2011 12 05 10:01:46.021"/>
+		<File name="ecp3pcs.pp" type="pp" modified="2011 12 05 10:01:46.037"/>
+		<File name="ecp3pcs.sym" type="sym" modified="2011 12 05 10:01:46.333"/>
+		<File name="ecp3pcs.tft" type="tft" modified="2011 12 05 10:01:46.068"/>
+		<File name="ecp3pcs.txt" type="pcs_module" modified="2011 12 05 10:01:46.068"/>
+		<File name="ecp3pcs.v" type="top_level_verilog" modified="2011 12 05 10:01:46.068"/>
+  </Package>
+</DiamondModule>

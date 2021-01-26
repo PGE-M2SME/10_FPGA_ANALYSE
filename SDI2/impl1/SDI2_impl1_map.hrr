@@ -3,146 +3,281 @@ Report for cell TOP_LEVEL
    Instance path: TOP_LEVEL
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	     487.00        100.0
-                                  LUT4	     619.00        100.0
-                                 IOBUF	          3        100.0
-                                PFUREG	        357        100.0
-                                RIPPLE	         37        100.0
+                                  SLIC	     574.00        100.0
+                                  LUT4	     677.00        100.0
+                                 IOBUF	          1        100.0
+                                PFUREG	        517        100.0
+                                RIPPLE	         66        100.0
+                                   EBR	         25        100.0
 SUB MODULES
                                   cell	      count    SLC Usage(%)
-                            SDI_IP_top	          1        94.0
-                                PLL_IP	          1         0.2
-                                PCS_IP	          1         5.7
+                        reveal_coretop	          1        86.3
+                               ep5chub	          1         7.7
+                                SDI_IP	          1         0.0
+                          PLL_1_uniq_1	          1         0.0
+                          PLL_1_uniq_0	          1         0.0
+PCS_IP_uniq_0_work_top_level_arc_0layer0	          1         5.5
 ---------------------------------------------------
-Report for cell PCS_IP
+Report for cell PCS_IP_uniq_0_work_top_level_arc_0layer0
    Instance path: TOP_LEVEL/PCS
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	      28.00         5.7
-                                  LUT4	      19.00         3.1
-                                PFUREG	         34         9.5
-                                RIPPLE	         10        27.0
+                                  SLIC	      31.33         5.5
+                                  LUT4	      19.00         2.8
+                                PFUREG	         34         6.6
+                                RIPPLE	         10        15.2
 SUB MODULES
                                   cell	      count    SLC Usage(%)
-                     PCS_IPrx_reset_sm	          1         5.3
+PCS_IPrx_reset_sm_uniq_0_work_top_level_arc_0layer0	          1         5.3
 ---------------------------------------------------
-Report for cell PCS_IPrx_reset_sm
+Report for cell PCS_IPrx_reset_sm_uniq_0_work_top_level_arc_0layer0
    Instance path: TOP_LEVEL/PCS/rx_reset_sm_ch3
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	      26.00         5.3
-                                  LUT4	      17.00         2.7
-                                PFUREG	         33         9.2
-                                RIPPLE	         10        27.0
+                                  SLIC	      30.67         5.3
+                                  LUT4	      18.00         2.7
+                                PFUREG	         33         6.4
+                                RIPPLE	         10        15.2
 ---------------------------------------------------
-Report for cell SDI_IP_top
+Report for cell PLL_1_uniq_1
+   Instance path: TOP_LEVEL/PLL2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+---------------------------------------------------
+Report for cell PLL_1_uniq_0
+   Instance path: TOP_LEVEL/PLL1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+---------------------------------------------------
+Report for cell SDI_IP
    Instance path: TOP_LEVEL/SDI
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	     458.00        94.0
-                                  LUT4	     597.00        96.4
-                                PFUREG	        323        90.5
-                                RIPPLE	         27        73.0
 SUB MODULES
                                   cell	      count    SLC Usage(%)
-                                SDI_IP	          1        93.9
+                           sdi_core_Z3	          1         0.0
 ---------------------------------------------------
-Report for cell SDI_IP
+Report for cell sdi_core_Z3
    Instance path: TOP_LEVEL/SDI/SDI_IP_inst
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	     457.50        93.9
-                                  LUT4	     596.00        96.3
-                                PFUREG	        323        90.5
-                                RIPPLE	         27        73.0
 SUB MODULES
                                   cell	      count    SLC Usage(%)
-                           sdi_core_Z3	          1        93.9
----------------------------------------------------
-Report for cell sdi_core_Z3
-   Instance path: TOP_LEVEL/SDI/SDI_IP_inst/SDI_IP_inst
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  SLIC	     457.50        93.9
-                                  LUT4	     596.00        96.3
-                                PFUREG	        323        90.5
-                                RIPPLE	         27        73.0
-SUB MODULES
-                                  cell	      count    SLC Usage(%)
-                        multiraterx_Z2	          1        93.4
+pmi_distributed_dpramEbnoner13416pb3e07b7	          1         0.0
+pmi_distributed_dpramEbnoner16416pb3e1501	          1         0.0
+pmi_distributed_dpramEbnoner13416pb3e07b7_0	          1         0.0
+pmi_distributed_dpramEbnoner10416pb3dfa6d_0	          1         0.0
+pmi_distributed_dpramEbnoner10416pb3dfa6d	          1         0.0
+                        multiraterx_Z2	          1         0.0
 ---------------------------------------------------
 Report for cell multiraterx_Z2
-   Instance path: TOP_LEVEL/SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx
+   Instance path: TOP_LEVEL/SDI/SDI_IP_inst/u1_multiraterx
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	     454.67        93.4
-                                  LUT4	     596.00        96.3
-                                PFUREG	        317        88.8
-                                RIPPLE	         27        73.0
 SUB MODULES
                                   cell	      count    SLC Usage(%)
-                           xyzword_10s	          1         1.1
-                         rateselect_Z1	          1        32.0
-                             offsetdet	          1        33.9
-         descrambler_20s_10s_29s_0_0_0	          1         4.5
+                           xyzword_10s	          1         0.0
+                             offsetdet	          1         0.0
+                         rateselect_Z1	          1         0.0
+                         crc_10s_18s_3	          1         0.0
+                         crc_10s_18s_5	          1         0.0
+                         crc_10s_18s_4	          1         0.0
                            crc_10s_18s	          1         0.0
-                         crc_10s_18s_0	          1         0.0
-                   bshifter_5s_39s_20s	          1         5.8
+                   bshifter_5s_39s_20s	          1         0.0
+         descrambler_20s_10s_29s_0_0_0	          1         0.0
 ---------------------------------------------------
 Report for cell rateselect_Z1
-   Instance path: TOP_LEVEL/SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_rateselect
+   Instance path: TOP_LEVEL/SDI/SDI_IP_inst/u1_multiraterx/u1_rateselect
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	     155.83        32.0
-                                  LUT4	     212.00        34.2
-                                PFUREG	         97        27.2
-                                RIPPLE	         27        73.0
 ---------------------------------------------------
-Report for cell crc_10s_18s_0
-   Instance path: TOP_LEVEL/SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_bl
+Report for cell crc_10s_18s_5
+   Instance path: TOP_LEVEL/SDI/SDI_IP_inst/u1_multiraterx/genblk5.crc_br
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+---------------------------------------------------
+Report for cell crc_10s_18s_4
+   Instance path: TOP_LEVEL/SDI/SDI_IP_inst/u1_multiraterx/genblk5.crc_tr
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+---------------------------------------------------
+Report for cell crc_10s_18s_3
+   Instance path: TOP_LEVEL/SDI/SDI_IP_inst/u1_multiraterx/crc_bl
                      Cell usage:
                                   cell	      count    Res Usage(%)
 ---------------------------------------------------
 Report for cell crc_10s_18s
-   Instance path: TOP_LEVEL/SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/crc_tl
+   Instance path: TOP_LEVEL/SDI/SDI_IP_inst/u1_multiraterx/crc_tl
                      Cell usage:
                                   cell	      count    Res Usage(%)
 ---------------------------------------------------
 Report for cell xyzword_10s
-   Instance path: TOP_LEVEL/SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/y_xyzword
+   Instance path: TOP_LEVEL/SDI/SDI_IP_inst/u1_multiraterx/y_xyzword
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	       5.25         1.1
-                                  LUT4	       3.00         0.5
-                                PFUREG	          7         2.0
 ---------------------------------------------------
 Report for cell bshifter_5s_39s_20s
-   Instance path: TOP_LEVEL/SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_bshifter
+   Instance path: TOP_LEVEL/SDI/SDI_IP_inst/u1_multiraterx/u1_bshifter
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	      28.25         5.8
-                                  LUT4	      47.00         7.6
-                                PFUREG	          3         0.8
 ---------------------------------------------------
 Report for cell offsetdet
-   Instance path: TOP_LEVEL/SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/offsetdet_u1
+   Instance path: TOP_LEVEL/SDI/SDI_IP_inst/u1_multiraterx/offsetdet_u1
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	     165.00        33.9
-                                  LUT4	     295.00        47.7
-                                PFUREG	         21         5.9
 ---------------------------------------------------
 Report for cell descrambler_20s_10s_29s_0_0_0
-   Instance path: TOP_LEVEL/SDI/SDI_IP_inst/SDI_IP_inst/u1_multiraterx/u1_descrambler
+   Instance path: TOP_LEVEL/SDI/SDI_IP_inst/u1_multiraterx/u1_descrambler
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	      22.00         4.5
-                                  LUT4	      37.00         6.0
-                                PFUREG	         32         9.0
 ---------------------------------------------------
-Report for cell PLL_IP
-   Instance path: TOP_LEVEL/PLL1
+Report for cell pmi_distributed_dpramEbnoner10416pb3dfa6d_0
+   Instance path: TOP_LEVEL/SDI/SDI_IP_inst/genblk11.rx1_pmi_distributed_dpram
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	       1.00         0.2
-                                  LUT4	       1.00         0.2
+---------------------------------------------------
+Report for cell pmi_distributed_dpramEbnoner13416pb3e07b7_0
+   Instance path: TOP_LEVEL/SDI/SDI_IP_inst/genblk11.lc1_pmi_distributed_dpram
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+---------------------------------------------------
+Report for cell pmi_distributed_dpramEbnoner16416pb3e1501
+   Instance path: TOP_LEVEL/SDI/SDI_IP_inst/genblk11.rx4_pmi_distributed_dpram
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+---------------------------------------------------
+Report for cell pmi_distributed_dpramEbnoner13416pb3e07b7
+   Instance path: TOP_LEVEL/SDI/SDI_IP_inst/genblk11.lc2_pmi_distributed_dpram
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+---------------------------------------------------
+Report for cell pmi_distributed_dpramEbnoner10416pb3dfa6d
+   Instance path: TOP_LEVEL/SDI/SDI_IP_inst/genblk11.rx2_pmi_distributed_dpram
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+---------------------------------------------------
+Report for cell reveal_coretop
+   Instance path: TOP_LEVEL/top_level_reveal_coretop_instance
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     495.50        86.3
+                                  LUT4	     634.00        93.6
+                                PFUREG	        433        83.8
+                                RIPPLE	         48        72.7
+                                   EBR	         25        100.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                         top_level_la0	          1        86.3
+---------------------------------------------------
+Report for cell top_level_la0
+   Instance path: TOP_LEVEL/top_level_reveal_coretop_instance/core0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     495.50        86.3
+                                  LUT4	     634.00        93.6
+                                PFUREG	        433        83.8
+                                RIPPLE	         48        72.7
+                                   EBR	         25        100.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                    top_level_la0_trig	          1        14.0
+                      rvl_tm_Z3_layer1	          1        41.5
+  rvl_jtag_int_27s_2s_0s_0s_5s_27s_27s	          1        30.7
+---------------------------------------------------
+Report for cell top_level_la0_trig
+   Instance path: TOP_LEVEL/top_level_reveal_coretop_instance/core0/trig_u
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      80.08        14.0
+                                  LUT4	      97.00        14.3
+                                PFUREG	         65        12.6
+                                RIPPLE	          9        13.6
+                                   EBR	          1         4.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                 rvl_tu_2s_0s_0s_0s_1s	          1         2.5
+                      rvl_te_Z1_layer1	          1         8.0
+                   rvl_tcnt_1s_3s_1_0s	          1         2.5
+                      rvl_decode_1s_1s	          1         0.6
+---------------------------------------------------
+Report for cell rvl_decode_1s_1s
+   Instance path: TOP_LEVEL/top_level_reveal_coretop_instance/core0/trig_u/decode_u
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       3.67         0.6
+                                  LUT4	       7.50         1.1
+---------------------------------------------------
+Report for cell rvl_tu_2s_0s_0s_0s_1s
+   Instance path: TOP_LEVEL/top_level_reveal_coretop_instance/core0/trig_u/tu_0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      14.33         2.5
+                                  LUT4	      18.00         2.7
+                                PFUREG	          8         1.5
+---------------------------------------------------
+Report for cell rvl_te_Z1_layer1
+   Instance path: TOP_LEVEL/top_level_reveal_coretop_instance/core0/trig_u/te_0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      45.83         8.0
+                                  LUT4	      47.50         7.0
+                                PFUREG	         45         8.7
+                                RIPPLE	          9        13.6
+                                   EBR	          1         4.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+   pmi_ram_dpEbnonesadr112112p12f3a6c3	          1         0.0
+---------------------------------------------------
+Report for cell pmi_ram_dpEbnonesadr112112p12f3a6c3
+   Instance path: TOP_LEVEL/top_level_reveal_coretop_instance/core0/trig_u/te_0/genblk1.te_tt_ebr_ram
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                   EBR	          1         4.0
+---------------------------------------------------
+Report for cell rvl_tcnt_1s_3s_1_0s
+   Instance path: TOP_LEVEL/top_level_reveal_coretop_instance/core0/trig_u/tcnt_0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      14.08         2.5
+                                  LUT4	      20.00         3.0
+                                PFUREG	         12         2.3
+---------------------------------------------------
+Report for cell rvl_jtag_int_27s_2s_0s_0s_5s_27s_27s
+   Instance path: TOP_LEVEL/top_level_reveal_coretop_instance/core0/jtag_int_u
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     176.05        30.7
+                                  LUT4	     241.50        35.7
+                                PFUREG	        161        31.1
+                                RIPPLE	          7        10.6
+---------------------------------------------------
+Report for cell rvl_tm_Z3_layer1
+   Instance path: TOP_LEVEL/top_level_reveal_coretop_instance/core0/tm_u
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     238.03        41.5
+                                  LUT4	     294.00        43.4
+                                PFUREG	        207        40.0
+                                RIPPLE	         32        48.5
+                                   EBR	         24        96.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+pmi_ram_dpEbnonesadr271416384271416384p13baf45e	          1         8.8
+---------------------------------------------------
+Report for cell pmi_ram_dpEbnonesadr271416384271416384p13baf45e
+   Instance path: TOP_LEVEL/top_level_reveal_coretop_instance/core0/tm_u/genblk4.tr_mem
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      50.25         8.8
+                                  LUT4	     108.00        16.0
+                                PFUREG	          6         1.2
+                                   EBR	         24        96.0
+---------------------------------------------------
+Report for cell ep5chub
+   Instance path: TOP_LEVEL/ep5chub
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      44.17         7.7
+                                  LUT4	      24.00         3.5
+                                PFUREG	         50         9.7
+                                RIPPLE	          8        12.1

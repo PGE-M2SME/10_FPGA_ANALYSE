@@ -1,88 +1,162 @@
 ----------------------------------------------------------------------
 Report for cell TOP_LEVEL.arc
 
-Register bits: 34 of 62640 (0%)
+Register bits: 467 of 62640 (1%)
 PIC Latch:       0
 I/O cells:       3
                                           Cell usage:
                                cell       count    Res Usage(%)
-                              CCU2C       10       100.0
-                            EHXPLLF        1       100.0
+                              CCU2C       58       100.0
+                            EHXPLLF        2       100.0
+                            FD1P3AX       18       100.0
+                            FD1P3BX       33       100.0
+                            FD1P3DX      325       100.0
                             FD1S3AX        6       100.0
-                            FD1S3DX        3       100.0
+                            FD1S3BX        1       100.0
+                            FD1S3DX       59       100.0
                             FD1S3IX       22       100.0
                             FD1S3JX        3       100.0
                                 GSR        1       100.0
                                  IB        1       100.0
-                                INV        4       100.0
+                                INV       16       100.0
                                  OB        2       100.0
-                           ORCALUT4       15       100.0
+                           ORCALUT4      544       100.0
                                PCSD        1       100.0
-                              PFUMX        2       100.0
+                              PFUMX        6       100.0
                                 PUR        1       100.0
                              SDI_IP        1       100.0
-                                VHI        4       100.0
-                                VLO        5       100.0
+                                VHI       12       100.0
+                                VLO       14       100.0
+                         jtagconn16        1       100.0
+               pmi_ram_dp_Z2_layer1        1       100.0
+               pmi_ram_dp_Z4_layer1        1       100.0
 SUB MODULES 
-                             PCS_IP        1       100.0
-                  PCS_IPrx_reset_sm        1       100.0
-                             PLL_IP        1       100.0
-                         SDI_IP_top        1       100.0
+          PCS_IP_uniq_0_work_top_level_arc_0layer0        1       100.0
+          PCS_IPrx_reset_sm_uniq_0_work_top_level_arc_0layer0        1       100.0
+                       PLL_1_uniq_0        1       100.0
+                       PLL_1_uniq_1        1       100.0
+                     reveal_coretop        1       100.0
+                      top_level_la0        1       100.0
+                 top_level_la0_trig        1       100.0
                             
-                         TOTAL            86           
+                         TOTAL          1136           
 ----------------------------------------------------------------------
-Report for cell PCS_IP.netlist
+Report for cell PCS_IP_uniq_0_work_top_level_arc_0layer0.netlist
      Instance path:  PCS
                                           Cell usage:
                                cell       count    Res Usage(%)
-                              CCU2C       10       100.0
+                              CCU2C       10        17.2
                             FD1S3AX        6       100.0
-                            FD1S3DX        3       100.0
+                            FD1S3DX        3         5.1
                             FD1S3IX       22       100.0
                             FD1S3JX        3       100.0
-                                INV        4       100.0
-                           ORCALUT4       15       100.0
+                                INV        4        25.0
+                           ORCALUT4       15         2.8
                                PCSD        1       100.0
-                              PFUMX        2       100.0
-                                VHI        2        50.0
-                                VLO        2        40.0
+                              PFUMX        2        33.3
+                                VHI        2        16.7
+                                VLO        2        14.3
 SUB MODULES 
-                  PCS_IPrx_reset_sm        1       100.0
+          PCS_IPrx_reset_sm_uniq_0_work_top_level_arc_0layer0        1       100.0
                             
                          TOTAL            71           
 ----------------------------------------------------------------------
-Report for cell PCS_IPrx_reset_sm.netlist
+Report for cell PCS_IPrx_reset_sm_uniq_0_work_top_level_arc_0layer0.netlist
      Instance path:  PCS.rx_reset_sm_ch3
                                           Cell usage:
                                cell       count    Res Usage(%)
-                              CCU2C       10       100.0
+                              CCU2C       10        17.2
                             FD1S3AX        5        83.3
-                            FD1S3DX        3       100.0
+                            FD1S3DX        3         5.1
                             FD1S3IX       22       100.0
                             FD1S3JX        3       100.0
-                                INV        3        75.0
-                           ORCALUT4       15       100.0
-                              PFUMX        2       100.0
-                                VHI        1        25.0
-                                VLO        1        20.0
+                                INV        3        18.8
+                           ORCALUT4       15         2.8
+                              PFUMX        2        33.3
+                                VHI        1         8.3
+                                VLO        1         7.1
                             
                          TOTAL            65           
 ----------------------------------------------------------------------
-Report for cell SDI_IP_top.netlist
-     Instance path:  SDI
+Report for cell PLL_1_uniq_1.netlist
+     Instance path:  PLL2
                                           Cell usage:
                                cell       count    Res Usage(%)
-                             SDI_IP        1       100.0
-                                VHI        1        25.0
-                                VLO        1        20.0
+                            EHXPLLF        1        50.0
+                                VLO        1         7.1
                             
-                         TOTAL             3           
+                         TOTAL             2           
 ----------------------------------------------------------------------
-Report for cell PLL_IP.netlist
+Report for cell PLL_1_uniq_0.netlist
      Instance path:  PLL1
                                           Cell usage:
                                cell       count    Res Usage(%)
-                            EHXPLLF        1       100.0
-                                VLO        1        20.0
+                            EHXPLLF        1        50.0
+                                VLO        1         7.1
                             
                          TOTAL             2           
+----------------------------------------------------------------------
+Report for cell reveal_coretop.one
+     Instance path:  top_level_reveal_coretop_instance
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                              CCU2C       48        82.8
+                            FD1P3AX       18       100.0
+                            FD1P3BX       33       100.0
+                            FD1P3DX      325       100.0
+                            FD1S3BX        1       100.0
+                            FD1S3DX       56        94.9
+                                INV       12        75.0
+                           ORCALUT4      529        97.2
+                              PFUMX        4        66.7
+                                VHI        9        75.0
+                                VLO        9        64.3
+                         jtagconn16        1       100.0
+               pmi_ram_dp_Z2_layer1        1       100.0
+               pmi_ram_dp_Z4_layer1        1       100.0
+SUB MODULES 
+                      top_level_la0        1       100.0
+                 top_level_la0_trig        1       100.0
+                            
+                         TOTAL          1049           
+----------------------------------------------------------------------
+Report for cell top_level_la0.netlist
+     Instance path:  top_level_reveal_coretop_instance.core0
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                              CCU2C       48        82.8
+                            FD1P3AX       18       100.0
+                            FD1P3BX       33       100.0
+                            FD1P3DX      325       100.0
+                            FD1S3BX        1       100.0
+                            FD1S3DX       56        94.9
+                                INV       12        75.0
+                           ORCALUT4      529        97.2
+                              PFUMX        4        66.7
+                                VHI        8        66.7
+                                VLO        8        57.1
+               pmi_ram_dp_Z2_layer1        1       100.0
+               pmi_ram_dp_Z4_layer1        1       100.0
+SUB MODULES 
+                 top_level_la0_trig        1       100.0
+                            
+                         TOTAL          1045           
+----------------------------------------------------------------------
+Report for cell top_level_la0_trig.netlist
+     Instance path:  top_level_reveal_coretop_instance.core0.trig_u
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                              CCU2C        9        15.5
+                            FD1P3AX       16        88.9
+                            FD1P3BX        1         3.0
+                            FD1P3DX       35        10.8
+                            FD1S3BX        1       100.0
+                            FD1S3DX       16        27.1
+                                INV        5        31.3
+                           ORCALUT4      101        18.6
+                              PFUMX        3        50.0
+                                VHI        5        41.7
+                                VLO        5        35.7
+               pmi_ram_dp_Z2_layer1        1       100.0
+                            
+                         TOTAL           198           

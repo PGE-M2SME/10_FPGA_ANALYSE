@@ -1,9 +1,9 @@
 onbreak {resume} 
 quit -sim 
-cd "/home/diamond/SharedFolder/SDI2/sdi_eval/SDI_IP/sim/modelsim/rtl"
+cd "C:/Users/cypri/OneDrive/Documents/GIT/PGE/10_FPGA_ANALYSE/SDI2/sdi_eval/SDI_IP/sim/modelsim/rtl"
 # --------- Simulation work library creation -- 
 vlib work
-vmap pcsd_mti_work "/usr/local/diamond/3.11_x64/cae_library/simulation/blackbox/pcsd_work"
+vmap pcsd_mti_work "C:/lscc/diamond/3.12/cae_library/simulation/blackbox/pcsd_work"
 vlog -novopt +define+HALF_PERIOD1=3.36 \
    +define+HALF_PERIOD1=3.36 \
    +define+HALF_PERIOD2=3.36 \
@@ -24,8 +24,8 @@ vlog -novopt +define+HALF_PERIOD1=3.36 \
    "../../../../testbench/patgenerator/anc_send.v" \
    "../../../../models/ecp3/pcs/ecp3pcs.v" \
    "../../../../models/ecp3/pll_148/pll_148.v" \
-   -y /usr/local/diamond/3.11_x64/cae_library/simulation/verilog/pmi \
-   -y /usr/local/diamond/3.11_x64/cae_library/simulation/verilog/ecp3 +libext+.v
+   -y C:/lscc/diamond/3.12/cae_library/simulation/verilog/pmi \
+   -y C:/lscc/diamond/3.12/cae_library/simulation/verilog/ecp3 +libext+.v
 vlog -refresh -quiet -work pcsd_mti_work
 # --------- Start evaluation test -- 
 vsim -novopt -L pcsd_mti_work sdi_tb 

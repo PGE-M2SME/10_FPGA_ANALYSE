@@ -15,6 +15,7 @@ entity SDI_IP_top is port (
             rx_clk      : in std_logic;                      -- receive clock input synchronous with rxdata
             rxdata      : in std_logic_vector(19 downto 0);  -- parallel data received from SERDES
             rx_rate     : in std_logic_vector(2 downto 0);   -- receiver scan control: {3G enable, HD enable, SD enable}
+            rx_full_clk : in std_logic;                      -- 27 MHz SD clock when 10-bits Rx mode is used
 
       --=====OUTPUTS
       --===== transmitter output signals 
@@ -23,6 +24,8 @@ entity SDI_IP_top is port (
             pd_out      : out std_logic_vector(19 downto 0); -- parralel output data from the receiver
             vid_active  : out std_logic;                     -- Indicates the receiver is locked to a valid video
             trs_out     : out std_logic;                     -- TRS (either EAV or SAV) output
+            ychannel    : out std_logic;                     -- y channel output indicator
+            rx_lb_lan   : out std_logic;                     -- indicates if output is 3G Level-B or not
             rx_tg_hdn   : out std_logic;                     -- indicates whether 3G or HD is being received
             rx_hd_sdn   : out std_logic;                     -- indicates whether Hd or SD is being received
             vid_format  : out std_logic_vector(1 downto 0);  -- Video format (0-SD, 1-1280x720, 2-1920x1035, 3-1920x1080)
@@ -31,11 +34,15 @@ entity SDI_IP_top is port (
             vblank      : out std_logic;                     -- vertical blanking
             hblank      : out std_logic;                     -- horizontal blanking
             ln1_out     : out std_logic_vector(10 downto 0); -- line number output for stream1
+            ln2_out     : out std_logic_vector(10 downto 0); -- line number output for stream2
             eav_error   : out std_logic;                     -- EAV error
             sav_error   : out std_logic;                     -- SAV error
             y1_crc_error: out std_logic;                     -- CRC error for y channel of stream1
             c1_crc_error: out std_logic;                     -- CRC error for c channel of stream1
+            y2_crc_error: out std_logic;                     -- CRC error for y channel of stream2
+            c2_crc_error: out std_logic;                     -- CRC error for c channel of stream2
 
+            pdo_clk     : out std_logic;                     -- Multiplexed output clock synchronous with output data
       --===== global input signal 
             rstn        : in  std_logic                      -- system reset
       );
@@ -53,6 +60,7 @@ component SDI_IP
             rx_clk      : in std_logic;                      -- receive clock input synchronous with rxdata
             rxdata      : in std_logic_vector(19 downto 0);  -- parallel data received from SERDES
             rx_rate     : in std_logic_vector(2 downto 0);   -- receiver scan control: {3G enable, HD enable, SD enable}
+            rx_full_clk : in std_logic;                      -- 27 MHz SD clock when 10-bits Rx mode is used
 
       --=====OUTPUTS
       --===== transmitter output signals 
@@ -61,6 +69,8 @@ component SDI_IP
             pd_out      : out std_logic_vector(19 downto 0); -- parralel output data from the receiver
             vid_active  : out std_logic;                     -- Indicates the receiver is locked to a valid video
             trs_out     : out std_logic;                     -- TRS (either EAV or SAV) output
+            ychannel    : out std_logic;                     -- y channel output indicator
+            rx_lb_lan   : out std_logic;                     -- indicates if output is 3G Level-B or not
             rx_tg_hdn   : out std_logic;                     -- indicates whether 3G or HD is being received
             rx_hd_sdn   : out std_logic;                     -- indicates whether Hd or SD is being received
             vid_format  : out std_logic_vector(1 downto 0);  -- Video format (0-SD, 1-1280x720, 2-1920x1035, 3-1920x1080)
@@ -69,11 +79,15 @@ component SDI_IP
             vblank      : out std_logic;                     -- vertical blanking
             hblank      : out std_logic;                     -- horizontal blanking
             ln1_out     : out std_logic_vector(10 downto 0); -- line number output for stream1
+            ln2_out     : out std_logic_vector(10 downto 0); -- line number output for stream2
             eav_error   : out std_logic;                     -- EAV error
             sav_error   : out std_logic;                     -- SAV error
             y1_crc_error: out std_logic;                     -- CRC error for y channel of stream1
             c1_crc_error: out std_logic;                     -- CRC error for c channel of stream1
+            y2_crc_error: out std_logic;                     -- CRC error for y channel of stream2
+            c2_crc_error: out std_logic;                     -- CRC error for c channel of stream2
 
+            pdo_clk     : out std_logic;                     -- Multiplexed output clock synchronous with output data
       --===== global input signal 
             rstn        : in  std_logic                      -- system reset
       );
@@ -90,6 +104,7 @@ begin
             rx_clk       => rx_clk,
             rxdata       => rxdata,
             rx_rate      => rx_rate,
+            rx_full_clk  => rx_full_clk,
 
       --=====OUTPUTS
       --===== transmitter output signals 
@@ -98,6 +113,8 @@ begin
             pd_out       => pd_out,
             vid_active   => vid_active,
             trs_out      => trs_out,
+            ychannel     => ychannel,
+            rx_lb_lan    => rx_lb_lan,
             rx_tg_hdn    => rx_tg_hdn,
             rx_hd_sdn    => rx_hd_sdn,
             vid_format   => vid_format,
@@ -106,10 +123,14 @@ begin
             vblank       => vblank,
             hblank       => hblank,
             ln1_out      => ln1_out,
+            ln2_out      => ln2_out,
             eav_error    => eav_error,
             sav_error    => sav_error,
             y1_crc_error => y1_crc_error,
             c1_crc_error => c1_crc_error,
+            y2_crc_error => y2_crc_error,
+            c2_crc_error => c2_crc_error,
+            pdo_clk      => pdo_clk,
       --===== global input signal 
             rstn         => rstn
    );

@@ -1,0 +1,52 @@
+#Start recording tcl command: 1/25/2021 14:07:33
+#Project Location: C:/Users/cypri/OneDrive/Documents/GIT/PGE/10_FPGA_ANALYSE/SDI2; Project name: SDI2
+prj_project open "C:/Users/cypri/OneDrive/Documents/GIT/PGE/10_FPGA_ANALYSE/SDI2/SDI2.ldf"
+prj_src add "C:/Users/cypri/OneDrive/Documents/GIT/PGE/10_FPGA_ANALYSE/SDI2/PCS_IP.ipx"
+prj_src remove "C:/Users/cypri/OneDrive/Documents/GIT/PGE/10_FPGA_ANALYSE/SDI2/PCS_IP.vhd"
+prj_src remove "C:/Users/cypri/OneDrive/Documents/GIT/PGE/10_FPGA_ANALYSE/SDI2/sdi_eval/SDI_IP/src/rtl/top/ecp3/SDI_IP_top.vhd"
+prj_src remove "C:/Users/cypri/OneDrive/Documents/GIT/PGE/10_FPGA_ANALYSE/SDI2/PLL_IP.vhd"
+prj_src add "C:/Users/cypri/OneDrive/Documents/GIT/PGE/10_FPGA_ANALYSE/SDI2/PLL_IP.ipx"
+prj_src add "C:/Users/cypri/OneDrive/Documents/GIT/PGE/10_FPGA_ANALYSE/SDI2/SDI_IP.ipx"
+prj_src remove "C:/Users/cypri/OneDrive/Documents/GIT/PGE/10_FPGA_ANALYSE/SDI2/PLL_IP.ipx"
+prj_src add "C:/Users/cypri/OneDrive/Documents/GIT/PGE/10_FPGA_ANALYSE/SDI2/PLL_1.ipx"
+prj_src add "C:/Users/cypri/OneDrive/Documents/GIT/PGE/10_FPGA_ANALYSE/SDI2/PLL_2.ipx"
+prj_run Synthesis -impl impl1
+prj_run Synthesis -impl impl1
+prj_run Synthesis -impl impl1
+prj_run Synthesis -impl impl1
+prj_run Synthesis -impl impl1
+prj_run Translate -impl impl1
+prj_src remove "C:/Users/cypri/OneDrive/Documents/GIT/PGE/10_FPGA_ANALYSE/SDI2/TOP_LEVEL/divFreq.vhd"
+prj_run Export -impl impl1 -task Bitgen
+prj_run Translate -impl impl1
+prj_run Translate -impl impl1
+prj_run Translate -impl impl1
+prj_run Export -impl impl1 -task Bitgen
+prj_run Export -impl impl1 -task Bitgen
+prj_run Export -impl impl1 -task Bitgen
+prj_run Export -impl impl1 -task Bitgen
+prj_run Export -impl impl1 -task Bitgen
+prj_run Export -impl impl1 -task Bitgen
+prj_run Export -impl impl1 -task Bitgen
+prj_run Export -impl impl1 -task Bitgen
+rvl_project new
+rvl_trace trc_option SampleClk=Clk148_5Mhz
+rvl_trace trc_option BufferDepth=16384
+rvl_trace add_sig  {{rxdata[19:0]}}
+rvl_trace add_sig  {{vid_format[1:0]}}
+rvl_trace add_sig  {pll2/clk}
+rvl_trace add_sig  {pll2/clkop}
+rvl_trace add_sig  {pll1/clk}
+rvl_trace add_sig  {pll1/clkop}
+rvl_trace add_sig  {pcs/fpga_rxrefclk_ch3}
+rvl_tu add -radix Bin 
+rvl_tu set -name TU1 -add_sig {{vid_format[1:0]} }
+rvl_tu remove TU2
+rvl_te set -expression TU1 TE1
+rvl_project save -overwrite C:/Users/cypri/OneDrive/Documents/GIT/PGE/10_FPGA_ANALYSE/SDI2/Rvl1.rvl
+prj_src add -exclude "C:/Users/cypri/OneDrive/Documents/GIT/PGE/10_FPGA_ANALYSE/SDI2/Rvl1.rvl"
+prj_src enable "C:/Users/cypri/OneDrive/Documents/GIT/PGE/10_FPGA_ANALYSE/SDI2/Rvl1.rvl"
+prj_run Export -impl impl1 -task Bitgen
+prj_run Export -impl impl1 -task Bitgen
+rvl_project close -force
+#Stop recording: 1/26/2021 07:56:23

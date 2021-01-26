@@ -1,80 +1,118 @@
 %%% protect protected_file
-#OPTIONS:"|-bldtbl|-prodtype|synplify_pro|-dspmac|-fixsmult|-infer_seqShift|-nram|-sdff_counter|-divnmod|-nostructver|-encrypt|-pro|-lite|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-ignore_undefined_lib|-lib|work|-lib|work|-lib|work"
-#CUR:"/usr/local/diamond/3.11_x64/synpbase/linux_a_64/c_vhdl":1554136090
-#CUR:"/usr/local/diamond/3.11_x64/synpbase/lib/vhd/location.map":1596709817
-#CUR:"/usr/local/diamond/3.11_x64/synpbase/lib/vhd/std.vhd":1554135527
-#CUR:"/usr/local/diamond/3.11_x64/synpbase/lib/vhd/snps_haps_pkg.vhd":1554135527
-#CUR:"/usr/local/diamond/3.11_x64/synpbase/lib/vhd/std1164.vhd":1554135527
-#CUR:"/usr/local/diamond/3.11_x64/synpbase/lib/vhd/numeric.vhd":1554135527
-#CUR:"/usr/local/diamond/3.11_x64/synpbase/lib/vhd/umr_capim.vhd":1554135527
-#CUR:"/usr/local/diamond/3.11_x64/synpbase/lib/vhd/arith.vhd":1554135527
-#CUR:"/usr/local/diamond/3.11_x64/synpbase/lib/vhd/unsigned.vhd":1554135527
-#CUR:"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":1611362231
-#CUR:"/usr/local/diamond/3.11_x64/synpbase/lib/vhd/std_textio.vhd":1554135527
-#CUR:"/home/diamond/SharedFolder/SDI2/sdi_eval/SDI_IP/src/rtl/top/ecp3/SDI_IP_top.vhd":1611362108
-#CUR:"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":1611366564
-@E8lFkRDCa_mup  epH
+#OPTIONS:"|-bldtbl|-prodtype|synplify_pro|-dspmac|-fixsmult|-infer_seqShift|-nram|-sdff_counter|-divnmod|-nostructver|-encrypt|-pro|-lite|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-ignore_undefined_lib|-lib|work"
+#CUR:"C:\\lscc\\diamond\\3.12\\synpbase\\bin64\\c_vhdl.exe":1603963122
+#CUR:"C:\\lscc\\diamond\\3.12\\synpbase\\lib\\vhd\\location.map":1604334380
+#CUR:"C:\\lscc\\diamond\\3.12\\synpbase\\lib\\vhd\\std.vhd":1603963390
+#CUR:"C:\\lscc\\diamond\\3.12\\synpbase\\lib\\vhd\\snps_haps_pkg.vhd":1603963390
+#CUR:"C:\\lscc\\diamond\\3.12\\synpbase\\lib\\vhd\\std1164.vhd":1603963390
+#CUR:"C:\\lscc\\diamond\\3.12\\synpbase\\lib\\vhd\\numeric.vhd":1603963390
+#CUR:"C:\\lscc\\diamond\\3.12\\synpbase\\lib\\vhd\\umr_capim.vhd":1603963390
+#CUR:"C:\\lscc\\diamond\\3.12\\synpbase\\lib\\vhd\\arith.vhd":1603963390
+#CUR:"C:\\lscc\\diamond\\3.12\\synpbase\\lib\\vhd\\unsigned.vhd":1603963390
+#CUR:"C:\\Users\\cypri\\OneDrive\\Documents\\GIT\\PGE\\10_FPGA_ANALYSE\\SDI2\\impl1\\reveal_workspace\\tmpreveal\\TOP_LEVEL_rvl_top.vhd":1611644089
+#CUR:"C:\\lscc\\diamond\\3.12\\synpbase\\lib\\vhd\\std_textio.vhd":1603963390
+@E8lFkRDCu_pp.H
 DLssN$FRIsH	
-M0bkRQ17_4hR
-bHMk10R7uQ_RH4
-M0bkR	ODRF4
-kk0b0HRP8F_Vs0lNRC.
-MF8l8CkD
-8lFkRDC1_7QQ0u_FDb
+M0bkRiBpRF4
+kk0b0pRBiRmu4k
+F00bkRBpmi
+R4ClM8FD8kCF
+l8CkDRpup_D4
 HNLssI$RF
-s	HkMb0GRs_	ODRH4
-M0bkR8sGNR0N.Hj
-M0bkR_sGsCN0RFd
-kk0b08Rb_0FkR
-.jFbk0kP0RHN8_OP0HC
-R4Fbk0k00RsF#_k40R
-0FkbRk0s0G_o8_EM
-R4Fbk0ks0RG8_E_M#8RF4
-kk0b0HRP8F_Vs0lNRF.
-kk0b0sRVN_lCVlFsNd0R
-0FkbRk0VDHC8
-R4Fbk0kP0RLMDN	
-R4Fbk0kE0RLMDN	
-R4Fbk0kD0RMF4_k40R4k
-F00bkRPCN_sCsF4sR
-0FkbRk0#_NPCFsss
-R4Fbk0k$0R4s_OOs_CsRFs4k
-F00bkR_O4O_sOCFsss
-R4HkMb0#Rs04MR
+s	HkMb0pRBi
+R4Fbk0kB0RpuimRF4
+kk0b0mRpB4iR
 8CMlkF8DlC
 FD8kCBRu1u_Q
 LDHs$NsRsIF	N
 bsCNl0RCsz)1 _hBmw_Qtw QpRs#0H
-MoHkMb0CRsV	ODb4R-
-bHMks0RCDVO	-MR4M
-HbRk0EM8HbE_Od4R-
-bHMkE0R8MHM_dOER
--4HkMb0GRsH	OD_dOER
--4Fbk0ks0RGk_VDOD_DO	_E-dR4k
-F00bkR_sGEVND_	OD_dOER
--4HkMb0bRVosN_GVsCO_D	OREd-F4
-kk0b0GRs8NN0_dOER
--4HkMb0GRs_sbIkOb_EOd_R
--4Fbk0ks0RGF_D#F_DIE_OdR_#-F4
-kk0b0GRs_sO8_DDF_dOE_-#R4k
-F00bkR8sG_sD8_dOER
--4HkMb0GRs_P8H4l4_F_8CO_EdO4R-
-bHMks0RGH_8Pl._F_8CO_EdO4R-
+MoHkMb08REH_MbOREd-H4
+M0bkRHE8MOM_E-dR4M
+HbRk0sOGHDO	_E-dR4k
+F00bkR_sGVDkD_	OD_dOER
+-4Fbk0ks0RGN_EDOV_DO	_E-dR4M
+HbRk0VNbo_ssGCDVO	E_Od4R-
+0FkbRk0sNG80ON_E-dR4M
+HbRk0sbG_Ibsk_dOE_-OR4k
+F00bkR_sGD_F#D_FIO_Ed#4R-
+0FkbRk0sOG_8Ds_FOD_E#d_R
+-4Fbk0ks0RGD8_8Os_E-dR4M
+HbRk0s8G_H4P4_8lFCE_OdR_O-H4
+M0bkR_sG8.HP_8lFCE_OdR_O-H4
+M0bkRoVbNG_0sOCVD-	R4k
+F00bkRVsCO.D	VNboR
+-4HkMb0#Rs0R_M-H4
+M0bkRs#C8_C#s_#0JO8_R
+-4ClM8FD8kCF
+l8CkDR1uB_sQuGC_s#_C0#Dl
+HNLssI$RF
+s	bNNslCC0sFROk_M0HCM8GMRH0CCosM
+HbRk0s_#0M4R-
+bHMks0RCDVO	P8H.4R-
+bHMk00RGD_bDF_DD8_J_-#R4k
+F00bkR_sG#8CsCs#_#O0_ER_O-H4
+M0bkR_sGO_8sD_FDO#E_R
+-4HkMb0GRs_#DF_IDF__OE#4R-
+0FkbRk0sbG_Os#_#O0_ER_O-C4
+MF8l8CkD
+8lFkRDCu_B1QGus_#sCC#0_lM_kHjJ_
+LDHs$NsRsIF	N
+bsCNl0RCsOMFk0M_H8RCGHCM0o
+CsHkMb0#Rs0R_M-H4
+M0bkRVsCO8D	HRP.-H4
+M0bkR_0Gb_DDD_FDJ#8_R
+-4Fbk0ks0RGC_#s#8C_0s#__OEO4R-
+bHMks0RG8_OsF_DDE_O_-#R4M
+HbRk0sDG_FD#_FOI_ER_#-F4
+kk0b0GRs_#bO_0s#__OEO4R-
+8CMlkF8DlC
+FD8kCBRu1u_Q_HkMJ
+_jDsHLNRs$I	Fs
+sbNN0lCCzsR1_ )BwmhQwt_QRp #H0sMHo
+M0bkRHE8MOb_E-dR4M
+HbRk0EM8HME_Od4R-
+bHMks0RGDHO	E_Od4R-
+0FkbRk0sVG_k_DDO_D	OREd-F4
+kk0b0GRs_DENVD_O	E_Od4R-
+bHMkV0Rb_oNsCGsV	OD_dOER
+-4Fbk0ks0RG08NNE_Od4R-
+bHMks0RGI_bs_kbO_EdO4R-
+0FkbRk0sDG_FD#_FOI_E#d_R
+-4Fbk0ks0RG8_OsF_DDE_OdR_#-F4
+kk0b0GRs88_DsE_Od4R-
+bHMks0RGH_8P_44lCF8_dOE_-OR4M
+HbRk0s8G_H_P.lCF8_dOE_-OR4M
+HbRk0VNbo_s0GCDVO	4R-
 0FkbRk0sOCVDV	.bRoN-H4
 M0bkR0s#_-MR4M
 HbRk0#8CsCs#_#J0_8R_O-C4
 MF8l8CkD
-8lFkRDCu_B1QGus_#sCC#0_lH
-DLssN$FRIsb	
-NlsNCs0CRkOFMH0_MG8CR0HMCsoC
-bHMks0R#M0_R
--4HkMb0CRsV	OD8.HPR
--4HkMb0GR0_DbD_DDF__J8#4R-
-0FkbRk0s#G_CCs8##_s0E_O_-OR4M
-HbRk0sOG_8Ds_FOD_ER_#-H4
-M0bkR_sGD_F#D_FIO#E_R
--4Fbk0ks0RGO_b##_s0E_O_-OR4M
-C88lFk
-DC
+8lFkRDCu_pp4M_kH4J_
+LDHs$NsRsIF	M
+HbRk0BRpi4k
+F00bkRiBpm4uR
+0FkbRk0pimBRC4
+MF8l8CkD
+8lFkRDCu_pp4M_kHjJ_
+LDHs$NsRsIF	M
+HbRk0BRpi4k
+F00bkRiBpm4uR
+0FkbRk0pimBRC4
+MF8l8CkD
+8lFkRDCa_mup  epH
+DLssN$FRIsH	
+M0bkRHE8MOb_E4dR
+bHMkE0R8MHM_dOERH4
+M0bkR	OD_64.v
+R4Fbk0kP0RHV8_FNsl0
+R.ClM8FD8kCF
+l8CkDRPsCC_NDOCFs0
+FbDsHLNRs$I	Fs
+bHMkO0RD4	R
+bHMks0RC0#C_4MR
+bHMk00RsoHoC8s_H.MR
+bHMk00RsoHoCCs_M
+R4HkMb0sR0N_OC8RHM.C(
+MF8l8CkD
 
 @ 

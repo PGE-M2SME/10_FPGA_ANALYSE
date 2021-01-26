@@ -60,8 +60,6 @@ attribute nopad of
 
 	COMPONENT PCS_IP
 	PORT(
-		refclkp : IN std_logic;
-		refclkn : IN std_logic;
 		hdinp_ch3 : IN std_logic;
 		hdinn_ch3 : IN std_logic;
 		rxiclk_ch3 : IN std_logic;
@@ -69,6 +67,7 @@ attribute nopad of
 		rx_pwrup_ch3_c : IN std_logic;
 		rx_div11_mode_ch3_c : IN std_logic;
 		rx_div2_mode_ch3_c : IN std_logic;
+		fpga_txrefclk : IN std_logic;
 		rst_n : IN std_logic;
 		serdes_rst_qd_c : IN std_logic;          
 		rx_full_clk_ch3 : OUT std_logic;
@@ -84,8 +83,6 @@ attribute nopad of
 
 
 	uut: PCS_IP PORT MAP(
-		refclkp => refclkp,
-		refclkn => refclkn,
 		hdinp_ch3 => hdinp_ch3,
 		hdinn_ch3 => hdinn_ch3,
 		rxiclk_ch3 => rxiclk_ch3,
@@ -99,6 +96,7 @@ attribute nopad of
 		rxd_ldr_ch3 => rxd_ldr_ch3,
 		rx_div11_mode_ch3_c => rx_div11_mode_ch3_c,
 		rx_div2_mode_ch3_c => rx_div2_mode_ch3_c,
+		fpga_txrefclk => fpga_txrefclk,
 		refclk2fpga => refclk2fpga,
 		rst_n => rst_n,
 		serdes_rst_qd_c => serdes_rst_qd_c

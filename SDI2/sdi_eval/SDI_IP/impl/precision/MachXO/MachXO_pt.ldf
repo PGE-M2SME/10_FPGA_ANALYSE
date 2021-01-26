@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaliProject version="1.3" title="MachXO_pt" device="LCMXO256C-4M100C" synthesis="precision" default_implementation="impl1">
+    <Implementation title="impl1" dir="impl1" description="impl1" default_strategy="Strategy1">
+        <Options>
+            <Option name="HDL type" value="Verilog"/>
+            <Option name="top" value="machxo_pt"/>
+        </Options>
+        <Source name="MachXO_pt.v" type="Verilog"/>
+        <Source name="MachXO_pt.lpf" type="Logic Preference"/>
+    </Implementation>
+    <Strategy name="Strategy1" file="Strategy1.sty"/>
+</BaliProject>
+

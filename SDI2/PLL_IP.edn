@@ -4,9 +4,9 @@
   (keywordMap (keywordLevel 0))
   (status
     (written
-      (timestamp 2021 1 24 17 32 22)
-      (program "SCUBA" (version "Diamond (64-bit) 3.11.3.469"))))
-      (comment "/usr/local/diamond/3.11_x64/ispfpga/bin/lin64/scuba -w -n PLL_IP -lang vhdl -synth synplify -arch ep5c00 -type pll -fin 125 -phase_cntl STATIC -fclkop 148.5 -fclkop_tol 0.1 -fb_mode CLOCKTREE -noclkos -noclkok -norst -noclkok2 -bw ")
+      (timestamp 2021 1 25 14 27 30)
+      (program "SCUBA" (version "Diamond (64-bit) 3.12.0.240.2"))))
+      (comment "C:\lscc\diamond\3.12\ispfpga\bin\nt64\scuba.exe -w -n PLL_IP -lang vhdl -synth synplify -arch ep5c00 -type pll -fin 125 -phase_cntl STATIC -fclkop 148.5 -fclkop_tol 0.1 -fb_mode CLOCKTREE -noclkos -noclkok -norst -noclkok2 -bw ")
   (library ORCLIB
     (edifLevel 0)
     (technology

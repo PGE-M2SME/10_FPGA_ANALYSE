@@ -1,0 +1,48 @@
+<Project ModBy="Inserter" Name="C:/Users/cypri/OneDrive/Documents/GIT/PGE/10_FPGA_ANALYSE/SDI2/Rvl1.rvl" Date="2021-01-26">
+    <Core Name="TOP_LEVEL_LA0">
+        <Setting>
+            <Capture SamplesPerTrig="1" NumTrigsCap=""/>
+            <Event EventCnt="" CntEnableRun=""/>
+            <TrigSetting PreTrgSamples="" AND_ALL="" PostTrgSamples="" TURadix="0"/>
+        </Setting>
+        <Dataset Name="Base">
+            <Trace>
+                <Bus Name="rxdata" Radix="0">
+                    <Sig Name="rxdata:0"/>
+                    <Sig Name="rxdata:1"/>
+                    <Sig Name="rxdata:2"/>
+                    <Sig Name="rxdata:3"/>
+                    <Sig Name="rxdata:4"/>
+                    <Sig Name="rxdata:5"/>
+                    <Sig Name="rxdata:6"/>
+                    <Sig Name="rxdata:7"/>
+                    <Sig Name="rxdata:8"/>
+                    <Sig Name="rxdata:9"/>
+                    <Sig Name="rxdata:10"/>
+                    <Sig Name="rxdata:11"/>
+                    <Sig Name="rxdata:12"/>
+                    <Sig Name="rxdata:13"/>
+                    <Sig Name="rxdata:14"/>
+                    <Sig Name="rxdata:15"/>
+                    <Sig Name="rxdata:16"/>
+                    <Sig Name="rxdata:17"/>
+                    <Sig Name="rxdata:18"/>
+                    <Sig Name="rxdata:19"/>
+                </Bus>
+                <Bus Name="vid_format" Radix="0">
+                    <Sig Name="vid_format:0"/>
+                    <Sig Name="vid_format:1"/>
+                </Bus>
+                <Sig Name="pll2/clk"/>
+                <Sig Name="pll2/clkop"/>
+                <Sig Name="pll1/clk"/>
+                <Sig Name="pll1/clkop"/>
+                <Sig Name="pcs/fpga_rxrefclk_ch3"/>
+            </Trace>
+            <Trigger>
+                <TU Operator="0" Name="TU1" ID="1" Value="00" Radix="0"/>
+                <TE Enable="1" Expression="TU1" Name="TE1" ID="1"/>
+            </Trigger>
+        </Dataset>
+    </Core>
+</Project>

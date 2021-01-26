@@ -1,49 +1,90 @@
-# Sun Jan 24 17:37:35 2021
+# Tue Jan 26 07:54:54 2021
 
 
-Copyright (C) 1994-2018 Synopsys, Inc.
+Copyright (C) 1994-2020 Synopsys, Inc.
 This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
 and may only be used pursuant to the terms and conditions of a written license agreement
 with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
 Synopsys software or the associated documentation is strictly prohibited.
 Tool: Synplify Pro (R)
-Build: N-2018.03L-SP1-1
-Install: /usr/local/diamond/3.11_x64/synpbase
-OS: CentOS Linux 7 (Core)
-Hostname: 15acaac0c3d8
+Build: Q-2020.03L-SP1
+Install: C:\lscc\diamond\3.12\synpbase
+OS: Windows 6.2
+
+Hostname: LAPTOP-QU0RURPA
 
 Implementation : impl1
-Synopsys Lattice Technology Pre-mapping, Version maplat2018q2p1, Build 055R, Built Apr  3 2019 09:24:52
+Synopsys Lattice Technology Pre-mapping, Version map202003lat, Build 172R, Built Nov  2 2020 09:31:45, @
 
 
-Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 98MB peak: 99MB)
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 116MB peak: 116MB)
 
 @A: MF827 |No constraint file specified.
-@N: MF284 |Setting synthesis effort to medium for the design
-@L: /home/diamond/SharedFolder/SDI2/impl1/SDI2_impl1_scck.rpt 
-Printing clock  summary report in "/home/diamond/SharedFolder/SDI2/impl1/SDI2_impl1_scck.rpt" file 
+@L: C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\SDI2_impl1_scck.rpt 
+See clock summary report "C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\SDI2_impl1_scck.rpt"
 @N: MF916 |Option synthesis_strategy=base is enabled. 
 @N: MF248 |Running in 64-bit mode.
 @N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
 
-Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 100MB peak: 101MB)
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 129MB peak: 129MB)
 
 
-Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 100MB peak: 101MB)
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 129MB peak: 129MB)
 
 
-Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 112MB peak: 112MB)
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 141MB peak: 141MB)
 
 
-Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 112MB peak: 114MB)
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 141MB peak: 143MB)
 
-@N: MF284 |Setting synthesis effort to medium for the design
-@N: MH105 |UMR3 is only supported for HAPS-80.
-@N: MH105 |UMR3 is only supported for HAPS-80.
-@W: MO129 :"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":1575:3:1575:4|Sequential instance PCS.rx_reset_sm_ch3.rstn_m1 is reduced to a combinational gate by constant propagation.
-@W: MO129 :"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":1575:3:1575:4|Sequential instance PCS.rx_reset_sm_ch3.rstn_m2 is reduced to a combinational gate by constant propagation.
-@W: MO129 :"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":1591:3:1591:4|Sequential instance PCS.rx_reset_sm_ch3.tx_pll_lol_qd_s_int is reduced to a combinational gate by constant propagation.
-Encoding state machine cs[0:5] (in view: work.PCS_IPrx_reset_sm(rx_reset_sm_arch))
+@W: BN117 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_la0_trig_gen.v":96:0:96:7|Instance decode_u of partition view:work.rvl_decode_1s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_la0_trig_gen.v":110:0:110:3|Instance tu_0 of partition view:work.rvl_tu_2s_0s_0s_0s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_la0_trig_gen.v":162:0:162:5|Instance tcnt_0 of partition view:work.rvl_tcnt_1s_3s_1_0s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_la0_trig_gen.v":96:0:96:7|Instance decode_u of partition view:work.rvl_decode_1s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_la0_trig_gen.v":110:0:110:3|Instance tu_0 of partition view:work.rvl_tu_2s_0s_0s_0s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_la0_trig_gen.v":162:0:162:5|Instance tcnt_0 of partition view:work.rvl_tcnt_1s_3s_1_0s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_la0_trig_gen.v":96:0:96:7|Instance decode_u of partition view:work.rvl_decode_1s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_la0_trig_gen.v":110:0:110:3|Instance tu_0 of partition view:work.rvl_tu_2s_0s_0s_0s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_la0_trig_gen.v":162:0:162:5|Instance tcnt_0 of partition view:work.rvl_tcnt_1s_3s_1_0s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_la0_gen.v":95:0:95:9|Instance jtag_int_u of partition view:work.rvl_jtag_int_27s_2s_0s_0s_5s_27s_27s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_la0_gen.v":95:0:95:9|Instance jtag_int_u of partition view:work.rvl_jtag_int_27s_2s_0s_0s_5s_27s_27s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_la0_gen.v":95:0:95:9|Instance jtag_int_u of partition view:work.rvl_jtag_int_27s_2s_0s_0s_5s_27s_27s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_la0_trig_gen.v":96:0:96:7|Instance decode_u of partition view:work.rvl_decode_1s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_la0_trig_gen.v":110:0:110:3|Instance tu_0 of partition view:work.rvl_tu_2s_0s_0s_0s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_la0_trig_gen.v":162:0:162:5|Instance tcnt_0 of partition view:work.rvl_tcnt_1s_3s_1_0s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_la0_trig_gen.v":96:0:96:7|Instance decode_u of partition view:work.rvl_decode_1s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_la0_trig_gen.v":110:0:110:3|Instance tu_0 of partition view:work.rvl_tu_2s_0s_0s_0s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_la0_trig_gen.v":162:0:162:5|Instance tcnt_0 of partition view:work.rvl_tcnt_1s_3s_1_0s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_la0_trig_gen.v":96:0:96:7|Instance decode_u of partition view:work.rvl_decode_1s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_la0_trig_gen.v":110:0:110:3|Instance tu_0 of partition view:work.rvl_tu_2s_0s_0s_0s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_la0_trig_gen.v":162:0:162:5|Instance tcnt_0 of partition view:work.rvl_tcnt_1s_3s_1_0s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_la0_trig_gen.v":96:0:96:7|Instance decode_u of partition view:work.rvl_decode_1s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_la0_trig_gen.v":110:0:110:3|Instance tu_0 of partition view:work.rvl_tu_2s_0s_0s_0s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_la0_trig_gen.v":162:0:162:5|Instance tcnt_0 of partition view:work.rvl_tcnt_1s_3s_1_0s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_la0_trig_gen.v":96:0:96:7|Instance decode_u of partition view:work.rvl_decode_1s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_la0_trig_gen.v":110:0:110:3|Instance tu_0 of partition view:work.rvl_tu_2s_0s_0s_0s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_la0_trig_gen.v":162:0:162:5|Instance tcnt_0 of partition view:work.rvl_tcnt_1s_3s_1_0s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_la0_gen.v":95:0:95:9|Instance jtag_int_u of partition view:work.rvl_jtag_int_27s_2s_0s_0s_5s_27s_27s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_la0_gen.v":95:0:95:9|Instance jtag_int_u of partition view:work.rvl_jtag_int_27s_2s_0s_0s_5s_27s_27s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_la0_gen.v":95:0:95:9|Instance jtag_int_u of partition view:work.rvl_jtag_int_27s_2s_0s_0s_5s_27s_27s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_la0_gen.v":95:0:95:9|Instance jtag_int_u of partition view:work.rvl_jtag_int_27s_2s_0s_0s_5s_27s_27s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_la0_gen.v":95:0:95:9|Instance jtag_int_u of partition view:work.rvl_jtag_int_27s_2s_0s_0s_5s_27s_27s(verilog) has no references to its outputs; instance not removed. 
+@W: MO129 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_rvl_top.vhd":447:8:447:9|Sequential instance PCS.rx_reset_sm_ch3.rstn_m1 is reduced to a combinational gate by constant propagation.
+@W: MO129 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_rvl_top.vhd":447:8:447:9|Sequential instance PCS.rx_reset_sm_ch3.rstn_m2 is reduced to a combinational gate by constant propagation.
+@W: MO129 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_rvl_top.vhd":461:8:461:9|Sequential instance PCS.rx_reset_sm_ch3.tx_pll_lol_qd_s_int is reduced to a combinational gate by constant propagation.
+@W: BN117 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_la0_gen.v":95:0:95:9|Instance jtag_int_u of partition view:work.rvl_jtag_int_27s_2s_0s_0s_5s_27s_27s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_la0_gen.v":172:0:172:3|Instance tm_u of partition view:work.rvl_tm_Z3_layer1(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_la0_trig_gen.v":96:0:96:7|Instance decode_u of partition view:work.rvl_decode_1s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_la0_trig_gen.v":110:0:110:3|Instance tu_0 of partition view:work.rvl_tu_2s_0s_0s_0s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_la0_trig_gen.v":130:0:130:3|Instance te_0 of partition view:work.rvl_te_Z1_layer1(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_la0_trig_gen.v":162:0:162:5|Instance tcnt_0 of partition view:work.rvl_tcnt_1s_3s_1_0s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_la0_gen.v":95:0:95:9|Instance jtag_int_u of partition view:work.rvl_jtag_int_27s_2s_0s_0s_5s_27s_27s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_la0_gen.v":172:0:172:3|Instance tm_u of partition view:work.rvl_tm_Z3_layer1(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_la0_trig_gen.v":96:0:96:7|Instance decode_u of partition view:work.rvl_decode_1s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_la0_trig_gen.v":110:0:110:3|Instance tu_0 of partition view:work.rvl_tu_2s_0s_0s_0s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_la0_trig_gen.v":130:0:130:3|Instance te_0 of partition view:work.rvl_te_Z1_layer1(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_la0_trig_gen.v":162:0:162:5|Instance tcnt_0 of partition view:work.rvl_tcnt_1s_3s_1_0s(verilog) has no references to its outputs; instance not removed. 
+Encoding state machine cs[0:5] (in view: work.PCS_IPrx_reset_sm_uniq_0_work_top_level_arc_0layer0(rx_reset_sm_arch))
 original code -> new code
    000001 -> 000
    000010 -> 001
@@ -51,40 +92,70 @@ original code -> new code
    001000 -> 011
    010000 -> 100
    100000 -> 101
-@N: MO195 :"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":1591:3:1591:4|Using syn_encoding = safe, FSM error recovery to reset state is enabled for cs[0:5].  
-syn_allowed_resources : blockrams=240  set on top level netlist TOP_LEVEL
+@N: MO195 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_rvl_top.vhd":461:8:461:9|Using syn_encoding = safe, FSM error recovery to reset state is enabled for cs[0:5].  
 
-Finished netlist restructuring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 141MB peak: 142MB)
+Starting clock optimization phase (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 174MB peak: 174MB)
+
+@W: MO197 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_rvl_top.vhd":461:8:461:9|Removing FSM register cs_illegalpipe2 (in view view:work.PCS_IPrx_reset_sm_uniq_0_work_top_level_arc_0layer0(rx_reset_sm_arch)) because its output is a constant.
+@W: MO197 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_rvl_top.vhd":461:8:461:9|Removing FSM register cs_illegalpipe1 (in view view:work.PCS_IPrx_reset_sm_uniq_0_work_top_level_arc_0layer0(rx_reset_sm_arch)) because its output is a constant.
+
+Finished clock optimization phase (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 174MB peak: 174MB)
+
+
+Starting clock optimization report phase (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 174MB peak: 175MB)
+
+@W: BN117 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_la0_gen.v":95:0:95:9|Instance jtag_int_u of partition view:work.rvl_jtag_int_27s_2s_0s_0s_5s_27s_27s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_la0_gen.v":172:0:172:3|Instance tm_u of partition view:work.rvl_tm_Z3_layer1(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_la0_trig_gen.v":96:0:96:7|Instance decode_u of partition view:work.rvl_decode_1s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_la0_trig_gen.v":110:0:110:3|Instance tu_0 of partition view:work.rvl_tu_2s_0s_0s_0s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_la0_trig_gen.v":130:0:130:3|Instance te_0 of partition view:work.rvl_te_Z1_layer1(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_la0_trig_gen.v":162:0:162:5|Instance tcnt_0 of partition view:work.rvl_tcnt_1s_3s_1_0s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_la0_gen.v":95:0:95:9|Instance jtag_int_u of partition view:work.rvl_jtag_int_27s_2s_0s_0s_5s_27s_27s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_la0_gen.v":172:0:172:3|Instance tm_u of partition view:work.rvl_tm_Z3_layer1(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_la0_trig_gen.v":96:0:96:7|Instance decode_u of partition view:work.rvl_decode_1s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_la0_trig_gen.v":110:0:110:3|Instance tu_0 of partition view:work.rvl_tu_2s_0s_0s_0s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_la0_trig_gen.v":130:0:130:3|Instance te_0 of partition view:work.rvl_te_Z1_layer1(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_la0_trig_gen.v":162:0:162:5|Instance tcnt_0 of partition view:work.rvl_tcnt_1s_3s_1_0s(verilog) has no references to its outputs; instance not removed. 
+
+Finished clock optimization report phase (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 174MB peak: 175MB)
+
+@N: FX1184 |Applying syn_allowed_resources blockrams=240 on top level netlist TOP_LEVEL 
+
+Finished netlist restructuring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 174MB peak: 175MB)
 
 
 
 Clock Summary
 ******************
 
-          Start                                        Requested     Requested     Clock                                          Clock                   Clock
-Level     Clock                                        Frequency     Period        Type                                           Group                   Load 
----------------------------------------------------------------------------------------------------------------------------------------------------------------
-0 -       System                                       200.0 MHz     5.000         system                                         system_clkgroup         0    
-                                                                                                                                                               
-0 -       PLL_IP|CLKOP_inferred_clock                  200.0 MHz     5.000         inferred                                       Inferred_clkgroup_0     1    
-1 .         PCS_IP|refclkdiv2_rx_ch3_derived_clock     200.0 MHz     5.000         derived (from PLL_IP|CLKOP_inferred_clock)     Inferred_clkgroup_0     33   
-===============================================================================================================================================================
+          Start                                                                          Requested     Requested     Clock                                                Clock                   Clock
+Level     Clock                                                                          Frequency     Period        Type                                                 Group                   Load 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+0 -       System                                                                         200.0 MHz     5.000         system                                               system_clkgroup         0    
+                                                                                                                                                                                                       
+0 -       PLL_1_uniq_1|CLKOP_inferred_clock                                              200.0 MHz     5.000         inferred                                             Inferred_clkgroup_1     269  
+1 .         PCS_IP_uniq_0_work_top_level_arc_0layer0|refclkdiv2_rx_ch3_derived_clock     200.0 MHz     5.000         derived (from PLL_1_uniq_1|CLKOP_inferred_clock)     Inferred_clkgroup_1     33   
+                                                                                                                                                                                                       
+0 -       reveal_coretop|jtck_inferred_clock[0]                                          200.0 MHz     5.000         inferred                                             Inferred_clkgroup_0     215  
+=======================================================================================================================================================================================================
 
 
 
 Clock Load Summary
 ***********************
 
-                                           Clock     Source                              Clock Pin                                Non-clock Pin     Non-clock Pin                     
-Clock                                      Load      Pin                                 Seq Example                              Seq Example       Comb Example                      
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-System                                     0         -                                   -                                        -                 -                                 
-                                                                                                                                                                                      
-PLL_IP|CLKOP_inferred_clock                1         PLL1.PLLInst_0.CLKOP(EHXPLLF)       PCS.refclkdiv2_rx_ch3.C                  -                 -                                 
-PCS_IP|refclkdiv2_rx_ch3_derived_clock     33        PCS.refclkdiv2_rx_ch3.Q[0](dff)     PCS.rx_reset_sm_ch3.rx_lol_los_int.C     -                 PCS.rx_reset_sm_ch3.cs_4.I[0](inv)
-======================================================================================================================================================================================
+                                                                             Clock     Source                                                       Clock Pin                                                         Non-clock Pin                                                            Non-clock Pin                                                           
+Clock                                                                        Load      Pin                                                          Seq Example                                                       Seq Example                                                              Comb Example                                                            
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+System                                                                       0         -                                                            -                                                                 -                                                                        -                                                                       
+                                                                                                                                                                                                                                                                                                                                                                       
+PLL_1_uniq_1|CLKOP_inferred_clock                                            269       PLL2.PLLInst_0.CLKOP(EHXPLLF)                                top_level_reveal_coretop_instance.core0.tm_u.sample_en_d.C        top_level_reveal_coretop_instance.core0.tm_u.trace_din_d[26:0].D[26]     Clk148_5Mhz.I[0](keepbuf)                                               
+PCS_IP_uniq_0_work_top_level_arc_0layer0|refclkdiv2_rx_ch3_derived_clock     33        PCS.refclkdiv2_rx_ch3.Q[0](dff)                              PCS.rx_reset_sm_ch3.rx_lol_los_int.C                              -                                                                        PCS.rx_reset_sm_ch3.cs_4.I[0](inv)                                      
+                                                                                                                                                                                                                                                                                                                                                                       
+reveal_coretop|jtck_inferred_clock[0]                                        215       top_level_reveal_coretop_instance.jtag0.jtck(jtagconn16)     top_level_reveal_coretop_instance.core0.tm_u.tm_first_rd_d1.C     -                                                                        top_level_reveal_coretop_instance.core0.tm_u.genblk4\.un1_jtck.I[0](inv)
+=======================================================================================================================================================================================================================================================================================================================================================================
 
-@W: MT529 :"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":2884:5:2884:6|Found inferred clock PLL_IP|CLKOP_inferred_clock which controls 1 sequential elements including PCS.refclkdiv2_rx_ch3. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 
+@W: MT529 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_rvl_top.vhd":1637:8:1637:9|Found inferred clock PLL_1_uniq_1|CLKOP_inferred_clock which controls 269 sequential elements including PCS.refclkdiv2_rx_ch3. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 
 
 ICG Latch Removal Summary:
 Number of ICG latches removed: 0
@@ -97,15 +168,20 @@ Number of ICG latches not removed:	0
 
 #### START OF PREMAP CLOCK OPTIMIZATION REPORT #####[
 
-0 non-gated/non-generated clock tree(s) driving 0 clock pin(s) of sequential element(s)
-2 gated/generated clock tree(s) driving 34 clock pin(s) of sequential element(s)
-0 instances converted, 34 sequential instances remain driven by gated/generated clocks
+2 non-gated/non-generated clock tree(s) driving 430 clock pin(s) of sequential element(s)
+1 gated/generated clock tree(s) driving 33 clock pin(s) of sequential element(s)
+0 instances converted, 33 sequential instances remain driven by gated/generated clocks
 
+============================================= Non-Gated/Non-Generated Clocks =============================================
+Clock Tree ID     Driving Element                                  Drive Element Type     Fanout     Sample Instance      
+--------------------------------------------------------------------------------------------------------------------------
+@KP:ckid0_0       PLL2.CLKOP                                       PLL_1_uniq_1           215        PCS.refclkdiv2_rx_ch3
+@KP:ckid0_1       top_level_reveal_coretop_instance.jtag0.jtck     jtagconn16             215        ENCRYPTED            
+==========================================================================================================================
 ======================================================================= Gated/Generated Clocks ========================================================================
 Clock Tree ID     Driving Element                Drive Element Type     Unconverted Fanout     Sample Instance               Explanation                               
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-@KP:ckid0_0       PCS.refclkdiv2_rx_ch3.Q[0]     dff                    33                     PCS.rx_reset_sm_ch3.cs[2]     Derived clock on input (not legal for GCC)
-@KP:ckid0_2       PLL1.PLLInst_0.CLKOP           EHXPLLF                1                      PCS.refclkdiv2_rx_ch3         Black box on clock path                   
+@KP:ckid0_2       PCS.refclkdiv2_rx_ch3.Q[0]     dff                    33                     PCS.rx_reset_sm_ch3.cs[2]     Derived clock on input (not legal for GCC)
 =======================================================================================================================================================================
 
 
@@ -114,21 +190,19 @@ Clock Tree ID     Driving Element                Drive Element Type     Unconver
 @N: FX1143 |Skipping assigning INTERNAL_VREF to iobanks, because the table of mapping from pin to iobank is not initialized.
 Finished Pre Mapping Phase.
 
-Starting constraint checker (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 140MB peak: 142MB)
+Starting constraint checker (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:01s; Memory used current: 175MB peak: 175MB)
 
 
-Finished constraint checker preprocessing (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 140MB peak: 142MB)
+Finished constraint checker preprocessing (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 175MB peak: 175MB)
 
-None
-None
 
-Finished constraint checker (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 140MB peak: 142MB)
+Finished constraint checker (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 176MB peak: 176MB)
 
 Pre-mapping successful!
 
-At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 56MB peak: 142MB)
+At Mapper Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 95MB peak: 177MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Sun Jan 24 17:37:36 2021
+# Tue Jan 26 07:54:55 2021
 
 ###########################################################]

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<DiamondModule name="PLL_IP" module="PLL" VendorName="Lattice Semiconductor Corporation" generator="IPexpress" date="2021 01 24 17:32:24.328" version="5.8" type="Module" synthesis="synplify" source_format="VHDL">
+<DiamondModule name="PLL_IP" module="PLL_IP" VendorName="Lattice Semiconductor Corporation" generator="IPexpress" date="2021 01 25 14:27:32.219" version="5.8" type="Module" synthesis="synplify" source_format="VHDL">
   <Package>
-		<File name="PLL_IP.lpc" type="lpc" modified="2021 01 24 17:32:22.000"/>
-		<File name="PLL_IP.vhd" type="top_level_vhdl" modified="2021 01 24 17:32:22.000"/>
-		<File name="PLL_IP_tmpl.vhd" type="template_vhdl" modified="2021 01 24 17:32:22.000"/>
+		<File name="PLL_IP.lpc" type="lpc" modified="2021 01 25 14:27:30.538"/>
+		<File name="PLL_IP.vhd" type="top_level_vhdl" modified="2021 01 25 14:27:30.591"/>
+		<File name="PLL_IP_tmpl.vhd" type="template_vhdl" modified="2021 01 25 14:27:30.591"/>
   </Package>
 </DiamondModule>

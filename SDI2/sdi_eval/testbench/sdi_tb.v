@@ -1,6 +1,6 @@
 // =============================================================================
 //                           COPYRIGHT NOTICE
-// Copyright 2000-2013 (c) Lattice Semiconductor Corporation
+// Copyright 2000-2009 (c) Lattice Semiconductor Corporation
 // ALL RIGHTS RESERVED
 // This confidential and proprietary software may be used only as authorised by
 // a licensing agreement from Lattice Semiconductor Corporation.
@@ -28,7 +28,7 @@
 // -----------------------------------------------------------------------------
 // Version          : 0.2
 // Changes Made     : Level-B/VPID modifications
-// Author(s)        : BM
+// Author(s)        : Babu Mailachalam
 // Mod. Date        : July 28, 2009
 // =============================================================================
 

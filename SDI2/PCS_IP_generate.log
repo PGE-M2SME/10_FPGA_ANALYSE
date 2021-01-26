@@ -6,14 +6,14 @@ Starting process:
 	Core Name: PCS
 	LPC file : PCS_IP.lpc
 	Parameter File : PCS_IP.pp
-	Command line: /usr/local/diamond/3.11_x64/ispfpga/bin/lin64/orcapp -Fmaco PCS_IP.pp
+	Command line: C:/lscc/diamond/3.12/ispfpga/bin/nt64/orcapp.exe -Fmaco PCS_IP.pp
 	Return Value:
 
 
 
- Module PCS has been generated in /home/diamond/SharedFolder/SDI2/. successfully!
+ Module PCS has been generated in C:/Users/cypri/OneDrive/Documents/GIT/PGE/10_FPGA_ANALYSE/SDI2/. successfully!
 
-/usr/local/diamond/3.11_x64/bin/lin64/hdl2jhd -tfi -mod PCS_IP -ext readme -out PCS_IP -tpl PCS_IP.tft PCS_IP.vhd
+C:/lscc/diamond/3.12/bin/nt64/hdl2jhd.exe -tfi -mod PCS_IP -ext readme -out PCS_IP -tpl PCS_IP.tft PCS_IP.vhd
 
 Done successfully!
 File: PCS_IP.lpc created.

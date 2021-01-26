@@ -2,20 +2,20 @@
 <HEAD><TITLE>Bitgen Report</TITLE>
 <STYLE TYPE="text/css">
 <!--
- body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
 -->
 </STYLE>
 </HEAD>
-<PRE><A name="Bgn"></A>BITGEN: Bitstream Generator Diamond (64-bit) 3.11.3.469
+<PRE><A name="Bgn"></A>BITGEN: Bitstream Generator Diamond (64-bit) 3.12.0.240.2
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
-Sun Jan 24 17:38:23 2021
+Tue Jan 26 07:55:42 2021
 
 
-Command: bitgen -w -g CfgMode:Disable -g RamCfg:Reset -path /home/diamond/SharedFolder/SDI2 -path /home/diamond/SharedFolder/SDI2 -g ES:No -e -s /home/diamond/SharedFolder/SDI2/SDI2.sec -k /home/diamond/SharedFolder/SDI2/SDI2.bek -gui SDI2_impl1.ncd SDI2_impl1.prf 
+Command: bitgen -w -g CfgMode:Disable -g RamCfg:Reset -path C:/Users/cypri/OneDrive/Documents/GIT/PGE/10_FPGA_ANALYSE/SDI2 -path C:/Users/cypri/OneDrive/Documents/GIT/PGE/10_FPGA_ANALYSE/SDI2 -g ES:No -e -s C:/Users/cypri/OneDrive/Documents/GIT/PGE/10_FPGA_ANALYSE/SDI2/SDI2.sec -k C:/Users/cypri/OneDrive/Documents/GIT/PGE/10_FPGA_ANALYSE/SDI2/SDI2.bek -gui SDI2_impl1.ncd SDI2_impl1.prf 
 
 Loading design for application Bitgen from file SDI2_impl1.ncd.
 Design name: TOP_LEVEL
@@ -24,12 +24,16 @@ Vendor:      LATTICE
 Device:      LFE3-70E
 Package:     FPBGA672
 Performance: 8
-Loading device for application Bitgen from file 'ep5c97x146.nph' in environment: /usr/local/diamond/3.11_x64/ispfpga.
+Loading device for application Bitgen from file 'ep5c97x146.nph' in environment: C:/lscc/diamond/3.12/ispfpga.
 Package Status:                     Final          Version 1.65.
 Performance Hardware Data Status:   Final          Version 35.22.
 
 Running DRC.
-DRC detected 0 errors and 0 warnings.
+WARNING - netcheck: no load pins found on signal ep5chub/ip_enable_12.
+WARNING - netcheck: no load pins found on signal ep5chub/ip_enable_13.
+WARNING - blockcheck: the signal on pin Q1 on component ep5chub/SLICE_95 is not routed.
+WARNING - blockcheck: the signal on pin Q0 on component ep5chub/SLICE_96 is not routed.
+DRC detected 0 errors and 4 warnings.
 Reading Preference File from SDI2_impl1.prf.
 
 <A name="bgn_ps"></A>
@@ -78,9 +82,9 @@ PCSD PCS/PCSD_INST: Reading CONFIG_FILE 'PCS_IP.ptx' which is created from 'PCS_
 Bitstream Status: Final           Version 1.133 (Final).
  
 Saving bit stream in "SDI2_impl1.bit".
-Total CPU Time: 25 secs 
-Total REAL Time: 26 secs 
-Peak Memory Usage: 1365 MB
+Total CPU Time: 17 secs 
+Total REAL Time: 17 secs 
+Peak Memory Usage: 1300 MB
 
 
 

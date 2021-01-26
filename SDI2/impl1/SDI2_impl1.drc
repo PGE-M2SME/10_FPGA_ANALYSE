@@ -1,1 +1,5 @@
-DRC detected 0 errors and 0 warnings.
+WARNING - netcheck: no load pins found on signal ep5chub/ip_enable_12.
+WARNING - netcheck: no load pins found on signal ep5chub/ip_enable_13.
+WARNING - blockcheck: the signal on pin Q1 on component ep5chub/SLICE_95 is not routed.
+WARNING - blockcheck: the signal on pin Q0 on component ep5chub/SLICE_96 is not routed.
+DRC detected 0 errors and 4 warnings.

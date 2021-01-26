@@ -1,9 +1,10 @@
 #
-# Logical Preferences generated for Lattice by Synplify maplat2018q2p1, Build 055R.
+# Logical Preferences generated for Lattice by Synplify map202003lat, Build 172R.
 #
 
 # Period Constraints 
-#FREQUENCY NET "PLL1/CLKOP" 200.0 MHz;
+#FREQUENCY NET "top_level_reveal_coretop_instance/jtck[0]" 200.0 MHz;
+#FREQUENCY NET "PLL2/Clk148_5Mhz_1" 200.0 MHz;
 #FREQUENCY NET "PCS/refclkdiv2_rx_ch3" 200.0 MHz;
 
 
@@ -17,6 +18,8 @@
 
 
 # Block Path Constraints 
+#BLOCK PATH FROM CLKNET "PLL2/Clk148_5Mhz_1" TO CLKNET "top_level_reveal_coretop_instance/jtck[0]";
+#BLOCK PATH FROM CLKNET "top_level_reveal_coretop_instance/jtck[0]" TO CLKNET "PLL2/Clk148_5Mhz_1";
 
 BLOCK ASYNCPATHS;
 

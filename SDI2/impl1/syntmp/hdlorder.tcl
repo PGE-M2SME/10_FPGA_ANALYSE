@@ -1,1 +1,1 @@
-project -fileorder "/usr/local/diamond/3.11_x64/cae_library/synthesis/vhdl/ecp3.vhd" "/home/diamond/SharedFolder/SDI2/sdi_eval/SDI_IP/src/rtl/top/ecp3/SDI_IP_top.vhd" "/home/diamond/SharedFolder/SDI2/TOP_LEVEL/divFreq.vhd" "/home/diamond/SharedFolder/SDI2/PCS_IP.vhd" "/home/diamond/SharedFolder/SDI2/PLL_IP.vhd" "/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd" 
+project -fileorder "C:/Users/cypri/OneDrive/Documents/GIT/PGE/10_FPGA_ANALYSE/SDI2/impl1/reveal_workspace/tmpreveal/TOP_LEVEL_rvl_top.vhd" 

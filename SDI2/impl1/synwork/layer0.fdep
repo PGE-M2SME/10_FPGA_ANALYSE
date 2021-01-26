@@ -1,61 +1,65 @@
 #defaultlanguage:vhdl
-#OPTIONS:"|-layerid|0|-orig_srs|/home/diamond/SharedFolder/SDI2/impl1/synwork/SDI2_impl1_comp.srs|-top|TOP_LEVEL|-prodtype|synplify_pro|-dspmac|-fixsmult|-infer_seqShift|-nram|-sdff_counter|-divnmod|-nostructver|-encrypt|-pro|-lite|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-ignore_undefined_lib|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work"
-#CUR:"/usr/local/diamond/3.11_x64/synpbase/linux_a_64/c_vhdl":1554136090
-#CUR:"/usr/local/diamond/3.11_x64/synpbase/lib/vhd/location.map":1596709817
-#CUR:"/usr/local/diamond/3.11_x64/synpbase/lib/vhd/std.vhd":1554135527
-#CUR:"/usr/local/diamond/3.11_x64/synpbase/lib/vhd/snps_haps_pkg.vhd":1554135527
-#CUR:"/usr/local/diamond/3.11_x64/synpbase/lib/vhd/std1164.vhd":1554135527
-#CUR:"/usr/local/diamond/3.11_x64/synpbase/lib/vhd/numeric.vhd":1554135527
-#CUR:"/usr/local/diamond/3.11_x64/synpbase/lib/vhd/umr_capim.vhd":1554135527
-#CUR:"/usr/local/diamond/3.11_x64/synpbase/lib/vhd/arith.vhd":1554135527
-#CUR:"/usr/local/diamond/3.11_x64/synpbase/lib/vhd/unsigned.vhd":1554135527
-#CUR:"/usr/local/diamond/3.11_x64/synpbase/lib/vhd/hyperents.vhd":1554135527
-#CUR:"/usr/local/diamond/3.11_x64/cae_library/synthesis/vhdl/ecp3.vhd":1542270737
-#CUR:"/home/diamond/SharedFolder/SDI2/sdi_eval/SDI_IP/src/rtl/top/ecp3/SDI_IP_top.vhd":1611362108
-#CUR:"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/divFreq.vhd":1611508966
-#CUR:"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":1611362231
-#CUR:"/usr/local/diamond/3.11_x64/synpbase/lib/vhd/std_textio.vhd":1554135527
-#CUR:"/home/diamond/SharedFolder/SDI2/PLL_IP.vhd":1611509542
-#CUR:"/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd":1611509733
-0 "/usr/local/diamond/3.11_x64/cae_library/synthesis/vhdl/ecp3.vhd" vhdl
-1 "/home/diamond/SharedFolder/SDI2/sdi_eval/SDI_IP/src/rtl/top/ecp3/SDI_IP_top.vhd" vhdl
-2 "/home/diamond/SharedFolder/SDI2/TOP_LEVEL/divFreq.vhd" vhdl
-3 "/home/diamond/SharedFolder/SDI2/PCS_IP.vhd" vhdl
-4 "/home/diamond/SharedFolder/SDI2/PLL_IP.vhd" vhdl
-5 "/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd" vhdl
+#OPTIONS:"|-mixedhdl|-top|TOP_LEVEL|-layerid|0|-orig_srs|C:\\Users\\cypri\\OneDrive\\Documents\\GIT\\PGE\\10_FPGA_ANALYSE\\SDI2\\impl1\\synwork\\SDI2_impl1_comp.srs|-prodtype|synplify_pro|-dspmac|-fixsmult|-infer_seqShift|-nram|-sdff_counter|-divnmod|-nostructver|-encrypt|-pro|-lite|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-ignore_undefined_lib|-lib|work"
+#CUR:"C:\\lscc\\diamond\\3.12\\synpbase\\bin64\\c_vhdl.exe":1603963122
+#CUR:"C:\\lscc\\diamond\\3.12\\synpbase\\lib\\vhd\\location.map":1604334380
+#CUR:"C:\\lscc\\diamond\\3.12\\synpbase\\lib\\vhd\\std.vhd":1603963390
+#CUR:"C:\\lscc\\diamond\\3.12\\synpbase\\lib\\vhd\\snps_haps_pkg.vhd":1603963390
+#CUR:"C:\\lscc\\diamond\\3.12\\synpbase\\lib\\vhd\\std1164.vhd":1603963390
+#CUR:"C:\\lscc\\diamond\\3.12\\synpbase\\lib\\vhd\\numeric.vhd":1603963390
+#CUR:"C:\\lscc\\diamond\\3.12\\synpbase\\lib\\vhd\\umr_capim.vhd":1603963390
+#CUR:"C:\\lscc\\diamond\\3.12\\synpbase\\lib\\vhd\\arith.vhd":1603963390
+#CUR:"C:\\lscc\\diamond\\3.12\\synpbase\\lib\\vhd\\unsigned.vhd":1603963390
+#CUR:"C:\\lscc\\diamond\\3.12\\synpbase\\lib\\vhd\\hyperents.vhd":1603963390
+#CUR:"C:\\Users\\cypri\\OneDrive\\Documents\\GIT\\PGE\\10_FPGA_ANALYSE\\SDI2\\impl1\\reveal_workspace\\tmpreveal\\TOP_LEVEL_rvl_top.vhd":1611644089
+#CUR:"C:\\lscc\\diamond\\3.12\\synpbase\\lib\\vhd\\std_textio.vhd":1603963390
+0 "C:\Users\cypri\OneDrive\Documents\GIT\PGE\10_FPGA_ANALYSE\SDI2\impl1\reveal_workspace\tmpreveal\TOP_LEVEL_rvl_top.vhd" vhdl
 
 # Dependency Lists (Uses list)
 0 -1
-1 -1
-2 -1
-3 0 
-4 0 
-5 4 1 3 
 
 # Dependency Lists (Users Of)
-0 4 3 
-1 5 
-2 -1
-3 5 
-4 5 
-5 -1
+0 -1
 
 # Design Unit to File Association
-arch work sdi_ip_top arch 1
-module work sdi_ip_top 1
-arch work divfreq arch 2
-module work divfreq 2
-arch work pcs_ip pcs_ip_arch 3
-module work pcs_ip 3
-arch work pcs_iprx_reset_sm rx_reset_sm_arch 3
-module work pcs_iprx_reset_sm 3
-arch work pcsd pcsd_arch 3
-module work pcsd 3
-config work structure_con 4
-arch work pll_ip structure 4
-module work pll_ip 4
-arch work top_level arc 5
-module work top_level 5
+arch work pll_2 structure 0
+module work pll_2 0
+arch work pll_1 structure 0
+module work pll_1 0
+arch work pcs_ip pcs_ip_arch 0
+module work pcs_ip 0
+arch work pcs_iprx_reset_sm rx_reset_sm_arch 0
+module work pcs_iprx_reset_sm 0
+arch work top_level arc 0
+arch work pcs_ip_uniq_0 pcs_ip_arch 0
+arch work pcs_iprx_reset_sm_uniq_0 rx_reset_sm_arch 0
+module work pcs_iprx_reset_sm_uniq_0 0
+module work pcs_ip_uniq_0 0
+arch work pll_1_uniq_1 structure 0
+module work pll_1_uniq_1 0
+arch work pll_1_uniq_0 structure 0
+module work pll_1_uniq_0 0
+module work top_level 0
+arch work reveal_coretop one 0
+module work reveal_coretop 0
+
+# Unbound Instances to File Association
+inst work pll_2 ehxpllf 0
+inst work pll_2 vlo 0
+inst work pll_1 ehxpllf 0
+inst work pll_1 vlo 0
+inst work pcs_ip pcsd 0
+inst work pcs_ip vhi 0
+inst work pcs_ip vlo 0
+inst work top_level sdi_ip 0
+inst work pcs_ip_uniq_0 pcsd 0
+inst work pcs_ip_uniq_0 vhi 0
+inst work pcs_ip_uniq_0 vlo 0
+inst work pll_1_uniq_1 ehxpllf 0
+inst work pll_1_uniq_1 vlo 0
+inst work pll_1_uniq_0 ehxpllf 0
+inst work pll_1_uniq_0 vlo 0
+inst work reveal_coretop jtagconn16 0
+inst work reveal_coretop top_level_la0 0
 
 
 # Configuration files used

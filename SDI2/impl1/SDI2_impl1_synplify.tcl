@@ -22,7 +22,7 @@ set_option -disable_io_insertion false
 set_option -retiming false; set_option -pipe true
 set_option -force_gsr false
 set_option -compiler_compatible 0
-set_option -dup false
+set_option -dup 1
 
 set_option -default_enum_encoding default
 
@@ -42,20 +42,24 @@ set_option -update_models_cp 0
 set_option -resolve_multiple_driver 0
 
 
+set_option -seqshift_no_replicate 0
 
 #-- add_file options
-add_file -vhdl {/usr/local/diamond/3.11_x64/cae_library/synthesis/vhdl/ecp3.vhd}
-add_file -vhdl -lib "work" {/home/diamond/SharedFolder/SDI2/TOP_LEVEL/TOP_LEVEL.vhd}
-add_file -vhdl -lib "work" {/home/diamond/SharedFolder/SDI2/PCS_IP.vhd}
-add_file -vhdl -lib "work" {/home/diamond/SharedFolder/SDI2/sdi_eval/SDI_IP/src/rtl/top/ecp3/SDI_IP_top.vhd}
-add_file -vhdl -lib "work" {/home/diamond/SharedFolder/SDI2/PLL_IP.vhd}
-add_file -vhdl -lib "work" {/home/diamond/SharedFolder/SDI2/TOP_LEVEL/divFreq.vhd}
+set_option -include_path {C:/Users/cypri/OneDrive/Documents/GIT/PGE/10_FPGA_ANALYSE/SDI2}
+add_file -verilog {C:/lscc/diamond/3.12/cae_library/synthesis/verilog/pmi_def.v}
+add_file -verilog {C:/lscc/diamond/3.12/module/reveal/src/ertl/ertl.v}
+add_file -verilog {C:/lscc/diamond/3.12/module/reveal/src/rvl_j2w_module/rvl_j2w_module.v}
+add_file -verilog {C:/lscc/diamond/3.12/module/reveal/src/rvl_j2w_module/wb2sci.v}
+add_file -verilog {C:/lscc/diamond/3.12/module/reveal/src/ertl/JTAG_SOFT.v}
+add_file -verilog -vlog_std v2001 {C:/Users/cypri/OneDrive/Documents/GIT/PGE/10_FPGA_ANALYSE/SDI2/impl1/reveal_workspace/tmpreveal/top_level_la0_trig_gen.v}
+add_file -verilog -vlog_std v2001 {C:/Users/cypri/OneDrive/Documents/GIT/PGE/10_FPGA_ANALYSE/SDI2/impl1/reveal_workspace/tmpreveal/top_level_la0_gen.v}
+add_file -vhdl -lib "work" {C:/Users/cypri/OneDrive/Documents/GIT/PGE/10_FPGA_ANALYSE/SDI2/impl1/reveal_workspace/tmpreveal/TOP_LEVEL_rvl_top.vhd}
 
 #-- top module name
 set_option -top_module TOP_LEVEL
 
 #-- set result format/file last
-project -result_file {/home/diamond/SharedFolder/SDI2/impl1/SDI2_impl1.edi}
+project -result_file {C:/Users/cypri/OneDrive/Documents/GIT/PGE/10_FPGA_ANALYSE/SDI2/impl1/SDI2_impl1.edi}
 
 #-- error message log file
 project -log_file {SDI2_impl1.srf}

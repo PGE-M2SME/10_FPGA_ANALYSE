@@ -50,7 +50,7 @@ set Para(install_dir) $env(TOOLRTF)
 set Para(FPGAPath) "[file join $Para(install_dir) ispfpga bin $platformpath]"
 set Para(bin_dir) "[file join $Para(install_dir) bin $platformpath]"
 
-set Para(ModuleName) "PLL_IP"
+set Para(ModuleName) "PLL_2"
 set Para(Module) "PLL"
 set Para(libname) latticeecp3
 set Para(arch_name) ep5c00

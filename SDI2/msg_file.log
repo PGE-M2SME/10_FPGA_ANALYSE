@@ -1,5 +1,5 @@
-SCUBA, Version Diamond (64-bit) 3.11.3.469
-Sun Jan 24 17:32:22 2021
+SCUBA, Version Diamond (64-bit) 3.12.0.240.2
+Tue Jan 26 07:37:03 2021
   
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -9,20 +9,20 @@ Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
   
 BEGIN SCUBA Module Synthesis
   
-    Issued command   : /usr/local/diamond/3.11_x64/ispfpga/bin/lin64/scuba -w -n PLL_IP -lang vhdl -synth synplify -arch ep5c00 -type pll -fin 125 -phase_cntl STATIC -fclkop 148.5 -fclkop_tol 0.1 -fb_mode CLOCKTREE -noclkos -noclkok -norst -noclkok2 -bw 
-    Circuit name     : PLL_IP
+    Issued command   : C:\lscc\diamond\3.12\ispfpga\bin\nt64\scuba.exe -w -n PLL_2 -lang vhdl -synth synplify -arch ep5c00 -type pll -fin 180 -phase_cntl STATIC -fclkop 148.5 -fclkop_tol 0.0 -fb_mode CLOCKTREE -noclkos -noclkok -norst -noclkok2 -bw 
+    Circuit name     : PLL_2
     Module type      : pll
     Module Version   : 5.7
     Ports            : 
     Inputs       : CLK
     Outputs      : CLKOP, LOCK
     I/O buffer       : not inserted
-    EDIF output      : PLL_IP.edn
-    VHDL output      : PLL_IP.vhd
-    VHDL template    : PLL_IP_tmpl.vhd
+    EDIF output      : PLL_2.edn
+    VHDL output      : PLL_2.vhd
+    VHDL template    : PLL_2_tmpl.vhd
     VHDL purpose     : for synthesis and simulation
     Bus notation     : not used
-    Report output    : PLL_IP.srp
+    Report output    : PLL_2.srp
     Estimated Resource Usage:
   
 END   SCUBA Module Synthesis

@@ -1,9 +1,6 @@
-@N: MF284 |Setting synthesis effort to medium for the design
 @N: MF916 |Option synthesis_strategy=base is enabled. 
 @N: MF248 |Running in 64-bit mode.
 @N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
-@N: MF284 |Setting synthesis effort to medium for the design
-@N: MH105 |UMR3 is only supported for HAPS-80.
-@N: MH105 |UMR3 is only supported for HAPS-80.
-@N: MO195 :"/home/diamond/SharedFolder/SDI2/PCS_IP.vhd":1591:3:1591:4|Using syn_encoding = safe, FSM error recovery to reset state is enabled for cs[0:5].  
+@N: MO195 :"c:\users\cypri\onedrive\documents\git\pge\10_fpga_analyse\sdi2\impl1\reveal_workspace\tmpreveal\top_level_rvl_top.vhd":461:8:461:9|Using syn_encoding = safe, FSM error recovery to reset state is enabled for cs[0:5].  
+@N: FX1184 |Applying syn_allowed_resources blockrams=240 on top level netlist TOP_LEVEL 
 @N: FX1143 |Skipping assigning INTERNAL_VREF to iobanks, because the table of mapping from pin to iobank is not initialized.

@@ -1,18 +1,19 @@
 
-Copyright (C) 1994-2018 Synopsys, Inc.
+Copyright (C) 1994-2020 Synopsys, Inc.
 This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
 and may only be used pursuant to the terms and conditions of a written license agreement
 with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
 Synopsys software or the associated documentation is strictly prohibited.
 Tool: Synplify Pro (R)
-Build: N-2018.03L-SP1-1
-Install: /usr/local/diamond/3.11_x64/synpbase
-OS: CentOS Linux 7 (Core)
-Hostname: 15acaac0c3d8
+Build: Q-2020.03L-SP1
+Install: C:\lscc\diamond\3.12\synpbase
+OS: Windows 6.2
+
+Hostname: LAPTOP-QU0RURPA
 
 Implementation : impl1
 
-# Written on Sun Jan 24 17:37:35 2021
+# Written on Tue Jan 26 07:54:54 2021
 
 ##### FILES SYNTAX CHECKED ##############################################
 Constraint File(s):      (none)
@@ -29,24 +30,28 @@ No issues found in constraint syntax.
 Clock Summary
 *************
 
-          Start                                        Requested     Requested     Clock                                          Clock                   Clock
-Level     Clock                                        Frequency     Period        Type                                           Group                   Load 
----------------------------------------------------------------------------------------------------------------------------------------------------------------
-0 -       System                                       200.0 MHz     5.000         system                                         system_clkgroup         0    
-                                                                                                                                                               
-0 -       PLL_IP|CLKOP_inferred_clock                  200.0 MHz     5.000         inferred                                       Inferred_clkgroup_0     1    
-1 .         PCS_IP|refclkdiv2_rx_ch3_derived_clock     200.0 MHz     5.000         derived (from PLL_IP|CLKOP_inferred_clock)     Inferred_clkgroup_0     33   
-===============================================================================================================================================================
+          Start                                                                          Requested     Requested     Clock                                                Clock                   Clock
+Level     Clock                                                                          Frequency     Period        Type                                                 Group                   Load 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+0 -       System                                                                         200.0 MHz     5.000         system                                               system_clkgroup         0    
+                                                                                                                                                                                                       
+0 -       PLL_1_uniq_1|CLKOP_inferred_clock                                              200.0 MHz     5.000         inferred                                             Inferred_clkgroup_1     269  
+1 .         PCS_IP_uniq_0_work_top_level_arc_0layer0|refclkdiv2_rx_ch3_derived_clock     200.0 MHz     5.000         derived (from PLL_1_uniq_1|CLKOP_inferred_clock)     Inferred_clkgroup_1     33   
+                                                                                                                                                                                                       
+0 -       reveal_coretop|jtck_inferred_clock[0]                                          200.0 MHz     5.000         inferred                                             Inferred_clkgroup_0     215  
+=======================================================================================================================================================================================================
 
 
 Clock Load Summary
 ******************
 
-                                           Clock     Source                              Clock Pin                                Non-clock Pin     Non-clock Pin                     
-Clock                                      Load      Pin                                 Seq Example                              Seq Example       Comb Example                      
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-System                                     0         -                                   -                                        -                 -                                 
-                                                                                                                                                                                      
-PLL_IP|CLKOP_inferred_clock                1         PLL1.PLLInst_0.CLKOP(EHXPLLF)       PCS.refclkdiv2_rx_ch3.C                  -                 -                                 
-PCS_IP|refclkdiv2_rx_ch3_derived_clock     33        PCS.refclkdiv2_rx_ch3.Q[0](dff)     PCS.rx_reset_sm_ch3.rx_lol_los_int.C     -                 PCS.rx_reset_sm_ch3.cs_4.I[0](inv)
-======================================================================================================================================================================================
+                                                                             Clock     Source                                                       Clock Pin                                                         Non-clock Pin                                                            Non-clock Pin                                                           
+Clock                                                                        Load      Pin                                                          Seq Example                                                       Seq Example                                                              Comb Example                                                            
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+System                                                                       0         -                                                            -                                                                 -                                                                        -                                                                       
+                                                                                                                                                                                                                                                                                                                                                                       
+PLL_1_uniq_1|CLKOP_inferred_clock                                            269       PLL2.PLLInst_0.CLKOP(EHXPLLF)                                top_level_reveal_coretop_instance.core0.tm_u.sample_en_d.C        top_level_reveal_coretop_instance.core0.tm_u.trace_din_d[26:0].D[26]     Clk148_5Mhz.I[0](keepbuf)                                               
+PCS_IP_uniq_0_work_top_level_arc_0layer0|refclkdiv2_rx_ch3_derived_clock     33        PCS.refclkdiv2_rx_ch3.Q[0](dff)                              PCS.rx_reset_sm_ch3.rx_lol_los_int.C                              -                                                                        PCS.rx_reset_sm_ch3.cs_4.I[0](inv)                                      
+                                                                                                                                                                                                                                                                                                                                                                       
+reveal_coretop|jtck_inferred_clock[0]                                        215       top_level_reveal_coretop_instance.jtag0.jtck(jtagconn16)     top_level_reveal_coretop_instance.core0.tm_u.tm_first_rd_d1.C     -                                                                        top_level_reveal_coretop_instance.core0.tm_u.genblk4\.un1_jtck.I[0](inv)
+=======================================================================================================================================================================================================================================================================================================================================================================

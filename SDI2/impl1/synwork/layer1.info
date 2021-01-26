@@ -1,2 +1,8 @@
-work.PLL_IP
 work.SDI_IP
+work.top_level_la0
+work.jtagconn16
+work.VLO
+work.VHI
+work.PCSD
+|work.EHXPLLF|parameter FEEDBK_PATH "CLKOP";,parameter CLKOK_INPUT "CLKOP";,parameter DELAY_PWD "DISABLED";,parameter DELAY_VAL 0;,parameter CLKOS_TRIM_DELAY 0;,parameter CLKOS_TRIM_POL "RISING";,parameter CLKOP_TRIM_DELAY 0;,parameter CLKOP_TRIM_POL "RISING";,parameter CLKOK_BYPASS "DISABLED";,parameter CLKOS_BYPASS "DISABLED";,parameter CLKOP_BYPASS "DISABLED";,parameter PHASE_DELAY_CNTL "STATIC";,parameter DUTY 8;,parameter PHASEADJ "0.0";,parameter CLKOK_DIV 2;,parameter CLKOP_DIV 4;,parameter CLKFB_DIV 36;,parameter CLKI_DIV 25;,parameter FIN "125.000000";|
+|work.EHXPLLF|parameter FEEDBK_PATH "CLKOP";,parameter CLKOK_INPUT "CLKOP";,parameter DELAY_PWD "DISABLED";,parameter DELAY_VAL 0;,parameter CLKOS_TRIM_DELAY 0;,parameter CLKOS_TRIM_POL "RISING";,parameter CLKOP_TRIM_DELAY 0;,parameter CLKOP_TRIM_POL "RISING";,parameter CLKOK_BYPASS "DISABLED";,parameter CLKOS_BYPASS "DISABLED";,parameter CLKOP_BYPASS "DISABLED";,parameter PHASE_DELAY_CNTL "STATIC";,parameter DUTY 8;,parameter PHASEADJ "0.0";,parameter CLKOK_DIV 2;,parameter CLKOP_DIV 4;,parameter CLKFB_DIV 36;,parameter CLKI_DIV 25;,parameter FIN "125.000000";|
