@@ -126,6 +126,7 @@ signal CLKOP1, PLL_LOCK : std_logic;
 signal rx_clk, rstn : std_logic;
 signal rxdata : std_logic_vector(19 downto 0);
 signal rx_hlfClk, pcs_rstn : std_logic;
+signal lol, los   : std_logic;
 begin
 
   PLL1 : PLL_1
@@ -135,7 +136,7 @@ begin
       LOCK    =>  open   
     );
 	
-  PLL2 : PLL_1
+  PLL2 : PLL_2
   port map(
       CLK     =>  CLKOP1, 
       CLKOP   =>  Clk148_5Mhz, 
@@ -149,8 +150,10 @@ begin
     hdinp_ch3         => hdinp_ch3,
     rxdata_ch3        => rxdata,
     fpga_rxrefclk_ch3 => Clk148_5Mhz,
-	fpga_txrefclk => open ,
+	fpga_txrefclk =>    Clk148_5Mhz,
     rxiclk_ch3        => rx_hlfClk,
+	 rx_los_low_ch3_s  =>  los, 
+    rx_cdr_lol_ch3_s   =>  lol,
     rx_half_clk_ch3   => open ,
     rx_pwrup_ch3_c    => '1',
     rx_div2_mode_ch3_c  => '1',

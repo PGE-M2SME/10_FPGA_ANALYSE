@@ -2,7 +2,7 @@
 <BaliProject version="3.2" title="SDI2" device="LFE3-70E-8FN672C" default_implementation="impl1">
     <Options/>
     <Implementation title="impl1" dir="impl1" description="impl1" synthesis="synplify" default_strategy="Strategy1">
-        <Options def_top="PLL_2" top="TOP_LEVEL"/>
+        <Options def_top="TOP_LEVEL" top="TOP_LEVEL"/>
         <Source name="TOP_LEVEL/TOP_LEVEL.vhd" type="VHDL" type_short="VHDL">
             <Options top_module="TOP_LEVEL"/>
         </Source>
