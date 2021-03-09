@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaliProject version="3.2" title="TestDvi" device="LFE3-70E-6FN484C" default_implementation="impl2">
+    <Options/>
+    <Implementation title="impl2" dir="impl2" description="impl2" synthesis="lse" default_strategy="Strategy1">
+        <Options/>
+        <Source name="TestDvi.lpf" type="Logic Preference" type_short="LPF">
+            <Options/>
+        </Source>
+    </Implementation>
+    <Strategy name="Strategy1" file="TestDvi1.sty"/>
+</BaliProject>
