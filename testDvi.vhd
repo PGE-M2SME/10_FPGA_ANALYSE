@@ -45,8 +45,8 @@ Hdisp : out std_logic_vector ( 15 downto 0);
 Vdisp : out std_logic_vector ( 15 downto 0);
 Hblank: out std_logic_vector ( 15 downto 0);
 Vblank: out std_logic_vector ( 15 downto 0); 
-Hsync_out : out std_logic_vector ( 15 downto 0) ; 
-Vsync_out : out std_logic_vector ( 15 downto 0)
+Hsync_out : out std_logic_vector ( 15 downto 0) ; --comptage de la duree du signal hsync 
+Vsync_out : out std_logic_vector ( 15 downto 0)  --- comptage de la duree du signal vsync 
 
 		);
 end test_DVI;
