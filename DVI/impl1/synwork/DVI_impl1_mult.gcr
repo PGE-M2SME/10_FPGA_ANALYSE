@@ -1,0 +1,7 @@
+i ODCK
+m 0 0
+u 1 16
+p {p:ODCK}{t:sig_Hdisp[15:0].C}
+e ckid0_0 {t:sig_Hdisp[15:0].C} dff
+c ckid0_0 {p:ODCK} Unconstrained_port Inferred clock from port
+l 0 0 0 0 0

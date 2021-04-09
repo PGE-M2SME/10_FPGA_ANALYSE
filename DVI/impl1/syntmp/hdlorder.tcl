@@ -1,0 +1,1 @@
+project -fileorder "/usr/local/diamond/3.11_x64/cae_library/synthesis/vhdl/ecp3.vhd" "/home/diamond/SharedFolder/DiamondProjFolder/DVI/TOP_LEVEL.vhd" 

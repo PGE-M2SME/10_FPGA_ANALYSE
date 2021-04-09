@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaliMessageLog>
+    <Task name="Map">
+        <Message>
+            <ID>51001046</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>Vsync</Dynamic>
+        </Message>
+        <Message>
+            <ID>51001046</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>Hsync</Dynamic>
+        </Message>
+    </Task>
+    <Task name="Translate">
+        <Message>
+            <ID>1166052</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>logical</Dynamic>
+            <Dynamic>Vsync</Dynamic>
+            <Navigation>Vsync</Navigation>
+        </Message>
+        <Message>
+            <ID>1166052</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>logical</Dynamic>
+            <Dynamic>Hsync</Dynamic>
+            <Navigation>Hsync</Navigation>
+        </Message>
+        <Message>
+            <ID>1163101</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>2</Dynamic>
+        </Message>
+    </Task>
+    <Task name="Synplify_Synthesis">
+        <Message>
+            <ID>2011000</ID>
+            <Severity>Info</Severity>
+        </Message>
+        <Message>
+            <ID>2019991</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>CL240 :&quot;/home/diamond/SharedFolder/DiamondProjFolder/DVI/TOP_LEVEL.vhd&quot;:47:0:47:5|Signal Vblank is floating; a simulation mismatch is possible.</Dynamic>
+            <Navigation>CL240</Navigation>
+            <Navigation>/home/diamond/SharedFolder/DiamondProjFolder/DVI/TOP_LEVEL.vhd</Navigation>
+            <Navigation>47</Navigation>
+            <Navigation>0</Navigation>
+            <Navigation>47</Navigation>
+            <Navigation>5</Navigation>
+            <Navigation>Signal Vblank is floating; a simulation mismatch is possible.</Navigation>
+        </Message>
+        <Message>
+            <ID>2019991</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>CL240 :&quot;/home/diamond/SharedFolder/DiamondProjFolder/DVI/TOP_LEVEL.vhd&quot;:46:0:46:5|Signal Hblank is floating; a simulation mismatch is possible.</Dynamic>
+            <Navigation>CL240</Navigation>
+            <Navigation>/home/diamond/SharedFolder/DiamondProjFolder/DVI/TOP_LEVEL.vhd</Navigation>
+            <Navigation>46</Navigation>
+            <Navigation>0</Navigation>
+            <Navigation>46</Navigation>
+            <Navigation>5</Navigation>
+            <Navigation>Signal Hblank is floating; a simulation mismatch is possible.</Navigation>
+        </Message>
+        <Message>
+            <ID>2019991</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>CL169 :&quot;/home/diamond/SharedFolder/DiamondProjFolder/DVI/TOP_LEVEL.vhd&quot;:69:0:69:1|Pruning unused register sig_Vdisp_2(15 downto 0). Make sure that there are no unused intermediate registers.</Dynamic>
+            <Navigation>CL169</Navigation>
+            <Navigation>/home/diamond/SharedFolder/DiamondProjFolder/DVI/TOP_LEVEL.vhd</Navigation>
+            <Navigation>69</Navigation>
+            <Navigation>0</Navigation>
+            <Navigation>69</Navigation>
+            <Navigation>1</Navigation>
+            <Navigation>Pruning unused register sig_Vdisp_2(15 downto 0). Make sure that there are no unused intermediate registers.</Navigation>
+        </Message>
+        <Message>
+            <ID>2019991</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>CL182 :&quot;/home/diamond/SharedFolder/DiamondProjFolder/DVI/TOP_LEVEL.vhd&quot;:54:7:54:15|Signal read but some bits are never set, assigning initial value to unassigned bits: sig_Vdisp</Dynamic>
+            <Navigation>CL182</Navigation>
+            <Navigation>/home/diamond/SharedFolder/DiamondProjFolder/DVI/TOP_LEVEL.vhd</Navigation>
+            <Navigation>54</Navigation>
+            <Navigation>7</Navigation>
+            <Navigation>54</Navigation>
+            <Navigation>15</Navigation>
+            <Navigation>Signal read but some bits are never set, assigning initial value to unassigned bits: sig_Vdisp</Navigation>
+        </Message>
+        <Message>
+            <ID>2019991</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>MT529 :&quot;/home/diamond/SharedFolder/DiamondProjFolder/DVI/TOP_LEVEL.vhd&quot;:58:0:58:1|Found inferred clock TOP_LEVEL|ODCK which controls 16 sequential elements including sig_Hdisp[15:0]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance.</Dynamic>
+            <Navigation>MT529</Navigation>
+            <Navigation>/home/diamond/SharedFolder/DiamondProjFolder/DVI/TOP_LEVEL.vhd</Navigation>
+            <Navigation>58</Navigation>
+            <Navigation>0</Navigation>
+            <Navigation>58</Navigation>
+            <Navigation>1</Navigation>
+            <Navigation>Found inferred clock TOP_LEVEL|ODCK which controls 16 sequential elements including sig_Hdisp[15:0]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. </Navigation>
+        </Message>
+        <Message>
+            <ID>2019993</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>MT420 |Found inferred clock TOP_LEVEL|ODCK with period 5.00ns. Please declare a user-defined clock on port ODCK.</Dynamic>
+            <Navigation>MT420</Navigation>
+            <Navigation>Found inferred clock TOP_LEVEL|ODCK with period 5.00ns. Please declare a user-defined clock on port ODCK.</Navigation>
+        </Message>
+    </Task>
+</BaliMessageLog>

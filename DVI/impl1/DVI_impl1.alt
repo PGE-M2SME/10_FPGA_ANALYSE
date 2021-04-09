@@ -1,0 +1,74 @@
+NOTE Copyright (C), 1992-2010, Lattice Semiconductor Corporation *
+NOTE All Rights Reserved *
+NOTE DATE CREATED: Wed Feb 10 17:48:27 2021 *
+NOTE DESIGN NAME: TOP_LEVEL *
+NOTE DEVICE NAME: LFE3-70E-6FPBGA672 *
+NOTE PIN ASSIGNMENTS *
+NOTE PINS Hdisp[0] : U26 : out *
+NOTE PINS DE : T26 : in *
+NOTE PINS Vblank[15] : A11 : out *
+NOTE PINS Vblank[14] : B15 : out *
+NOTE PINS Vblank[13] : C10 : out *
+NOTE PINS Vblank[12] : F15 : out *
+NOTE PINS Vblank[11] : A18 : out *
+NOTE PINS Vblank[10] : A9 : out *
+NOTE PINS Vblank[9] : C15 : out *
+NOTE PINS Vblank[8] : F11 : out *
+NOTE PINS Vblank[7] : G14 : out *
+NOTE PINS Vblank[6] : B19 : out *
+NOTE PINS Vblank[5] : A19 : out *
+NOTE PINS Vblank[4] : A16 : out *
+NOTE PINS Vblank[3] : F14 : out *
+NOTE PINS Vblank[2] : B11 : out *
+NOTE PINS Vblank[1] : D14 : out *
+NOTE PINS Vblank[0] : C12 : out *
+NOTE PINS Hblank[15] : A21 : out *
+NOTE PINS Hblank[14] : C20 : out *
+NOTE PINS Hblank[13] : B10 : out *
+NOTE PINS Hblank[12] : E15 : out *
+NOTE PINS Hblank[11] : C14 : out *
+NOTE PINS Hblank[10] : G11 : out *
+NOTE PINS Hblank[9] : C17 : out *
+NOTE PINS Hblank[8] : H11 : out *
+NOTE PINS Hblank[7] : A14 : out *
+NOTE PINS Hblank[6] : B13 : out *
+NOTE PINS Hblank[5] : E12 : out *
+NOTE PINS Hblank[4] : C9 : out *
+NOTE PINS Hblank[3] : A17 : out *
+NOTE PINS Hblank[2] : A10 : out *
+NOTE PINS Hblank[1] : B16 : out *
+NOTE PINS Hblank[0] : B17 : out *
+NOTE PINS Vdisp[15] : D12 : out *
+NOTE PINS Vdisp[14] : B20 : out *
+NOTE PINS Vdisp[13] : G13 : out *
+NOTE PINS Vdisp[12] : A13 : out *
+NOTE PINS Vdisp[11] : A12 : out *
+NOTE PINS Vdisp[10] : E14 : out *
+NOTE PINS Vdisp[9] : A15 : out *
+NOTE PINS Vdisp[8] : C16 : out *
+NOTE PINS Vdisp[7] : F13 : out *
+NOTE PINS Vdisp[6] : D13 : out *
+NOTE PINS Vdisp[5] : C11 : out *
+NOTE PINS Vdisp[4] : A20 : out *
+NOTE PINS Vdisp[3] : H10 : out *
+NOTE PINS Vdisp[2] : C13 : out *
+NOTE PINS Vdisp[1] : E11 : out *
+NOTE PINS Vdisp[0] : F12 : out *
+NOTE PINS Hdisp[15] : U24 : out *
+NOTE PINS Hdisp[14] : N26 : out *
+NOTE PINS Hdisp[13] : T22 : out *
+NOTE PINS Hdisp[12] : P26 : out *
+NOTE PINS Hdisp[11] : R26 : out *
+NOTE PINS Hdisp[10] : V24 : out *
+NOTE PINS Hdisp[9] : R25 : out *
+NOTE PINS Hdisp[8] : V21 : out *
+NOTE PINS Hdisp[7] : U22 : out *
+NOTE PINS Hdisp[6] : U21 : out *
+NOTE PINS Hdisp[5] : T20 : out *
+NOTE PINS Hdisp[4] : T24 : out *
+NOTE PINS Hdisp[3] : V22 : out *
+NOTE PINS Hdisp[2] : R23 : out *
+NOTE PINS Hdisp[1] : T25 : out *
+NOTE PINS ODCK : E13 : in *
+NOTE CONFIGURATION MODE: SPI *
+NOTE COMPRESSION: off *

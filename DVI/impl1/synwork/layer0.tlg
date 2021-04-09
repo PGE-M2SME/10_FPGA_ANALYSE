@@ -1,0 +1,15 @@
+@N: CD630 :"/home/diamond/SharedFolder/DiamondProjFolder/DVI/TOP_LEVEL.vhd":36:7:36:15|Synthesizing work.top_level.arc.
+Post processing for work.top_level.arc
+Running optimization stage 1 on TOP_LEVEL .......
+@W: CL240 :"/home/diamond/SharedFolder/DiamondProjFolder/DVI/TOP_LEVEL.vhd":47:0:47:5|Signal Vblank is floating; a simulation mismatch is possible.
+@W: CL240 :"/home/diamond/SharedFolder/DiamondProjFolder/DVI/TOP_LEVEL.vhd":46:0:46:5|Signal Hblank is floating; a simulation mismatch is possible.
+@W: CL169 :"/home/diamond/SharedFolder/DiamondProjFolder/DVI/TOP_LEVEL.vhd":69:0:69:1|Pruning unused register sig_Vdisp_2(15 downto 0). Make sure that there are no unused intermediate registers.
+@W: CL182 :"/home/diamond/SharedFolder/DiamondProjFolder/DVI/TOP_LEVEL.vhd":54:7:54:15|Signal read but some bits are never set, assigning initial value to unassigned bits: sig_Vdisp
+Running optimization stage 2 on TOP_LEVEL .......
+@N: CL159 :"/home/diamond/SharedFolder/DiamondProjFolder/DVI/TOP_LEVEL.vhd":40:0:40:4|Input Vsync is unused.
+@N: CL159 :"/home/diamond/SharedFolder/DiamondProjFolder/DVI/TOP_LEVEL.vhd":41:0:41:4|Input Hsync is unused.
+
+For a summary of runtime and memory usage per design unit, please see file:
+==========================================================
+@L: /home/diamond/SharedFolder/DiamondProjFolder/DVI/impl1/synwork/layer0.rt.csv
+

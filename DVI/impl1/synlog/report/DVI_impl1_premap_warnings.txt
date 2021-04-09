@@ -1,0 +1,1 @@
+@W: MT529 :"/home/diamond/SharedFolder/DiamondProjFolder/DVI/TOP_LEVEL.vhd":58:0:58:1|Found inferred clock TOP_LEVEL|ODCK which controls 16 sequential elements including sig_Hdisp[15:0]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 

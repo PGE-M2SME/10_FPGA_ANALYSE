@@ -1,0 +1,1242 @@
+<HTML>
+<HEAD><TITLE>Lattice TRACE Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Par_Twr"></A><B><U><big>Place & Route TRACE Report</big></U></B>
+
+Loading design for application trce from file DVI_impl1.ncd.
+Design name: TOP_LEVEL
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE3-70E
+Package:     FPBGA672
+Performance: 6
+Loading device for application trce from file 'ep5c97x146.nph' in environment: /usr/local/diamond/3.11_x64/ispfpga.
+Package Status:                     Final          Version 1.65.
+Performance Hardware Data Status:   Final          Version 35.22.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+<A name="Par_Twr_setup"></A><B><U><big>Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.11.3.469</big></U></B>
+Wed Feb 10 17:47:49 2021
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+<A name="ptwr_set_ri"></A><B><U><big>Report Information</big></U></B>
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 6 -sphld m -o DVI_impl1.twr -gui DVI_impl1.ncd DVI_impl1.prf 
+Design file:     DVI_impl1.ncd
+Preference file: DVI_impl1.prf
+Device,speed:    LFE3-70E,6
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+<A name="ptwr_set_ps"></A><B><U><big>Preference Summary</big></U></B>
+
+<LI><A href='#par_twr_pref_0_0' Target='right'>FREQUENCY NET "ODCK_c" 374.953000 MHz (0 errors)</A></LI>            136 items scored, 0 timing errors detected.
+Report:  375.094MHz is the maximum frequency for this preference.
+
+Report Type:     based on TRACE automatically generated preferences
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+<A name="par_twr_pref_0_0"></A>Preference: FREQUENCY NET "ODCK_c" 374.953000 MHz ;
+            136 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed:  The following path meets requirements by 0.001ns
+         The internal maximum frequency of the following component is 375.094 MHz
+
+ Logical Details:  Cell type  Pin name       Component name
+
+   Destination:    FSLICE     CLK            SLICE_0
+
+   Delay:               2.666ns -- based on Minimum Pulse Width
+
+
+Passed: The following path meets requirements by 0.653ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              sig_Hdisp[1]  (from ODCK_c +)
+   Destination:    FF         Data in        sig_Hdisp[15]  (to ODCK_c +)
+
+   Delay:               1.939ns  (66.5% logic, 33.5% route), 9 logic levels.
+
+ Constraint Details:
+
+      1.939ns physical path delay SLICE_2 to SLICE_0 meets
+      2.667ns delay constraint less
+      0.000ns skew and
+      0.075ns DIN_SET requirement (totaling 2.592ns) by 0.653ns
+
+ Physical Path Details:
+
+      Data path SLICE_2 to SLICE_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.303   R55C143B.CLK to    R55C143B.Q0 SLICE_2 (from ODCK_c)
+ROUTE         2     0.650    R55C143B.Q0 to    R55C143B.B0 Hdisp_c[1]
+C0TOFCO_DE  ---     0.403    R55C143B.B0 to   R55C143B.FCO SLICE_2
+ROUTE         1     0.000   R55C143B.FCO to   R55C143C.FCI sig_Hdisp_cry[2]
+FCITOFCO_D  ---     0.070   R55C143C.FCI to   R55C143C.FCO SLICE_3
+ROUTE         1     0.000   R55C143C.FCO to   R55C144A.FCI sig_Hdisp_cry[4]
+FCITOFCO_D  ---     0.070   R55C144A.FCI to   R55C144A.FCO SLICE_4
+ROUTE         1     0.000   R55C144A.FCO to   R55C144B.FCI sig_Hdisp_cry[6]
+FCITOFCO_D  ---     0.070   R55C144B.FCI to   R55C144B.FCO SLICE_5
+ROUTE         1     0.000   R55C144B.FCO to   R55C144C.FCI sig_Hdisp_cry[8]
+FCITOFCO_D  ---     0.070   R55C144C.FCI to   R55C144C.FCO SLICE_6
+ROUTE         1     0.000   R55C144C.FCO to   R55C145A.FCI sig_Hdisp_cry[10]
+FCITOFCO_D  ---     0.070   R55C145A.FCI to   R55C145A.FCO SLICE_7
+ROUTE         1     0.000   R55C145A.FCO to   R55C145B.FCI sig_Hdisp_cry[12]
+FCITOFCO_D  ---     0.070   R55C145B.FCI to   R55C145B.FCO SLICE_8
+ROUTE         1     0.000   R55C145B.FCO to   R55C145C.FCI sig_Hdisp_cry[14]
+FCITOF0_DE  ---     0.163   R55C145C.FCI to    R55C145C.F0 SLICE_0
+ROUTE         1     0.000    R55C145C.F0 to   R55C145C.DI0 sig_Hdisp_s[15] (to ODCK_c)
+                  --------
+                    1.939   (66.5% logic, 33.5% route), 9 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ODCK to SLICE_2:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         9     1.872      E13.PADDI to   R55C143B.CLK ODCK_c
+                  --------
+                    1.872   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ODCK to SLICE_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         9     1.872      E13.PADDI to   R55C145C.CLK ODCK_c
+                  --------
+                    1.872   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.668ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              sig_Hdisp[1]  (from ODCK_c +)
+   Destination:    FF         Data in        sig_Hdisp[14]  (to ODCK_c +)
+
+   Delay:               1.924ns  (66.2% logic, 33.8% route), 8 logic levels.
+
+ Constraint Details:
+
+      1.924ns physical path delay SLICE_2 to SLICE_8 meets
+      2.667ns delay constraint less
+      0.000ns skew and
+      0.075ns DIN_SET requirement (totaling 2.592ns) by 0.668ns
+
+ Physical Path Details:
+
+      Data path SLICE_2 to SLICE_8:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.303   R55C143B.CLK to    R55C143B.Q0 SLICE_2 (from ODCK_c)
+ROUTE         2     0.650    R55C143B.Q0 to    R55C143B.B0 Hdisp_c[1]
+C0TOFCO_DE  ---     0.403    R55C143B.B0 to   R55C143B.FCO SLICE_2
+ROUTE         1     0.000   R55C143B.FCO to   R55C143C.FCI sig_Hdisp_cry[2]
+FCITOFCO_D  ---     0.070   R55C143C.FCI to   R55C143C.FCO SLICE_3
+ROUTE         1     0.000   R55C143C.FCO to   R55C144A.FCI sig_Hdisp_cry[4]
+FCITOFCO_D  ---     0.070   R55C144A.FCI to   R55C144A.FCO SLICE_4
+ROUTE         1     0.000   R55C144A.FCO to   R55C144B.FCI sig_Hdisp_cry[6]
+FCITOFCO_D  ---     0.070   R55C144B.FCI to   R55C144B.FCO SLICE_5
+ROUTE         1     0.000   R55C144B.FCO to   R55C144C.FCI sig_Hdisp_cry[8]
+FCITOFCO_D  ---     0.070   R55C144C.FCI to   R55C144C.FCO SLICE_6
+ROUTE         1     0.000   R55C144C.FCO to   R55C145A.FCI sig_Hdisp_cry[10]
+FCITOFCO_D  ---     0.070   R55C145A.FCI to   R55C145A.FCO SLICE_7
+ROUTE         1     0.000   R55C145A.FCO to   R55C145B.FCI sig_Hdisp_cry[12]
+FCITOF1_DE  ---     0.218   R55C145B.FCI to    R55C145B.F1 SLICE_8
+ROUTE         1     0.000    R55C145B.F1 to   R55C145B.DI1 sig_Hdisp_s[14] (to ODCK_c)
+                  --------
+                    1.924   (66.2% logic, 33.8% route), 8 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ODCK to SLICE_2:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         9     1.872      E13.PADDI to   R55C143B.CLK ODCK_c
+                  --------
+                    1.872   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ODCK to SLICE_8:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         9     1.872      E13.PADDI to   R55C145B.CLK ODCK_c
+                  --------
+                    1.872   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.723ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              sig_Hdisp[1]  (from ODCK_c +)
+   Destination:    FF         Data in        sig_Hdisp[13]  (to ODCK_c +)
+
+   Delay:               1.869ns  (65.2% logic, 34.8% route), 8 logic levels.
+
+ Constraint Details:
+
+      1.869ns physical path delay SLICE_2 to SLICE_8 meets
+      2.667ns delay constraint less
+      0.000ns skew and
+      0.075ns DIN_SET requirement (totaling 2.592ns) by 0.723ns
+
+ Physical Path Details:
+
+      Data path SLICE_2 to SLICE_8:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.303   R55C143B.CLK to    R55C143B.Q0 SLICE_2 (from ODCK_c)
+ROUTE         2     0.650    R55C143B.Q0 to    R55C143B.B0 Hdisp_c[1]
+C0TOFCO_DE  ---     0.403    R55C143B.B0 to   R55C143B.FCO SLICE_2
+ROUTE         1     0.000   R55C143B.FCO to   R55C143C.FCI sig_Hdisp_cry[2]
+FCITOFCO_D  ---     0.070   R55C143C.FCI to   R55C143C.FCO SLICE_3
+ROUTE         1     0.000   R55C143C.FCO to   R55C144A.FCI sig_Hdisp_cry[4]
+FCITOFCO_D  ---     0.070   R55C144A.FCI to   R55C144A.FCO SLICE_4
+ROUTE         1     0.000   R55C144A.FCO to   R55C144B.FCI sig_Hdisp_cry[6]
+FCITOFCO_D  ---     0.070   R55C144B.FCI to   R55C144B.FCO SLICE_5
+ROUTE         1     0.000   R55C144B.FCO to   R55C144C.FCI sig_Hdisp_cry[8]
+FCITOFCO_D  ---     0.070   R55C144C.FCI to   R55C144C.FCO SLICE_6
+ROUTE         1     0.000   R55C144C.FCO to   R55C145A.FCI sig_Hdisp_cry[10]
+FCITOFCO_D  ---     0.070   R55C145A.FCI to   R55C145A.FCO SLICE_7
+ROUTE         1     0.000   R55C145A.FCO to   R55C145B.FCI sig_Hdisp_cry[12]
+FCITOF0_DE  ---     0.163   R55C145B.FCI to    R55C145B.F0 SLICE_8
+ROUTE         1     0.000    R55C145B.F0 to   R55C145B.DI0 sig_Hdisp_s[13] (to ODCK_c)
+                  --------
+                    1.869   (65.2% logic, 34.8% route), 8 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ODCK to SLICE_2:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         9     1.872      E13.PADDI to   R55C143B.CLK ODCK_c
+                  --------
+                    1.872   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ODCK to SLICE_8:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         9     1.872      E13.PADDI to   R55C145B.CLK ODCK_c
+                  --------
+                    1.872   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.723ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              sig_Hdisp[3]  (from ODCK_c +)
+   Destination:    FF         Data in        sig_Hdisp[15]  (to ODCK_c +)
+
+   Delay:               1.869ns  (65.2% logic, 34.8% route), 8 logic levels.
+
+ Constraint Details:
+
+      1.869ns physical path delay SLICE_3 to SLICE_0 meets
+      2.667ns delay constraint less
+      0.000ns skew and
+      0.075ns DIN_SET requirement (totaling 2.592ns) by 0.723ns
+
+ Physical Path Details:
+
+      Data path SLICE_3 to SLICE_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.303   R55C143C.CLK to    R55C143C.Q0 SLICE_3 (from ODCK_c)
+ROUTE         2     0.650    R55C143C.Q0 to    R55C143C.B0 Hdisp_c[3]
+C0TOFCO_DE  ---     0.403    R55C143C.B0 to   R55C143C.FCO SLICE_3
+ROUTE         1     0.000   R55C143C.FCO to   R55C144A.FCI sig_Hdisp_cry[4]
+FCITOFCO_D  ---     0.070   R55C144A.FCI to   R55C144A.FCO SLICE_4
+ROUTE         1     0.000   R55C144A.FCO to   R55C144B.FCI sig_Hdisp_cry[6]
+FCITOFCO_D  ---     0.070   R55C144B.FCI to   R55C144B.FCO SLICE_5
+ROUTE         1     0.000   R55C144B.FCO to   R55C144C.FCI sig_Hdisp_cry[8]
+FCITOFCO_D  ---     0.070   R55C144C.FCI to   R55C144C.FCO SLICE_6
+ROUTE         1     0.000   R55C144C.FCO to   R55C145A.FCI sig_Hdisp_cry[10]
+FCITOFCO_D  ---     0.070   R55C145A.FCI to   R55C145A.FCO SLICE_7
+ROUTE         1     0.000   R55C145A.FCO to   R55C145B.FCI sig_Hdisp_cry[12]
+FCITOFCO_D  ---     0.070   R55C145B.FCI to   R55C145B.FCO SLICE_8
+ROUTE         1     0.000   R55C145B.FCO to   R55C145C.FCI sig_Hdisp_cry[14]
+FCITOF0_DE  ---     0.163   R55C145C.FCI to    R55C145C.F0 SLICE_0
+ROUTE         1     0.000    R55C145C.F0 to   R55C145C.DI0 sig_Hdisp_s[15] (to ODCK_c)
+                  --------
+                    1.869   (65.2% logic, 34.8% route), 8 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ODCK to SLICE_3:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         9     1.872      E13.PADDI to   R55C143C.CLK ODCK_c
+                  --------
+                    1.872   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ODCK to SLICE_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         9     1.872      E13.PADDI to   R55C145C.CLK ODCK_c
+                  --------
+                    1.872   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.738ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              sig_Hdisp[1]  (from ODCK_c +)
+   Destination:    FF         Data in        sig_Hdisp[12]  (to ODCK_c +)
+
+   Delay:               1.854ns  (64.9% logic, 35.1% route), 7 logic levels.
+
+ Constraint Details:
+
+      1.854ns physical path delay SLICE_2 to SLICE_7 meets
+      2.667ns delay constraint less
+      0.000ns skew and
+      0.075ns DIN_SET requirement (totaling 2.592ns) by 0.738ns
+
+ Physical Path Details:
+
+      Data path SLICE_2 to SLICE_7:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.303   R55C143B.CLK to    R55C143B.Q0 SLICE_2 (from ODCK_c)
+ROUTE         2     0.650    R55C143B.Q0 to    R55C143B.B0 Hdisp_c[1]
+C0TOFCO_DE  ---     0.403    R55C143B.B0 to   R55C143B.FCO SLICE_2
+ROUTE         1     0.000   R55C143B.FCO to   R55C143C.FCI sig_Hdisp_cry[2]
+FCITOFCO_D  ---     0.070   R55C143C.FCI to   R55C143C.FCO SLICE_3
+ROUTE         1     0.000   R55C143C.FCO to   R55C144A.FCI sig_Hdisp_cry[4]
+FCITOFCO_D  ---     0.070   R55C144A.FCI to   R55C144A.FCO SLICE_4
+ROUTE         1     0.000   R55C144A.FCO to   R55C144B.FCI sig_Hdisp_cry[6]
+FCITOFCO_D  ---     0.070   R55C144B.FCI to   R55C144B.FCO SLICE_5
+ROUTE         1     0.000   R55C144B.FCO to   R55C144C.FCI sig_Hdisp_cry[8]
+FCITOFCO_D  ---     0.070   R55C144C.FCI to   R55C144C.FCO SLICE_6
+ROUTE         1     0.000   R55C144C.FCO to   R55C145A.FCI sig_Hdisp_cry[10]
+FCITOF1_DE  ---     0.218   R55C145A.FCI to    R55C145A.F1 SLICE_7
+ROUTE         1     0.000    R55C145A.F1 to   R55C145A.DI1 sig_Hdisp_s[12] (to ODCK_c)
+                  --------
+                    1.854   (64.9% logic, 35.1% route), 7 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ODCK to SLICE_2:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         9     1.872      E13.PADDI to   R55C143B.CLK ODCK_c
+                  --------
+                    1.872   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ODCK to SLICE_7:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         9     1.872      E13.PADDI to   R55C145A.CLK ODCK_c
+                  --------
+                    1.872   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.738ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              sig_Hdisp[3]  (from ODCK_c +)
+   Destination:    FF         Data in        sig_Hdisp[14]  (to ODCK_c +)
+
+   Delay:               1.854ns  (64.9% logic, 35.1% route), 7 logic levels.
+
+ Constraint Details:
+
+      1.854ns physical path delay SLICE_3 to SLICE_8 meets
+      2.667ns delay constraint less
+      0.000ns skew and
+      0.075ns DIN_SET requirement (totaling 2.592ns) by 0.738ns
+
+ Physical Path Details:
+
+      Data path SLICE_3 to SLICE_8:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.303   R55C143C.CLK to    R55C143C.Q0 SLICE_3 (from ODCK_c)
+ROUTE         2     0.650    R55C143C.Q0 to    R55C143C.B0 Hdisp_c[3]
+C0TOFCO_DE  ---     0.403    R55C143C.B0 to   R55C143C.FCO SLICE_3
+ROUTE         1     0.000   R55C143C.FCO to   R55C144A.FCI sig_Hdisp_cry[4]
+FCITOFCO_D  ---     0.070   R55C144A.FCI to   R55C144A.FCO SLICE_4
+ROUTE         1     0.000   R55C144A.FCO to   R55C144B.FCI sig_Hdisp_cry[6]
+FCITOFCO_D  ---     0.070   R55C144B.FCI to   R55C144B.FCO SLICE_5
+ROUTE         1     0.000   R55C144B.FCO to   R55C144C.FCI sig_Hdisp_cry[8]
+FCITOFCO_D  ---     0.070   R55C144C.FCI to   R55C144C.FCO SLICE_6
+ROUTE         1     0.000   R55C144C.FCO to   R55C145A.FCI sig_Hdisp_cry[10]
+FCITOFCO_D  ---     0.070   R55C145A.FCI to   R55C145A.FCO SLICE_7
+ROUTE         1     0.000   R55C145A.FCO to   R55C145B.FCI sig_Hdisp_cry[12]
+FCITOF1_DE  ---     0.218   R55C145B.FCI to    R55C145B.F1 SLICE_8
+ROUTE         1     0.000    R55C145B.F1 to   R55C145B.DI1 sig_Hdisp_s[14] (to ODCK_c)
+                  --------
+                    1.854   (64.9% logic, 35.1% route), 7 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ODCK to SLICE_3:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         9     1.872      E13.PADDI to   R55C143C.CLK ODCK_c
+                  --------
+                    1.872   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ODCK to SLICE_8:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         9     1.872      E13.PADDI to   R55C145B.CLK ODCK_c
+                  --------
+                    1.872   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.793ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              sig_Hdisp[1]  (from ODCK_c +)
+   Destination:    FF         Data in        sig_Hdisp[11]  (to ODCK_c +)
+
+   Delay:               1.799ns  (63.9% logic, 36.1% route), 7 logic levels.
+
+ Constraint Details:
+
+      1.799ns physical path delay SLICE_2 to SLICE_7 meets
+      2.667ns delay constraint less
+      0.000ns skew and
+      0.075ns DIN_SET requirement (totaling 2.592ns) by 0.793ns
+
+ Physical Path Details:
+
+      Data path SLICE_2 to SLICE_7:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.303   R55C143B.CLK to    R55C143B.Q0 SLICE_2 (from ODCK_c)
+ROUTE         2     0.650    R55C143B.Q0 to    R55C143B.B0 Hdisp_c[1]
+C0TOFCO_DE  ---     0.403    R55C143B.B0 to   R55C143B.FCO SLICE_2
+ROUTE         1     0.000   R55C143B.FCO to   R55C143C.FCI sig_Hdisp_cry[2]
+FCITOFCO_D  ---     0.070   R55C143C.FCI to   R55C143C.FCO SLICE_3
+ROUTE         1     0.000   R55C143C.FCO to   R55C144A.FCI sig_Hdisp_cry[4]
+FCITOFCO_D  ---     0.070   R55C144A.FCI to   R55C144A.FCO SLICE_4
+ROUTE         1     0.000   R55C144A.FCO to   R55C144B.FCI sig_Hdisp_cry[6]
+FCITOFCO_D  ---     0.070   R55C144B.FCI to   R55C144B.FCO SLICE_5
+ROUTE         1     0.000   R55C144B.FCO to   R55C144C.FCI sig_Hdisp_cry[8]
+FCITOFCO_D  ---     0.070   R55C144C.FCI to   R55C144C.FCO SLICE_6
+ROUTE         1     0.000   R55C144C.FCO to   R55C145A.FCI sig_Hdisp_cry[10]
+FCITOF0_DE  ---     0.163   R55C145A.FCI to    R55C145A.F0 SLICE_7
+ROUTE         1     0.000    R55C145A.F0 to   R55C145A.DI0 sig_Hdisp_s[11] (to ODCK_c)
+                  --------
+                    1.799   (63.9% logic, 36.1% route), 7 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ODCK to SLICE_2:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         9     1.872      E13.PADDI to   R55C143B.CLK ODCK_c
+                  --------
+                    1.872   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ODCK to SLICE_7:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         9     1.872      E13.PADDI to   R55C145A.CLK ODCK_c
+                  --------
+                    1.872   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.793ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              sig_Hdisp[3]  (from ODCK_c +)
+   Destination:    FF         Data in        sig_Hdisp[13]  (to ODCK_c +)
+
+   Delay:               1.799ns  (63.9% logic, 36.1% route), 7 logic levels.
+
+ Constraint Details:
+
+      1.799ns physical path delay SLICE_3 to SLICE_8 meets
+      2.667ns delay constraint less
+      0.000ns skew and
+      0.075ns DIN_SET requirement (totaling 2.592ns) by 0.793ns
+
+ Physical Path Details:
+
+      Data path SLICE_3 to SLICE_8:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.303   R55C143C.CLK to    R55C143C.Q0 SLICE_3 (from ODCK_c)
+ROUTE         2     0.650    R55C143C.Q0 to    R55C143C.B0 Hdisp_c[3]
+C0TOFCO_DE  ---     0.403    R55C143C.B0 to   R55C143C.FCO SLICE_3
+ROUTE         1     0.000   R55C143C.FCO to   R55C144A.FCI sig_Hdisp_cry[4]
+FCITOFCO_D  ---     0.070   R55C144A.FCI to   R55C144A.FCO SLICE_4
+ROUTE         1     0.000   R55C144A.FCO to   R55C144B.FCI sig_Hdisp_cry[6]
+FCITOFCO_D  ---     0.070   R55C144B.FCI to   R55C144B.FCO SLICE_5
+ROUTE         1     0.000   R55C144B.FCO to   R55C144C.FCI sig_Hdisp_cry[8]
+FCITOFCO_D  ---     0.070   R55C144C.FCI to   R55C144C.FCO SLICE_6
+ROUTE         1     0.000   R55C144C.FCO to   R55C145A.FCI sig_Hdisp_cry[10]
+FCITOFCO_D  ---     0.070   R55C145A.FCI to   R55C145A.FCO SLICE_7
+ROUTE         1     0.000   R55C145A.FCO to   R55C145B.FCI sig_Hdisp_cry[12]
+FCITOF0_DE  ---     0.163   R55C145B.FCI to    R55C145B.F0 SLICE_8
+ROUTE         1     0.000    R55C145B.F0 to   R55C145B.DI0 sig_Hdisp_s[13] (to ODCK_c)
+                  --------
+                    1.799   (63.9% logic, 36.1% route), 7 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ODCK to SLICE_3:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         9     1.872      E13.PADDI to   R55C143C.CLK ODCK_c
+                  --------
+                    1.872   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ODCK to SLICE_8:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         9     1.872      E13.PADDI to   R55C145B.CLK ODCK_c
+                  --------
+                    1.872   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.793ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              sig_Hdisp[5]  (from ODCK_c +)
+   Destination:    FF         Data in        sig_Hdisp[15]  (to ODCK_c +)
+
+   Delay:               1.799ns  (63.9% logic, 36.1% route), 7 logic levels.
+
+ Constraint Details:
+
+      1.799ns physical path delay SLICE_4 to SLICE_0 meets
+      2.667ns delay constraint less
+      0.000ns skew and
+      0.075ns DIN_SET requirement (totaling 2.592ns) by 0.793ns
+
+ Physical Path Details:
+
+      Data path SLICE_4 to SLICE_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.303   R55C144A.CLK to    R55C144A.Q0 SLICE_4 (from ODCK_c)
+ROUTE         2     0.650    R55C144A.Q0 to    R55C144A.B0 Hdisp_c[5]
+C0TOFCO_DE  ---     0.403    R55C144A.B0 to   R55C144A.FCO SLICE_4
+ROUTE         1     0.000   R55C144A.FCO to   R55C144B.FCI sig_Hdisp_cry[6]
+FCITOFCO_D  ---     0.070   R55C144B.FCI to   R55C144B.FCO SLICE_5
+ROUTE         1     0.000   R55C144B.FCO to   R55C144C.FCI sig_Hdisp_cry[8]
+FCITOFCO_D  ---     0.070   R55C144C.FCI to   R55C144C.FCO SLICE_6
+ROUTE         1     0.000   R55C144C.FCO to   R55C145A.FCI sig_Hdisp_cry[10]
+FCITOFCO_D  ---     0.070   R55C145A.FCI to   R55C145A.FCO SLICE_7
+ROUTE         1     0.000   R55C145A.FCO to   R55C145B.FCI sig_Hdisp_cry[12]
+FCITOFCO_D  ---     0.070   R55C145B.FCI to   R55C145B.FCO SLICE_8
+ROUTE         1     0.000   R55C145B.FCO to   R55C145C.FCI sig_Hdisp_cry[14]
+FCITOF0_DE  ---     0.163   R55C145C.FCI to    R55C145C.F0 SLICE_0
+ROUTE         1     0.000    R55C145C.F0 to   R55C145C.DI0 sig_Hdisp_s[15] (to ODCK_c)
+                  --------
+                    1.799   (63.9% logic, 36.1% route), 7 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ODCK to SLICE_4:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         9     1.872      E13.PADDI to   R55C144A.CLK ODCK_c
+                  --------
+                    1.872   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ODCK to SLICE_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         9     1.872      E13.PADDI to   R55C145C.CLK ODCK_c
+                  --------
+                    1.872   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.808ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              sig_Hdisp[1]  (from ODCK_c +)
+   Destination:    FF         Data in        sig_Hdisp[10]  (to ODCK_c +)
+
+   Delay:               1.784ns  (63.6% logic, 36.4% route), 6 logic levels.
+
+ Constraint Details:
+
+      1.784ns physical path delay SLICE_2 to SLICE_6 meets
+      2.667ns delay constraint less
+      0.000ns skew and
+      0.075ns DIN_SET requirement (totaling 2.592ns) by 0.808ns
+
+ Physical Path Details:
+
+      Data path SLICE_2 to SLICE_6:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.303   R55C143B.CLK to    R55C143B.Q0 SLICE_2 (from ODCK_c)
+ROUTE         2     0.650    R55C143B.Q0 to    R55C143B.B0 Hdisp_c[1]
+C0TOFCO_DE  ---     0.403    R55C143B.B0 to   R55C143B.FCO SLICE_2
+ROUTE         1     0.000   R55C143B.FCO to   R55C143C.FCI sig_Hdisp_cry[2]
+FCITOFCO_D  ---     0.070   R55C143C.FCI to   R55C143C.FCO SLICE_3
+ROUTE         1     0.000   R55C143C.FCO to   R55C144A.FCI sig_Hdisp_cry[4]
+FCITOFCO_D  ---     0.070   R55C144A.FCI to   R55C144A.FCO SLICE_4
+ROUTE         1     0.000   R55C144A.FCO to   R55C144B.FCI sig_Hdisp_cry[6]
+FCITOFCO_D  ---     0.070   R55C144B.FCI to   R55C144B.FCO SLICE_5
+ROUTE         1     0.000   R55C144B.FCO to   R55C144C.FCI sig_Hdisp_cry[8]
+FCITOF1_DE  ---     0.218   R55C144C.FCI to    R55C144C.F1 SLICE_6
+ROUTE         1     0.000    R55C144C.F1 to   R55C144C.DI1 sig_Hdisp_s[10] (to ODCK_c)
+                  --------
+                    1.784   (63.6% logic, 36.4% route), 6 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ODCK to SLICE_2:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         9     1.872      E13.PADDI to   R55C143B.CLK ODCK_c
+                  --------
+                    1.872   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ODCK to SLICE_6:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         9     1.872      E13.PADDI to   R55C144C.CLK ODCK_c
+                  --------
+                    1.872   (0.0% logic, 100.0% route), 0 logic levels.
+
+Report:  375.094MHz is the maximum frequency for this preference.
+
+<A name="ptwr_set_rs"></A><B><U><big>Report Summary</big></U></B>
+--------------
+----------------------------------------------------------------------------
+Preference                              |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "ODCK_c" 374.953000 MHz ; |  374.953 MHz|  375.094 MHz|   0  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+<A name="ptwr_set_clkda"></A><B><U><big>Clock Domains Analysis</big></U></B>
+------------------------
+
+Found 1 clocks:
+
+Clock Domain: ODCK_c   Source: ODCK.PAD   Loads: 9
+   Covered under: FREQUENCY NET "ODCK_c" 374.953000 MHz ;
+
+
+<A name="ptwr_set_ts"></A><B><U><big>Timing summary (Setup):</big></U></B>
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 136 paths, 1 nets, and 113 connections (81.88% coverage)
+
+--------------------------------------------------------------------------------
+<A name="Par_Twr_hold"></A><B><U><big>Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.11.3.469</big></U></B>
+Wed Feb 10 17:47:49 2021
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+<A name="ptwr_hold_ri"></A><B><U><big>Report Information</big></U></B>
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 6 -sphld m -o DVI_impl1.twr -gui DVI_impl1.ncd DVI_impl1.prf 
+Design file:     DVI_impl1.ncd
+Preference file: DVI_impl1.prf
+Device,speed:    LFE3-70E,m
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+<A name="ptwr_hold_ps"></A><B><U><big>Preference Summary</big></U></B>
+
+<LI><A href='#par_twr_pref_1_0' Target='right'>FREQUENCY NET "ODCK_c" 374.953000 MHz (0 errors)</A></LI>            136 items scored, 0 timing errors detected.
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+<A name="par_twr_pref_1_0"></A>Preference: FREQUENCY NET "ODCK_c" 374.953000 MHz ;
+            136 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.279ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              sig_Hdisp[4]  (from ODCK_c +)
+   Destination:    FF         Data in        sig_Hdisp[4]  (to ODCK_c +)
+
+   Delay:               0.268ns  (56.0% logic, 44.0% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.268ns physical path delay SLICE_3 to SLICE_3 meets
+     -0.011ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.011ns) by 0.279ns
+
+ Physical Path Details:
+
+      Data path SLICE_3 to SLICE_3:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.094   R55C143C.CLK to    R55C143C.Q1 SLICE_3 (from ODCK_c)
+ROUTE         2     0.118    R55C143C.Q1 to    R55C143C.A1 Hdisp_c[4]
+CTOF_DEL    ---     0.056    R55C143C.A1 to    R55C143C.F1 SLICE_3
+ROUTE         1     0.000    R55C143C.F1 to   R55C143C.DI1 sig_Hdisp_s[4] (to ODCK_c)
+                  --------
+                    0.268   (56.0% logic, 44.0% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ODCK to SLICE_3:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         9     0.628      E13.PADDI to   R55C143C.CLK ODCK_c
+                  --------
+                    0.628   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ODCK to SLICE_3:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         9     0.628      E13.PADDI to   R55C143C.CLK ODCK_c
+                  --------
+                    0.628   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.279ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              sig_Hdisp[10]  (from ODCK_c +)
+   Destination:    FF         Data in        sig_Hdisp[10]  (to ODCK_c +)
+
+   Delay:               0.268ns  (56.0% logic, 44.0% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.268ns physical path delay SLICE_6 to SLICE_6 meets
+     -0.011ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.011ns) by 0.279ns
+
+ Physical Path Details:
+
+      Data path SLICE_6 to SLICE_6:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.094   R55C144C.CLK to    R55C144C.Q1 SLICE_6 (from ODCK_c)
+ROUTE         2     0.118    R55C144C.Q1 to    R55C144C.A1 Hdisp_c[10]
+CTOF_DEL    ---     0.056    R55C144C.A1 to    R55C144C.F1 SLICE_6
+ROUTE         1     0.000    R55C144C.F1 to   R55C144C.DI1 sig_Hdisp_s[10] (to ODCK_c)
+                  --------
+                    0.268   (56.0% logic, 44.0% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ODCK to SLICE_6:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         9     0.628      E13.PADDI to   R55C144C.CLK ODCK_c
+                  --------
+                    0.628   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ODCK to SLICE_6:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         9     0.628      E13.PADDI to   R55C144C.CLK ODCK_c
+                  --------
+                    0.628   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.280ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              sig_Hdisp[0]  (from ODCK_c +)
+   Destination:    FF         Data in        sig_Hdisp[0]  (to ODCK_c +)
+
+   Delay:               0.269ns  (55.8% logic, 44.2% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.269ns physical path delay SLICE_1 to SLICE_1 meets
+     -0.011ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.011ns) by 0.280ns
+
+ Physical Path Details:
+
+      Data path SLICE_1 to SLICE_1:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.094   R55C143A.CLK to    R55C143A.Q1 SLICE_1 (from ODCK_c)
+ROUTE         2     0.119    R55C143A.Q1 to    R55C143A.B1 Hdisp_c[0]
+CTOF_DEL    ---     0.056    R55C143A.B1 to    R55C143A.F1 SLICE_1
+ROUTE         1     0.000    R55C143A.F1 to   R55C143A.DI1 sig_Hdisp_s[0] (to ODCK_c)
+                  --------
+                    0.269   (55.8% logic, 44.2% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ODCK to SLICE_1:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         9     0.628      E13.PADDI to   R55C143A.CLK ODCK_c
+                  --------
+                    0.628   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ODCK to SLICE_1:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         9     0.628      E13.PADDI to   R55C143A.CLK ODCK_c
+                  --------
+                    0.628   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.280ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              sig_Hdisp[2]  (from ODCK_c +)
+   Destination:    FF         Data in        sig_Hdisp[2]  (to ODCK_c +)
+
+   Delay:               0.269ns  (55.8% logic, 44.2% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.269ns physical path delay SLICE_2 to SLICE_2 meets
+     -0.011ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.011ns) by 0.280ns
+
+ Physical Path Details:
+
+      Data path SLICE_2 to SLICE_2:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.094   R55C143B.CLK to    R55C143B.Q1 SLICE_2 (from ODCK_c)
+ROUTE         2     0.119    R55C143B.Q1 to    R55C143B.B1 Hdisp_c[2]
+CTOF_DEL    ---     0.056    R55C143B.B1 to    R55C143B.F1 SLICE_2
+ROUTE         1     0.000    R55C143B.F1 to   R55C143B.DI1 sig_Hdisp_s[2] (to ODCK_c)
+                  --------
+                    0.269   (55.8% logic, 44.2% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ODCK to SLICE_2:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         9     0.628      E13.PADDI to   R55C143B.CLK ODCK_c
+                  --------
+                    0.628   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ODCK to SLICE_2:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         9     0.628      E13.PADDI to   R55C143B.CLK ODCK_c
+                  --------
+                    0.628   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.280ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              sig_Hdisp[6]  (from ODCK_c +)
+   Destination:    FF         Data in        sig_Hdisp[6]  (to ODCK_c +)
+
+   Delay:               0.269ns  (55.8% logic, 44.2% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.269ns physical path delay SLICE_4 to SLICE_4 meets
+     -0.011ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.011ns) by 0.280ns
+
+ Physical Path Details:
+
+      Data path SLICE_4 to SLICE_4:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.094   R55C144A.CLK to    R55C144A.Q1 SLICE_4 (from ODCK_c)
+ROUTE         2     0.119    R55C144A.Q1 to    R55C144A.B1 Hdisp_c[6]
+CTOF_DEL    ---     0.056    R55C144A.B1 to    R55C144A.F1 SLICE_4
+ROUTE         1     0.000    R55C144A.F1 to   R55C144A.DI1 sig_Hdisp_s[6] (to ODCK_c)
+                  --------
+                    0.269   (55.8% logic, 44.2% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ODCK to SLICE_4:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         9     0.628      E13.PADDI to   R55C144A.CLK ODCK_c
+                  --------
+                    0.628   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ODCK to SLICE_4:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         9     0.628      E13.PADDI to   R55C144A.CLK ODCK_c
+                  --------
+                    0.628   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.280ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              sig_Hdisp[8]  (from ODCK_c +)
+   Destination:    FF         Data in        sig_Hdisp[8]  (to ODCK_c +)
+
+   Delay:               0.269ns  (55.8% logic, 44.2% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.269ns physical path delay SLICE_5 to SLICE_5 meets
+     -0.011ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.011ns) by 0.280ns
+
+ Physical Path Details:
+
+      Data path SLICE_5 to SLICE_5:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.094   R55C144B.CLK to    R55C144B.Q1 SLICE_5 (from ODCK_c)
+ROUTE         2     0.119    R55C144B.Q1 to    R55C144B.B1 Hdisp_c[8]
+CTOF_DEL    ---     0.056    R55C144B.B1 to    R55C144B.F1 SLICE_5
+ROUTE         1     0.000    R55C144B.F1 to   R55C144B.DI1 sig_Hdisp_s[8] (to ODCK_c)
+                  --------
+                    0.269   (55.8% logic, 44.2% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ODCK to SLICE_5:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         9     0.628      E13.PADDI to   R55C144B.CLK ODCK_c
+                  --------
+                    0.628   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ODCK to SLICE_5:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         9     0.628      E13.PADDI to   R55C144B.CLK ODCK_c
+                  --------
+                    0.628   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.280ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              sig_Hdisp[12]  (from ODCK_c +)
+   Destination:    FF         Data in        sig_Hdisp[12]  (to ODCK_c +)
+
+   Delay:               0.269ns  (55.8% logic, 44.2% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.269ns physical path delay SLICE_7 to SLICE_7 meets
+     -0.011ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.011ns) by 0.280ns
+
+ Physical Path Details:
+
+      Data path SLICE_7 to SLICE_7:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.094   R55C145A.CLK to    R55C145A.Q1 SLICE_7 (from ODCK_c)
+ROUTE         2     0.119    R55C145A.Q1 to    R55C145A.B1 Hdisp_c[12]
+CTOF_DEL    ---     0.056    R55C145A.B1 to    R55C145A.F1 SLICE_7
+ROUTE         1     0.000    R55C145A.F1 to   R55C145A.DI1 sig_Hdisp_s[12] (to ODCK_c)
+                  --------
+                    0.269   (55.8% logic, 44.2% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ODCK to SLICE_7:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         9     0.628      E13.PADDI to   R55C145A.CLK ODCK_c
+                  --------
+                    0.628   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ODCK to SLICE_7:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         9     0.628      E13.PADDI to   R55C145A.CLK ODCK_c
+                  --------
+                    0.628   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.280ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              sig_Hdisp[14]  (from ODCK_c +)
+   Destination:    FF         Data in        sig_Hdisp[14]  (to ODCK_c +)
+
+   Delay:               0.269ns  (55.8% logic, 44.2% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.269ns physical path delay SLICE_8 to SLICE_8 meets
+     -0.011ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.011ns) by 0.280ns
+
+ Physical Path Details:
+
+      Data path SLICE_8 to SLICE_8:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.094   R55C145B.CLK to    R55C145B.Q1 SLICE_8 (from ODCK_c)
+ROUTE         2     0.119    R55C145B.Q1 to    R55C145B.B1 Hdisp_c[14]
+CTOF_DEL    ---     0.056    R55C145B.B1 to    R55C145B.F1 SLICE_8
+ROUTE         1     0.000    R55C145B.F1 to   R55C145B.DI1 sig_Hdisp_s[14] (to ODCK_c)
+                  --------
+                    0.269   (55.8% logic, 44.2% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ODCK to SLICE_8:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         9     0.628      E13.PADDI to   R55C145B.CLK ODCK_c
+                  --------
+                    0.628   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ODCK to SLICE_8:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         9     0.628      E13.PADDI to   R55C145B.CLK ODCK_c
+                  --------
+                    0.628   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.341ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              sig_Hdisp[15]  (from ODCK_c +)
+   Destination:    FF         Data in        sig_Hdisp[15]  (to ODCK_c +)
+
+   Delay:               0.330ns  (45.5% logic, 54.5% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.330ns physical path delay SLICE_0 to SLICE_0 meets
+     -0.011ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.011ns) by 0.341ns
+
+ Physical Path Details:
+
+      Data path SLICE_0 to SLICE_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.094   R55C145C.CLK to    R55C145C.Q0 SLICE_0 (from ODCK_c)
+ROUTE         2     0.180    R55C145C.Q0 to    R55C145C.A0 Hdisp_c[15]
+CTOF_DEL    ---     0.056    R55C145C.A0 to    R55C145C.F0 SLICE_0
+ROUTE         1     0.000    R55C145C.F0 to   R55C145C.DI0 sig_Hdisp_s[15] (to ODCK_c)
+                  --------
+                    0.330   (45.5% logic, 54.5% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ODCK to SLICE_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         9     0.628      E13.PADDI to   R55C145C.CLK ODCK_c
+                  --------
+                    0.628   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ODCK to SLICE_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         9     0.628      E13.PADDI to   R55C145C.CLK ODCK_c
+                  --------
+                    0.628   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.342ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              sig_Hdisp[1]  (from ODCK_c +)
+   Destination:    FF         Data in        sig_Hdisp[1]  (to ODCK_c +)
+
+   Delay:               0.331ns  (45.3% logic, 54.7% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.331ns physical path delay SLICE_2 to SLICE_2 meets
+     -0.011ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.011ns) by 0.342ns
+
+ Physical Path Details:
+
+      Data path SLICE_2 to SLICE_2:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.094   R55C143B.CLK to    R55C143B.Q0 SLICE_2 (from ODCK_c)
+ROUTE         2     0.181    R55C143B.Q0 to    R55C143B.B0 Hdisp_c[1]
+CTOF_DEL    ---     0.056    R55C143B.B0 to    R55C143B.F0 SLICE_2
+ROUTE         1     0.000    R55C143B.F0 to   R55C143B.DI0 sig_Hdisp_s[1] (to ODCK_c)
+                  --------
+                    0.331   (45.3% logic, 54.7% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ODCK to SLICE_2:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         9     0.628      E13.PADDI to   R55C143B.CLK ODCK_c
+                  --------
+                    0.628   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ODCK to SLICE_2:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE         9     0.628      E13.PADDI to   R55C143B.CLK ODCK_c
+                  --------
+                    0.628   (0.0% logic, 100.0% route), 0 logic levels.
+
+<A name="ptwr_hold_rs"></A><B><U><big>Report Summary</big></U></B>
+--------------
+----------------------------------------------------------------------------
+Preference(MIN Delays)                  |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "ODCK_c" 374.953000 MHz ; |     0.000 ns|     0.279 ns|   2  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+<A name="ptwr_hold_clkda"></A><B><U><big>Clock Domains Analysis</big></U></B>
+------------------------
+
+Found 1 clocks:
+
+Clock Domain: ODCK_c   Source: ODCK.PAD   Loads: 9
+   Covered under: FREQUENCY NET "ODCK_c" 374.953000 MHz ;
+
+
+<A name="ptwr_hold_ts"></A><B><U><big>Timing summary (Hold):</big></U></B>
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 136 paths, 1 nets, and 113 connections (81.88% coverage)
+
+
+
+<A name="ptwr_ts"></A><B><U><big>Timing summary (Setup and Hold):</big></U></B>
+---------------
+
+Timing errors: 0 (setup), 0 (hold)
+Score: 0 (setup), 0 (hold)
+Cumulative negative slack: 0 (0+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

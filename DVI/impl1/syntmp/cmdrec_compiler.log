@@ -1,0 +1,9 @@
+/usr/local/diamond/3.11_x64/synpbase/bin/c_hdl  -osyn  /home/diamond/SharedFolder/DiamondProjFolder/DVI/impl1/synwork/DVI_impl1_comp.srs  -top  TOP_LEVEL  -hdllog  /home/diamond/SharedFolder/DiamondProjFolder/DVI/impl1/synlog/DVI_impl1_compiler.srr  -encrypt  -mp  4  -verification_mode 0  -vhdl  -prodtype  synplify_pro  -dspmac -fixsmult -infer_seqShift -nram -sdff_counter -divnmod -nostructver  -encrypt  -pro  -dmgen  /home/diamond/SharedFolder/DiamondProjFolder/DVI/impl1/dm  -lite -ui -fid2 -ram -sharing on -ll 2000 -autosm  -ignore_undefined_lib  -lib work /usr/local/diamond/3.11_x64/cae_library/synthesis/vhdl/ecp3.vhd -lib work /home/diamond/SharedFolder/DiamondProjFolder/DVI/TOP_LEVEL.vhd  -jobname  "compiler" 
+relcom:/usr/local/diamond/3.11_x64/synpbase/bin/c_hdl -osyn ../synwork/DVI_impl1_comp.srs -top TOP_LEVEL -hdllog ../synlog/DVI_impl1_compiler.srr -encrypt -mp 4 -verification_mode 0 -vhdl -prodtype synplify_pro -dspmac -fixsmult -infer_seqShift -nram -sdff_counter -divnmod -nostructver -encrypt -pro -dmgen ../dm -lite -ui -fid2 -ram -sharing on -ll 2000 -autosm -ignore_undefined_lib -lib work /usr/local/diamond/3.11_x64/cae_library/synthesis/vhdl/ecp3.vhd -lib work ../../TOP_LEVEL.vhd -jobname "compiler"
+rc:0 success:1 runtime:2
+file:../synwork/DVI_impl1_comp.srs|io:o|time:1612979210|size:1995|exec:0|csum:
+file:../synlog/DVI_impl1_compiler.srr|io:o|time:1612979210|size:4597|exec:0|csum:
+file:/usr/local/diamond/3.11_x64/cae_library/synthesis/vhdl/ecp3.vhd|io:i|time:1542270737|size:196741|exec:0|csum:E34DA525EA0082AB2F0D3F5F81F24F0D
+file:../../TOP_LEVEL.vhd|io:i|time:1612974071|size:2362|exec:0|csum:28E0CD60420F997403AE8830EFA60216
+file:/usr/local/diamond/3.11_x64/synpbase/linux_a_64/c_hdl|io:i|time:1554136089|size:8774632|exec:1|csum:C3E07530A8524987C42892A5146F1BC8
+file:/usr/local/diamond/3.11_x64/synpbase/bin/c_hdl|io:i|time:1554135608|size:365|exec:1|csum:4BFE636BF1E789CD3BE436D80F9E4F42
