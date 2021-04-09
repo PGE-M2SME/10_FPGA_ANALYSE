@@ -1,9 +1,0 @@
-/usr/local/diamond/3.11_x64/synpbase/bin/c_vhdl  -osyn  /home/diamond/SharedFolder/DiamondProjFolder/DVI/impl1/synwork/DVI_impl1_hdl_.srs  -top  TOP_LEVEL  -prodtype  synplify_pro  -dspmac -fixsmult -infer_seqShift -nram -sdff_counter -divnmod -nostructver  -encrypt  -pro  -dmgen  /home/diamond/SharedFolder/DiamondProjFolder/DVI/impl1/dm  -lite -ui -fid2 -ram -sharing on -ll 2000 -autosm  -ignore_undefined_lib  -lib work /usr/local/diamond/3.11_x64/cae_library/synthesis/vhdl/ecp3.vhd -lib work /home/diamond/SharedFolder/DiamondProjFolder/DVI/TOP_LEVEL.vhd  -log  /home/diamond/SharedFolder/DiamondProjFolder/DVI/impl1/syntax.log  -fileorder  /home/diamond/SharedFolder/DiamondProjFolder/DVI/impl1/syntmp/hdlorder.tcl  -jobname  "hdl_info_gen" 
-relcom:/usr/local/diamond/3.11_x64/synpbase/bin/c_vhdl -osyn ../synwork/DVI_impl1_hdl_.srs -top TOP_LEVEL -prodtype synplify_pro -dspmac -fixsmult -infer_seqShift -nram -sdff_counter -divnmod -nostructver -encrypt -pro -dmgen ../dm -lite -ui -fid2 -ram -sharing on -ll 2000 -autosm -ignore_undefined_lib -lib work /usr/local/diamond/3.11_x64/cae_library/synthesis/vhdl/ecp3.vhd -lib work ../../TOP_LEVEL.vhd -log ../syntax.log -fileorder hdlorder.tcl -jobname "hdl_info_gen"
-rc:0 success:1 runtime:0
-file:../synwork/DVI_impl1_hdl_.srs|io:o|time:0|size:-1|exec:0|csum:
-file:/usr/local/diamond/3.11_x64/cae_library/synthesis/vhdl/ecp3.vhd|io:i|time:1542270737|size:196741|exec:0|csum:E34DA525EA0082AB2F0D3F5F81F24F0D
-file:../../TOP_LEVEL.vhd|io:i|time:1612974071|size:2362|exec:0|csum:28E0CD60420F997403AE8830EFA60216
-file:../syntax.log|io:o|time:1612979208|size:1058|exec:0|csum:
-file:/usr/local/diamond/3.11_x64/synpbase/linux_a_64/c_vhdl|io:i|time:1554136090|size:10093640|exec:1|csum:FDC3BDAF0FB04CD9D905630D63DABBF1
-file:/usr/local/diamond/3.11_x64/synpbase/bin/c_vhdl|io:i|time:1554135608|size:365|exec:1|csum:4BFE636BF1E789CD3BE436D80F9E4F42

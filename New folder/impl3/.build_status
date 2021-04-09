@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BuildStatus>
+    <Strategy name="Strategy1">
+        <Milestone name="Export" build_result="0" build_time="0">
+            <Task name="IBIS" build_result="0" update_result="3" update_time="0"/>
+            <Task name="TimingSimFileVlg" build_result="0" update_result="3" update_time="0"/>
+            <Task name="TimingSimFileVHD" build_result="0" update_result="3" update_time="0"/>
+            <Task name="Bitgen" build_result="2" update_result="0" update_time="1617041967"/>
+            <Task name="Promgen" build_result="0" update_result="3" update_time="0"/>
+        </Milestone>
+        <Milestone name="Map" build_result="2" build_time="1617041864">
+            <Task name="Map" build_result="2" update_result="0" update_time="1617041864"/>
+            <Task name="MapTrace" build_result="2" update_result="0" update_time="1617041868"/>
+            <Task name="MapVerilogSimFile" build_result="0" update_result="3" update_time="0"/>
+            <Task name="MapVHDLSimFile" build_result="0" update_result="3" update_time="0"/>
+        </Milestone>
+        <Milestone name="PAR" build_result="2" build_time="1617041922">
+            <Task name="PAR" build_result="2" update_result="0" update_time="1617041922"/>
+            <Task name="PARTrace" build_result="2" update_result="0" update_time="1617041926"/>
+            <Task name="IOTiming" build_result="0" update_result="3" update_time="0"/>
+        </Milestone>
+        <Milestone name="Synthesis" build_result="2" build_time="1617041857">
+            <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1617041857"/>
+            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1617041967"/>
+        </Milestone>
+        <Milestone name="TOOL_Report" build_result="0" build_time="0">
+            <Task name="HDLE" build_result="2" update_result="0" update_time="1617041806"/>
+        </Milestone>
+        <Report name=".vdbs/test403_impl3_map.vdb" last_build_time="1617041864" last_build_size="328961"/>
+        <Report name="test403_impl3.bgn" last_build_time="1617041967" last_build_size="3931"/>
+        <Report name="test403_impl3.bit" last_build_time="1617041966" last_build_size="2390441"/>
+        <Report name="test403_impl3.lsedata" last_build_time="1617041850" last_build_size="1347563"/>
+        <Report name="test403_impl3.ncd" last_build_time="1617041922" last_build_size="795448"/>
+        <Report name="test403_impl3.ngd" last_build_time="1617041857" last_build_size="713369"/>
+        <Report name="test403_impl3.tw1" last_build_time="1617041868" last_build_size="8275"/>
+        <Report name="test403_impl3.twr" last_build_time="1617041926" last_build_size="44221"/>
+        <Report name="test403_impl3_map.ncd" last_build_time="1617041861" last_build_size="520844"/>
+    </Strategy>
+</BuildStatus>

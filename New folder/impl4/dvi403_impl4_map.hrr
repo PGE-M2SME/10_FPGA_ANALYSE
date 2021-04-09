@@ -1,0 +1,141 @@
+---------------------------------------------------
+Report for cell test_DVI
+   Instance path: test_DVI
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     952.00        100.0
+                                  LUT4	    1154.00        100.0
+                                 IOBUF	        100        100.0
+                                PFUREG	        817        100.0
+                                RIPPLE	        116        100.0
+                                   EBR	         89        100.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                        reveal_coretop	          1        83.1
+                               ep5chub	          1         4.4
+---------------------------------------------------
+Report for cell reveal_coretop
+   Instance path: test_DVI/test_dvi_reveal_coretop_instance
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     790.78        83.1
+                                  LUT4	    1094.50        94.8
+                                PFUREG	        634        77.6
+                                RIPPLE	         29        25.0
+                                   EBR	         89        100.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                              core_la0	          1        83.0
+---------------------------------------------------
+Report for cell core_la0
+   Instance path: test_DVI/test_dvi_reveal_coretop_instance/core0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     789.78        83.0
+                                  LUT4	    1093.50        94.8
+                                PFUREG	        634        77.6
+                                RIPPLE	         29        25.0
+                                   EBR	         89        100.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+rvl_jtag_int(NUM_TRACE_SIGNALS=99,NUM_TRIGGER_SIGNALS=1)	          1        31.4
+rvl_tm(NUM_TRACE_SIGNALS=99,NUM_TRACE_SAMPLES=16384,NUM_TRIGGER_SIGNALS=1,NUM_TRIG_MAX=1,REVEAL_SIG=352005267,LSCC_FAMILY="ECP3")	          1        43.7
+                         core_la0_trig	          1         7.9
+---------------------------------------------------
+Report for cell core_la0_trig
+   Instance path: test_DVI/test_dvi_reveal_coretop_instance/core0/trig_u
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      75.42         7.9
+                                  LUT4	      91.00         7.9
+                                PFUREG	         65         8.0
+                                RIPPLE	          9         7.8
+                                   EBR	          1         1.1
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                 rvl_tu(NUM_TU_BITS=1)	          1         1.1
+rvl_te(NUM_TU=1,NUM_TE_ROW=2,NUM_TE_COL=1,TE_EBR=1,NUM_TE_EVENT_CNT_BITS=0,LSCC_FAMILY="ECP3")	          1         4.7
+    rvl_tcnt(NUM_TE=1,NUM_TCNT_BITS=3)	          1         1.1
+         rvl_decode(NUM_TU=1,NUM_TE=1)	          1         0.5
+---------------------------------------------------
+Report for cell rvl_tu(NUM_TU_BITS=1)
+   Instance path: test_DVI/test_dvi_reveal_coretop_instance/core0/trig_u/tu_0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      10.83         1.1
+                                  LUT4	      13.00         1.1
+                                PFUREG	          8         1.0
+---------------------------------------------------
+Report for cell rvl_te(NUM_TU=1,NUM_TE_ROW=2,NUM_TE_COL=1,TE_EBR=1,NUM_TE_EVENT_CNT_BITS=0,LSCC_FAMILY="ECP3")
+   Instance path: test_DVI/test_dvi_reveal_coretop_instance/core0/trig_u/te_0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      45.00         4.7
+                                  LUT4	      49.67         4.3
+                                PFUREG	         45         5.5
+                                RIPPLE	          9         7.8
+                                   EBR	          1         1.1
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+    pmi_ram_dpEbnonesadr112112115216de	          1         0.0
+---------------------------------------------------
+Report for cell pmi_ram_dpEbnonesadr112112115216de
+   Instance path: test_DVI/test_dvi_reveal_coretop_instance/core0/trig_u/te_0/pmi_ram_dpECP3binarynonespeedasyncdisablereg112112
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                   EBR	          1         1.1
+---------------------------------------------------
+Report for cell rvl_tcnt(NUM_TE=1,NUM_TCNT_BITS=3)
+   Instance path: test_DVI/test_dvi_reveal_coretop_instance/core0/trig_u/tcnt_0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      10.58         1.1
+                                  LUT4	      11.33         1.0
+                                PFUREG	         12         1.5
+---------------------------------------------------
+Report for cell rvl_decode(NUM_TU=1,NUM_TE=1)
+   Instance path: test_DVI/test_dvi_reveal_coretop_instance/core0/trig_u/decode_u
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       5.00         0.5
+                                  LUT4	      10.00         0.9
+---------------------------------------------------
+Report for cell rvl_tm(NUM_TRACE_SIGNALS=99,NUM_TRACE_SAMPLES=16384,NUM_TRIGGER_SIGNALS=1,NUM_TRIG_MAX=1,REVEAL_SIG=352005267,LSCC_FAMILY="ECP3")
+   Instance path: test_DVI/test_dvi_reveal_coretop_instance/core0/tm_u
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     415.83        43.7
+                                  LUT4	     583.00        50.5
+                                PFUREG	        351        43.0
+                                RIPPLE	         16        13.8
+                                   EBR	         88        98.9
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+pmi_ram_dpEbnonesadr991416384991416384122adcc5	          1        18.5
+---------------------------------------------------
+Report for cell pmi_ram_dpEbnonesadr991416384991416384122adcc5
+   Instance path: test_DVI/test_dvi_reveal_coretop_instance/core0/tm_u/pmi_ram_dpECP3binarynonespeedasyncdisablereg991416384991416384
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     176.25        18.5
+                                  LUT4	     396.00        34.3
+                                PFUREG	          6         0.7
+                                   EBR	         88        98.9
+---------------------------------------------------
+Report for cell rvl_jtag_int(NUM_TRACE_SIGNALS=99,NUM_TRIGGER_SIGNALS=1)
+   Instance path: test_DVI/test_dvi_reveal_coretop_instance/core0/jtag_int_u
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     298.53        31.4
+                                  LUT4	     419.50        36.4
+                                PFUREG	        218        26.7
+                                RIPPLE	          4         3.4
+---------------------------------------------------
+Report for cell ep5chub
+   Instance path: test_DVI/ep5chub
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      41.47         4.4
+                                  LUT4	      25.50         2.2
+                                PFUREG	         50         6.1
+                                RIPPLE	          8         6.9

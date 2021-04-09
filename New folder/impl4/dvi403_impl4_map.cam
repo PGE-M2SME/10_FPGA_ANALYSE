@@ -1,0 +1,119 @@
+[ START MERGED ]
+ODCK_c_enable_89 DE_N
+n3882 Vsync_N
+jshift[0]_keep jtaghub16_jshift
+ip_enable[0]_keep jtaghub16_ip_enable0
+jtaghub16_er2_tdo0 test_dvi_reveal_coretop_instance/er2_tdo[0]
+test_dvi_reveal_coretop_instance/jtck[0] jtaghub16_jtck
+test_dvi_reveal_coretop_instance/jtdi[0] jtaghub16_jtdi
+test_dvi_reveal_coretop_instance/jrstn[0] jtaghub16_jrstn
+test_dvi_reveal_coretop_instance/jce2[0] jtaghub16_jce2
+test_dvi_reveal_coretop_instance/jtck_N_422 jtaghub16_jtck
+test_dvi_reveal_coretop_instance/core0/jrstn_N_420 jtaghub16_jrstn
+ep5chub/cdn_CN jtaghub16_jtck
+ep5chub/jrstn_i jtaghub16_jrstn
+ep5chub/jtdo2_0_a4_1_am_RNO_2 ep5chub/ip_enable_2
+[ END MERGED ]
+[ START CLIPPED ]
+ep5chub/ip_enable_14
+ep5chub/jtdo2_int_m5_d
+ep5chub/jtdo2_int_m0
+ep5chub/jtdo2_int_m7
+ep5chub/jtdo2_int_m10
+ep5chub/jtdo2_int_m5_d_bm
+ep5chub/jtdo2_int_m5_d_am
+ep5chub/rom_rd_addr_cry_0_S0_0
+ep5chub/bit_count_cry_0_COUT_3
+ep5chub/bit_count_cry_0_S0_0
+ep5chub/er2_tdo_15
+ep5chub/er2_tdo_14
+ep5chub/er2_tdo_7
+ep5chub/er2_tdo_6
+ep5chub/er2_tdo_4
+ep5chub/er2_tdo_3
+ep5chub/er2_tdo_10
+ep5chub/er2_tdo_9
+ep5chub/er2_tdo_13
+ep5chub/er2_tdo_12
+ep5chub/er2_tdo_11
+ep5chub/er2_tdo_1
+ep5chub/er2_tdo_2
+ep5chub/er2_tdo_8
+ep5chub/er2_tdo_5
+ep5chub/ip_enable_15
+ep5chub/genblk5_un1_jtage_u
+ep5chub/genblk5_un1_jtage_u_1
+ep5chub/tdoa
+ep5chub/tdia
+ep5chub/tmsa
+ep5chub/tcka
+ep5chub/cdn
+ep5chub/rom_rd_addr_s_0_S1_7
+ep5chub/rom_rd_addr_s_0_COUT_7
+test_dvi_reveal_coretop_instance/core0/jtag_int_u/bit_cnt_744_add_4_1/S0
+test_dvi_reveal_coretop_instance/core0/jtag_int_u/bit_cnt_744_add_4_1/CI
+test_dvi_reveal_coretop_instance/core0/jtag_int_u/bit_cnt_744_add_4_7/S1
+test_dvi_reveal_coretop_instance/core0/jtag_int_u/bit_cnt_744_add_4_7/CO
+test_dvi_reveal_coretop_instance/core0/tm_u/tm_rd_addr_cntr_746_add_4_1/S0
+test_dvi_reveal_coretop_instance/core0/tm_u/tm_rd_addr_cntr_746_add_4_1/CI
+test_dvi_reveal_coretop_instance/core0/tm_u/tm_rd_addr_cntr_746_add_4_15/S1
+test_dvi_reveal_coretop_instance/core0/tm_u/tm_rd_addr_cntr_746_add_4_15/CO
+test_dvi_reveal_coretop_instance/core0/tm_u/tm_wr_addr_cntr_747_add_4_1/S0
+test_dvi_reveal_coretop_instance/core0/tm_u/tm_wr_addr_cntr_747_add_4_1/CI
+test_dvi_reveal_coretop_instance/core0/tm_u/tm_wr_addr_cntr_747_add_4_15/S1
+test_dvi_reveal_coretop_instance/core0/tm_u/tm_wr_addr_cntr_747_add_4_15/CO
+test_dvi_reveal_coretop_instance/core0/tm_u/pmi_ram_dpECP3binarynonespeedasyncdisablereg991416384991416384/scuba_vhi
+test_dvi_reveal_coretop_instance/core0/trig_u/te_0/te_precnt_748_add_4_17/S1
+test_dvi_reveal_coretop_instance/core0/trig_u/te_0/te_precnt_748_add_4_17/CO
+test_dvi_reveal_coretop_instance/core0/trig_u/te_0/te_precnt_748_add_4_1/S0
+test_dvi_reveal_coretop_instance/core0/trig_u/te_0/te_precnt_748_add_4_1/CI
+test_dvi_reveal_coretop_instance/core0/trig_u/te_0/pmi_ram_dpECP3binarynonespeedasyncdisablereg112112/scuba_vhi
+test_dvi_reveal_coretop_instance/jupdate[0]
+sig_Vsync_738_add_4_1/S0
+sig_Vsync_738_add_4_1/CI
+sig_Hblank_739_add_4_1/S0
+sig_Hblank_739_add_4_1/CI
+sig_Hblank_739_add_4_17/S1
+sig_Hblank_739_add_4_17/CO
+_add_1_add_4_2/S0
+_add_1_add_4_2/CI
+sig_Vsync_738_add_4_17/S1
+sig_Vsync_738_add_4_17/CO
+_add_1_add_4_16/S1
+_add_1_add_4_16/CO
+_add_1_1177_add_4_1/S0
+_add_1_1177_add_4_1/CI
+sig_Vdisp_734_add_4_17/S1
+sig_Vdisp_734_add_4_17/CO
+_add_1_1177_add_4_15/S1
+_add_1_1177_add_4_15/CO
+sig_Vblank_743_add_4_1/S0
+sig_Vblank_743_add_4_1/CI
+sig_compt_front_Hsync_741_add_4_1/S0
+sig_compt_front_Hsync_741_add_4_1/CI
+sig_compt_front_Hsync_741_add_4_17/S1
+sig_compt_front_Hsync_741_add_4_17/CO
+sig_Vblank_743_add_4_17/S1
+sig_Vblank_743_add_4_17/CO
+sig_Hsync_736_add_4_1/S0
+sig_Hsync_736_add_4_1/CI
+sig_Hdisp_cpt_732_add_4_1/S0
+sig_Hdisp_cpt_732_add_4_1/CI
+sig_Hdisp_cpt_732_add_4_17/S1
+sig_Hdisp_cpt_732_add_4_17/CO
+sig_Vdisp_734_add_4_1/S0
+sig_Vdisp_734_add_4_1/CI
+sig_Hsync_736_add_4_17/S1
+sig_Hsync_736_add_4_17/CO
+[ END CLIPPED ]
+[ START DESIGN PREFS ]
+SCHEMATIC START ;
+# map:  version Diamond (64-bit) 3.11.3.469 -- WARNING: Map write only section -- Mon Mar 29 18:50:40 2021
+
+SYSCONFIG PERSISTENT=OFF CONFIG_MODE=SPI DONE_OD=ON DONE_EX=OFF MCCLK_FREQ=2.5 CONFIG_SECURE=OFF WAKE_UP=21 WAKE_ON_LOCK=OFF COMPRESS_CONFIG=OFF ENABLE_NDR=OFF CONFIG_IOVOLTAGE=2.5 STRTUP=EXTERNAL ;
+LOCATE COMP "DE" SITE "AD1" ;
+LOCATE COMP "Vsync" SITE "AA1" ;
+LOCATE COMP "Hsync" SITE "AD2" ;
+LOCATE COMP "ODCK" SITE "U20" ;
+SCHEMATIC END ;
+[ END DESIGN PREFS ]

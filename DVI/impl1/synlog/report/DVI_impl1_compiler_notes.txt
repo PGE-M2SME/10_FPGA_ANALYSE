@@ -1,8 +1,0 @@
-@N|Running in 64-bit mode
-@N|Running in 64-bit mode
-@N:"/home/diamond/SharedFolder/DiamondProjFolder/DVI/TOP_LEVEL.vhd":38:7:38:15|Top entity is set to TOP_LEVEL.
-@N: CD630 :"/home/diamond/SharedFolder/DiamondProjFolder/DVI/TOP_LEVEL.vhd":36:7:36:15|Synthesizing work.top_level.arc.
-@N: CL159 :"/home/diamond/SharedFolder/DiamondProjFolder/DVI/TOP_LEVEL.vhd":40:0:40:4|Input Vsync is unused.
-@N: CL159 :"/home/diamond/SharedFolder/DiamondProjFolder/DVI/TOP_LEVEL.vhd":41:0:41:4|Input Hsync is unused.
-@N|Running in 64-bit mode
-

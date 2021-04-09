@@ -1,0 +1,133 @@
+<Project ModBy="Inserter" SigType="0" Name="/home/diamond/SharedFolder/DiamondProjFolder/test_dvi.rvl" Date="2021-03-29">
+    <IP Version="1_6_042617"/>
+    <Design DesignEntry="Schematic/VHDL" Synthesis="lse" DeviceFamily="LatticeECP3" DesignName="dvi403"/>
+    <Core InsertDataset="0" Insert="1" Reveal_sig="352005267" Name="core_LA0" ID="0">
+        <Setting>
+            <Clock SampleClk="odck" SampleEnable="0" EnableClk="" EnableClk_Pri="0"/>
+            <TraceBuffer Implementation="0" BitTimeStamp="0" hasTimeStamp="0" IncTrigSig="0" BufferDepth="16384"/>
+            <Capture Mode="0" MinSamplesPerTrig="64"/>
+            <Event CntEnable="0" MaxEventCnt="8"/>
+            <TrigOut Polarity="0" MinPulseWidth="0" TrigOutNetType="1" EnableTrigOut="0" TrigOutNet="reveal_debug_dvi403_LA0_net"/>
+            <DistRAM Disable="0"/>
+        </Setting>
+        <Dataset Name="Base">
+            <Trace>
+                <Sig Type="SIG" Name="de"/>
+                <Bus Name="hblank">
+                    <Sig Type="SIG" Name="hblank:0"/>
+                    <Sig Type="SIG" Name="hblank:1"/>
+                    <Sig Type="SIG" Name="hblank:2"/>
+                    <Sig Type="SIG" Name="hblank:3"/>
+                    <Sig Type="SIG" Name="hblank:4"/>
+                    <Sig Type="SIG" Name="hblank:5"/>
+                    <Sig Type="SIG" Name="hblank:6"/>
+                    <Sig Type="SIG" Name="hblank:7"/>
+                    <Sig Type="SIG" Name="hblank:8"/>
+                    <Sig Type="SIG" Name="hblank:9"/>
+                    <Sig Type="SIG" Name="hblank:10"/>
+                    <Sig Type="SIG" Name="hblank:11"/>
+                    <Sig Type="SIG" Name="hblank:12"/>
+                    <Sig Type="SIG" Name="hblank:13"/>
+                    <Sig Type="SIG" Name="hblank:14"/>
+                    <Sig Type="SIG" Name="hblank:15"/>
+                </Bus>
+                <Bus Name="hdisp">
+                    <Sig Type="SIG" Name="hdisp:0"/>
+                    <Sig Type="SIG" Name="hdisp:1"/>
+                    <Sig Type="SIG" Name="hdisp:2"/>
+                    <Sig Type="SIG" Name="hdisp:3"/>
+                    <Sig Type="SIG" Name="hdisp:4"/>
+                    <Sig Type="SIG" Name="hdisp:5"/>
+                    <Sig Type="SIG" Name="hdisp:6"/>
+                    <Sig Type="SIG" Name="hdisp:7"/>
+                    <Sig Type="SIG" Name="hdisp:8"/>
+                    <Sig Type="SIG" Name="hdisp:9"/>
+                    <Sig Type="SIG" Name="hdisp:10"/>
+                    <Sig Type="SIG" Name="hdisp:11"/>
+                    <Sig Type="SIG" Name="hdisp:12"/>
+                    <Sig Type="SIG" Name="hdisp:13"/>
+                    <Sig Type="SIG" Name="hdisp:14"/>
+                    <Sig Type="SIG" Name="hdisp:15"/>
+                </Bus>
+                <Sig Type="SIG" Name="hsync"/>
+                <Bus Name="hsync_out">
+                    <Sig Type="SIG" Name="hsync_out:0"/>
+                    <Sig Type="SIG" Name="hsync_out:1"/>
+                    <Sig Type="SIG" Name="hsync_out:2"/>
+                    <Sig Type="SIG" Name="hsync_out:3"/>
+                    <Sig Type="SIG" Name="hsync_out:4"/>
+                    <Sig Type="SIG" Name="hsync_out:5"/>
+                    <Sig Type="SIG" Name="hsync_out:6"/>
+                    <Sig Type="SIG" Name="hsync_out:7"/>
+                    <Sig Type="SIG" Name="hsync_out:8"/>
+                    <Sig Type="SIG" Name="hsync_out:9"/>
+                    <Sig Type="SIG" Name="hsync_out:10"/>
+                    <Sig Type="SIG" Name="hsync_out:11"/>
+                    <Sig Type="SIG" Name="hsync_out:12"/>
+                    <Sig Type="SIG" Name="hsync_out:13"/>
+                    <Sig Type="SIG" Name="hsync_out:14"/>
+                    <Sig Type="SIG" Name="hsync_out:15"/>
+                </Bus>
+                <Bus Name="vblank">
+                    <Sig Type="SIG" Name="vblank:0"/>
+                    <Sig Type="SIG" Name="vblank:1"/>
+                    <Sig Type="SIG" Name="vblank:2"/>
+                    <Sig Type="SIG" Name="vblank:3"/>
+                    <Sig Type="SIG" Name="vblank:4"/>
+                    <Sig Type="SIG" Name="vblank:5"/>
+                    <Sig Type="SIG" Name="vblank:6"/>
+                    <Sig Type="SIG" Name="vblank:7"/>
+                    <Sig Type="SIG" Name="vblank:8"/>
+                    <Sig Type="SIG" Name="vblank:9"/>
+                    <Sig Type="SIG" Name="vblank:10"/>
+                    <Sig Type="SIG" Name="vblank:11"/>
+                    <Sig Type="SIG" Name="vblank:12"/>
+                    <Sig Type="SIG" Name="vblank:13"/>
+                    <Sig Type="SIG" Name="vblank:14"/>
+                    <Sig Type="SIG" Name="vblank:15"/>
+                </Bus>
+                <Bus Name="vdisp">
+                    <Sig Type="SIG" Name="vdisp:0"/>
+                    <Sig Type="SIG" Name="vdisp:1"/>
+                    <Sig Type="SIG" Name="vdisp:2"/>
+                    <Sig Type="SIG" Name="vdisp:3"/>
+                    <Sig Type="SIG" Name="vdisp:4"/>
+                    <Sig Type="SIG" Name="vdisp:5"/>
+                    <Sig Type="SIG" Name="vdisp:6"/>
+                    <Sig Type="SIG" Name="vdisp:7"/>
+                    <Sig Type="SIG" Name="vdisp:8"/>
+                    <Sig Type="SIG" Name="vdisp:9"/>
+                    <Sig Type="SIG" Name="vdisp:10"/>
+                    <Sig Type="SIG" Name="vdisp:11"/>
+                    <Sig Type="SIG" Name="vdisp:12"/>
+                    <Sig Type="SIG" Name="vdisp:13"/>
+                    <Sig Type="SIG" Name="vdisp:14"/>
+                    <Sig Type="SIG" Name="vdisp:15"/>
+                </Bus>
+                <Bus Name="vsync_out">
+                    <Sig Type="SIG" Name="vsync_out:0"/>
+                    <Sig Type="SIG" Name="vsync_out:1"/>
+                    <Sig Type="SIG" Name="vsync_out:2"/>
+                    <Sig Type="SIG" Name="vsync_out:3"/>
+                    <Sig Type="SIG" Name="vsync_out:4"/>
+                    <Sig Type="SIG" Name="vsync_out:5"/>
+                    <Sig Type="SIG" Name="vsync_out:6"/>
+                    <Sig Type="SIG" Name="vsync_out:7"/>
+                    <Sig Type="SIG" Name="vsync_out:8"/>
+                    <Sig Type="SIG" Name="vsync_out:9"/>
+                    <Sig Type="SIG" Name="vsync_out:10"/>
+                    <Sig Type="SIG" Name="vsync_out:11"/>
+                    <Sig Type="SIG" Name="vsync_out:12"/>
+                    <Sig Type="SIG" Name="vsync_out:13"/>
+                    <Sig Type="SIG" Name="vsync_out:14"/>
+                    <Sig Type="SIG" Name="vsync_out:15"/>
+                </Bus>
+                <Sig Type="SIG" Name="vsync"/>
+            </Trace>
+            <Trigger>
+                <TU Serialbits="0" Type="0" ID="1" Sig="vsync,"/>
+                <TE MaxSequence="1" MaxEvnCnt="1" ID="1" Resource="1"/>
+            </Trigger>
+        </Dataset>
+    </Core>
+</Project>

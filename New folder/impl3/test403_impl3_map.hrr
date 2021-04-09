@@ -1,0 +1,142 @@
+---------------------------------------------------
+Report for cell Top
+   Instance path: Top
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     500.00        100.0
+                                  LUT4	     569.00        100.0
+                                 IOBUF	          6        100.0
+                                PFUREG	        433        100.0
+                                RIPPLE	         66        100.0
+                                   EBR	          4        100.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                        reveal_coretop	          1        82.6
+                               ep5chub	          1         8.3
+---------------------------------------------------
+Report for cell reveal_coretop
+   Instance path: Top/top_reveal_coretop_instance
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     412.92        82.6
+                                  LUT4	     517.00        90.9
+                                PFUREG	        358        82.7
+                                RIPPLE	         29        43.9
+                                   EBR	          4        100.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                               top_la0	          1        80.2
+---------------------------------------------------
+Report for cell top_la0
+   Instance path: Top/top_reveal_coretop_instance/core0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     401.00        80.2
+                                  LUT4	     490.00        86.1
+                                PFUREG	        358        82.7
+                                RIPPLE	         29        43.9
+                                   EBR	          4        100.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                          top_la0_trig	          1        13.8
+rvl_tm(NUM_TRACE_SIGNALS=3,NUM_TRACE_SAMPLES=16384,NUM_TRIGGER_SIGNALS=1,NUM_TRIG_MAX=1,REVEAL_SIG=352003137,LSCC_FAMILY="ECP3")	          1        37.5
+rvl_jtag_int(NUM_TRACE_SIGNALS=3,NUM_TRIGGER_SIGNALS=1)	          1        28.9
+---------------------------------------------------
+Report for cell top_la0_trig
+   Instance path: Top/top_reveal_coretop_instance/core0/trig_u
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      69.08        13.8
+                                  LUT4	      77.67        13.6
+                                PFUREG	         65        15.0
+                                RIPPLE	          9        13.6
+                                   EBR	          1        25.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+         rvl_decode(NUM_TU=1,NUM_TE=1)	          1         0.9
+                 rvl_tu(NUM_TU_BITS=1)	          1         2.0
+    rvl_tcnt(NUM_TE=1,NUM_TCNT_BITS=3)	          1         1.8
+rvl_te(NUM_TU=1,NUM_TE_ROW=2,NUM_TE_COL=1,TE_EBR=1,NUM_TE_EVENT_CNT_BITS=0,LSCC_FAMILY="ECP3")	          1         9.1
+---------------------------------------------------
+Report for cell rvl_tu(NUM_TU_BITS=1)
+   Instance path: Top/top_reveal_coretop_instance/core0/trig_u/tu_0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       9.83         2.0
+                                  LUT4	      12.00         2.1
+                                PFUREG	          8         1.8
+---------------------------------------------------
+Report for cell rvl_te(NUM_TU=1,NUM_TE_ROW=2,NUM_TE_COL=1,TE_EBR=1,NUM_TE_EVENT_CNT_BITS=0,LSCC_FAMILY="ECP3")
+   Instance path: Top/top_reveal_coretop_instance/core0/trig_u/te_0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      45.50         9.1
+                                  LUT4	      48.67         8.6
+                                PFUREG	         45        10.4
+                                RIPPLE	          9        13.6
+                                   EBR	          1        25.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+    pmi_ram_dpEbnonesadr112112115216de	          1         0.2
+---------------------------------------------------
+Report for cell pmi_ram_dpEbnonesadr112112115216de
+   Instance path: Top/top_reveal_coretop_instance/core0/trig_u/te_0/pmi_ram_dpECP3binarynonespeedasyncdisablereg112112
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.00         0.2
+                                  LUT4	       1.00         0.2
+                                   EBR	          1        25.0
+---------------------------------------------------
+Report for cell rvl_tcnt(NUM_TE=1,NUM_TCNT_BITS=3)
+   Instance path: Top/top_reveal_coretop_instance/core0/trig_u/tcnt_0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       9.08         1.8
+                                  LUT4	       8.00         1.4
+                                PFUREG	         12         2.8
+---------------------------------------------------
+Report for cell rvl_decode(NUM_TU=1,NUM_TE=1)
+   Instance path: Top/top_reveal_coretop_instance/core0/trig_u/decode_u
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       4.67         0.9
+                                  LUT4	       9.00         1.6
+---------------------------------------------------
+Report for cell rvl_tm(NUM_TRACE_SIGNALS=3,NUM_TRACE_SAMPLES=16384,NUM_TRIGGER_SIGNALS=1,NUM_TRIG_MAX=1,REVEAL_SIG=352003137,LSCC_FAMILY="ECP3")
+   Instance path: Top/top_reveal_coretop_instance/core0/tm_u
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     187.25        37.5
+                                  LUT4	     211.00        37.1
+                                PFUREG	        176        40.6
+                                RIPPLE	         16        24.2
+                                   EBR	          3        75.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+pmi_ram_dpEbnonesadr314163843141638412067ab1	          1         0.2
+---------------------------------------------------
+Report for cell pmi_ram_dpEbnonesadr314163843141638412067ab1
+   Instance path: Top/top_reveal_coretop_instance/core0/tm_u/pmi_ram_dpECP3binarynonespeedasyncdisablereg3141638431416384
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.00         0.2
+                                  LUT4	       1.00         0.2
+                                   EBR	          3        75.0
+---------------------------------------------------
+Report for cell rvl_jtag_int(NUM_TRACE_SIGNALS=3,NUM_TRIGGER_SIGNALS=1)
+   Instance path: Top/top_reveal_coretop_instance/core0/jtag_int_u
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     144.67        28.9
+                                  LUT4	     201.33        35.4
+                                PFUREG	        117        27.0
+                                RIPPLE	          4         6.1
+---------------------------------------------------
+Report for cell ep5chub
+   Instance path: Top/ep5chub
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      41.50         8.3
+                                  LUT4	      25.00         4.4
+                                PFUREG	         50        11.5
+                                RIPPLE	          8        12.1

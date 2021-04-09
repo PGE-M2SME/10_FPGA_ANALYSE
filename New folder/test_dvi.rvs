@@ -1,0 +1,128 @@
+<Project ModBy="Analyzer" Name="C:/Users/tarab/Desktop/PGE/VM/DiamondProjFolder/test_dvi.rvs" Date="2021-03-29">
+ <Core Name="core_LA0">
+  <Setting>
+   <Capture SamplesPerTrig="16384" NumTrigsCap="1"/>
+   <Event EventCnt="0" CntEnableRun="0"/>
+   <TrigSetting PreTrgSamples="" AND_ALL="0" PostTrgSamples="" TURadix="0"/>
+  </Setting>
+  <Dataset Name="Base">
+   <Trace>
+    <Sig Name="de"/>
+    <Bus Name="hblank" Radix="0">
+     <Sig Name="hblank:0"/>
+     <Sig Name="hblank:1"/>
+     <Sig Name="hblank:2"/>
+     <Sig Name="hblank:3"/>
+     <Sig Name="hblank:4"/>
+     <Sig Name="hblank:5"/>
+     <Sig Name="hblank:6"/>
+     <Sig Name="hblank:7"/>
+     <Sig Name="hblank:8"/>
+     <Sig Name="hblank:9"/>
+     <Sig Name="hblank:10"/>
+     <Sig Name="hblank:11"/>
+     <Sig Name="hblank:12"/>
+     <Sig Name="hblank:13"/>
+     <Sig Name="hblank:14"/>
+     <Sig Name="hblank:15"/>
+    </Bus>
+    <Bus Name="hdisp" Radix="0">
+     <Sig Name="hdisp:0"/>
+     <Sig Name="hdisp:1"/>
+     <Sig Name="hdisp:2"/>
+     <Sig Name="hdisp:3"/>
+     <Sig Name="hdisp:4"/>
+     <Sig Name="hdisp:5"/>
+     <Sig Name="hdisp:6"/>
+     <Sig Name="hdisp:7"/>
+     <Sig Name="hdisp:8"/>
+     <Sig Name="hdisp:9"/>
+     <Sig Name="hdisp:10"/>
+     <Sig Name="hdisp:11"/>
+     <Sig Name="hdisp:12"/>
+     <Sig Name="hdisp:13"/>
+     <Sig Name="hdisp:14"/>
+     <Sig Name="hdisp:15"/>
+    </Bus>
+    <Sig Name="hsync"/>
+    <Bus Name="hsync_out" Radix="0">
+     <Sig Name="hsync_out:0"/>
+     <Sig Name="hsync_out:1"/>
+     <Sig Name="hsync_out:2"/>
+     <Sig Name="hsync_out:3"/>
+     <Sig Name="hsync_out:4"/>
+     <Sig Name="hsync_out:5"/>
+     <Sig Name="hsync_out:6"/>
+     <Sig Name="hsync_out:7"/>
+     <Sig Name="hsync_out:8"/>
+     <Sig Name="hsync_out:9"/>
+     <Sig Name="hsync_out:10"/>
+     <Sig Name="hsync_out:11"/>
+     <Sig Name="hsync_out:12"/>
+     <Sig Name="hsync_out:13"/>
+     <Sig Name="hsync_out:14"/>
+     <Sig Name="hsync_out:15"/>
+    </Bus>
+    <Bus Name="vblank" Radix="0">
+     <Sig Name="vblank:0"/>
+     <Sig Name="vblank:1"/>
+     <Sig Name="vblank:2"/>
+     <Sig Name="vblank:3"/>
+     <Sig Name="vblank:4"/>
+     <Sig Name="vblank:5"/>
+     <Sig Name="vblank:6"/>
+     <Sig Name="vblank:7"/>
+     <Sig Name="vblank:8"/>
+     <Sig Name="vblank:9"/>
+     <Sig Name="vblank:10"/>
+     <Sig Name="vblank:11"/>
+     <Sig Name="vblank:12"/>
+     <Sig Name="vblank:13"/>
+     <Sig Name="vblank:14"/>
+     <Sig Name="vblank:15"/>
+    </Bus>
+    <Bus Name="vdisp" Radix="0">
+     <Sig Name="vdisp:0"/>
+     <Sig Name="vdisp:1"/>
+     <Sig Name="vdisp:2"/>
+     <Sig Name="vdisp:3"/>
+     <Sig Name="vdisp:4"/>
+     <Sig Name="vdisp:5"/>
+     <Sig Name="vdisp:6"/>
+     <Sig Name="vdisp:7"/>
+     <Sig Name="vdisp:8"/>
+     <Sig Name="vdisp:9"/>
+     <Sig Name="vdisp:10"/>
+     <Sig Name="vdisp:11"/>
+     <Sig Name="vdisp:12"/>
+     <Sig Name="vdisp:13"/>
+     <Sig Name="vdisp:14"/>
+     <Sig Name="vdisp:15"/>
+    </Bus>
+    <Bus Name="vsync_out" Radix="0">
+     <Sig Name="vsync_out:0"/>
+     <Sig Name="vsync_out:1"/>
+     <Sig Name="vsync_out:2"/>
+     <Sig Name="vsync_out:3"/>
+     <Sig Name="vsync_out:4"/>
+     <Sig Name="vsync_out:5"/>
+     <Sig Name="vsync_out:6"/>
+     <Sig Name="vsync_out:7"/>
+     <Sig Name="vsync_out:8"/>
+     <Sig Name="vsync_out:9"/>
+     <Sig Name="vsync_out:10"/>
+     <Sig Name="vsync_out:11"/>
+     <Sig Name="vsync_out:12"/>
+     <Sig Name="vsync_out:13"/>
+     <Sig Name="vsync_out:14"/>
+     <Sig Name="vsync_out:15"/>
+    </Bus>
+    <Sig Name="vsync"/>
+   </Trace>
+   <Trigger>
+    <TU Operator="0" Name="TU1" ID="1" Value="0" Radix="0"/>
+    <TE Enable="1" Expression="TU1" Name="TE1" ID="1"/>
+   </Trigger>
+  </Dataset>
+ </Core>
+</Project>

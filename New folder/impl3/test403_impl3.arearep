@@ -1,0 +1,178 @@
+----------------------------------------------------------------------
+Report for cell Top.TECH
+Register bits:  383 of 52176 (0.734%)
+I/O cells:      6
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2C        58          100.0
+                            FD1P3AX        24          100.0
+                            FD1P3BX        34          100.0
+                            FD1P3DX       260          100.0
+                            FD1S3AX         1          100.0
+                            FD1S3DX        40          100.0
+                            FD1S3IX        24          100.0
+                                GSR         1          100.0
+                                 IB         5          100.0
+                                INV         1          100.0
+                            L6MUX21         2          100.0
+                               LUT4       551          100.0
+                                 OB         1          100.0
+                              PFUMX        37          100.0
+                        VERIFIC_GND         4          100.0
+ pmi_ram_dpEbnonesadr112112115216de         1          100.0
+pmi_ram_dpEbnonesadr314163843141638412067ab1         1          100.0
+SUB MODULES
+                     reveal_coretop         1
+      rvl_decode(NUM_TU=1,NUM_TE=1)         1
+rvl_jtag_int(NUM_TRACE_SIGNALS=3,NUM_TRIGGER_SIGNALS=1)         1
+ rvl_tcnt(NUM_TE=1,NUM_TCNT_BITS=3)         1
+rvl_te(NUM_TU=1,NUM_TE_ROW=2,NUM_TE_COL=1,TE_EBR=1,NUM_TE_EVENT_CNT_BITS=0,LSCC_FAMILY="ECP3")         1
+rvl_tm(NUM_TRACE_SIGNALS=3,NUM_TRACE_SAMPLES=16384,NUM_TRIGGER_SIGNALS=1,NUM_TRIG_MAX=1,REVEAL_SIG=352003137,LSCC_FAMILY="ECP3")         1
+              rvl_tu(NUM_TU_BITS=1)         1
+                            top_la0         1
+                       top_la0_trig         1
+                              TOTAL      1054
+----------------------------------------------------------------------
+Report for cell reveal_coretop.v1
+Instance Path : top_reveal_coretop_instance
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2C        29           50.0
+                            FD1P3AX        24          100.0
+                            FD1P3BX        34          100.0
+                            FD1P3DX       260          100.0
+                            FD1S3DX        40          100.0
+                                INV         1          100.0
+                            L6MUX21         2          100.0
+                               LUT4       524           95.1
+                              PFUMX        33           89.2
+                        VERIFIC_GND         3           75.0
+ pmi_ram_dpEbnonesadr112112115216de         1          100.0
+pmi_ram_dpEbnonesadr314163843141638412067ab1         1          100.0
+SUB MODULES
+      rvl_decode(NUM_TU=1,NUM_TE=1)         1
+rvl_jtag_int(NUM_TRACE_SIGNALS=3,NUM_TRIGGER_SIGNALS=1)         1
+ rvl_tcnt(NUM_TE=1,NUM_TCNT_BITS=3)         1
+rvl_te(NUM_TU=1,NUM_TE_ROW=2,NUM_TE_COL=1,TE_EBR=1,NUM_TE_EVENT_CNT_BITS=0,LSCC_FAMILY="ECP3")         1
+rvl_tm(NUM_TRACE_SIGNALS=3,NUM_TRACE_SAMPLES=16384,NUM_TRIGGER_SIGNALS=1,NUM_TRIG_MAX=1,REVEAL_SIG=352003137,LSCC_FAMILY="ECP3")         1
+              rvl_tu(NUM_TU_BITS=1)         1
+                            top_la0         1
+                       top_la0_trig         1
+                              TOTAL       960
+----------------------------------------------------------------------
+Report for cell top_la0.v1
+Instance Path : top_reveal_coretop_instance.core0
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2C        29           50.0
+                            FD1P3AX        24          100.0
+                            FD1P3BX        34          100.0
+                            FD1P3DX       260          100.0
+                            FD1S3DX        40          100.0
+                            L6MUX21         2          100.0
+                               LUT4       489           88.7
+                              PFUMX        33           89.2
+                        VERIFIC_GND         3           75.0
+ pmi_ram_dpEbnonesadr112112115216de         1          100.0
+pmi_ram_dpEbnonesadr314163843141638412067ab1         1          100.0
+SUB MODULES
+      rvl_decode(NUM_TU=1,NUM_TE=1)         1
+rvl_jtag_int(NUM_TRACE_SIGNALS=3,NUM_TRIGGER_SIGNALS=1)         1
+ rvl_tcnt(NUM_TE=1,NUM_TCNT_BITS=3)         1
+rvl_te(NUM_TU=1,NUM_TE_ROW=2,NUM_TE_COL=1,TE_EBR=1,NUM_TE_EVENT_CNT_BITS=0,LSCC_FAMILY="ECP3")         1
+rvl_tm(NUM_TRACE_SIGNALS=3,NUM_TRACE_SAMPLES=16384,NUM_TRIGGER_SIGNALS=1,NUM_TRIG_MAX=1,REVEAL_SIG=352003137,LSCC_FAMILY="ECP3")         1
+              rvl_tu(NUM_TU_BITS=1)         1
+                       top_la0_trig         1
+                              TOTAL       923
+----------------------------------------------------------------------
+Report for cell top_la0_trig.v1
+Instance Path : top_reveal_coretop_instance.core0.trig_u
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2C         9           15.5
+                            FD1P3AX        16           66.7
+                            FD1P3BX         2            5.9
+                            FD1P3DX        32           12.3
+                            FD1S3DX        15           37.5
+                               LUT4        78           14.2
+                              PFUMX         2            5.4
+                        VERIFIC_GND         1           25.0
+ pmi_ram_dpEbnonesadr112112115216de         1          100.0
+SUB MODULES
+      rvl_decode(NUM_TU=1,NUM_TE=1)         1
+ rvl_tcnt(NUM_TE=1,NUM_TCNT_BITS=3)         1
+rvl_te(NUM_TU=1,NUM_TE_ROW=2,NUM_TE_COL=1,TE_EBR=1,NUM_TE_EVENT_CNT_BITS=0,LSCC_FAMILY="ECP3")         1
+              rvl_tu(NUM_TU_BITS=1)         1
+                              TOTAL       160
+----------------------------------------------------------------------
+Report for cell rvl_tu(NUM_TU_BITS=1).v1
+Instance Path : top_reveal_coretop_instance.core0.trig_u.tu_0
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3DX         5            1.9
+                            FD1S3DX         3            7.5
+                               LUT4        12            2.2
+                              PFUMX         1            2.7
+                              TOTAL        21
+----------------------------------------------------------------------
+Report for cell rvl_te(NUM_TU=1,NUM_TE_ROW=2,NUM_TE_COL=1,TE_EBR=1,NUM_TE_EVENT_CNT_BITS=0,LSCC_FAMILY="ECP3").v1
+Instance Path : top_reveal_coretop_instance.core0.trig_u.te_0
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2C         9           15.5
+                            FD1P3AX        16           66.7
+                            FD1P3BX         1            2.9
+                            FD1P3DX        21            8.1
+                            FD1S3DX         7           17.5
+                               LUT4        49            8.9
+                        VERIFIC_GND         1           25.0
+ pmi_ram_dpEbnonesadr112112115216de         1          100.0
+                              TOTAL       105
+----------------------------------------------------------------------
+Report for cell rvl_tcnt(NUM_TE=1,NUM_TCNT_BITS=3).v1
+Instance Path : top_reveal_coretop_instance.core0.trig_u.tcnt_0
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3BX         1            2.9
+                            FD1P3DX         6            2.3
+                            FD1S3DX         5           12.5
+                               LUT4         8            1.5
+                              TOTAL        20
+----------------------------------------------------------------------
+Report for cell rvl_decode(NUM_TU=1,NUM_TE=1).v1
+Instance Path : top_reveal_coretop_instance.core0.trig_u.decode_u
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4         9            1.6
+                              PFUMX         1            2.7
+                              TOTAL        10
+----------------------------------------------------------------------
+Report for cell rvl_tm(NUM_TRACE_SIGNALS=3,NUM_TRACE_SAMPLES=16384,NUM_TRIGGER_SIGNALS=1,NUM_TRIG_MAX=1,REVEAL_SIG=352003137,LSCC_FAMILY="ECP3").v1
+Instance Path : top_reveal_coretop_instance.core0.tm_u
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2C        16           27.6
+                            FD1P3AX         6           25.0
+                            FD1P3DX       155           59.6
+                            FD1S3DX        15           37.5
+                            L6MUX21         1           50.0
+                               LUT4       208           37.7
+                              PFUMX        13           35.1
+                        VERIFIC_GND         1           25.0
+pmi_ram_dpEbnonesadr314163843141638412067ab1         1          100.0
+                              TOTAL       416
+----------------------------------------------------------------------
+Report for cell rvl_jtag_int(NUM_TRACE_SIGNALS=3,NUM_TRIGGER_SIGNALS=1).v1
+Instance Path : top_reveal_coretop_instance.core0.jtag_int_u
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2C         4            6.9
+                            FD1P3AX         2            8.3
+                            FD1P3BX        32           94.1
+                            FD1P3DX        73           28.1
+                            FD1S3DX        10           25.0
+                            L6MUX21         1           50.0
+                               LUT4       203           36.8
+                              PFUMX        18           48.6
+                        VERIFIC_GND         1           25.0
+                              TOTAL       344

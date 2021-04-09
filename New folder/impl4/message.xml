@@ -1,0 +1,890 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaliMessageLog>
+    <Task name="Map">
+        <Message>
+            <ID>1100523</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/diamond/SharedFolder/DiamondProjFolder/dvi403.lpf(18): Semantic error in &quot;FREQUENCY PORT &quot;Clk_FPGA&quot; 125.000000 MHz ;&quot;: </Dynamic>
+            <Dynamic>&quot;Clk_FPGA&quot; matches no ports in the design. </Dynamic>
+            <Navigation>/home/diamond/SharedFolder/DiamondProjFolder/dvi403.lpf</Navigation>
+            <Navigation>18</Navigation>
+        </Message>
+        <Message>
+            <ID>1100679</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/diamond/SharedFolder/DiamondProjFolder/dvi403.lpf(17): Semantic error in &quot;LOCATE COMP &quot;Clk_FPGA&quot; SITE &quot;M3&quot; ;&quot;: </Dynamic>
+            <Dynamic>Clk_FPGA</Dynamic>
+            <Navigation>/home/diamond/SharedFolder/DiamondProjFolder/dvi403.lpf</Navigation>
+            <Navigation>17</Navigation>
+        </Message>
+    </Task>
+    <Task name="Lattice_Synthesis">
+        <Message>
+            <ID>35921014</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/usr/local/diamond/3.11_x64/cae_library/vhdl_packages/../../ispfpga/vhdl_packages/standard.vhd(9): </Dynamic>
+            <Dynamic>standard</Dynamic>
+            <Navigation>/usr/local/diamond/3.11_x64/cae_library/vhdl_packages/../../ispfpga/vhdl_packages/standard.vhd</Navigation>
+            <Navigation>9</Navigation>
+        </Message>
+        <Message>
+            <ID>35921014</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/usr/local/diamond/3.11_x64/cae_library/vhdl_packages/../../ispfpga/vhdl_packages/std_1164.vhd(15): </Dynamic>
+            <Dynamic>std_logic_1164</Dynamic>
+            <Navigation>/usr/local/diamond/3.11_x64/cae_library/vhdl_packages/../../ispfpga/vhdl_packages/std_1164.vhd</Navigation>
+            <Navigation>15</Navigation>
+        </Message>
+        <Message>
+            <ID>35921013</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/usr/local/diamond/3.11_x64/cae_library/vhdl_packages/../../ispfpga/vhdl_packages/std_1164.vhd(178): </Dynamic>
+            <Dynamic>std_logic_1164</Dynamic>
+            <Navigation>/usr/local/diamond/3.11_x64/cae_library/vhdl_packages/../../ispfpga/vhdl_packages/std_1164.vhd</Navigation>
+            <Navigation>178</Navigation>
+        </Message>
+        <Message>
+            <ID>35921014</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/usr/local/diamond/3.11_x64/cae_library/vhdl_packages/../../ispfpga/vhdl_packages/mgc_qsim.vhd(18): </Dynamic>
+            <Dynamic>qsim_logic</Dynamic>
+            <Navigation>/usr/local/diamond/3.11_x64/cae_library/vhdl_packages/../../ispfpga/vhdl_packages/mgc_qsim.vhd</Navigation>
+            <Navigation>18</Navigation>
+        </Message>
+        <Message>
+            <ID>35921013</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/usr/local/diamond/3.11_x64/cae_library/vhdl_packages/../../ispfpga/vhdl_packages/mgc_qsim.vhd(753): </Dynamic>
+            <Dynamic>qsim_logic</Dynamic>
+            <Navigation>/usr/local/diamond/3.11_x64/cae_library/vhdl_packages/../../ispfpga/vhdl_packages/mgc_qsim.vhd</Navigation>
+            <Navigation>753</Navigation>
+        </Message>
+        <Message>
+            <ID>35921014</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/usr/local/diamond/3.11_x64/cae_library/vhdl_packages/../../ispfpga/vhdl_packages/numeric_bit.vhd(54): </Dynamic>
+            <Dynamic>numeric_bit</Dynamic>
+            <Navigation>/usr/local/diamond/3.11_x64/cae_library/vhdl_packages/../../ispfpga/vhdl_packages/numeric_bit.vhd</Navigation>
+            <Navigation>54</Navigation>
+        </Message>
+        <Message>
+            <ID>35921013</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/usr/local/diamond/3.11_x64/cae_library/vhdl_packages/../../ispfpga/vhdl_packages/numeric_bit.vhd(834): </Dynamic>
+            <Dynamic>numeric_bit</Dynamic>
+            <Navigation>/usr/local/diamond/3.11_x64/cae_library/vhdl_packages/../../ispfpga/vhdl_packages/numeric_bit.vhd</Navigation>
+            <Navigation>834</Navigation>
+        </Message>
+        <Message>
+            <ID>35921014</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/usr/local/diamond/3.11_x64/cae_library/vhdl_packages/../../ispfpga/vhdl_packages/numeric_std.vhd(57): </Dynamic>
+            <Dynamic>numeric_std</Dynamic>
+            <Navigation>/usr/local/diamond/3.11_x64/cae_library/vhdl_packages/../../ispfpga/vhdl_packages/numeric_std.vhd</Navigation>
+            <Navigation>57</Navigation>
+        </Message>
+        <Message>
+            <ID>35921013</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/usr/local/diamond/3.11_x64/cae_library/vhdl_packages/../../ispfpga/vhdl_packages/numeric_std.vhd(874): </Dynamic>
+            <Dynamic>numeric_std</Dynamic>
+            <Navigation>/usr/local/diamond/3.11_x64/cae_library/vhdl_packages/../../ispfpga/vhdl_packages/numeric_std.vhd</Navigation>
+            <Navigation>874</Navigation>
+        </Message>
+        <Message>
+            <ID>35921014</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/usr/local/diamond/3.11_x64/cae_library/vhdl_packages/../../ispfpga/vhdl_packages/textio.vhd(13): </Dynamic>
+            <Dynamic>textio</Dynamic>
+            <Navigation>/usr/local/diamond/3.11_x64/cae_library/vhdl_packages/../../ispfpga/vhdl_packages/textio.vhd</Navigation>
+            <Navigation>13</Navigation>
+        </Message>
+        <Message>
+            <ID>35921013</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/usr/local/diamond/3.11_x64/cae_library/vhdl_packages/../../ispfpga/vhdl_packages/textio.vhd(114): </Dynamic>
+            <Dynamic>textio</Dynamic>
+            <Navigation>/usr/local/diamond/3.11_x64/cae_library/vhdl_packages/../../ispfpga/vhdl_packages/textio.vhd</Navigation>
+            <Navigation>114</Navigation>
+        </Message>
+        <Message>
+            <ID>35921014</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/usr/local/diamond/3.11_x64/cae_library/vhdl_packages/../../ispfpga/vhdl_packages/std_logic_textio.vhd(26): </Dynamic>
+            <Dynamic>std_logic_textio</Dynamic>
+            <Navigation>/usr/local/diamond/3.11_x64/cae_library/vhdl_packages/../../ispfpga/vhdl_packages/std_logic_textio.vhd</Navigation>
+            <Navigation>26</Navigation>
+        </Message>
+        <Message>
+            <ID>35921013</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/usr/local/diamond/3.11_x64/cae_library/vhdl_packages/../../ispfpga/vhdl_packages/std_logic_textio.vhd(72): </Dynamic>
+            <Dynamic>std_logic_textio</Dynamic>
+            <Navigation>/usr/local/diamond/3.11_x64/cae_library/vhdl_packages/../../ispfpga/vhdl_packages/std_logic_textio.vhd</Navigation>
+            <Navigation>72</Navigation>
+        </Message>
+        <Message>
+            <ID>35921014</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/usr/local/diamond/3.11_x64/cae_library/vhdl_packages/../../ispfpga/vhdl_packages/syn_misc.vhd(30): </Dynamic>
+            <Dynamic>std_logic_misc</Dynamic>
+            <Navigation>/usr/local/diamond/3.11_x64/cae_library/vhdl_packages/../../ispfpga/vhdl_packages/syn_misc.vhd</Navigation>
+            <Navigation>30</Navigation>
+        </Message>
+        <Message>
+            <ID>35921013</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/usr/local/diamond/3.11_x64/cae_library/vhdl_packages/../../ispfpga/vhdl_packages/syn_misc.vhd(182): </Dynamic>
+            <Dynamic>std_logic_misc</Dynamic>
+            <Navigation>/usr/local/diamond/3.11_x64/cae_library/vhdl_packages/../../ispfpga/vhdl_packages/syn_misc.vhd</Navigation>
+            <Navigation>182</Navigation>
+        </Message>
+        <Message>
+            <ID>35921014</ID>
+            <Severity>Info</Severity>
+            <Dynamic>./.__tmp_vxr_0_(56): </Dynamic>
+            <Dynamic>math_real</Dynamic>
+            <Navigation>./.__tmp_vxr_0_</Navigation>
+            <Navigation>56</Navigation>
+        </Message>
+        <Message>
+            <ID>35921013</ID>
+            <Severity>Info</Severity>
+            <Dynamic>./.__tmp_vxr_0_(685): </Dynamic>
+            <Dynamic>math_real</Dynamic>
+            <Navigation>./.__tmp_vxr_0_</Navigation>
+            <Navigation>685</Navigation>
+        </Message>
+        <Message>
+            <ID>35921014</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/usr/local/diamond/3.11_x64/cae_library/vhdl_packages/../../ispfpga/vhdl_packages/mixed_lang_vltype.vhd(9): </Dynamic>
+            <Dynamic>vl_types</Dynamic>
+            <Navigation>/usr/local/diamond/3.11_x64/cae_library/vhdl_packages/../../ispfpga/vhdl_packages/mixed_lang_vltype.vhd</Navigation>
+            <Navigation>9</Navigation>
+        </Message>
+        <Message>
+            <ID>35921013</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/usr/local/diamond/3.11_x64/cae_library/vhdl_packages/../../ispfpga/vhdl_packages/mixed_lang_vltype.vhd(88): </Dynamic>
+            <Dynamic>vl_types</Dynamic>
+            <Navigation>/usr/local/diamond/3.11_x64/cae_library/vhdl_packages/../../ispfpga/vhdl_packages/mixed_lang_vltype.vhd</Navigation>
+            <Navigation>88</Navigation>
+        </Message>
+        <Message>
+            <ID>35921014</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/usr/local/diamond/3.11_x64/cae_library/vhdl_packages/../../ispfpga/vhdl_packages/syn_arit.vhd(25): </Dynamic>
+            <Dynamic>std_logic_arith</Dynamic>
+            <Navigation>/usr/local/diamond/3.11_x64/cae_library/vhdl_packages/../../ispfpga/vhdl_packages/syn_arit.vhd</Navigation>
+            <Navigation>25</Navigation>
+        </Message>
+        <Message>
+            <ID>35921013</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/usr/local/diamond/3.11_x64/cae_library/vhdl_packages/../../ispfpga/vhdl_packages/syn_arit.vhd(206): </Dynamic>
+            <Dynamic>std_logic_arith</Dynamic>
+            <Navigation>/usr/local/diamond/3.11_x64/cae_library/vhdl_packages/../../ispfpga/vhdl_packages/syn_arit.vhd</Navigation>
+            <Navigation>206</Navigation>
+        </Message>
+        <Message>
+            <ID>35921014</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/usr/local/diamond/3.11_x64/cae_library/vhdl_packages/../../ispfpga/vhdl_packages/syn_attr.vhd(39): </Dynamic>
+            <Dynamic>attributes</Dynamic>
+            <Navigation>/usr/local/diamond/3.11_x64/cae_library/vhdl_packages/../../ispfpga/vhdl_packages/syn_attr.vhd</Navigation>
+            <Navigation>39</Navigation>
+        </Message>
+        <Message>
+            <ID>35921014</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/usr/local/diamond/3.11_x64/cae_library/vhdl_packages/../../ispfpga/vhdl_packages/syn_sign.vhd(35): </Dynamic>
+            <Dynamic>std_logic_signed</Dynamic>
+            <Navigation>/usr/local/diamond/3.11_x64/cae_library/vhdl_packages/../../ispfpga/vhdl_packages/syn_sign.vhd</Navigation>
+            <Navigation>35</Navigation>
+        </Message>
+        <Message>
+            <ID>35921013</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/usr/local/diamond/3.11_x64/cae_library/vhdl_packages/../../ispfpga/vhdl_packages/syn_sign.vhd(96): </Dynamic>
+            <Dynamic>std_logic_signed</Dynamic>
+            <Navigation>/usr/local/diamond/3.11_x64/cae_library/vhdl_packages/../../ispfpga/vhdl_packages/syn_sign.vhd</Navigation>
+            <Navigation>96</Navigation>
+        </Message>
+        <Message>
+            <ID>35921014</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/usr/local/diamond/3.11_x64/cae_library/vhdl_packages/../../ispfpga/vhdl_packages/syn_unsi.vhd(35): </Dynamic>
+            <Dynamic>std_logic_unsigned</Dynamic>
+            <Navigation>/usr/local/diamond/3.11_x64/cae_library/vhdl_packages/../../ispfpga/vhdl_packages/syn_unsi.vhd</Navigation>
+            <Navigation>35</Navigation>
+        </Message>
+        <Message>
+            <ID>35921013</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/usr/local/diamond/3.11_x64/cae_library/vhdl_packages/../../ispfpga/vhdl_packages/syn_unsi.vhd(94): </Dynamic>
+            <Dynamic>std_logic_unsigned</Dynamic>
+            <Navigation>/usr/local/diamond/3.11_x64/cae_library/vhdl_packages/../../ispfpga/vhdl_packages/syn_unsi.vhd</Navigation>
+            <Navigation>94</Navigation>
+        </Message>
+        <Message>
+            <ID>35921014</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/usr/local/diamond/3.11_x64/cae_library/vhdl_packages/../../ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp3.vhd(27): </Dynamic>
+            <Dynamic>components</Dynamic>
+            <Navigation>/usr/local/diamond/3.11_x64/cae_library/vhdl_packages/../../ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp3.vhd</Navigation>
+            <Navigation>27</Navigation>
+        </Message>
+        <Message>
+            <ID>35921014</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/usr/local/diamond/3.11_x64/cae_library/vhdl_packages/../../ispfpga/vhdl_packages/orca4.vhd(35): </Dynamic>
+            <Dynamic>orcacomp</Dynamic>
+            <Navigation>/usr/local/diamond/3.11_x64/cae_library/vhdl_packages/../../ispfpga/vhdl_packages/orca4.vhd</Navigation>
+            <Navigation>35</Navigation>
+        </Message>
+        <Message>
+            <ID>35921014</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/usr/local/diamond/3.11_x64/cae_library/vhdl_packages/../../ispfpga/vhdl_packages/synattr.vhd(50): </Dynamic>
+            <Dynamic>attributes</Dynamic>
+            <Navigation>/usr/local/diamond/3.11_x64/cae_library/vhdl_packages/../../ispfpga/vhdl_packages/synattr.vhd</Navigation>
+            <Navigation>50</Navigation>
+        </Message>
+        <Message>
+            <ID>35921012</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/diamond/SharedFolder/DiamondProjFolder/test_DVI.vhd(36): </Dynamic>
+            <Dynamic>test_dvi</Dynamic>
+            <Navigation>/home/diamond/SharedFolder/DiamondProjFolder/test_DVI.vhd</Navigation>
+            <Navigation>36</Navigation>
+        </Message>
+        <Message>
+            <ID>35921010</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/diamond/SharedFolder/DiamondProjFolder/test_DVI.vhd(54): </Dynamic>
+            <Dynamic>arc</Dynamic>
+            <Navigation>/home/diamond/SharedFolder/DiamondProjFolder/test_DVI.vhd</Navigation>
+            <Navigation>54</Navigation>
+        </Message>
+        <Message>
+            <ID>35921067</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/diamond/SharedFolder/DiamondProjFolder/test_DVI.vhd(36): </Dynamic>
+            <Dynamic>test_DVI</Dynamic>
+            <Dynamic>arc</Dynamic>
+            <Navigation>/home/diamond/SharedFolder/DiamondProjFolder/test_DVI.vhd</Navigation>
+            <Navigation>36</Navigation>
+        </Message>
+        <Message>
+            <ID>2120344</ID>
+            <Severity>Info</Severity>
+            <Dynamic>100</Dynamic>
+        </Message>
+        <Message>
+            <ID>2120346</ID>
+            <Severity>Info</Severity>
+            <Dynamic>0</Dynamic>
+        </Message>
+        <Message>
+            <ID>35921014</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/usr/local/diamond/3.11_x64/ispfpga/vhdl_packages/standard.vhd(9): </Dynamic>
+            <Dynamic>standard</Dynamic>
+            <Navigation>/usr/local/diamond/3.11_x64/ispfpga/vhdl_packages/standard.vhd</Navigation>
+            <Navigation>9</Navigation>
+        </Message>
+        <Message>
+            <ID>35921014</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/usr/local/diamond/3.11_x64/ispfpga/vhdl_packages/std_1164.vhd(15): </Dynamic>
+            <Dynamic>std_logic_1164</Dynamic>
+            <Navigation>/usr/local/diamond/3.11_x64/ispfpga/vhdl_packages/std_1164.vhd</Navigation>
+            <Navigation>15</Navigation>
+        </Message>
+        <Message>
+            <ID>35921013</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/usr/local/diamond/3.11_x64/ispfpga/vhdl_packages/std_1164.vhd(178): </Dynamic>
+            <Dynamic>std_logic_1164</Dynamic>
+            <Navigation>/usr/local/diamond/3.11_x64/ispfpga/vhdl_packages/std_1164.vhd</Navigation>
+            <Navigation>178</Navigation>
+        </Message>
+        <Message>
+            <ID>35921014</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/usr/local/diamond/3.11_x64/ispfpga/vhdl_packages/mgc_qsim.vhd(18): </Dynamic>
+            <Dynamic>qsim_logic</Dynamic>
+            <Navigation>/usr/local/diamond/3.11_x64/ispfpga/vhdl_packages/mgc_qsim.vhd</Navigation>
+            <Navigation>18</Navigation>
+        </Message>
+        <Message>
+            <ID>35921013</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/usr/local/diamond/3.11_x64/ispfpga/vhdl_packages/mgc_qsim.vhd(753): </Dynamic>
+            <Dynamic>qsim_logic</Dynamic>
+            <Navigation>/usr/local/diamond/3.11_x64/ispfpga/vhdl_packages/mgc_qsim.vhd</Navigation>
+            <Navigation>753</Navigation>
+        </Message>
+        <Message>
+            <ID>35921014</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/usr/local/diamond/3.11_x64/ispfpga/vhdl_packages/numeric_bit.vhd(54): </Dynamic>
+            <Dynamic>numeric_bit</Dynamic>
+            <Navigation>/usr/local/diamond/3.11_x64/ispfpga/vhdl_packages/numeric_bit.vhd</Navigation>
+            <Navigation>54</Navigation>
+        </Message>
+        <Message>
+            <ID>35921013</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/usr/local/diamond/3.11_x64/ispfpga/vhdl_packages/numeric_bit.vhd(834): </Dynamic>
+            <Dynamic>numeric_bit</Dynamic>
+            <Navigation>/usr/local/diamond/3.11_x64/ispfpga/vhdl_packages/numeric_bit.vhd</Navigation>
+            <Navigation>834</Navigation>
+        </Message>
+        <Message>
+            <ID>35921014</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/usr/local/diamond/3.11_x64/ispfpga/vhdl_packages/numeric_std.vhd(57): </Dynamic>
+            <Dynamic>numeric_std</Dynamic>
+            <Navigation>/usr/local/diamond/3.11_x64/ispfpga/vhdl_packages/numeric_std.vhd</Navigation>
+            <Navigation>57</Navigation>
+        </Message>
+        <Message>
+            <ID>35921013</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/usr/local/diamond/3.11_x64/ispfpga/vhdl_packages/numeric_std.vhd(874): </Dynamic>
+            <Dynamic>numeric_std</Dynamic>
+            <Navigation>/usr/local/diamond/3.11_x64/ispfpga/vhdl_packages/numeric_std.vhd</Navigation>
+            <Navigation>874</Navigation>
+        </Message>
+        <Message>
+            <ID>35921012</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/diamond/SharedFolder/DiamondProjFolder/impl4/reveal_workspace/test_dvi/core_la0_sim.vhd(13): </Dynamic>
+            <Dynamic>core_la0</Dynamic>
+            <Navigation>/home/diamond/SharedFolder/DiamondProjFolder/impl4/reveal_workspace/test_dvi/core_la0_sim.vhd</Navigation>
+            <Navigation>13</Navigation>
+        </Message>
+        <Message>
+            <ID>35921010</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/diamond/SharedFolder/DiamondProjFolder/impl4/reveal_workspace/test_dvi/core_la0_sim.vhd(32): </Dynamic>
+            <Dynamic>core_la0_u</Dynamic>
+            <Navigation>/home/diamond/SharedFolder/DiamondProjFolder/impl4/reveal_workspace/test_dvi/core_la0_sim.vhd</Navigation>
+            <Navigation>32</Navigation>
+        </Message>
+        <Message>
+            <ID>35921014</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/usr/local/diamond/3.11_x64/ispfpga/vhdl_packages/standard.vhd(9): </Dynamic>
+            <Dynamic>standard</Dynamic>
+            <Navigation>/usr/local/diamond/3.11_x64/ispfpga/vhdl_packages/standard.vhd</Navigation>
+            <Navigation>9</Navigation>
+        </Message>
+        <Message>
+            <ID>35921014</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/usr/local/diamond/3.11_x64/ispfpga/vhdl_packages/std_1164.vhd(15): </Dynamic>
+            <Dynamic>std_logic_1164</Dynamic>
+            <Navigation>/usr/local/diamond/3.11_x64/ispfpga/vhdl_packages/std_1164.vhd</Navigation>
+            <Navigation>15</Navigation>
+        </Message>
+        <Message>
+            <ID>35921013</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/usr/local/diamond/3.11_x64/ispfpga/vhdl_packages/std_1164.vhd(178): </Dynamic>
+            <Dynamic>std_logic_1164</Dynamic>
+            <Navigation>/usr/local/diamond/3.11_x64/ispfpga/vhdl_packages/std_1164.vhd</Navigation>
+            <Navigation>178</Navigation>
+        </Message>
+        <Message>
+            <ID>35921014</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/usr/local/diamond/3.11_x64/ispfpga/vhdl_packages/mgc_qsim.vhd(18): </Dynamic>
+            <Dynamic>qsim_logic</Dynamic>
+            <Navigation>/usr/local/diamond/3.11_x64/ispfpga/vhdl_packages/mgc_qsim.vhd</Navigation>
+            <Navigation>18</Navigation>
+        </Message>
+        <Message>
+            <ID>35921013</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/usr/local/diamond/3.11_x64/ispfpga/vhdl_packages/mgc_qsim.vhd(753): </Dynamic>
+            <Dynamic>qsim_logic</Dynamic>
+            <Navigation>/usr/local/diamond/3.11_x64/ispfpga/vhdl_packages/mgc_qsim.vhd</Navigation>
+            <Navigation>753</Navigation>
+        </Message>
+        <Message>
+            <ID>35921014</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/usr/local/diamond/3.11_x64/ispfpga/vhdl_packages/numeric_bit.vhd(54): </Dynamic>
+            <Dynamic>numeric_bit</Dynamic>
+            <Navigation>/usr/local/diamond/3.11_x64/ispfpga/vhdl_packages/numeric_bit.vhd</Navigation>
+            <Navigation>54</Navigation>
+        </Message>
+        <Message>
+            <ID>35921013</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/usr/local/diamond/3.11_x64/ispfpga/vhdl_packages/numeric_bit.vhd(834): </Dynamic>
+            <Dynamic>numeric_bit</Dynamic>
+            <Navigation>/usr/local/diamond/3.11_x64/ispfpga/vhdl_packages/numeric_bit.vhd</Navigation>
+            <Navigation>834</Navigation>
+        </Message>
+        <Message>
+            <ID>35921014</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/usr/local/diamond/3.11_x64/ispfpga/vhdl_packages/numeric_std.vhd(57): </Dynamic>
+            <Dynamic>numeric_std</Dynamic>
+            <Navigation>/usr/local/diamond/3.11_x64/ispfpga/vhdl_packages/numeric_std.vhd</Navigation>
+            <Navigation>57</Navigation>
+        </Message>
+        <Message>
+            <ID>35921013</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/usr/local/diamond/3.11_x64/ispfpga/vhdl_packages/numeric_std.vhd(874): </Dynamic>
+            <Dynamic>numeric_std</Dynamic>
+            <Navigation>/usr/local/diamond/3.11_x64/ispfpga/vhdl_packages/numeric_std.vhd</Navigation>
+            <Navigation>874</Navigation>
+        </Message>
+        <Message>
+            <ID>35921014</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/usr/local/diamond/3.11_x64/ispfpga/vhdl_packages/textio.vhd(13): </Dynamic>
+            <Dynamic>textio</Dynamic>
+            <Navigation>/usr/local/diamond/3.11_x64/ispfpga/vhdl_packages/textio.vhd</Navigation>
+            <Navigation>13</Navigation>
+        </Message>
+        <Message>
+            <ID>35921013</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/usr/local/diamond/3.11_x64/ispfpga/vhdl_packages/textio.vhd(114): </Dynamic>
+            <Dynamic>textio</Dynamic>
+            <Navigation>/usr/local/diamond/3.11_x64/ispfpga/vhdl_packages/textio.vhd</Navigation>
+            <Navigation>114</Navigation>
+        </Message>
+        <Message>
+            <ID>35921014</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/usr/local/diamond/3.11_x64/ispfpga/vhdl_packages/std_logic_textio.vhd(26): </Dynamic>
+            <Dynamic>std_logic_textio</Dynamic>
+            <Navigation>/usr/local/diamond/3.11_x64/ispfpga/vhdl_packages/std_logic_textio.vhd</Navigation>
+            <Navigation>26</Navigation>
+        </Message>
+        <Message>
+            <ID>35921013</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/usr/local/diamond/3.11_x64/ispfpga/vhdl_packages/std_logic_textio.vhd(72): </Dynamic>
+            <Dynamic>std_logic_textio</Dynamic>
+            <Navigation>/usr/local/diamond/3.11_x64/ispfpga/vhdl_packages/std_logic_textio.vhd</Navigation>
+            <Navigation>72</Navigation>
+        </Message>
+        <Message>
+            <ID>35921014</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/usr/local/diamond/3.11_x64/ispfpga/vhdl_packages/syn_misc.vhd(30): </Dynamic>
+            <Dynamic>std_logic_misc</Dynamic>
+            <Navigation>/usr/local/diamond/3.11_x64/ispfpga/vhdl_packages/syn_misc.vhd</Navigation>
+            <Navigation>30</Navigation>
+        </Message>
+        <Message>
+            <ID>35921013</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/usr/local/diamond/3.11_x64/ispfpga/vhdl_packages/syn_misc.vhd(182): </Dynamic>
+            <Dynamic>std_logic_misc</Dynamic>
+            <Navigation>/usr/local/diamond/3.11_x64/ispfpga/vhdl_packages/syn_misc.vhd</Navigation>
+            <Navigation>182</Navigation>
+        </Message>
+        <Message>
+            <ID>35921014</ID>
+            <Severity>Info</Severity>
+            <Dynamic>./.__tmp_vxr_0_(56): </Dynamic>
+            <Dynamic>math_real</Dynamic>
+            <Navigation>./.__tmp_vxr_0_</Navigation>
+            <Navigation>56</Navigation>
+        </Message>
+        <Message>
+            <ID>35921013</ID>
+            <Severity>Info</Severity>
+            <Dynamic>./.__tmp_vxr_0_(685): </Dynamic>
+            <Dynamic>math_real</Dynamic>
+            <Navigation>./.__tmp_vxr_0_</Navigation>
+            <Navigation>685</Navigation>
+        </Message>
+        <Message>
+            <ID>35921014</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/usr/local/diamond/3.11_x64/ispfpga/vhdl_packages/mixed_lang_vltype.vhd(9): </Dynamic>
+            <Dynamic>vl_types</Dynamic>
+            <Navigation>/usr/local/diamond/3.11_x64/ispfpga/vhdl_packages/mixed_lang_vltype.vhd</Navigation>
+            <Navigation>9</Navigation>
+        </Message>
+        <Message>
+            <ID>35921013</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/usr/local/diamond/3.11_x64/ispfpga/vhdl_packages/mixed_lang_vltype.vhd(88): </Dynamic>
+            <Dynamic>vl_types</Dynamic>
+            <Navigation>/usr/local/diamond/3.11_x64/ispfpga/vhdl_packages/mixed_lang_vltype.vhd</Navigation>
+            <Navigation>88</Navigation>
+        </Message>
+        <Message>
+            <ID>35921014</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/usr/local/diamond/3.11_x64/ispfpga/vhdl_packages/syn_arit.vhd(25): </Dynamic>
+            <Dynamic>std_logic_arith</Dynamic>
+            <Navigation>/usr/local/diamond/3.11_x64/ispfpga/vhdl_packages/syn_arit.vhd</Navigation>
+            <Navigation>25</Navigation>
+        </Message>
+        <Message>
+            <ID>35921013</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/usr/local/diamond/3.11_x64/ispfpga/vhdl_packages/syn_arit.vhd(206): </Dynamic>
+            <Dynamic>std_logic_arith</Dynamic>
+            <Navigation>/usr/local/diamond/3.11_x64/ispfpga/vhdl_packages/syn_arit.vhd</Navigation>
+            <Navigation>206</Navigation>
+        </Message>
+        <Message>
+            <ID>35921014</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/usr/local/diamond/3.11_x64/ispfpga/vhdl_packages/syn_attr.vhd(39): </Dynamic>
+            <Dynamic>attributes</Dynamic>
+            <Navigation>/usr/local/diamond/3.11_x64/ispfpga/vhdl_packages/syn_attr.vhd</Navigation>
+            <Navigation>39</Navigation>
+        </Message>
+        <Message>
+            <ID>35921014</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/usr/local/diamond/3.11_x64/ispfpga/vhdl_packages/syn_sign.vhd(35): </Dynamic>
+            <Dynamic>std_logic_signed</Dynamic>
+            <Navigation>/usr/local/diamond/3.11_x64/ispfpga/vhdl_packages/syn_sign.vhd</Navigation>
+            <Navigation>35</Navigation>
+        </Message>
+        <Message>
+            <ID>35921013</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/usr/local/diamond/3.11_x64/ispfpga/vhdl_packages/syn_sign.vhd(96): </Dynamic>
+            <Dynamic>std_logic_signed</Dynamic>
+            <Navigation>/usr/local/diamond/3.11_x64/ispfpga/vhdl_packages/syn_sign.vhd</Navigation>
+            <Navigation>96</Navigation>
+        </Message>
+        <Message>
+            <ID>35921014</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/usr/local/diamond/3.11_x64/ispfpga/vhdl_packages/syn_unsi.vhd(35): </Dynamic>
+            <Dynamic>std_logic_unsigned</Dynamic>
+            <Navigation>/usr/local/diamond/3.11_x64/ispfpga/vhdl_packages/syn_unsi.vhd</Navigation>
+            <Navigation>35</Navigation>
+        </Message>
+        <Message>
+            <ID>35921013</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/usr/local/diamond/3.11_x64/ispfpga/vhdl_packages/syn_unsi.vhd(94): </Dynamic>
+            <Dynamic>std_logic_unsigned</Dynamic>
+            <Navigation>/usr/local/diamond/3.11_x64/ispfpga/vhdl_packages/syn_unsi.vhd</Navigation>
+            <Navigation>94</Navigation>
+        </Message>
+        <Message>
+            <ID>35921014</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/usr/local/diamond/3.11_x64/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp3.vhd(27): </Dynamic>
+            <Dynamic>components</Dynamic>
+            <Navigation>/usr/local/diamond/3.11_x64/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp3.vhd</Navigation>
+            <Navigation>27</Navigation>
+        </Message>
+        <Message>
+            <ID>35921014</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/usr/local/diamond/3.11_x64/ispfpga/vhdl_packages/orca4.vhd(35): </Dynamic>
+            <Dynamic>orcacomp</Dynamic>
+            <Navigation>/usr/local/diamond/3.11_x64/ispfpga/vhdl_packages/orca4.vhd</Navigation>
+            <Navigation>35</Navigation>
+        </Message>
+        <Message>
+            <ID>35921014</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/usr/local/diamond/3.11_x64/ispfpga/vhdl_packages/synattr.vhd(50): </Dynamic>
+            <Dynamic>attributes</Dynamic>
+            <Navigation>/usr/local/diamond/3.11_x64/ispfpga/vhdl_packages/synattr.vhd</Navigation>
+            <Navigation>50</Navigation>
+        </Message>
+        <Message>
+            <ID>35921012</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/diamond/SharedFolder/DiamondProjFolder/impl4/reveal_workspace/tmpreveal/test_DVI_reveal_coretop.vhd(6): </Dynamic>
+            <Dynamic>reveal_coretop</Dynamic>
+            <Navigation>/home/diamond/SharedFolder/DiamondProjFolder/impl4/reveal_workspace/tmpreveal/test_DVI_reveal_coretop.vhd</Navigation>
+            <Navigation>6</Navigation>
+        </Message>
+        <Message>
+            <ID>35921010</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/diamond/SharedFolder/DiamondProjFolder/impl4/reveal_workspace/tmpreveal/test_DVI_reveal_coretop.vhd(22): </Dynamic>
+            <Dynamic>one</Dynamic>
+            <Navigation>/home/diamond/SharedFolder/DiamondProjFolder/impl4/reveal_workspace/tmpreveal/test_DVI_reveal_coretop.vhd</Navigation>
+            <Navigation>22</Navigation>
+        </Message>
+        <Message>
+            <ID>35921012</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/diamond/SharedFolder/DiamondProjFolder/test_DVI.vhd(36): </Dynamic>
+            <Dynamic>test_dvi</Dynamic>
+            <Navigation>/home/diamond/SharedFolder/DiamondProjFolder/test_DVI.vhd</Navigation>
+            <Navigation>36</Navigation>
+        </Message>
+        <Message>
+            <ID>35921010</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/diamond/SharedFolder/DiamondProjFolder/test_DVI.vhd(54): </Dynamic>
+            <Dynamic>arc</Dynamic>
+            <Navigation>/home/diamond/SharedFolder/DiamondProjFolder/test_DVI.vhd</Navigation>
+            <Navigation>54</Navigation>
+        </Message>
+        <Message>
+            <ID>35921067</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/diamond/SharedFolder/DiamondProjFolder/test_DVI.vhd(36): </Dynamic>
+            <Dynamic>test_DVI</Dynamic>
+            <Dynamic>arc</Dynamic>
+            <Navigation>/home/diamond/SharedFolder/DiamondProjFolder/test_DVI.vhd</Navigation>
+            <Navigation>36</Navigation>
+        </Message>
+        <Message>
+            <ID>35929000</ID>
+            <Severity>Info</Severity>
+            <Dynamic></Dynamic>
+            <Dynamic>clk</Dynamic>
+        </Message>
+        <Message>
+            <ID>35921259</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/diamond/SharedFolder/DiamondProjFolder/impl4/reveal_workspace/tmpreveal/test_DVI_reveal_coretop.vhd(8): </Dynamic>
+            <Dynamic>clk</Dynamic>
+            <Navigation>/home/diamond/SharedFolder/DiamondProjFolder/impl4/reveal_workspace/tmpreveal/test_DVI_reveal_coretop.vhd</Navigation>
+            <Navigation>8</Navigation>
+        </Message>
+        <Message>
+            <ID>35929000</ID>
+            <Severity>Info</Severity>
+            <Dynamic></Dynamic>
+            <Dynamic>reset_n</Dynamic>
+        </Message>
+        <Message>
+            <ID>35921259</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/diamond/SharedFolder/DiamondProjFolder/impl4/reveal_workspace/tmpreveal/test_DVI_reveal_coretop.vhd(9): </Dynamic>
+            <Dynamic>reset_n</Dynamic>
+            <Navigation>/home/diamond/SharedFolder/DiamondProjFolder/impl4/reveal_workspace/tmpreveal/test_DVI_reveal_coretop.vhd</Navigation>
+            <Navigation>9</Navigation>
+        </Message>
+        <Message>
+            <ID>35929000</ID>
+            <Severity>Info</Severity>
+            <Dynamic></Dynamic>
+            <Dynamic>trigger_din</Dynamic>
+        </Message>
+        <Message>
+            <ID>35921259</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/diamond/SharedFolder/DiamondProjFolder/impl4/reveal_workspace/tmpreveal/test_DVI_reveal_coretop.vhd(10): </Dynamic>
+            <Dynamic>trigger_din</Dynamic>
+            <Navigation>/home/diamond/SharedFolder/DiamondProjFolder/impl4/reveal_workspace/tmpreveal/test_DVI_reveal_coretop.vhd</Navigation>
+            <Navigation>10</Navigation>
+        </Message>
+        <Message>
+            <ID>35929000</ID>
+            <Severity>Info</Severity>
+            <Dynamic></Dynamic>
+            <Dynamic>trigger_en</Dynamic>
+        </Message>
+        <Message>
+            <ID>35921259</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/diamond/SharedFolder/DiamondProjFolder/impl4/reveal_workspace/tmpreveal/test_DVI_reveal_coretop.vhd(11): </Dynamic>
+            <Dynamic>trigger_en</Dynamic>
+            <Navigation>/home/diamond/SharedFolder/DiamondProjFolder/impl4/reveal_workspace/tmpreveal/test_DVI_reveal_coretop.vhd</Navigation>
+            <Navigation>11</Navigation>
+        </Message>
+        <Message>
+            <ID>35929000</ID>
+            <Severity>Info</Severity>
+            <Dynamic></Dynamic>
+            <Dynamic>trace_din</Dynamic>
+        </Message>
+        <Message>
+            <ID>35921259</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/diamond/SharedFolder/DiamondProjFolder/impl4/reveal_workspace/tmpreveal/test_DVI_reveal_coretop.vhd(13): </Dynamic>
+            <Dynamic>trace_din</Dynamic>
+            <Navigation>/home/diamond/SharedFolder/DiamondProjFolder/impl4/reveal_workspace/tmpreveal/test_DVI_reveal_coretop.vhd</Navigation>
+            <Navigation>13</Navigation>
+        </Message>
+        <Message>
+            <ID>35002000</ID>
+            <Severity>Info</Severity>
+        </Message>
+        <Message>
+            <ID>35001781</ID>
+            <Severity>Info</Severity>
+        </Message>
+        <Message>
+            <ID>35921012</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/diamond/SharedFolder/DiamondProjFolder/impl4/reveal_workspace/tmpreveal/test_DVI_rvl_top.vhd(4): </Dynamic>
+            <Dynamic>reveal_coretop</Dynamic>
+            <Navigation>/home/diamond/SharedFolder/DiamondProjFolder/impl4/reveal_workspace/tmpreveal/test_DVI_rvl_top.vhd</Navigation>
+            <Navigation>4</Navigation>
+        </Message>
+        <Message>
+            <ID>35921010</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/diamond/SharedFolder/DiamondProjFolder/impl4/reveal_workspace/tmpreveal/test_DVI_rvl_top.vhd(18): </Dynamic>
+            <Dynamic>one</Dynamic>
+            <Navigation>/home/diamond/SharedFolder/DiamondProjFolder/impl4/reveal_workspace/tmpreveal/test_DVI_rvl_top.vhd</Navigation>
+            <Navigation>18</Navigation>
+        </Message>
+        <Message>
+            <ID>35921012</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/diamond/SharedFolder/DiamondProjFolder/impl4/reveal_workspace/tmpreveal/test_DVI_rvl_top.vhd(165): </Dynamic>
+            <Dynamic>test_dvi</Dynamic>
+            <Navigation>/home/diamond/SharedFolder/DiamondProjFolder/impl4/reveal_workspace/tmpreveal/test_DVI_rvl_top.vhd</Navigation>
+            <Navigation>165</Navigation>
+        </Message>
+        <Message>
+            <ID>35921010</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/diamond/SharedFolder/DiamondProjFolder/impl4/reveal_workspace/tmpreveal/test_DVI_rvl_top.vhd(381): </Dynamic>
+            <Dynamic>arc</Dynamic>
+            <Navigation>/home/diamond/SharedFolder/DiamondProjFolder/impl4/reveal_workspace/tmpreveal/test_DVI_rvl_top.vhd</Navigation>
+            <Navigation>381</Navigation>
+        </Message>
+        <Message>
+            <ID>35921504</ID>
+            <Severity>Info</Severity>
+            <Dynamic></Dynamic>
+            <Dynamic>/home/diamond/SharedFolder/DiamondProjFolder/impl4</Dynamic>
+        </Message>
+        <Message>
+            <ID>35921251</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/diamond/SharedFolder/DiamondProjFolder/impl4/reveal_workspace/tmpreveal/test_DVI_rvl_top.vhd(518): </Dynamic>
+            <Dynamic>d_detect</Dynamic>
+            <Navigation>/home/diamond/SharedFolder/DiamondProjFolder/impl4/reveal_workspace/tmpreveal/test_DVI_rvl_top.vhd</Navigation>
+            <Navigation>518</Navigation>
+        </Message>
+        <Message>
+            <ID>35921251</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/diamond/SharedFolder/DiamondProjFolder/impl4/reveal_workspace/tmpreveal/test_DVI_rvl_top.vhd(518): </Dynamic>
+            <Dynamic>detect</Dynamic>
+            <Navigation>/home/diamond/SharedFolder/DiamondProjFolder/impl4/reveal_workspace/tmpreveal/test_DVI_rvl_top.vhd</Navigation>
+            <Navigation>518</Navigation>
+        </Message>
+        <Message>
+            <ID>35921613</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/diamond/SharedFolder/DiamondProjFolder/impl4/reveal_workspace/tmpreveal/test_DVI_rvl_top.vhd(523): </Dynamic>
+            <Navigation>/home/diamond/SharedFolder/DiamondProjFolder/impl4/reveal_workspace/tmpreveal/test_DVI_rvl_top.vhd</Navigation>
+            <Navigation>523</Navigation>
+        </Message>
+        <Message>
+            <ID>35921251</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/diamond/SharedFolder/DiamondProjFolder/impl4/reveal_workspace/tmpreveal/test_DVI_rvl_top.vhd(530): </Dynamic>
+            <Dynamic>d_detect_de</Dynamic>
+            <Navigation>/home/diamond/SharedFolder/DiamondProjFolder/impl4/reveal_workspace/tmpreveal/test_DVI_rvl_top.vhd</Navigation>
+            <Navigation>530</Navigation>
+        </Message>
+        <Message>
+            <ID>35921251</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/diamond/SharedFolder/DiamondProjFolder/impl4/reveal_workspace/tmpreveal/test_DVI_rvl_top.vhd(530): </Dynamic>
+            <Dynamic>detect_de</Dynamic>
+            <Navigation>/home/diamond/SharedFolder/DiamondProjFolder/impl4/reveal_workspace/tmpreveal/test_DVI_rvl_top.vhd</Navigation>
+            <Navigation>530</Navigation>
+        </Message>
+        <Message>
+            <ID>35921613</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/diamond/SharedFolder/DiamondProjFolder/impl4/reveal_workspace/tmpreveal/test_DVI_rvl_top.vhd(535): </Dynamic>
+            <Navigation>/home/diamond/SharedFolder/DiamondProjFolder/impl4/reveal_workspace/tmpreveal/test_DVI_rvl_top.vhd</Navigation>
+            <Navigation>535</Navigation>
+        </Message>
+        <Message>
+            <ID>35921205</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/diamond/SharedFolder/DiamondProjFolder/impl4/reveal_workspace/tmpreveal/test_DVI_rvl_top.vhd(379): </Dynamic>
+            <Dynamic>test_DVI</Dynamic>
+            <Dynamic>arc</Dynamic>
+            <Navigation>/home/diamond/SharedFolder/DiamondProjFolder/impl4/reveal_workspace/tmpreveal/test_DVI_rvl_top.vhd</Navigation>
+            <Navigation>379</Navigation>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>rising_Hsync</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001771</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>falling_DE</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001611</ID>
+            <Severity>Warning</Severity>
+        </Message>
+        <Message>
+            <ID>1166052</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>logical</Dynamic>
+            <Dynamic>test_dvi_reveal_coretop_instance/jupdate[0]</Dynamic>
+            <Navigation>test_dvi_reveal_coretop_instance/jupdate[0]</Navigation>
+        </Message>
+        <Message>
+            <ID>1166052</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>logical</Dynamic>
+            <Dynamic>ep5chub/tdoa</Dynamic>
+            <Navigation>ep5chub/tdoa</Navigation>
+        </Message>
+        <Message>
+            <ID>1166052</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>logical</Dynamic>
+            <Dynamic>ep5chub/cdn</Dynamic>
+            <Navigation>ep5chub/cdn</Navigation>
+        </Message>
+        <Message>
+            <ID>1166052</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>logical</Dynamic>
+            <Dynamic>ep5chub/ip_enable_15</Dynamic>
+            <Navigation>ep5chub/ip_enable_15</Navigation>
+        </Message>
+        <Message>
+            <ID>1166052</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>logical</Dynamic>
+            <Dynamic>ep5chub/genblk5_un1_jtage_u_1</Dynamic>
+            <Navigation>ep5chub/genblk5_un1_jtage_u_1</Navigation>
+        </Message>
+        <Message>
+            <ID>1166052</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>logical</Dynamic>
+            <Dynamic>ep5chub/genblk5_un1_jtage_u</Dynamic>
+            <Navigation>ep5chub/genblk5_un1_jtage_u</Navigation>
+        </Message>
+        <Message>
+            <ID>1163101</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>6</Dynamic>
+        </Message>
+    </Task>
+    <Task name="PAR">
+        <Message>
+            <ID>62131014</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>DE_N</Dynamic>
+        </Message>
+    </Task>
+</BaliMessageLog>

@@ -1,9 +1,0 @@
-
-
-
-
--g CfgMode:Disable
--g RamCfg:Reset
--path "/home/diamond/SharedFolder/DiamondProjFolder/DVI" 
--path "/home/diamond/SharedFolder/DiamondProjFolder/DVI"
--g ES:No

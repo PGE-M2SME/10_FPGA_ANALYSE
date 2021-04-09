@@ -1,0 +1,330 @@
+
+Loading design for application trce from file dvi403_impl4_map.ncd.
+Design name: test_DVI
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE3-70EA
+Package:     FPBGA672
+Performance: 7
+Loading device for application trce from file 'ec5a97x146.nph' in environment: /usr/local/diamond/3.11_x64/ispfpga.
+Package Status:                     Final          Version 1.3.
+Performance Hardware Data Status:   Final          Version 36.22.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.11.3.469
+Mon Mar 29 18:50:46 2021
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o dvi403_impl4.tw1 -gui -msgset /home/diamond/SharedFolder/DiamondProjFolder/promote.xml dvi403_impl4_map.ncd dvi403_impl4.prf 
+Design file:     dvi403_impl4_map.ncd
+Preference file: dvi403_impl4.prf
+Device,speed:    LFE3-70EA,7
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+Report Type:     based on TRACE automatically generated preferences
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+BLOCK INTERCLOCKDOMAIN PATHS
+BLOCK JTAG PATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Preference: FREQUENCY NET "ODCK_N" 305.904000 MHz ;
+            4096 items scored, 1293 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error: The following path exceeds requirements by 2.092ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              test_dvi_reveal_coretop_instance/core0/tm_u/post_trig_cntr_i0_i1  (from ODCK_N +)
+   Destination:    FF         Data in        test_dvi_reveal_coretop_instance/core0/tm_u/capture_675  (to ODCK_N +)
+
+   Delay:               5.066ns  (21.5% logic, 78.5% route), 6 logic levels.
+
+ Constraint Details:
+
+      5.066ns physical path delay SLICE_168 to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_136 exceeds
+      3.269ns delay constraint less
+      0.295ns CE_SET requirement (totaling 2.974ns) by 2.092ns
+
+ Physical Path Details:
+
+      Data path SLICE_168 to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_136:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.273  SLICE_168.CLK to   SLICE_168.Q1 SLICE_168 (from ODCK_N)
+ROUTE         2   e 0.663   SLICE_168.Q1 to */SLICE_732.A1 post_trig_cntr[1]
+CTOF_DEL    ---     0.163 */SLICE_732.A1 to */SLICE_732.F1 test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_732
+ROUTE         7   e 0.663 */SLICE_732.F1 to */SLICE_742.A0 test_dvi_reveal_coretop_instance/core0/tm_u/n21
+CTOF_DEL    ---     0.163 */SLICE_742.A0 to */SLICE_742.F0 test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_742
+ROUTE         1   e 0.663 */SLICE_742.F0 to   SLICE_697.A1 test_dvi_reveal_coretop_instance/core0/tm_u/n8906
+CTOF_DEL    ---     0.163   SLICE_697.A1 to   SLICE_697.F1 SLICE_697
+ROUTE         4   e 0.663   SLICE_697.F1 to */SLICE_136.C1 n27
+CTOF_DEL    ---     0.163 */SLICE_136.C1 to */SLICE_136.F1 test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_136
+ROUTE         1   e 0.663 */SLICE_136.F1 to */SLICE_727.C1 test_dvi_reveal_coretop_instance/core0/tm_u/n8591
+CTOF_DEL    ---     0.163 */SLICE_727.C1 to */SLICE_727.F1 test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_727
+ROUTE         1   e 0.663 */SLICE_727.F1 to */SLICE_136.CE test_dvi_reveal_coretop_instance/core0/tm_u/clk_N_keep_enable_137 (to ODCK_N)
+                  --------
+                    5.066   (21.5% logic, 78.5% route), 6 logic levels.
+
+Warning: 186.532MHz is the maximum frequency for this preference.
+
+
+================================================================================
+Preference: FREQUENCY NET "jtaghub16_jtck" 180.799000 MHz ;
+            4096 items scored, 18 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error: The following path exceeds requirements by 0.267ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              test_dvi_reveal_coretop_instance/core0/jtag_int_u/shift_reg__i19  (from jtaghub16_jtck -)
+   Destination:    FF         Data in        test_dvi_reveal_coretop_instance/core0/jtag_int_u/parity_calc_300  (to jtaghub16_jtck -)
+
+   Delay:               5.754ns  (30.8% logic, 69.2% route), 7 logic levels.
+
+ Constraint Details:
+
+      5.754ns physical path delay test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_187 to test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_215 exceeds
+      5.531ns delay constraint less
+      0.044ns DIN_SET requirement (totaling 5.487ns) by 0.267ns
+
+ Physical Path Details:
+
+      Data path test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_187 to test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_215:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.281 *SLICE_187.CLK to */SLICE_187.Q0 test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_187 (from jtaghub16_jtck)
+ROUTE        28   e 0.663 */SLICE_187.Q0 to */SLICE_791.B1 test_dvi_reveal_coretop_instance/core0/addr[2]
+CTOF_DEL    ---     0.163 */SLICE_791.B1 to */SLICE_791.F1 test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_791
+ROUTE         1   e 0.663 */SLICE_791.F1 to   SLICE_701.D1 test_dvi_reveal_coretop_instance/core0/jtag_int_u/n8814
+CTOF_DEL    ---     0.163   SLICE_701.D1 to   SLICE_701.F1 SLICE_701
+ROUTE        16   e 0.663   SLICE_701.F1 to */SLICE_681.C0 n5634
+CTOOFX_DEL  ---     0.335 */SLICE_681.C0 to *LICE_681.OFX0 test_dvi_reveal_coretop_instance/core0/jtag_int_u/i4193/SLICE_681
+ROUTE         1   e 0.663 *LICE_681.OFX0 to */SLICE_680.C0 test_dvi_reveal_coretop_instance/core0/jtag_int_u/jtdo_first_bit_N_830
+CTOOFX_DEL  ---     0.335 */SLICE_680.C0 to *LICE_680.OFX0 test_dvi_reveal_coretop_instance/core0/jtag_int_u/i8181/SLICE_680
+ROUTE         2   e 0.663 *LICE_680.OFX0 to */SLICE_931.C0 test_dvi_reveal_coretop_instance/core0/jtag_int_u/n9764
+CTOF_DEL    ---     0.163 */SLICE_931.C0 to */SLICE_931.F0 test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_931
+ROUTE         3   e 0.663 */SLICE_931.F0 to */SLICE_215.A1 test_dvi_reveal_coretop_instance/er2_tdo[0]
+CTOOFX_DEL  ---     0.335 */SLICE_215.A1 to *LICE_215.OFX0 test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_215
+ROUTE         1   e 0.001 *LICE_215.OFX0 to *SLICE_215.DI0 test_dvi_reveal_coretop_instance/core0/jtag_int_u/parity_calc_N_861 (to jtaghub16_jtck)
+                  --------
+                    5.754   (30.8% logic, 69.2% route), 7 logic levels.
+
+Warning: 172.473MHz is the maximum frequency for this preference.
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference                              |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "ODCK_N" 305.904000 MHz ; |  305.904 MHz|  186.532 MHz|   6 *
+                                        |             |             |
+FREQUENCY NET "jtaghub16_jtck"          |             |             |
+180.799000 MHz ;                        |  180.799 MHz|  172.473 MHz|   7 *
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+2 preferences(marked by "*" above) not met.
+
+----------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+----------------------------------------------------------------------------
+test_dvi_reveal_coretop_instance/core0/t|        |        |
+m_u/clear_N_1855                        |       5|     482|     36.77%
+                                        |        |        |
+test_dvi_reveal_coretop_instance/core0/t|        |        |
+m_u/n10467                              |      15|     336|     25.63%
+                                        |        |        |
+n27                                     |       4|     310|     23.65%
+                                        |        |        |
+test_dvi_reveal_coretop_instance/core0/t|        |        |
+m_u/clk_N_keep_enable_115               |       7|     231|     17.62%
+                                        |        |        |
+n7706                                   |       1|     190|     14.49%
+                                        |        |        |
+n10460                                  |      13|     182|     13.88%
+                                        |        |        |
+n7707                                   |       1|     178|     13.58%
+                                        |        |        |
+n7708                                   |       1|     161|     12.28%
+                                        |        |        |
+test_dvi_reveal_coretop_instance/core0/t|        |        |
+m_u/n9052                               |       1|     152|     11.59%
+                                        |        |        |
+n9745                                   |       2|     150|     11.44%
+                                        |        |        |
+n7709                                   |       1|     137|     10.45%
+                                        |        |        |
+n10465                                  |       2|     136|     10.37%
+                                        |        |        |
+test_dvi_reveal_coretop_instance/core0/t|        |        |
+m_u/n8906                               |       1|     134|     10.22%
+                                        |        |        |
+----------------------------------------------------------------------------
+
+
+Clock Domains Analysis
+------------------------
+
+No clock domain analysis is done. To analyze clock domains, please remove the BLOCK INTERCLOCKDOMAIN PATHS preference.
+
+
+Timing summary (Setup):
+---------------
+
+Timing errors: 1311  Score: 921209
+Cumulative negative slack: 921209
+
+Constraints cover 16302 paths, 2 nets, and 11743 connections (97.83% coverage)
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.11.3.469
+Mon Mar 29 18:50:47 2021
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o dvi403_impl4.tw1 -gui -msgset /home/diamond/SharedFolder/DiamondProjFolder/promote.xml dvi403_impl4_map.ncd dvi403_impl4.prf 
+Design file:     dvi403_impl4_map.ncd
+Preference file: dvi403_impl4.prf
+Device,speed:    LFE3-70EA,M
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+BLOCK INTERCLOCKDOMAIN PATHS
+BLOCK JTAG PATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Preference: FREQUENCY NET "ODCK_N" 305.904000 MHz ;
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.223ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              detect_91  (from ODCK_N +)
+   Destination:    FF         Data in        D_detect_92  (to ODCK_N +)
+
+   Delay:               0.174ns  (55.2% logic, 44.8% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.174ns physical path delay SLICE_137 to SLICE_137 meets
+     -0.049ns M_HLD and
+      0.000ns delay constraint requirement (totaling -0.049ns) by 0.223ns
+
+ Physical Path Details:
+
+      Data path SLICE_137 to SLICE_137:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.096  SLICE_137.CLK to   SLICE_137.Q0 SLICE_137 (from ODCK_N)
+ROUTE         3   e 0.078   SLICE_137.Q0 to   SLICE_137.M1 detect (to ODCK_N)
+                  --------
+                    0.174   (55.2% logic, 44.8% route), 1 logic levels.
+
+
+================================================================================
+Preference: FREQUENCY NET "jtaghub16_jtck" 180.799000 MHz ;
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.184ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              ep5chub/er1_shift_reg_2  (from jtaghub16_jtck -)
+   Destination:    FF         Data in        ep5chub/er1_shift_reg_1  (to jtaghub16_jtck -)
+
+   Delay:               0.177ns  (55.9% logic, 44.1% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.177ns physical path delay ep5chub/SLICE_140 to ep5chub/SLICE_140 meets
+     -0.007ns M_HLD and
+      0.000ns delay constraint requirement (totaling -0.007ns) by 0.184ns
+
+ Physical Path Details:
+
+      Data path ep5chub/SLICE_140 to ep5chub/SLICE_140:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.099 *SLICE_140.CLK to */SLICE_140.Q1 ep5chub/SLICE_140 (from jtaghub16_jtck)
+ROUTE         1   e 0.078 */SLICE_140.Q1 to */SLICE_140.M0 ep5chub/er1_shift_reg_2 (to jtaghub16_jtck)
+                  --------
+                    0.177   (55.9% logic, 44.1% route), 1 logic levels.
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference(MIN Delays)                  |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "ODCK_N" 305.904000 MHz ; |     0.000 ns|     0.223 ns|   1  
+                                        |             |             |
+FREQUENCY NET "jtaghub16_jtck"          |             |             |
+180.799000 MHz ;                        |     0.000 ns|     0.184 ns|   1  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+Clock Domains Analysis
+------------------------
+
+No clock domain analysis is done. To analyze clock domains, please remove the BLOCK INTERCLOCKDOMAIN PATHS preference.
+
+
+Timing summary (Hold):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 16302 paths, 2 nets, and 11734 connections (97.75% coverage)
+
+
+
+Timing summary (Setup and Hold):
+---------------
+
+Timing errors: 1311 (setup), 0 (hold)
+Score: 921209 (setup), 0 (hold)
+Cumulative negative slack: 921209 (921209+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+

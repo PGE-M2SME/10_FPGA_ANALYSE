@@ -1,0 +1,76 @@
+#Start recording tcl command: 3/29/2021 17:09:17
+#Project Location: /home/diamond/SharedFolder/DiamondProjFolder; Project name: test403
+prj_project new -name "test403" -impl "impl3" -dev LFE3-70EA-6FN484C -synthesis "lse"
+prj_project save
+prj_src add "/home/diamond/SharedFolder/DiamondProjFolder/TOP.vhd"
+prj_run Synthesis -impl impl3
+prj_run Synthesis -impl impl3 -task Lattice_Synthesis
+prj_run Map -impl impl3
+prj_run PAR -impl impl3
+prj_run Export -impl impl3
+rvl_project new
+rvl_trace add_sig  {clk}
+rvl_trace add_sig  {de}
+rvl_trace add_sig  {hsync}
+rvl_trace add_sig  {vsync}
+rvl_tu set -name TU1 -add_sig {clk_fpga }
+rvl_tu set -name TU1 -add_sig {de }
+rvl_tu set -name TU1 -set_sig {de }
+rvl_trace add_sig  {clk_fpga}
+rvl_trace move_sig -move_to .end. {clk_fpga}
+rvl_trace del_sig {clk_fpga}
+rvl_trace trc_option SampleClk=clk_fpga
+rvl_te set -expression TU1 TE1
+rvl_project save -overwrite /home/diamond/SharedFolder/DiamondProjFolder/impl3/test_rvl_403.rvl
+prj_src add -exclude "/home/diamond/SharedFolder/DiamondProjFolder/impl3/test_rvl_403.rvl"
+prj_src enable "/home/diamond/SharedFolder/DiamondProjFolder/impl3/test_rvl_403.rvl"
+prj_run Export -impl impl3
+rvl_trace trc_option SampleEnable=on
+rvl_trace trc_option SampleEnable=off
+rvl_trace trc_option SampleClk={}
+rvl_trace trc_option SampleClk=clk
+rvl_trace move_sig -move_to clk {de}
+rvl_trace trc_option SampleClk={}
+rvl_trace add_sig  {clk_fpga}
+rvl_trace trc_option SampleClk={}
+rvl_trace trc_option SampleClk=clk_fpga
+rvl_trace del_sig {clk_fpga}
+rvl_project save -overwrite /home/diamond/SharedFolder/DiamondProjFolder/impl3/test_rvl_403.rvl
+rvl_project save -overwrite /home/diamond/SharedFolder/DiamondProjFolder/impl3/test_rvl_403.rvl
+rvl_trace trc_option SampleClk={}
+rvl_trace del_sig {clk}
+rvl_trace trc_option SampleClk=clk
+rvl_project save -overwrite /home/diamond/SharedFolder/DiamondProjFolder/impl3/test_rvl_403.rvl
+rvl_project save -overwrite /home/diamond/SharedFolder/DiamondProjFolder/impl3/test_rvl_403.rvl
+prj_run Synthesis -impl impl3
+prj_run Map -impl impl3
+prj_run PAR -impl impl3
+prj_run Export -impl impl3
+rvl_project close -force
+rvl_project new -overwrite /home/diamond/SharedFolder/DiamondProjFolder/test43.rvl
+prj_src add -exclude "/home/diamond/SharedFolder/DiamondProjFolder/test43.rvl"
+prj_src enable "/home/diamond/SharedFolder/DiamondProjFolder/test43.rvl"
+rvl_trace trc_option SampleClk=clk
+rvl_trace add_sig  {de}
+rvl_trace add_sig  {hsync}
+rvl_trace add_sig  {vsync}
+rvl_trace trc_option BufferDepth=16
+rvl_trace trc_option BufferDepth=16384
+rvl_tu set -name TU1 -add_sig {de }
+rvl_te set -expression TU1 TE1
+rvl_project save -overwrite /home/diamond/SharedFolder/DiamondProjFolder/test43.rvl
+prj_run Export -impl impl3
+rvl_project close
+rvl_project open /home/diamond/SharedFolder/DiamondProjFolder/test43.rvl
+rvl_project close -force
+prj_dev set -part LFE3-70E-7FN672C
+prj_dev set -part LFE3-70EA-7FN672C
+prj_run Synthesis -impl impl3
+prj_run Export -impl impl3
+rvl_project open /home/diamond/SharedFolder/DiamondProjFolder/test43.rvl
+rvl_project save -overwrite /home/diamond/SharedFolder/DiamondProjFolder/test43.rvl
+prj_run Export -impl impl3
+rvl_project close -force
+prj_project save
+prj_project close
+#Stop recording: 3/29/2021 18:25:10

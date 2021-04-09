@@ -1,0 +1,25 @@
+<Project ModBy="Inserter" SigType="0" Name="/home/diamond/SharedFolder/DiamondProjFolder/impl3/test_rvl_403.rvl" Date="2021-03-29">
+    <IP Version="1_6_042617"/>
+    <Design DesignEntry="Schematic/VHDL" Synthesis="lse" DeviceFamily="LatticeECP3" DesignName="test403"/>
+    <Core InsertDataset="0" Insert="1" Reveal_sig="352000649" Name="Top_LA0" ID="0">
+        <Setting>
+            <Clock SampleClk="clk" SampleEnable="0" EnableClk="" EnableClk_Pri="0"/>
+            <TraceBuffer Implementation="0" BitTimeStamp="0" hasTimeStamp="0" IncTrigSig="0" BufferDepth="256"/>
+            <Capture Mode="0" MinSamplesPerTrig="8"/>
+            <Event CntEnable="0" MaxEventCnt="8"/>
+            <TrigOut Polarity="0" MinPulseWidth="0" TrigOutNetType="1" EnableTrigOut="0" TrigOutNet="reveal_debug_Top_LA0_net"/>
+            <DistRAM Disable="0"/>
+        </Setting>
+        <Dataset Name="Base">
+            <Trace>
+                <Sig Type="SIG" Name="de"/>
+                <Sig Type="SIG" Name="hsync"/>
+                <Sig Type="SIG" Name="vsync"/>
+            </Trace>
+            <Trigger>
+                <TU Serialbits="0" Type="0" ID="1" Sig="de,"/>
+                <TE MaxSequence="1" MaxEvnCnt="1" ID="1" Resource="1"/>
+            </Trigger>
+        </Dataset>
+    </Core>
+</Project>

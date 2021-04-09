@@ -1,0 +1,14 @@
+NOTE Copyright (C), 1992-2010, Lattice Semiconductor Corporation *
+NOTE All Rights Reserved *
+NOTE DATE CREATED: Mon Mar 29 18:19:27 2021 *
+NOTE DESIGN NAME: Top *
+NOTE DEVICE NAME: LFE3-70EA-7FPBGA672 *
+NOTE PIN ASSIGNMENTS *
+NOTE PINS Vsync : AA1 : in *
+NOTE PINS De : AD1 : in *
+NOTE PINS Hsync : AD2 : in *
+NOTE PINS Clk : U20 : in *
+NOTE PINS Clk_FPGA : M3 : in *
+NOTE PINS Led : E23 : out *
+NOTE CONFIGURATION MODE: SPI *
+NOTE COMPRESSION: off *

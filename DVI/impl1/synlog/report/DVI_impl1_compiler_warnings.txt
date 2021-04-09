@@ -1,5 +1,0 @@
-@W: CL240 :"/home/diamond/SharedFolder/DiamondProjFolder/DVI/TOP_LEVEL.vhd":47:0:47:5|Signal Vblank is floating; a simulation mismatch is possible.
-@W: CL240 :"/home/diamond/SharedFolder/DiamondProjFolder/DVI/TOP_LEVEL.vhd":46:0:46:5|Signal Hblank is floating; a simulation mismatch is possible.
-@W: CL169 :"/home/diamond/SharedFolder/DiamondProjFolder/DVI/TOP_LEVEL.vhd":69:0:69:1|Pruning unused register sig_Vdisp_2(15 downto 0). Make sure that there are no unused intermediate registers.
-@W: CL182 :"/home/diamond/SharedFolder/DiamondProjFolder/DVI/TOP_LEVEL.vhd":54:7:54:15|Signal read but some bits are never set, assigning initial value to unassigned bits: sig_Vdisp
-

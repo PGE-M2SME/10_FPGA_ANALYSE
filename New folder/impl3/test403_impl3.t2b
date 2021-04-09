@@ -1,0 +1,9 @@
+
+
+
+
+-g CfgMode:Disable
+-g RamCfg:Reset
+-path "/home/diamond/SharedFolder/DiamondProjFolder" 
+-path "/home/diamond/SharedFolder/DiamondProjFolder"
+-g ES:No

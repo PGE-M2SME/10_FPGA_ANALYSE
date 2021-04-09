@@ -1,0 +1,77 @@
+Results of NGD DRC are available in Top_drc.log.
+Loading NGL library '/usr/local/diamond/3.11_x64/ispfpga/ep5c00a/data/ec5alib.ngl'...
+Loading NGL library '/usr/local/diamond/3.11_x64/ispfpga/ep5c00/data/ep5clib.ngl'...
+Loading NGL library '/usr/local/diamond/3.11_x64/ispfpga/ep5a00/data/ep5alib.ngl'...
+Loading NGL library '/usr/local/diamond/3.11_x64/ispfpga/ep5g00/data/ep5glib.ngl'...
+Loading NGL library '/usr/local/diamond/3.11_x64/ispfpga/or5g00/data/orc5glib.ngl'...
+Loading NGL library '/usr/local/diamond/3.11_x64/ispfpga/data/neoprims.ngl'...
+Loading NGL library '/usr/local/diamond/3.11_x64/ispfpga/data/neomacro.ngl'...
+Loading NGO design 'lngotmp/pmi_ram_dpebnonesadr112112115216de.ngo'...
+Loading NGO design 'lngotmp/pmi_ram_dpebnonesadr314163843141638412067ab1.ngo'...
+Logic has been added to the IP to support JTAG capability.
+Loading NGO design '/usr/local/diamond/3.11_x64/ispfpga/ep5c00/data/ep5chub.ngl'...
+
+
+Running DRC...
+
+WARNING - synthesis: logical net 'PinDat[23]' has no load.
+WARNING - synthesis: input pad net 'PinDat[23]' has no legal load.
+WARNING - synthesis: logical net 'PinDat[22]' has no load.
+WARNING - synthesis: input pad net 'PinDat[22]' has no legal load.
+WARNING - synthesis: logical net 'PinDat[21]' has no load.
+WARNING - synthesis: input pad net 'PinDat[21]' has no legal load.
+WARNING - synthesis: logical net 'PinDat[20]' has no load.
+WARNING - synthesis: input pad net 'PinDat[20]' has no legal load.
+WARNING - synthesis: logical net 'PinDat[19]' has no load.
+WARNING - synthesis: input pad net 'PinDat[19]' has no legal load.
+WARNING - synthesis: logical net 'PinDat[18]' has no load.
+WARNING - synthesis: input pad net 'PinDat[18]' has no legal load.
+WARNING - synthesis: logical net 'PinDat[17]' has no load.
+WARNING - synthesis: input pad net 'PinDat[17]' has no legal load.
+WARNING - synthesis: logical net 'PinDat[16]' has no load.
+WARNING - synthesis: input pad net 'PinDat[16]' has no legal load.
+WARNING - synthesis: logical net 'PinDat[15]' has no load.
+WARNING - synthesis: input pad net 'PinDat[15]' has no legal load.
+WARNING - synthesis: logical net 'PinDat[14]' has no load.
+WARNING - synthesis: input pad net 'PinDat[14]' has no legal load.
+WARNING - synthesis: logical net 'PinDat[13]' has no load.
+WARNING - synthesis: input pad net 'PinDat[13]' has no legal load.
+WARNING - synthesis: logical net 'PinDat[12]' has no load.
+WARNING - synthesis: input pad net 'PinDat[12]' has no legal load.
+WARNING - synthesis: logical net 'PinDat[11]' has no load.
+WARNING - synthesis: input pad net 'PinDat[11]' has no legal load.
+WARNING - synthesis: logical net 'PinDat[10]' has no load.
+WARNING - synthesis: input pad net 'PinDat[10]' has no legal load.
+WARNING - synthesis: logical net 'PinDat[9]' has no load.
+WARNING - synthesis: input pad net 'PinDat[9]' has no legal load.
+WARNING - synthesis: logical net 'PinDat[8]' has no load.
+WARNING - synthesis: input pad net 'PinDat[8]' has no legal load.
+WARNING - synthesis: logical net 'PinDat[7]' has no load.
+WARNING - synthesis: input pad net 'PinDat[7]' has no legal load.
+WARNING - synthesis: logical net 'PinDat[6]' has no load.
+WARNING - synthesis: input pad net 'PinDat[6]' has no legal load.
+WARNING - synthesis: logical net 'PinDat[5]' has no load.
+WARNING - synthesis: input pad net 'PinDat[5]' has no legal load.
+WARNING - synthesis: logical net 'PinDat[4]' has no load.
+WARNING - synthesis: input pad net 'PinDat[4]' has no legal load.
+WARNING - synthesis: logical net 'PinDat[3]' has no load.
+WARNING - synthesis: input pad net 'PinDat[3]' has no legal load.
+WARNING - synthesis: logical net 'PinDat[2]' has no load.
+WARNING - synthesis: input pad net 'PinDat[2]' has no legal load.
+WARNING - synthesis: logical net 'PinDat[1]' has no load.
+WARNING - synthesis: input pad net 'PinDat[1]' has no legal load.
+WARNING - synthesis: logical net 'PinDat[0]' has no load.
+WARNING - synthesis: input pad net 'PinDat[0]' has no legal load.
+WARNING - synthesis: logical net 'top_reveal_coretop_instance/jupdate[0]' has no load.
+WARNING - synthesis: logical net 'ep5chub/tdoa' has no load.
+WARNING - synthesis: logical net 'ep5chub/cdn' has no load.
+WARNING - synthesis: logical net 'ep5chub/ip_enable_15' has no load.
+WARNING - synthesis: logical net 'ep5chub/genblk5_un1_jtage_u_1' has no load.
+WARNING - synthesis: logical net 'ep5chub/genblk5_un1_jtage_u' has no load.
+WARNING - synthesis: DRC complete with 54 warnings.
+
+Design Results:
+   1155 blocks expanded
+completed the first expansion
+All blocks are expanded and NGD expansion is successful.
+Writing NGD file test403_impl3.ngd.

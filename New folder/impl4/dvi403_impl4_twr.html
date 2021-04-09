@@ -1,0 +1,2188 @@
+<HTML>
+<HEAD><TITLE>Lattice TRACE Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Par_Twr"></A><B><U><big>Place & Route TRACE Report</big></U></B>
+
+Loading design for application trce from file dvi403_impl4.ncd.
+Design name: test_DVI
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE3-70EA
+Package:     FPBGA672
+Performance: 7
+Loading device for application trce from file 'ec5a97x146.nph' in environment: /usr/local/diamond/3.11_x64/ispfpga.
+Package Status:                     Final          Version 1.3.
+Performance Hardware Data Status:   Final          Version 36.22.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+<A name="Par_Twr_setup"></A><B><U><big>Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.11.3.469</big></U></B>
+Mon Mar 29 18:52:27 2021
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+<A name="ptwr_set_ri"></A><B><U><big>Report Information</big></U></B>
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 7 -sphld m -o dvi403_impl4.twr -gui -msgset /home/diamond/SharedFolder/DiamondProjFolder/promote.xml dvi403_impl4.ncd dvi403_impl4.prf 
+Design file:     dvi403_impl4.ncd
+Preference file: dvi403_impl4.prf
+Device,speed:    LFE3-70EA,7
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+<A name="ptwr_set_ps"></A><B><U><big>Preference Summary</big></U></B>
+
+<FONT COLOR=red><LI><A href='#par_twr_pref_0_0' Target='right'><FONT COLOR=red>FREQUENCY NET "ODCK_N" 305.904000 MHz (1195 errors)</FONT></A></LI>
+</FONT>            4096 items scored, 1195 timing errors detected.
+Warning: 235.960MHz is the maximum frequency for this preference.
+
+<FONT COLOR=red><LI><A href='#par_twr_pref_0_1' Target='right'><FONT COLOR=red>FREQUENCY NET "jtaghub16_jtck" 180.799000 MHz (383 errors)</FONT></A></LI>
+</FONT>            4096 items scored, 383 timing errors detected.
+Warning: 162.311MHz is the maximum frequency for this preference.
+
+Report Type:     based on TRACE automatically generated preferences
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+BLOCK INTERCLOCKDOMAIN PATHS
+BLOCK JTAG PATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+<A name="par_twr_pref_0_0"></A>Preference: FREQUENCY NET "ODCK_N" 305.904000 MHz ;
+            4096 items scored, 1195 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error: The following path exceeds requirements by 0.969ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              test_dvi_reveal_coretop_instance/core0/tm_u/post_trig_cntr_i0_i1  (from ODCK_N +)
+   Destination:    FF         Data in        test_dvi_reveal_coretop_instance/core0/tm_u/post_trig_cntr_i0_i11  (to ODCK_N +)
+
+   Delay:               3.943ns  (27.6% logic, 72.4% route), 6 logic levels.
+
+ Constraint Details:
+
+      3.943ns physical path delay SLICE_168_ppo_0 to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_173_ppo_0 exceeds
+      3.269ns delay constraint less
+      0.000ns skew and
+      0.295ns CE_SET requirement (totaling 2.974ns) by 0.969ns
+
+ Physical Path Details:
+
+      Data path SLICE_168_ppo_0 to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_173_ppo_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.273    R76C76C.CLK to     R76C76C.Q1 SLICE_168_ppo_0 (from ODCK_N)
+ROUTE         2     0.495     R76C76C.Q1 to     R76C75C.C1 post_trig_cntr[1]
+CTOF_DEL    ---     0.163     R76C75C.C1 to     R76C75C.F1 test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_732
+ROUTE         7     0.498     R76C75C.F1 to     R76C74D.C0 test_dvi_reveal_coretop_instance/core0/tm_u/n21
+CTOF_DEL    ---     0.163     R76C74D.C0 to     R76C74D.F0 test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_742
+ROUTE         1     0.505     R76C74D.F0 to     R74C74B.C1 test_dvi_reveal_coretop_instance/core0/tm_u/n8906
+CTOF_DEL    ---     0.163     R74C74B.C1 to     R74C74B.F1 SLICE_697
+ROUTE         4     0.354     R74C74B.F1 to     R74C74B.D0 n27
+CTOF_DEL    ---     0.163     R74C74B.D0 to     R74C74B.F0 SLICE_697
+ROUTE         2     0.388     R74C74B.F0 to     R74C76B.D0 n10465
+CTOF_DEL    ---     0.163     R74C76B.D0 to     R74C76B.F0 test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_741
+ROUTE         9     0.615     R74C76B.F0 to     R76C76A.CE test_dvi_reveal_coretop_instance/core0/tm_u/clk_N_keep_enable_115 (to ODCK_N)
+                  --------
+                    3.943   (27.6% logic, 72.4% route), 6 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ODCK to SLICE_168_ppo_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     1.313      U20.PADDI to    R76C76C.CLK ODCK_N
+                  --------
+                    1.313   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ODCK to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_173_ppo_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     1.313      U20.PADDI to    R76C76A.CLK ODCK_N
+                  --------
+                    1.313   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Error: The following path exceeds requirements by 0.969ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              test_dvi_reveal_coretop_instance/core0/tm_u/post_trig_cntr_i0_i1  (from ODCK_N +)
+   Destination:    FF         Data in        test_dvi_reveal_coretop_instance/core0/tm_u/post_trig_cntr_i0_i9  (to ODCK_N +)
+                   FF                        test_dvi_reveal_coretop_instance/core0/tm_u/post_trig_cntr_i0_i8
+
+   Delay:               3.943ns  (27.6% logic, 72.4% route), 6 logic levels.
+
+ Constraint Details:
+
+      3.943ns physical path delay SLICE_168_ppo_0 to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_172 exceeds
+      3.269ns delay constraint less
+      0.000ns skew and
+      0.295ns CE_SET requirement (totaling 2.974ns) by 0.969ns
+
+ Physical Path Details:
+
+      Data path SLICE_168_ppo_0 to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_172:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.273    R76C76C.CLK to     R76C76C.Q1 SLICE_168_ppo_0 (from ODCK_N)
+ROUTE         2     0.495     R76C76C.Q1 to     R76C75C.C1 post_trig_cntr[1]
+CTOF_DEL    ---     0.163     R76C75C.C1 to     R76C75C.F1 test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_732
+ROUTE         7     0.498     R76C75C.F1 to     R76C74D.C0 test_dvi_reveal_coretop_instance/core0/tm_u/n21
+CTOF_DEL    ---     0.163     R76C74D.C0 to     R76C74D.F0 test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_742
+ROUTE         1     0.505     R76C74D.F0 to     R74C74B.C1 test_dvi_reveal_coretop_instance/core0/tm_u/n8906
+CTOF_DEL    ---     0.163     R74C74B.C1 to     R74C74B.F1 SLICE_697
+ROUTE         4     0.354     R74C74B.F1 to     R74C74B.D0 n27
+CTOF_DEL    ---     0.163     R74C74B.D0 to     R74C74B.F0 SLICE_697
+ROUTE         2     0.388     R74C74B.F0 to     R74C76B.D0 n10465
+CTOF_DEL    ---     0.163     R74C76B.D0 to     R74C76B.F0 test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_741
+ROUTE         9     0.615     R74C76B.F0 to     R76C76B.CE test_dvi_reveal_coretop_instance/core0/tm_u/clk_N_keep_enable_115 (to ODCK_N)
+                  --------
+                    3.943   (27.6% logic, 72.4% route), 6 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ODCK to SLICE_168_ppo_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     1.313      U20.PADDI to    R76C76C.CLK ODCK_N
+                  --------
+                    1.313   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ODCK to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_172:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     1.313      U20.PADDI to    R76C76B.CLK ODCK_N
+                  --------
+                    1.313   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Error: The following path exceeds requirements by 0.964ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              test_dvi_reveal_coretop_instance/core0/tm_u/post_trig_cntr_i0_i1  (from ODCK_N +)
+   Destination:    FF         Data in        test_dvi_reveal_coretop_instance/core0/tm_u/post_trig_cntr_i0_i0  (to ODCK_N +)
+
+   Delay:               3.938ns  (27.6% logic, 72.4% route), 6 logic levels.
+
+ Constraint Details:
+
+      3.938ns physical path delay SLICE_168_ppo_0 to SLICE_168 exceeds
+      3.269ns delay constraint less
+      0.000ns skew and
+      0.295ns CE_SET requirement (totaling 2.974ns) by 0.964ns
+
+ Physical Path Details:
+
+      Data path SLICE_168_ppo_0 to SLICE_168:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.273    R76C76C.CLK to     R76C76C.Q1 SLICE_168_ppo_0 (from ODCK_N)
+ROUTE         2     0.495     R76C76C.Q1 to     R76C75C.C1 post_trig_cntr[1]
+CTOF_DEL    ---     0.163     R76C75C.C1 to     R76C75C.F1 test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_732
+ROUTE         7     0.498     R76C75C.F1 to     R76C74D.C0 test_dvi_reveal_coretop_instance/core0/tm_u/n21
+CTOF_DEL    ---     0.163     R76C74D.C0 to     R76C74D.F0 test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_742
+ROUTE         1     0.505     R76C74D.F0 to     R74C74B.C1 test_dvi_reveal_coretop_instance/core0/tm_u/n8906
+CTOF_DEL    ---     0.163     R74C74B.C1 to     R74C74B.F1 SLICE_697
+ROUTE         4     0.354     R74C74B.F1 to     R74C74B.D0 n27
+CTOF_DEL    ---     0.163     R74C74B.D0 to     R74C74B.F0 SLICE_697
+ROUTE         2     0.388     R74C74B.F0 to     R74C76B.D0 n10465
+CTOF_DEL    ---     0.163     R74C76B.D0 to     R74C76B.F0 test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_741
+ROUTE         9     0.610     R74C76B.F0 to     R74C75A.CE test_dvi_reveal_coretop_instance/core0/tm_u/clk_N_keep_enable_115 (to ODCK_N)
+                  --------
+                    3.938   (27.6% logic, 72.4% route), 6 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ODCK to SLICE_168_ppo_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     1.313      U20.PADDI to    R76C76C.CLK ODCK_N
+                  --------
+                    1.313   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ODCK to SLICE_168:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     1.313      U20.PADDI to    R74C75A.CLK ODCK_N
+                  --------
+                    1.313   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Error: The following path exceeds requirements by 0.964ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              test_dvi_reveal_coretop_instance/core0/tm_u/post_trig_cntr_i0_i1  (from ODCK_N +)
+   Destination:    FF         Data in        test_dvi_reveal_coretop_instance/core0/tm_u/post_trig_cntr_i0_i7  (to ODCK_N +)
+                   FF                        test_dvi_reveal_coretop_instance/core0/tm_u/post_trig_cntr_i0_i6
+
+   Delay:               3.938ns  (27.6% logic, 72.4% route), 6 logic levels.
+
+ Constraint Details:
+
+      3.938ns physical path delay SLICE_168_ppo_0 to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_171 exceeds
+      3.269ns delay constraint less
+      0.000ns skew and
+      0.295ns CE_SET requirement (totaling 2.974ns) by 0.964ns
+
+ Physical Path Details:
+
+      Data path SLICE_168_ppo_0 to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_171:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.273    R76C76C.CLK to     R76C76C.Q1 SLICE_168_ppo_0 (from ODCK_N)
+ROUTE         2     0.495     R76C76C.Q1 to     R76C75C.C1 post_trig_cntr[1]
+CTOF_DEL    ---     0.163     R76C75C.C1 to     R76C75C.F1 test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_732
+ROUTE         7     0.498     R76C75C.F1 to     R76C74D.C0 test_dvi_reveal_coretop_instance/core0/tm_u/n21
+CTOF_DEL    ---     0.163     R76C74D.C0 to     R76C74D.F0 test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_742
+ROUTE         1     0.505     R76C74D.F0 to     R74C74B.C1 test_dvi_reveal_coretop_instance/core0/tm_u/n8906
+CTOF_DEL    ---     0.163     R74C74B.C1 to     R74C74B.F1 SLICE_697
+ROUTE         4     0.354     R74C74B.F1 to     R74C74B.D0 n27
+CTOF_DEL    ---     0.163     R74C74B.D0 to     R74C74B.F0 SLICE_697
+ROUTE         2     0.388     R74C74B.F0 to     R74C76B.D0 n10465
+CTOF_DEL    ---     0.163     R74C76B.D0 to     R74C76B.F0 test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_741
+ROUTE         9     0.610     R74C76B.F0 to     R74C75C.CE test_dvi_reveal_coretop_instance/core0/tm_u/clk_N_keep_enable_115 (to ODCK_N)
+                  --------
+                    3.938   (27.6% logic, 72.4% route), 6 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ODCK to SLICE_168_ppo_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     1.313      U20.PADDI to    R76C76C.CLK ODCK_N
+                  --------
+                    1.313   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ODCK to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_171:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     1.313      U20.PADDI to    R74C75C.CLK ODCK_N
+                  --------
+                    1.313   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Error: The following path exceeds requirements by 0.960ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              test_dvi_reveal_coretop_instance/core0/tm_u/post_trig_cntr_i0_i11  (from ODCK_N +)
+   Destination:    FF         Data in        test_dvi_reveal_coretop_instance/core0/tm_u/post_trig_cntr_i0_i9  (to ODCK_N +)
+                   FF                        test_dvi_reveal_coretop_instance/core0/tm_u/post_trig_cntr_i0_i8
+
+   Delay:               3.934ns  (27.7% logic, 72.3% route), 6 logic levels.
+
+ Constraint Details:
+
+      3.934ns physical path delay test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_173_ppo_0 to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_172 exceeds
+      3.269ns delay constraint less
+      0.000ns skew and
+      0.295ns CE_SET requirement (totaling 2.974ns) by 0.960ns
+
+ Physical Path Details:
+
+      Data path test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_173_ppo_0 to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_172:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.273    R76C76A.CLK to     R76C76A.Q1 test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_173_ppo_0 (from ODCK_N)
+ROUTE         7     0.582     R76C76A.Q1 to     R76C74D.D1 post_trig_cntr[11]
+CTOF_DEL    ---     0.163     R76C74D.D1 to     R76C74D.F1 test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_742
+ROUTE         1     0.402     R76C74D.F1 to     R76C74D.A0 test_dvi_reveal_coretop_instance/core0/tm_u/n8888
+CTOF_DEL    ---     0.163     R76C74D.A0 to     R76C74D.F0 test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_742
+ROUTE         1     0.505     R76C74D.F0 to     R74C74B.C1 test_dvi_reveal_coretop_instance/core0/tm_u/n8906
+CTOF_DEL    ---     0.163     R74C74B.C1 to     R74C74B.F1 SLICE_697
+ROUTE         4     0.354     R74C74B.F1 to     R74C74B.D0 n27
+CTOF_DEL    ---     0.163     R74C74B.D0 to     R74C74B.F0 SLICE_697
+ROUTE         2     0.388     R74C74B.F0 to     R74C76B.D0 n10465
+CTOF_DEL    ---     0.163     R74C76B.D0 to     R74C76B.F0 test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_741
+ROUTE         9     0.615     R74C76B.F0 to     R76C76B.CE test_dvi_reveal_coretop_instance/core0/tm_u/clk_N_keep_enable_115 (to ODCK_N)
+                  --------
+                    3.934   (27.7% logic, 72.3% route), 6 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ODCK to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_173_ppo_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     1.313      U20.PADDI to    R76C76A.CLK ODCK_N
+                  --------
+                    1.313   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ODCK to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_172:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     1.313      U20.PADDI to    R76C76B.CLK ODCK_N
+                  --------
+                    1.313   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Error: The following path exceeds requirements by 0.960ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              test_dvi_reveal_coretop_instance/core0/tm_u/post_trig_cntr_i0_i11  (from ODCK_N +)
+   Destination:    FF         Data in        test_dvi_reveal_coretop_instance/core0/tm_u/post_trig_cntr_i0_i11  (to ODCK_N +)
+
+   Delay:               3.934ns  (27.7% logic, 72.3% route), 6 logic levels.
+
+ Constraint Details:
+
+      3.934ns physical path delay test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_173_ppo_0 to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_173_ppo_0 exceeds
+      3.269ns delay constraint less
+      0.000ns skew and
+      0.295ns CE_SET requirement (totaling 2.974ns) by 0.960ns
+
+ Physical Path Details:
+
+      Data path test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_173_ppo_0 to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_173_ppo_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.273    R76C76A.CLK to     R76C76A.Q1 test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_173_ppo_0 (from ODCK_N)
+ROUTE         7     0.582     R76C76A.Q1 to     R76C74D.D1 post_trig_cntr[11]
+CTOF_DEL    ---     0.163     R76C74D.D1 to     R76C74D.F1 test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_742
+ROUTE         1     0.402     R76C74D.F1 to     R76C74D.A0 test_dvi_reveal_coretop_instance/core0/tm_u/n8888
+CTOF_DEL    ---     0.163     R76C74D.A0 to     R76C74D.F0 test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_742
+ROUTE         1     0.505     R76C74D.F0 to     R74C74B.C1 test_dvi_reveal_coretop_instance/core0/tm_u/n8906
+CTOF_DEL    ---     0.163     R74C74B.C1 to     R74C74B.F1 SLICE_697
+ROUTE         4     0.354     R74C74B.F1 to     R74C74B.D0 n27
+CTOF_DEL    ---     0.163     R74C74B.D0 to     R74C74B.F0 SLICE_697
+ROUTE         2     0.388     R74C74B.F0 to     R74C76B.D0 n10465
+CTOF_DEL    ---     0.163     R74C76B.D0 to     R74C76B.F0 test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_741
+ROUTE         9     0.615     R74C76B.F0 to     R76C76A.CE test_dvi_reveal_coretop_instance/core0/tm_u/clk_N_keep_enable_115 (to ODCK_N)
+                  --------
+                    3.934   (27.7% logic, 72.3% route), 6 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ODCK to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_173_ppo_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     1.313      U20.PADDI to    R76C76A.CLK ODCK_N
+                  --------
+                    1.313   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ODCK to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_173_ppo_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     1.313      U20.PADDI to    R76C76A.CLK ODCK_N
+                  --------
+                    1.313   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Error: The following path exceeds requirements by 0.958ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              test_dvi_reveal_coretop_instance/core0/tm_u/post_trig_cntr_i0_i1  (from ODCK_N +)
+   Destination:    FF         Data in        test_dvi_reveal_coretop_instance/core0/tm_u/post_trig_cntr_i0_i13  (to ODCK_N +)
+                   FF                        test_dvi_reveal_coretop_instance/core0/tm_u/post_trig_cntr_i0_i12
+
+   Delay:               3.932ns  (27.7% logic, 72.3% route), 6 logic levels.
+
+ Constraint Details:
+
+      3.932ns physical path delay SLICE_168_ppo_0 to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_174 exceeds
+      3.269ns delay constraint less
+      0.000ns skew and
+      0.295ns CE_SET requirement (totaling 2.974ns) by 0.958ns
+
+ Physical Path Details:
+
+      Data path SLICE_168_ppo_0 to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_174:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.273    R76C76C.CLK to     R76C76C.Q1 SLICE_168_ppo_0 (from ODCK_N)
+ROUTE         2     0.495     R76C76C.Q1 to     R76C75C.C1 post_trig_cntr[1]
+CTOF_DEL    ---     0.163     R76C75C.C1 to     R76C75C.F1 test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_732
+ROUTE         7     0.498     R76C75C.F1 to     R76C74D.C0 test_dvi_reveal_coretop_instance/core0/tm_u/n21
+CTOF_DEL    ---     0.163     R76C74D.C0 to     R76C74D.F0 test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_742
+ROUTE         1     0.505     R76C74D.F0 to     R74C74B.C1 test_dvi_reveal_coretop_instance/core0/tm_u/n8906
+CTOF_DEL    ---     0.163     R74C74B.C1 to     R74C74B.F1 SLICE_697
+ROUTE         4     0.354     R74C74B.F1 to     R74C74B.D0 n27
+CTOF_DEL    ---     0.163     R74C74B.D0 to     R74C74B.F0 SLICE_697
+ROUTE         2     0.388     R74C74B.F0 to     R74C76B.D0 n10465
+CTOF_DEL    ---     0.163     R74C76B.D0 to     R74C76B.F0 test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_741
+ROUTE         9     0.604     R74C76B.F0 to     R74C77A.CE test_dvi_reveal_coretop_instance/core0/tm_u/clk_N_keep_enable_115 (to ODCK_N)
+                  --------
+                    3.932   (27.7% logic, 72.3% route), 6 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ODCK to SLICE_168_ppo_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     1.313      U20.PADDI to    R76C76C.CLK ODCK_N
+                  --------
+                    1.313   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ODCK to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_174:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     1.313      U20.PADDI to    R74C77A.CLK ODCK_N
+                  --------
+                    1.313   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Error: The following path exceeds requirements by 0.958ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              test_dvi_reveal_coretop_instance/core0/tm_u/post_trig_cntr_i0_i1  (from ODCK_N +)
+   Destination:    FF         Data in        test_dvi_reveal_coretop_instance/core0/tm_u/post_trig_cntr_i0_i3  (to ODCK_N +)
+                   FF                        test_dvi_reveal_coretop_instance/core0/tm_u/post_trig_cntr_i0_i2
+
+   Delay:               3.932ns  (27.7% logic, 72.3% route), 6 logic levels.
+
+ Constraint Details:
+
+      3.932ns physical path delay SLICE_168_ppo_0 to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_169 exceeds
+      3.269ns delay constraint less
+      0.000ns skew and
+      0.295ns CE_SET requirement (totaling 2.974ns) by 0.958ns
+
+ Physical Path Details:
+
+      Data path SLICE_168_ppo_0 to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_169:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.273    R76C76C.CLK to     R76C76C.Q1 SLICE_168_ppo_0 (from ODCK_N)
+ROUTE         2     0.495     R76C76C.Q1 to     R76C75C.C1 post_trig_cntr[1]
+CTOF_DEL    ---     0.163     R76C75C.C1 to     R76C75C.F1 test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_732
+ROUTE         7     0.498     R76C75C.F1 to     R76C74D.C0 test_dvi_reveal_coretop_instance/core0/tm_u/n21
+CTOF_DEL    ---     0.163     R76C74D.C0 to     R76C74D.F0 test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_742
+ROUTE         1     0.505     R76C74D.F0 to     R74C74B.C1 test_dvi_reveal_coretop_instance/core0/tm_u/n8906
+CTOF_DEL    ---     0.163     R74C74B.C1 to     R74C74B.F1 SLICE_697
+ROUTE         4     0.354     R74C74B.F1 to     R74C74B.D0 n27
+CTOF_DEL    ---     0.163     R74C74B.D0 to     R74C74B.F0 SLICE_697
+ROUTE         2     0.388     R74C74B.F0 to     R74C76B.D0 n10465
+CTOF_DEL    ---     0.163     R74C76B.D0 to     R74C76B.F0 test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_741
+ROUTE         9     0.604     R74C76B.F0 to     R74C77B.CE test_dvi_reveal_coretop_instance/core0/tm_u/clk_N_keep_enable_115 (to ODCK_N)
+                  --------
+                    3.932   (27.7% logic, 72.3% route), 6 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ODCK to SLICE_168_ppo_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     1.313      U20.PADDI to    R76C76C.CLK ODCK_N
+                  --------
+                    1.313   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ODCK to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_169:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     1.313      U20.PADDI to    R74C77B.CLK ODCK_N
+                  --------
+                    1.313   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Error: The following path exceeds requirements by 0.956ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              test_dvi_reveal_coretop_instance/core0/tm_u/post_trig_cntr_i0_i1  (from ODCK_N +)
+   Destination:    FF         Data in        test_dvi_reveal_coretop_instance/core0/tm_u/post_trig_cntr_i0_i1  (to ODCK_N +)
+                   FF                        test_dvi_reveal_coretop_instance/core0/tm_u/post_trig_cntr_i0_i5
+
+   Delay:               3.930ns  (27.7% logic, 72.3% route), 6 logic levels.
+
+ Constraint Details:
+
+      3.930ns physical path delay SLICE_168_ppo_0 to SLICE_168_ppo_0 exceeds
+      3.269ns delay constraint less
+      0.000ns skew and
+      0.295ns CE_SET requirement (totaling 2.974ns) by 0.956ns
+
+ Physical Path Details:
+
+      Data path SLICE_168_ppo_0 to SLICE_168_ppo_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.273    R76C76C.CLK to     R76C76C.Q1 SLICE_168_ppo_0 (from ODCK_N)
+ROUTE         2     0.495     R76C76C.Q1 to     R76C75C.C1 post_trig_cntr[1]
+CTOF_DEL    ---     0.163     R76C75C.C1 to     R76C75C.F1 test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_732
+ROUTE         7     0.498     R76C75C.F1 to     R76C74D.C0 test_dvi_reveal_coretop_instance/core0/tm_u/n21
+CTOF_DEL    ---     0.163     R76C74D.C0 to     R76C74D.F0 test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_742
+ROUTE         1     0.505     R76C74D.F0 to     R74C74B.C1 test_dvi_reveal_coretop_instance/core0/tm_u/n8906
+CTOF_DEL    ---     0.163     R74C74B.C1 to     R74C74B.F1 SLICE_697
+ROUTE         4     0.354     R74C74B.F1 to     R74C74B.D0 n27
+CTOF_DEL    ---     0.163     R74C74B.D0 to     R74C74B.F0 SLICE_697
+ROUTE         2     0.388     R74C74B.F0 to     R74C76B.D0 n10465
+CTOF_DEL    ---     0.163     R74C76B.D0 to     R74C76B.F0 test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_741
+ROUTE         9     0.602     R74C76B.F0 to     R76C76C.CE test_dvi_reveal_coretop_instance/core0/tm_u/clk_N_keep_enable_115 (to ODCK_N)
+                  --------
+                    3.930   (27.7% logic, 72.3% route), 6 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ODCK to SLICE_168_ppo_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     1.313      U20.PADDI to    R76C76C.CLK ODCK_N
+                  --------
+                    1.313   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ODCK to SLICE_168_ppo_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     1.313      U20.PADDI to    R76C76C.CLK ODCK_N
+                  --------
+                    1.313   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Error: The following path exceeds requirements by 0.956ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              test_dvi_reveal_coretop_instance/core0/tm_u/post_trig_cntr_i0_i1  (from ODCK_N +)
+   Destination:    FF         Data in        test_dvi_reveal_coretop_instance/core0/tm_u/post_trig_cntr_i0_i4  (to ODCK_N +)
+
+   Delay:               3.930ns  (27.7% logic, 72.3% route), 6 logic levels.
+
+ Constraint Details:
+
+      3.930ns physical path delay SLICE_168_ppo_0 to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_170 exceeds
+      3.269ns delay constraint less
+      0.000ns skew and
+      0.295ns CE_SET requirement (totaling 2.974ns) by 0.956ns
+
+ Physical Path Details:
+
+      Data path SLICE_168_ppo_0 to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_170:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.273    R76C76C.CLK to     R76C76C.Q1 SLICE_168_ppo_0 (from ODCK_N)
+ROUTE         2     0.495     R76C76C.Q1 to     R76C75C.C1 post_trig_cntr[1]
+CTOF_DEL    ---     0.163     R76C75C.C1 to     R76C75C.F1 test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_732
+ROUTE         7     0.498     R76C75C.F1 to     R76C74D.C0 test_dvi_reveal_coretop_instance/core0/tm_u/n21
+CTOF_DEL    ---     0.163     R76C74D.C0 to     R76C74D.F0 test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_742
+ROUTE         1     0.505     R76C74D.F0 to     R74C74B.C1 test_dvi_reveal_coretop_instance/core0/tm_u/n8906
+CTOF_DEL    ---     0.163     R74C74B.C1 to     R74C74B.F1 SLICE_697
+ROUTE         4     0.354     R74C74B.F1 to     R74C74B.D0 n27
+CTOF_DEL    ---     0.163     R74C74B.D0 to     R74C74B.F0 SLICE_697
+ROUTE         2     0.388     R74C74B.F0 to     R74C76B.D0 n10465
+CTOF_DEL    ---     0.163     R74C76B.D0 to     R74C76B.F0 test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_741
+ROUTE         9     0.602     R74C76B.F0 to     R75C76B.CE test_dvi_reveal_coretop_instance/core0/tm_u/clk_N_keep_enable_115 (to ODCK_N)
+                  --------
+                    3.930   (27.7% logic, 72.3% route), 6 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ODCK to SLICE_168_ppo_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     1.313      U20.PADDI to    R76C76C.CLK ODCK_N
+                  --------
+                    1.313   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ODCK to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_170:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     1.313      U20.PADDI to    R75C76B.CLK ODCK_N
+                  --------
+                    1.313   (0.0% logic, 100.0% route), 0 logic levels.
+
+Warning: 235.960MHz is the maximum frequency for this preference.
+
+
+================================================================================
+<A name="par_twr_pref_0_1"></A>Preference: FREQUENCY NET "jtaghub16_jtck" 180.799000 MHz ;
+            4096 items scored, 383 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error: The following path exceeds requirements by 0.630ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              test_dvi_reveal_coretop_instance/core0/jtag_int_u/tr_dout_bit_cnt_i0_i5  (from jtaghub16_jtck -)
+   Destination:    FF         Data in        test_dvi_reveal_coretop_instance/core0/jtag_int_u/shift_reg_tr_dout_i0_i30  (to jtaghub16_jtck -)
+
+   Delay:               6.117ns  (15.3% logic, 84.7% route), 5 logic levels.
+
+ Constraint Details:
+
+      6.117ns physical path delay test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_278 to test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_235 exceeds
+      5.531ns delay constraint less
+      0.000ns skew and
+      0.044ns DIN_SET requirement (totaling 5.487ns) by 0.630ns
+
+ Physical Path Details:
+
+      Data path test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_278 to test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_235:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.281    R69C73A.CLK to     R69C73A.Q1 test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_278 (from jtaghub16_jtck)
+ROUTE         4     0.621     R69C73A.Q1 to     R69C75D.B0 test_dvi_reveal_coretop_instance/core0/jtag_int_u/tr_dout_bit_cnt[5]
+CTOF_DEL    ---     0.163     R69C75D.B0 to     R69C75D.F0 test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_768
+ROUTE         2     0.830     R69C75D.F0 to     R67C74D.A1 test_dvi_reveal_coretop_instance/core0/jtag_int_u/n9454
+CTOF_DEL    ---     0.163     R67C74D.A1 to     R67C74D.F1 test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_750
+ROUTE        99     3.457     R67C74D.F1 to     R49C84C.B0 test_dvi_reveal_coretop_instance/core0/jtag_int_u/n15
+CTOF_DEL    ---     0.163     R49C84C.B0 to     R49C84C.F0 test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_850
+ROUTE         1     0.276     R49C84C.F0 to     R49C84A.C0 test_dvi_reveal_coretop_instance/core0/jtag_int_u/n207
+CTOF_DEL    ---     0.163     R49C84A.C0 to     R49C84A.F0 test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_235
+ROUTE         1     0.000     R49C84A.F0 to    R49C84A.DI0 test_dvi_reveal_coretop_instance/core0/jtag_int_u/shift_reg_tr_dout_98__N_593[30] (to jtaghub16_jtck)
+                  --------
+                    6.117   (15.3% logic, 84.7% route), 5 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ep5chub/genblk5_jtage_u to test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_278:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       453     3.924      JTAG.JTCK to    R69C73A.CLK jtaghub16_jtck
+                  --------
+                    3.924   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ep5chub/genblk5_jtage_u to test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_235:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       453     3.924      JTAG.JTCK to    R49C84A.CLK jtaghub16_jtck
+                  --------
+                    3.924   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Error: The following path exceeds requirements by 0.558ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              test_dvi_reveal_coretop_instance/core0/jtag_int_u/tr_dout_bit_cnt_i0_i5  (from jtaghub16_jtck -)
+   Destination:    FF         Data in        test_dvi_reveal_coretop_instance/core0/jtag_int_u/shift_reg_tr_dout_i0_i39  (to jtaghub16_jtck -)
+
+   Delay:               6.045ns  (15.4% logic, 84.6% route), 5 logic levels.
+
+ Constraint Details:
+
+      6.045ns physical path delay test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_278 to test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_239 exceeds
+      5.531ns delay constraint less
+      0.000ns skew and
+      0.044ns DIN_SET requirement (totaling 5.487ns) by 0.558ns
+
+ Physical Path Details:
+
+      Data path test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_278 to test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_239:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.281    R69C73A.CLK to     R69C73A.Q1 test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_278 (from jtaghub16_jtck)
+ROUTE         4     0.621     R69C73A.Q1 to     R69C75D.B0 test_dvi_reveal_coretop_instance/core0/jtag_int_u/tr_dout_bit_cnt[5]
+CTOF_DEL    ---     0.163     R69C75D.B0 to     R69C75D.F0 test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_768
+ROUTE         2     0.830     R69C75D.F0 to     R67C74D.A1 test_dvi_reveal_coretop_instance/core0/jtag_int_u/n9454
+CTOF_DEL    ---     0.163     R67C74D.A1 to     R67C74D.F1 test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_750
+ROUTE        99     3.385     R67C74D.F1 to     R51C92D.D0 test_dvi_reveal_coretop_instance/core0/jtag_int_u/n15
+CTOF_DEL    ---     0.163     R51C92D.D0 to     R51C92D.F0 test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_859
+ROUTE         1     0.276     R51C92D.F0 to     R51C92C.C1 test_dvi_reveal_coretop_instance/core0/jtag_int_u/n198
+CTOF_DEL    ---     0.163     R51C92C.C1 to     R51C92C.F1 test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_239
+ROUTE         1     0.000     R51C92C.F1 to    R51C92C.DI1 test_dvi_reveal_coretop_instance/core0/jtag_int_u/shift_reg_tr_dout_98__N_593[39] (to jtaghub16_jtck)
+                  --------
+                    6.045   (15.4% logic, 84.6% route), 5 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ep5chub/genblk5_jtage_u to test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_278:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       453     3.924      JTAG.JTCK to    R69C73A.CLK jtaghub16_jtck
+                  --------
+                    3.924   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ep5chub/genblk5_jtage_u to test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_239:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       453     3.924      JTAG.JTCK to    R51C92C.CLK jtaghub16_jtck
+                  --------
+                    3.924   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Error: The following path exceeds requirements by 0.519ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              test_dvi_reveal_coretop_instance/core0/jtag_int_u/tr_dout_bit_cnt_i0_i3  (from jtaghub16_jtck -)
+   Destination:    FF         Data in        test_dvi_reveal_coretop_instance/core0/jtag_int_u/shift_reg_tr_dout_i0_i30  (to jtaghub16_jtck -)
+
+   Delay:               6.001ns  (15.5% logic, 84.5% route), 5 logic levels.
+
+ Constraint Details:
+
+      6.001ns physical path delay test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_277 to test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_235 exceeds
+      5.531ns delay constraint less
+      0.005ns skew and
+      0.044ns DIN_SET requirement (totaling 5.482ns) by 0.519ns
+
+ Physical Path Details:
+
+      Data path test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_277 to test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_235:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.281    R71C74B.CLK to     R71C74B.Q1 test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_277 (from jtaghub16_jtck)
+ROUTE         6     0.710     R71C74B.Q1 to     R69C74D.A1 test_dvi_reveal_coretop_instance/core0/jtag_int_u/tr_dout_bit_cnt[3]
+CTOF_DEL    ---     0.163     R69C74D.A1 to     R69C74D.F1 test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_751
+ROUTE         4     0.625     R69C74D.F1 to     R67C74D.B1 test_dvi_reveal_coretop_instance/core0/jtag_int_u/n10516
+CTOF_DEL    ---     0.163     R67C74D.B1 to     R67C74D.F1 test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_750
+ROUTE        99     3.457     R67C74D.F1 to     R49C84C.B0 test_dvi_reveal_coretop_instance/core0/jtag_int_u/n15
+CTOF_DEL    ---     0.163     R49C84C.B0 to     R49C84C.F0 test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_850
+ROUTE         1     0.276     R49C84C.F0 to     R49C84A.C0 test_dvi_reveal_coretop_instance/core0/jtag_int_u/n207
+CTOF_DEL    ---     0.163     R49C84A.C0 to     R49C84A.F0 test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_235
+ROUTE         1     0.000     R49C84A.F0 to    R49C84A.DI0 test_dvi_reveal_coretop_instance/core0/jtag_int_u/shift_reg_tr_dout_98__N_593[30] (to jtaghub16_jtck)
+                  --------
+                    6.001   (15.5% logic, 84.5% route), 5 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ep5chub/genblk5_jtage_u to test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_277:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       453     3.929      JTAG.JTCK to    R71C74B.CLK jtaghub16_jtck
+                  --------
+                    3.929   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ep5chub/genblk5_jtage_u to test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_235:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       453     3.924      JTAG.JTCK to    R49C84A.CLK jtaghub16_jtck
+                  --------
+                    3.924   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Error: The following path exceeds requirements by 0.493ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              test_dvi_reveal_coretop_instance/core0/jtag_int_u/tr_dout_bit_cnt_i0_i5  (from jtaghub16_jtck -)
+   Destination:    FF         Data in        test_dvi_reveal_coretop_instance/core0/jtag_int_u/shift_reg_tr_dout_i0_i36  (to jtaghub16_jtck -)
+
+   Delay:               5.980ns  (15.6% logic, 84.4% route), 5 logic levels.
+
+ Constraint Details:
+
+      5.980ns physical path delay test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_278 to test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_238 exceeds
+      5.531ns delay constraint less
+      0.000ns skew and
+      0.044ns DIN_SET requirement (totaling 5.487ns) by 0.493ns
+
+ Physical Path Details:
+
+      Data path test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_278 to test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_238:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.281    R69C73A.CLK to     R69C73A.Q1 test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_278 (from jtaghub16_jtck)
+ROUTE         4     0.621     R69C73A.Q1 to     R69C75D.B0 test_dvi_reveal_coretop_instance/core0/jtag_int_u/tr_dout_bit_cnt[5]
+CTOF_DEL    ---     0.163     R69C75D.B0 to     R69C75D.F0 test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_768
+ROUTE         2     0.830     R69C75D.F0 to     R67C74D.A1 test_dvi_reveal_coretop_instance/core0/jtag_int_u/n9454
+CTOF_DEL    ---     0.163     R67C74D.A1 to     R67C74D.F1 test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_750
+ROUTE        99     3.320     R67C74D.F1 to     R55C92C.C0 test_dvi_reveal_coretop_instance/core0/jtag_int_u/n15
+CTOF_DEL    ---     0.163     R55C92C.C0 to     R55C92C.F0 test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_856
+ROUTE         1     0.276     R55C92C.F0 to     R55C92B.C0 test_dvi_reveal_coretop_instance/core0/jtag_int_u/n201
+CTOF_DEL    ---     0.163     R55C92B.C0 to     R55C92B.F0 test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_238
+ROUTE         1     0.000     R55C92B.F0 to    R55C92B.DI0 test_dvi_reveal_coretop_instance/core0/jtag_int_u/shift_reg_tr_dout_98__N_593[36] (to jtaghub16_jtck)
+                  --------
+                    5.980   (15.6% logic, 84.4% route), 5 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ep5chub/genblk5_jtage_u to test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_278:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       453     3.924      JTAG.JTCK to    R69C73A.CLK jtaghub16_jtck
+                  --------
+                    3.924   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ep5chub/genblk5_jtage_u to test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_238:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       453     3.924      JTAG.JTCK to    R55C92B.CLK jtaghub16_jtck
+                  --------
+                    3.924   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Error: The following path exceeds requirements by 0.482ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              test_dvi_reveal_coretop_instance/core0/jtag_int_u/tr_dout_bit_cnt_i0_i7  (from jtaghub16_jtck -)
+   Destination:    FF         Data in        test_dvi_reveal_coretop_instance/core0/tm_u/trace_dout_i0_i45  (to jtaghub16_jtck -)
+
+   Delay:               5.718ns  (13.5% logic, 86.5% route), 4 logic levels.
+
+ Constraint Details:
+
+      5.718ns physical path delay test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_279 to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_450 exceeds
+      5.531ns delay constraint less
+      0.000ns skew and
+      0.295ns CE_SET requirement (totaling 5.236ns) by 0.482ns
+
+ Physical Path Details:
+
+      Data path test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_279 to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_450:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.281    R69C75A.CLK to     R69C75A.Q1 test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_279 (from jtaghub16_jtck)
+ROUTE         3     0.615     R69C75A.Q1 to     R69C74B.B0 test_dvi_reveal_coretop_instance/core0/jtag_int_u/tr_dout_bit_cnt[7]
+CTOF_DEL    ---     0.163     R69C74B.B0 to     R69C74B.F0 test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_789
+ROUTE         2     1.173     R69C74B.F0 to     R83C74D.B1 test_dvi_reveal_coretop_instance/core0/jtag_int_u/n9452
+CTOF_DEL    ---     0.163     R83C74D.B1 to     R83C74D.F1 test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_755
+ROUTE         5     0.586     R83C74D.F1 to     R86C74C.D0 test_dvi_reveal_coretop_instance/core0/n35
+CTOF_DEL    ---     0.163     R86C74C.D0 to     R86C74C.F0 test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_758
+ROUTE        50     2.574     R86C74C.F0 to     R42C75A.CE test_dvi_reveal_coretop_instance/core0/jtck_N_422_enable_233 (to jtaghub16_jtck)
+                  --------
+                    5.718   (13.5% logic, 86.5% route), 4 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ep5chub/genblk5_jtage_u to test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_279:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       453     3.924      JTAG.JTCK to    R69C75A.CLK jtaghub16_jtck
+                  --------
+                    3.924   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ep5chub/genblk5_jtage_u to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_450:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       453     3.924      JTAG.JTCK to    R42C75A.CLK jtaghub16_jtck
+                  --------
+                    3.924   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Error: The following path exceeds requirements by 0.482ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              test_dvi_reveal_coretop_instance/core0/jtag_int_u/tr_dout_bit_cnt_i0_i7  (from jtaghub16_jtck -)
+   Destination:    FF         Data in        test_dvi_reveal_coretop_instance/core0/tm_u/trace_dout_i0_i43  (to jtaghub16_jtck -)
+
+   Delay:               5.718ns  (13.5% logic, 86.5% route), 4 logic levels.
+
+ Constraint Details:
+
+      5.718ns physical path delay test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_279 to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_448 exceeds
+      5.531ns delay constraint less
+      0.000ns skew and
+      0.295ns CE_SET requirement (totaling 5.236ns) by 0.482ns
+
+ Physical Path Details:
+
+      Data path test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_279 to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_448:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.281    R69C75A.CLK to     R69C75A.Q1 test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_279 (from jtaghub16_jtck)
+ROUTE         3     0.615     R69C75A.Q1 to     R69C74B.B0 test_dvi_reveal_coretop_instance/core0/jtag_int_u/tr_dout_bit_cnt[7]
+CTOF_DEL    ---     0.163     R69C74B.B0 to     R69C74B.F0 test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_789
+ROUTE         2     1.173     R69C74B.F0 to     R83C74D.B1 test_dvi_reveal_coretop_instance/core0/jtag_int_u/n9452
+CTOF_DEL    ---     0.163     R83C74D.B1 to     R83C74D.F1 test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_755
+ROUTE         5     0.586     R83C74D.F1 to     R86C74C.D0 test_dvi_reveal_coretop_instance/core0/n35
+CTOF_DEL    ---     0.163     R86C74C.D0 to     R86C74C.F0 test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_758
+ROUTE        50     2.574     R86C74C.F0 to    R62C102C.CE test_dvi_reveal_coretop_instance/core0/jtck_N_422_enable_233 (to jtaghub16_jtck)
+                  --------
+                    5.718   (13.5% logic, 86.5% route), 4 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ep5chub/genblk5_jtage_u to test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_279:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       453     3.924      JTAG.JTCK to    R69C75A.CLK jtaghub16_jtck
+                  --------
+                    3.924   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ep5chub/genblk5_jtage_u to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_448:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       453     3.924      JTAG.JTCK to   R62C102C.CLK jtaghub16_jtck
+                  --------
+                    3.924   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Error: The following path exceeds requirements by 0.482ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              test_dvi_reveal_coretop_instance/core0/jtag_int_u/tr_dout_bit_cnt_i0_i7  (from jtaghub16_jtck -)
+   Destination:    FF         Data in        test_dvi_reveal_coretop_instance/core0/tm_u/trace_dout_i0_i41  (to jtaghub16_jtck -)
+
+   Delay:               5.718ns  (13.5% logic, 86.5% route), 4 logic levels.
+
+ Constraint Details:
+
+      5.718ns physical path delay test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_279 to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_446 exceeds
+      5.531ns delay constraint less
+      0.000ns skew and
+      0.295ns CE_SET requirement (totaling 5.236ns) by 0.482ns
+
+ Physical Path Details:
+
+      Data path test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_279 to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_446:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.281    R69C75A.CLK to     R69C75A.Q1 test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_279 (from jtaghub16_jtck)
+ROUTE         3     0.615     R69C75A.Q1 to     R69C74B.B0 test_dvi_reveal_coretop_instance/core0/jtag_int_u/tr_dout_bit_cnt[7]
+CTOF_DEL    ---     0.163     R69C74B.B0 to     R69C74B.F0 test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_789
+ROUTE         2     1.173     R69C74B.F0 to     R83C74D.B1 test_dvi_reveal_coretop_instance/core0/jtag_int_u/n9452
+CTOF_DEL    ---     0.163     R83C74D.B1 to     R83C74D.F1 test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_755
+ROUTE         5     0.586     R83C74D.F1 to     R86C74C.D0 test_dvi_reveal_coretop_instance/core0/n35
+CTOF_DEL    ---     0.163     R86C74C.D0 to     R86C74C.F0 test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_758
+ROUTE        50     2.574     R86C74C.F0 to    R62C100A.CE test_dvi_reveal_coretop_instance/core0/jtck_N_422_enable_233 (to jtaghub16_jtck)
+                  --------
+                    5.718   (13.5% logic, 86.5% route), 4 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ep5chub/genblk5_jtage_u to test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_279:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       453     3.924      JTAG.JTCK to    R69C75A.CLK jtaghub16_jtck
+                  --------
+                    3.924   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ep5chub/genblk5_jtage_u to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_446:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       453     3.924      JTAG.JTCK to   R62C100A.CLK jtaghub16_jtck
+                  --------
+                    3.924   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Error: The following path exceeds requirements by 0.482ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              test_dvi_reveal_coretop_instance/core0/jtag_int_u/tr_dout_bit_cnt_i0_i7  (from jtaghub16_jtck -)
+   Destination:    FF         Data in        test_dvi_reveal_coretop_instance/core0/tm_u/trace_dout_i0_i39  (to jtaghub16_jtck -)
+
+   Delay:               5.718ns  (13.5% logic, 86.5% route), 4 logic levels.
+
+ Constraint Details:
+
+      5.718ns physical path delay test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_279 to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_444 exceeds
+      5.531ns delay constraint less
+      0.000ns skew and
+      0.295ns CE_SET requirement (totaling 5.236ns) by 0.482ns
+
+ Physical Path Details:
+
+      Data path test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_279 to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_444:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.281    R69C75A.CLK to     R69C75A.Q1 test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_279 (from jtaghub16_jtck)
+ROUTE         3     0.615     R69C75A.Q1 to     R69C74B.B0 test_dvi_reveal_coretop_instance/core0/jtag_int_u/tr_dout_bit_cnt[7]
+CTOF_DEL    ---     0.163     R69C74B.B0 to     R69C74B.F0 test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_789
+ROUTE         2     1.173     R69C74B.F0 to     R83C74D.B1 test_dvi_reveal_coretop_instance/core0/jtag_int_u/n9452
+CTOF_DEL    ---     0.163     R83C74D.B1 to     R83C74D.F1 test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_755
+ROUTE         5     0.586     R83C74D.F1 to     R86C74C.D0 test_dvi_reveal_coretop_instance/core0/n35
+CTOF_DEL    ---     0.163     R86C74C.D0 to     R86C74C.F0 test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_758
+ROUTE        50     2.574     R86C74C.F0 to    R60C102A.CE test_dvi_reveal_coretop_instance/core0/jtck_N_422_enable_233 (to jtaghub16_jtck)
+                  --------
+                    5.718   (13.5% logic, 86.5% route), 4 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ep5chub/genblk5_jtage_u to test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_279:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       453     3.924      JTAG.JTCK to    R69C75A.CLK jtaghub16_jtck
+                  --------
+                    3.924   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ep5chub/genblk5_jtage_u to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_444:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       453     3.924      JTAG.JTCK to   R60C102A.CLK jtaghub16_jtck
+                  --------
+                    3.924   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Error: The following path exceeds requirements by 0.482ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              test_dvi_reveal_coretop_instance/core0/jtag_int_u/tr_dout_bit_cnt_i0_i7  (from jtaghub16_jtck -)
+   Destination:    FF         Data in        test_dvi_reveal_coretop_instance/core0/tm_u/trace_dout_i0_i37  (to jtaghub16_jtck -)
+
+   Delay:               5.718ns  (13.5% logic, 86.5% route), 4 logic levels.
+
+ Constraint Details:
+
+      5.718ns physical path delay test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_279 to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_442 exceeds
+      5.531ns delay constraint less
+      0.000ns skew and
+      0.295ns CE_SET requirement (totaling 5.236ns) by 0.482ns
+
+ Physical Path Details:
+
+      Data path test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_279 to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_442:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.281    R69C75A.CLK to     R69C75A.Q1 test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_279 (from jtaghub16_jtck)
+ROUTE         3     0.615     R69C75A.Q1 to     R69C74B.B0 test_dvi_reveal_coretop_instance/core0/jtag_int_u/tr_dout_bit_cnt[7]
+CTOF_DEL    ---     0.163     R69C74B.B0 to     R69C74B.F0 test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_789
+ROUTE         2     1.173     R69C74B.F0 to     R83C74D.B1 test_dvi_reveal_coretop_instance/core0/jtag_int_u/n9452
+CTOF_DEL    ---     0.163     R83C74D.B1 to     R83C74D.F1 test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_755
+ROUTE         5     0.586     R83C74D.F1 to     R86C74C.D0 test_dvi_reveal_coretop_instance/core0/n35
+CTOF_DEL    ---     0.163     R86C74C.D0 to     R86C74C.F0 test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_758
+ROUTE        50     2.574     R86C74C.F0 to    R62C101C.CE test_dvi_reveal_coretop_instance/core0/jtck_N_422_enable_233 (to jtaghub16_jtck)
+                  --------
+                    5.718   (13.5% logic, 86.5% route), 4 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ep5chub/genblk5_jtage_u to test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_279:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       453     3.924      JTAG.JTCK to    R69C75A.CLK jtaghub16_jtck
+                  --------
+                    3.924   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ep5chub/genblk5_jtage_u to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_442:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       453     3.924      JTAG.JTCK to   R62C101C.CLK jtaghub16_jtck
+                  --------
+                    3.924   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Error: The following path exceeds requirements by 0.482ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              test_dvi_reveal_coretop_instance/core0/jtag_int_u/tr_dout_bit_cnt_i0_i7  (from jtaghub16_jtck -)
+   Destination:    FF         Data in        test_dvi_reveal_coretop_instance/core0/tm_u/trace_dout_i0_i47  (to jtaghub16_jtck -)
+
+   Delay:               5.718ns  (13.5% logic, 86.5% route), 4 logic levels.
+
+ Constraint Details:
+
+      5.718ns physical path delay test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_279 to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_452 exceeds
+      5.531ns delay constraint less
+      0.000ns skew and
+      0.295ns CE_SET requirement (totaling 5.236ns) by 0.482ns
+
+ Physical Path Details:
+
+      Data path test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_279 to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_452:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.281    R69C75A.CLK to     R69C75A.Q1 test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_279 (from jtaghub16_jtck)
+ROUTE         3     0.615     R69C75A.Q1 to     R69C74B.B0 test_dvi_reveal_coretop_instance/core0/jtag_int_u/tr_dout_bit_cnt[7]
+CTOF_DEL    ---     0.163     R69C74B.B0 to     R69C74B.F0 test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_789
+ROUTE         2     1.173     R69C74B.F0 to     R83C74D.B1 test_dvi_reveal_coretop_instance/core0/jtag_int_u/n9452
+CTOF_DEL    ---     0.163     R83C74D.B1 to     R83C74D.F1 test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_755
+ROUTE         5     0.586     R83C74D.F1 to     R86C74C.D0 test_dvi_reveal_coretop_instance/core0/n35
+CTOF_DEL    ---     0.163     R86C74C.D0 to     R86C74C.F0 test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_758
+ROUTE        50     2.574     R86C74C.F0 to     R42C75C.CE test_dvi_reveal_coretop_instance/core0/jtck_N_422_enable_233 (to jtaghub16_jtck)
+                  --------
+                    5.718   (13.5% logic, 86.5% route), 4 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ep5chub/genblk5_jtage_u to test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_279:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       453     3.924      JTAG.JTCK to    R69C75A.CLK jtaghub16_jtck
+                  --------
+                    3.924   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ep5chub/genblk5_jtage_u to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_452:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       453     3.924      JTAG.JTCK to    R42C75C.CLK jtaghub16_jtck
+                  --------
+                    3.924   (0.0% logic, 100.0% route), 0 logic levels.
+
+Warning: 162.311MHz is the maximum frequency for this preference.
+
+<A name="ptwr_set_rs"></A><B><U><big>Report Summary</big></U></B>
+--------------
+----------------------------------------------------------------------------
+Preference                              |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "ODCK_N" 305.904000 MHz ; |  305.904 MHz|  235.960 MHz|   6 *
+                                        |             |             |
+FREQUENCY NET "jtaghub16_jtck"          |             |             |
+180.799000 MHz ;                        |  180.799 MHz|  162.311 MHz|   5 *
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+2 preferences(marked by "*" above) not met.
+
+----------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+----------------------------------------------------------------------------
+test_dvi_reveal_coretop_instance/core0/t|        |        |
+<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=test_dvi_reveal_coretop_instance/core0/tm_u/clear_N_1855">m_u/clear_N_1855</a>                        |       5|     424|     26.87%
+                                        |        |        |
+test_dvi_reveal_coretop_instance/core0/n|        |        |
+<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=test_dvi_reveal_coretop_instance/core0/n35">35</a>                                      |       5|     342|     21.67%
+                                        |        |        |
+test_dvi_reveal_coretop_instance/core0/j|        |        |
+<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=test_dvi_reveal_coretop_instance/core0/jtck_N_422_enable_233">tck_N_422_enable_233</a>                    |      50|     321|     20.34%
+                                        |        |        |
+test_dvi_reveal_coretop_instance/core0/t|        |        |
+<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=test_dvi_reveal_coretop_instance/core0/tm_u/n10467">m_u/n10467</a>                              |      15|     296|     18.76%
+                                        |        |        |
+test_dvi_reveal_coretop_instance/core0/t|        |        |
+<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=test_dvi_reveal_coretop_instance/core0/tm_u/clk_N_keep_enable_115">m_u/clk_N_keep_enable_115</a>               |       9|     274|     17.36%
+                                        |        |        |
+<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=n27">n27</a>                                     |       4|     246|     15.59%
+                                        |        |        |
+<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=n7706">n7706</a>                                   |       1|     182|     11.53%
+                                        |        |        |
+test_dvi_reveal_coretop_instance/core0/j|        |        |
+<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=test_dvi_reveal_coretop_instance/core0/jtag_int_u/n9030">tag_int_u/n9030</a>                         |       1|     170|     10.77%
+                                        |        |        |
+----------------------------------------------------------------------------
+
+
+<A name="ptwr_set_clkda"></A><B><U><big>Clock Domains Analysis</big></U></B>
+------------------------
+
+No clock domain analysis is done. To analyze clock domains, please remove the BLOCK INTERCLOCKDOMAIN PATHS preference.
+
+
+<A name="ptwr_set_ts"></A><B><U><big>Timing summary (Setup):</big></U></B>
+---------------
+
+Timing errors: 1578  Score: 524013
+Cumulative negative slack: 524013
+
+Constraints cover 16378 paths, 2 nets, and 11751 connections (97.84% coverage)
+
+--------------------------------------------------------------------------------
+<A name="Par_Twr_hold"></A><B><U><big>Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.11.3.469</big></U></B>
+Mon Mar 29 18:52:28 2021
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+<A name="ptwr_hold_ri"></A><B><U><big>Report Information</big></U></B>
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 7 -sphld m -o dvi403_impl4.twr -gui -msgset /home/diamond/SharedFolder/DiamondProjFolder/promote.xml dvi403_impl4.ncd dvi403_impl4.prf 
+Design file:     dvi403_impl4.ncd
+Preference file: dvi403_impl4.prf
+Device,speed:    LFE3-70EA,m
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+<A name="ptwr_hold_ps"></A><B><U><big>Preference Summary</big></U></B>
+
+<LI><A href='#par_twr_pref_1_0' Target='right'>FREQUENCY NET "ODCK_N" 305.904000 MHz (0 errors)</A></LI>            4096 items scored, 0 timing errors detected.
+
+<LI><A href='#par_twr_pref_1_1' Target='right'>FREQUENCY NET "jtaghub16_jtck" 180.799000 MHz (0 errors)</A></LI>            4096 items scored, 0 timing errors detected.
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+BLOCK INTERCLOCKDOMAIN PATHS
+BLOCK JTAG PATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+<A name="par_twr_pref_1_0"></A>Preference: FREQUENCY NET "ODCK_N" 305.904000 MHz ;
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.046ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              test_dvi_reveal_coretop_instance/core0/tm_u/trace_din_d_i61  (from ODCK_N +)
+   Destination:    DP16KC     Port           test_dvi_reveal_coretop_instance/core0/tm_u/pmi_ram_dpECP3binarynonespeedasyncdisablereg991416384991416384/pmi_ram_dpEbnonesadr991416384991416384122adcc5_7_6_4(ASIC)  (to ODCK_N +)
+
+   Delay:               0.218ns  (44.0% logic, 56.0% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.218ns physical path delay test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_377 to test_dvi_reveal_coretop_instance/core0/tm_u/pmi_ram_dpECP3binarynonespeedasyncdisablereg991416384991416384/pmi_ram_dpEbnonesadr991416384991416384122adcc5_7_6_4 meets
+      0.113ns DATA_HLD and
+      0.000ns delay constraint less
+     -0.059ns skew requirement (totaling 0.172ns) by 0.046ns
+
+ Physical Path Details:
+
+      Data path test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_377 to test_dvi_reveal_coretop_instance/core0/tm_u/pmi_ram_dpECP3binarynonespeedasyncdisablereg991416384991416384/pmi_ram_dpEbnonesadr991416384991416384122adcc5_7_6_4:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.096    R60C88A.CLK to     R60C88A.Q1 test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_377 (from ODCK_N)
+ROUTE         8     0.122     R60C88A.Q1 to *R_R61C86.DIA7 test_dvi_reveal_coretop_instance/core0/tm_u/trace_din_d[61] (to ODCK_N)
+                  --------
+                    0.218   (44.0% logic, 56.0% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ODCK to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_377:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     0.480      U20.PADDI to    R60C88A.CLK ODCK_N
+                  --------
+                    0.480   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ODCK to test_dvi_reveal_coretop_instance/core0/tm_u/pmi_ram_dpECP3binarynonespeedasyncdisablereg991416384991416384/pmi_ram_dpEbnonesadr991416384991416384122adcc5_7_6_4:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     0.539      U20.PADDI to *R_R61C86.CLKA ODCK_N
+                  --------
+                    0.539   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.117ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              test_dvi_reveal_coretop_instance/core0/tm_u/trace_din_d_i98  (from ODCK_N +)
+   Destination:    DP16KC     Port           test_dvi_reveal_coretop_instance/core0/tm_u/pmi_ram_dpECP3binarynonespeedasyncdisablereg991416384991416384/pmi_ram_dpEbnonesadr991416384991416384122adcc5_7_10_0(ASIC)  (to ODCK_N +)
+
+   Delay:               0.289ns  (33.2% logic, 66.8% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.289ns physical path delay test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_396 to test_dvi_reveal_coretop_instance/core0/tm_u/pmi_ram_dpECP3binarynonespeedasyncdisablereg991416384991416384/pmi_ram_dpEbnonesadr991416384991416384122adcc5_7_10_0 meets
+      0.113ns DATA_HLD and
+      0.000ns delay constraint less
+     -0.059ns skew requirement (totaling 0.172ns) by 0.117ns
+
+ Physical Path Details:
+
+      Data path test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_396 to test_dvi_reveal_coretop_instance/core0/tm_u/pmi_ram_dpECP3binarynonespeedasyncdisablereg991416384991416384/pmi_ram_dpEbnonesadr991416384991416384122adcc5_7_10_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.096    R77C65A.CLK to     R77C65A.Q0 test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_396 (from ODCK_N)
+ROUTE         8     0.193     R77C65A.Q0 to *R_R79C62.DIA8 test_dvi_reveal_coretop_instance/core0/tm_u/trace_din_d[98] (to ODCK_N)
+                  --------
+                    0.289   (33.2% logic, 66.8% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ODCK to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_396:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     0.481      U20.PADDI to    R77C65A.CLK ODCK_N
+                  --------
+                    0.481   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ODCK to test_dvi_reveal_coretop_instance/core0/tm_u/pmi_ram_dpECP3binarynonespeedasyncdisablereg991416384991416384/pmi_ram_dpEbnonesadr991416384991416384122adcc5_7_10_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     0.540      U20.PADDI to *R_R79C62.CLKA ODCK_N
+                  --------
+                    0.540   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.129ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              test_dvi_reveal_coretop_instance/core0/tm_u/trace_din_d_i16  (from ODCK_N +)
+   Destination:    DP16KC     Port           test_dvi_reveal_coretop_instance/core0/tm_u/pmi_ram_dpECP3binarynonespeedasyncdisablereg991416384991416384/pmi_ram_dpEbnonesadr991416384991416384122adcc5_3_1_53(ASIC)  (to ODCK_N +)
+
+   Delay:               0.301ns  (31.9% logic, 68.1% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.301ns physical path delay test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_355 to test_dvi_reveal_coretop_instance/core0/tm_u/pmi_ram_dpECP3binarynonespeedasyncdisablereg991416384991416384/pmi_ram_dpEbnonesadr991416384991416384122adcc5_3_1_53 meets
+      0.113ns DATA_HLD and
+      0.000ns delay constraint less
+     -0.059ns skew requirement (totaling 0.172ns) by 0.129ns
+
+ Physical Path Details:
+
+      Data path test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_355 to test_dvi_reveal_coretop_instance/core0/tm_u/pmi_ram_dpECP3binarynonespeedasyncdisablereg991416384991416384/pmi_ram_dpEbnonesadr991416384991416384122adcc5_3_1_53:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.096    R62C66C.CLK to     R62C66C.Q0 test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_355 (from ODCK_N)
+ROUTE         8     0.205     R62C66C.Q0 to *R_R61C65.DIA7 test_dvi_reveal_coretop_instance/core0/tm_u/trace_din_d[16] (to ODCK_N)
+                  --------
+                    0.301   (31.9% logic, 68.1% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ODCK to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_355:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     0.480      U20.PADDI to    R62C66C.CLK ODCK_N
+                  --------
+                    0.480   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ODCK to test_dvi_reveal_coretop_instance/core0/tm_u/pmi_ram_dpECP3binarynonespeedasyncdisablereg991416384991416384/pmi_ram_dpEbnonesadr991416384991416384122adcc5_3_1_53:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     0.539      U20.PADDI to *R_R61C65.CLKA ODCK_N
+                  --------
+                    0.539   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.132ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              test_dvi_reveal_coretop_instance/core0/tm_u/trace_din_d_i80  (from ODCK_N +)
+   Destination:    DP16KC     Port           test_dvi_reveal_coretop_instance/core0/tm_u/pmi_ram_dpECP3binarynonespeedasyncdisablereg991416384991416384/pmi_ram_dpEbnonesadr991416384991416384122adcc5_2_8_57(ASIC)  (to ODCK_N +)
+
+   Delay:               0.304ns  (31.6% logic, 68.4% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.304ns physical path delay test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_387 to test_dvi_reveal_coretop_instance/core0/tm_u/pmi_ram_dpECP3binarynonespeedasyncdisablereg991416384991416384/pmi_ram_dpEbnonesadr991416384991416384122adcc5_2_8_57 meets
+      0.113ns DATA_HLD and
+      0.000ns delay constraint less
+     -0.059ns skew requirement (totaling 0.172ns) by 0.132ns
+
+ Physical Path Details:
+
+      Data path test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_387 to test_dvi_reveal_coretop_instance/core0/tm_u/pmi_ram_dpECP3binarynonespeedasyncdisablereg991416384991416384/pmi_ram_dpEbnonesadr991416384991416384122adcc5_2_8_57:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.096    R80C88A.CLK to     R80C88A.Q0 test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_387 (from ODCK_N)
+ROUTE         8     0.208     R80C88A.Q0 to *R_R79C86.DIA8 test_dvi_reveal_coretop_instance/core0/tm_u/trace_din_d[80] (to ODCK_N)
+                  --------
+                    0.304   (31.6% logic, 68.4% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ODCK to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_387:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     0.481      U20.PADDI to    R80C88A.CLK ODCK_N
+                  --------
+                    0.481   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ODCK to test_dvi_reveal_coretop_instance/core0/tm_u/pmi_ram_dpECP3binarynonespeedasyncdisablereg991416384991416384/pmi_ram_dpEbnonesadr991416384991416384122adcc5_2_8_57:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     0.540      U20.PADDI to *R_R79C86.CLKA ODCK_N
+                  --------
+                    0.540   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.151ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              test_dvi_reveal_coretop_instance/core0/tm_u/trace_din_d_i37  (from ODCK_N +)
+   Destination:    DP16KC     Port           test_dvi_reveal_coretop_instance/core0/tm_u/pmi_ram_dpECP3binarynonespeedasyncdisablereg991416384991416384/pmi_ram_dpEbnonesadr991416384991416384122adcc5_3_4_50(ASIC)  (to ODCK_N +)
+
+   Delay:               0.323ns  (29.7% logic, 70.3% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.323ns physical path delay test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_365 to test_dvi_reveal_coretop_instance/core0/tm_u/pmi_ram_dpECP3binarynonespeedasyncdisablereg991416384991416384/pmi_ram_dpEbnonesadr991416384991416384122adcc5_3_4_50 meets
+      0.113ns DATA_HLD and
+      0.000ns delay constraint less
+     -0.059ns skew requirement (totaling 0.172ns) by 0.151ns
+
+ Physical Path Details:
+
+      Data path test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_365 to test_dvi_reveal_coretop_instance/core0/tm_u/pmi_ram_dpECP3binarynonespeedasyncdisablereg991416384991416384/pmi_ram_dpEbnonesadr991416384991416384122adcc5_3_4_50:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.096   R60C108A.CLK to    R60C108A.Q1 test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_365 (from ODCK_N)
+ROUTE         8     0.227    R60C108A.Q1 to *_R61C107.DIA1 test_dvi_reveal_coretop_instance/core0/tm_u/trace_din_d[37] (to ODCK_N)
+                  --------
+                    0.323   (29.7% logic, 70.3% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ODCK to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_365:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     0.480      U20.PADDI to   R60C108A.CLK ODCK_N
+                  --------
+                    0.480   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ODCK to test_dvi_reveal_coretop_instance/core0/tm_u/pmi_ram_dpECP3binarynonespeedasyncdisablereg991416384991416384/pmi_ram_dpEbnonesadr991416384991416384122adcc5_3_4_50:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     0.539      U20.PADDI to *_R61C107.CLKA ODCK_N
+                  --------
+                    0.539   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.153ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              test_dvi_reveal_coretop_instance/core0/tm_u/trace_din_d_i89  (from ODCK_N +)
+   Destination:    DP16KC     Port           test_dvi_reveal_coretop_instance/core0/tm_u/pmi_ram_dpECP3binarynonespeedasyncdisablereg991416384991416384/pmi_ram_dpEbnonesadr991416384991416384122adcc5_5_9_23(ASIC)  (to ODCK_N +)
+
+   Delay:               0.325ns  (29.5% logic, 70.5% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.325ns physical path delay test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_391 to test_dvi_reveal_coretop_instance/core0/tm_u/pmi_ram_dpECP3binarynonespeedasyncdisablereg991416384991416384/pmi_ram_dpEbnonesadr991416384991416384122adcc5_5_9_23 meets
+      0.113ns DATA_HLD and
+      0.000ns delay constraint less
+     -0.059ns skew requirement (totaling 0.172ns) by 0.153ns
+
+ Physical Path Details:
+
+      Data path test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_391 to test_dvi_reveal_coretop_instance/core0/tm_u/pmi_ram_dpECP3binarynonespeedasyncdisablereg991416384991416384/pmi_ram_dpEbnonesadr991416384991416384122adcc5_5_9_23:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.096    R80C39A.CLK to     R80C39A.Q1 test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_391 (from ODCK_N)
+ROUTE         8     0.229     R80C39A.Q1 to *R_R79C38.DIA8 test_dvi_reveal_coretop_instance/core0/tm_u/trace_din_d[89] (to ODCK_N)
+                  --------
+                    0.325   (29.5% logic, 70.5% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ODCK to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_391:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     0.481      U20.PADDI to    R80C39A.CLK ODCK_N
+                  --------
+                    0.481   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ODCK to test_dvi_reveal_coretop_instance/core0/tm_u/pmi_ram_dpECP3binarynonespeedasyncdisablereg991416384991416384/pmi_ram_dpEbnonesadr991416384991416384122adcc5_5_9_23:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     0.540      U20.PADDI to *R_R79C38.CLKA ODCK_N
+                  --------
+                    0.540   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.153ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              test_dvi_reveal_coretop_instance/core0/tm_u/trace_din_d_i24  (from ODCK_N +)
+   Destination:    DP16KC     Port           test_dvi_reveal_coretop_instance/core0/tm_u/pmi_ram_dpECP3binarynonespeedasyncdisablereg991416384991416384/pmi_ram_dpEbnonesadr991416384991416384122adcc5_1_2_74(ASIC)  (to ODCK_N +)
+
+   Delay:               0.325ns  (29.5% logic, 70.5% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.325ns physical path delay test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_359 to test_dvi_reveal_coretop_instance/core0/tm_u/pmi_ram_dpECP3binarynonespeedasyncdisablereg991416384991416384/pmi_ram_dpEbnonesadr991416384991416384122adcc5_1_2_74 meets
+      0.113ns DATA_HLD and
+      0.000ns delay constraint less
+     -0.059ns skew requirement (totaling 0.172ns) by 0.153ns
+
+ Physical Path Details:
+
+      Data path test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_359 to test_dvi_reveal_coretop_instance/core0/tm_u/pmi_ram_dpECP3binarynonespeedasyncdisablereg991416384991416384/pmi_ram_dpEbnonesadr991416384991416384122adcc5_1_2_74:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.096    R45C62C.CLK to     R45C62C.Q0 test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_359 (from ODCK_N)
+ROUTE         8     0.229     R45C62C.Q0 to *R_R43C59.DIA6 test_dvi_reveal_coretop_instance/core0/tm_u/trace_din_d[24] (to ODCK_N)
+                  --------
+                    0.325   (29.5% logic, 70.5% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ODCK to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_359:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     0.480      U20.PADDI to    R45C62C.CLK ODCK_N
+                  --------
+                    0.480   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ODCK to test_dvi_reveal_coretop_instance/core0/tm_u/pmi_ram_dpECP3binarynonespeedasyncdisablereg991416384991416384/pmi_ram_dpEbnonesadr991416384991416384122adcc5_1_2_74:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     0.539      U20.PADDI to *R_R43C59.CLKA ODCK_N
+                  --------
+                    0.539   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.153ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              test_dvi_reveal_coretop_instance/core0/tm_u/trace_din_d_i92  (from ODCK_N +)
+   Destination:    DP16KC     Port           test_dvi_reveal_coretop_instance/core0/tm_u/pmi_ram_dpECP3binarynonespeedasyncdisablereg991416384991416384/pmi_ram_dpEbnonesadr991416384991416384122adcc5_5_10_22(ASIC)  (to ODCK_N +)
+
+   Delay:               0.325ns  (29.5% logic, 70.5% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.325ns physical path delay test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_393 to test_dvi_reveal_coretop_instance/core0/tm_u/pmi_ram_dpECP3binarynonespeedasyncdisablereg991416384991416384/pmi_ram_dpEbnonesadr991416384991416384122adcc5_5_10_22 meets
+      0.113ns DATA_HLD and
+      0.000ns delay constraint less
+     -0.059ns skew requirement (totaling 0.172ns) by 0.153ns
+
+ Physical Path Details:
+
+      Data path test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_393 to test_dvi_reveal_coretop_instance/core0/tm_u/pmi_ram_dpECP3binarynonespeedasyncdisablereg991416384991416384/pmi_ram_dpEbnonesadr991416384991416384122adcc5_5_10_22:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.096    R80C53A.CLK to     R80C53A.Q0 test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_393 (from ODCK_N)
+ROUTE         8     0.229     R80C53A.Q0 to *R_R79C53.DIA2 test_dvi_reveal_coretop_instance/core0/tm_u/trace_din_d[92] (to ODCK_N)
+                  --------
+                    0.325   (29.5% logic, 70.5% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ODCK to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_393:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     0.481      U20.PADDI to    R80C53A.CLK ODCK_N
+                  --------
+                    0.481   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ODCK to test_dvi_reveal_coretop_instance/core0/tm_u/pmi_ram_dpECP3binarynonespeedasyncdisablereg991416384991416384/pmi_ram_dpEbnonesadr991416384991416384122adcc5_5_10_22:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     0.540      U20.PADDI to *R_R79C53.CLKA ODCK_N
+                  --------
+                    0.540   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.153ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              test_dvi_reveal_coretop_instance/core0/tm_u/trace_din_d_i17  (from ODCK_N +)
+   Destination:    DP16KC     Port           test_dvi_reveal_coretop_instance/core0/tm_u/pmi_ram_dpECP3binarynonespeedasyncdisablereg991416384991416384/pmi_ram_dpEbnonesadr991416384991416384122adcc5_3_1_53(ASIC)  (to ODCK_N +)
+
+   Delay:               0.325ns  (29.5% logic, 70.5% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.325ns physical path delay test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_355 to test_dvi_reveal_coretop_instance/core0/tm_u/pmi_ram_dpECP3binarynonespeedasyncdisablereg991416384991416384/pmi_ram_dpEbnonesadr991416384991416384122adcc5_3_1_53 meets
+      0.113ns DATA_HLD and
+      0.000ns delay constraint less
+     -0.059ns skew requirement (totaling 0.172ns) by 0.153ns
+
+ Physical Path Details:
+
+      Data path test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_355 to test_dvi_reveal_coretop_instance/core0/tm_u/pmi_ram_dpECP3binarynonespeedasyncdisablereg991416384991416384/pmi_ram_dpEbnonesadr991416384991416384122adcc5_3_1_53:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.096    R62C66C.CLK to     R62C66C.Q1 test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_355 (from ODCK_N)
+ROUTE         8     0.229     R62C66C.Q1 to *R_R61C65.DIA8 test_dvi_reveal_coretop_instance/core0/tm_u/trace_din_d[17] (to ODCK_N)
+                  --------
+                    0.325   (29.5% logic, 70.5% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ODCK to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_355:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     0.480      U20.PADDI to    R62C66C.CLK ODCK_N
+                  --------
+                    0.480   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ODCK to test_dvi_reveal_coretop_instance/core0/tm_u/pmi_ram_dpECP3binarynonespeedasyncdisablereg991416384991416384/pmi_ram_dpEbnonesadr991416384991416384122adcc5_3_1_53:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     0.539      U20.PADDI to *R_R61C65.CLKA ODCK_N
+                  --------
+                    0.539   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.153ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              test_dvi_reveal_coretop_instance/core0/tm_u/trace_din_d_i11  (from ODCK_N +)
+   Destination:    DP16KC     Port           test_dvi_reveal_coretop_instance/core0/tm_u/pmi_ram_dpECP3binarynonespeedasyncdisablereg991416384991416384/pmi_ram_dpEbnonesadr991416384991416384122adcc5_3_1_53(ASIC)  (to ODCK_N +)
+
+   Delay:               0.325ns  (29.5% logic, 70.5% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.325ns physical path delay test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_352 to test_dvi_reveal_coretop_instance/core0/tm_u/pmi_ram_dpECP3binarynonespeedasyncdisablereg991416384991416384/pmi_ram_dpEbnonesadr991416384991416384122adcc5_3_1_53 meets
+      0.113ns DATA_HLD and
+      0.000ns delay constraint less
+     -0.059ns skew requirement (totaling 0.172ns) by 0.153ns
+
+ Physical Path Details:
+
+      Data path test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_352 to test_dvi_reveal_coretop_instance/core0/tm_u/pmi_ram_dpECP3binarynonespeedasyncdisablereg991416384991416384/pmi_ram_dpEbnonesadr991416384991416384122adcc5_3_1_53:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.096    R63C65A.CLK to     R63C65A.Q1 test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_352 (from ODCK_N)
+ROUTE         8     0.229     R63C65A.Q1 to *R_R61C65.DIA2 test_dvi_reveal_coretop_instance/core0/tm_u/trace_din_d[11] (to ODCK_N)
+                  --------
+                    0.325   (29.5% logic, 70.5% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ODCK to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_352:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     0.480      U20.PADDI to    R63C65A.CLK ODCK_N
+                  --------
+                    0.480   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ODCK to test_dvi_reveal_coretop_instance/core0/tm_u/pmi_ram_dpECP3binarynonespeedasyncdisablereg991416384991416384/pmi_ram_dpEbnonesadr991416384991416384122adcc5_3_1_53:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       428     0.539      U20.PADDI to *R_R61C65.CLKA ODCK_N
+                  --------
+                    0.539   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+================================================================================
+<A name="par_twr_pref_1_1"></A>Preference: FREQUENCY NET "jtaghub16_jtck" 180.799000 MHz ;
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.168ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              test_dvi_reveal_coretop_instance/core0/jtag_int_u/tt_crc_en_325  (from jtaghub16_jtck -)
+   Destination:    FF         Data in        test_dvi_reveal_coretop_instance/core0/jtag_int_u/tt_crc_en_325  (to jtaghub16_jtck -)
+
+   Delay:               0.199ns  (78.9% logic, 21.1% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.199ns physical path delay SLICE_562 to SLICE_562 meets
+      0.031ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.031ns) by 0.168ns
+
+ Physical Path Details:
+
+      Data path SLICE_562 to SLICE_562:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.099    R65C72A.CLK to     R65C72A.Q0 SLICE_562 (from jtaghub16_jtck)
+ROUTE        18     0.042     R65C72A.Q0 to     R65C72A.D0 tt_crc_en
+CTOF_DEL    ---     0.058     R65C72A.D0 to     R65C72A.F0 SLICE_562
+ROUTE         1     0.000     R65C72A.F0 to    R65C72A.DI0 n9778 (to jtaghub16_jtck)
+                  --------
+                    0.199   (78.9% logic, 21.1% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ep5chub/genblk5_jtage_u to SLICE_562:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       453     1.729      JTAG.JTCK to    R65C72A.CLK jtaghub16_jtck
+                  --------
+                    1.729   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ep5chub/genblk5_jtage_u to SLICE_562:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       453     1.729      JTAG.JTCK to    R65C72A.CLK jtaghub16_jtck
+                  --------
+                    1.729   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.168ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              test_dvi_reveal_coretop_instance/core0/tm_u/tm_rd_addr_cntr_746__i11  (from jtaghub16_jtck -)
+   Destination:    FF         Data in        test_dvi_reveal_coretop_instance/core0/tm_u/tm_rd_addr_cntr_746__i11  (to jtaghub16_jtck -)
+
+   Delay:               0.199ns  (78.9% logic, 21.1% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.199ns physical path delay test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_97 to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_97 meets
+      0.031ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.031ns) by 0.168ns
+
+ Physical Path Details:
+
+      Data path test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_97 to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_97:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.099    R71C77A.CLK to     R71C77A.Q0 test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_97 (from jtaghub16_jtck)
+ROUTE        90     0.042     R71C77A.Q0 to     R71C77A.D0 test_dvi_reveal_coretop_instance/core0/tm_u/tm_rd_addr_cntr[11]
+CTOF_DEL    ---     0.058     R71C77A.D0 to     R71C77A.F0 test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_97
+ROUTE         1     0.000     R71C77A.F0 to    R71C77A.DI0 test_dvi_reveal_coretop_instance/core0/tm_u/n64_adj_1890 (to jtaghub16_jtck)
+                  --------
+                    0.199   (78.9% logic, 21.1% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ep5chub/genblk5_jtage_u to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_97:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       453     1.730      JTAG.JTCK to    R71C77A.CLK jtaghub16_jtck
+                  --------
+                    1.730   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ep5chub/genblk5_jtage_u to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_97:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       453     1.730      JTAG.JTCK to    R71C77A.CLK jtaghub16_jtck
+                  --------
+                    1.730   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.168ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              test_dvi_reveal_coretop_instance/core0/jtag_int_u/parity_checker_299  (from jtaghub16_jtck -)
+   Destination:    FF         Data in        test_dvi_reveal_coretop_instance/core0/jtag_int_u/parity_checker_299  (to jtaghub16_jtck -)
+
+   Delay:               0.199ns  (78.9% logic, 21.1% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.199ns physical path delay test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_216 to test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_216 meets
+      0.031ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.031ns) by 0.168ns
+
+ Physical Path Details:
+
+      Data path test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_216 to test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_216:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.099    R66C72A.CLK to     R66C72A.Q0 test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_216 (from jtaghub16_jtck)
+ROUTE         2     0.042     R66C72A.Q0 to     R66C72A.D0 test_dvi_reveal_coretop_instance/core0/jtag_int_u/parity_checker
+CTOF_DEL    ---     0.058     R66C72A.D0 to     R66C72A.F0 test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_216
+ROUTE         1     0.000     R66C72A.F0 to    R66C72A.DI0 test_dvi_reveal_coretop_instance/core0/jtag_int_u/parity_checker_N_856 (to jtaghub16_jtck)
+                  --------
+                    0.199   (78.9% logic, 21.1% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ep5chub/genblk5_jtage_u to test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_216:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       453     1.729      JTAG.JTCK to    R66C72A.CLK jtaghub16_jtck
+                  --------
+                    1.729   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ep5chub/genblk5_jtage_u to test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_216:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       453     1.729      JTAG.JTCK to    R66C72A.CLK jtaghub16_jtck
+                  --------
+                    1.729   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.168ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              test_dvi_reveal_coretop_instance/core0/tm_u/tm_rd_addr_cntr_746__i5  (from jtaghub16_jtck -)
+   Destination:    FF         Data in        test_dvi_reveal_coretop_instance/core0/tm_u/tm_rd_addr_cntr_746__i5  (to jtaghub16_jtck -)
+
+   Delay:               0.199ns  (78.9% logic, 21.1% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.199ns physical path delay test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_100 to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_100 meets
+      0.031ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.031ns) by 0.168ns
+
+ Physical Path Details:
+
+      Data path test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_100 to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_100:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.099    R71C76A.CLK to     R71C76A.Q0 test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_100 (from jtaghub16_jtck)
+ROUTE        89     0.042     R71C76A.Q0 to     R71C76A.D0 test_dvi_reveal_coretop_instance/core0/tm_u/tm_rd_addr_cntr[5]
+CTOF_DEL    ---     0.058     R71C76A.D0 to     R71C76A.F0 test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_100
+ROUTE         1     0.000     R71C76A.F0 to    R71C76A.DI0 test_dvi_reveal_coretop_instance/core0/tm_u/n70_adj_1884 (to jtaghub16_jtck)
+                  --------
+                    0.199   (78.9% logic, 21.1% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ep5chub/genblk5_jtage_u to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_100:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       453     1.730      JTAG.JTCK to    R71C76A.CLK jtaghub16_jtck
+                  --------
+                    1.730   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ep5chub/genblk5_jtage_u to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_100:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       453     1.730      JTAG.JTCK to    R71C76A.CLK jtaghub16_jtck
+                  --------
+                    1.730   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.168ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              test_dvi_reveal_coretop_instance/core0/tm_u/tm_rd_addr_cntr_746__i7  (from jtaghub16_jtck -)
+   Destination:    FF         Data in        test_dvi_reveal_coretop_instance/core0/tm_u/tm_rd_addr_cntr_746__i7  (to jtaghub16_jtck -)
+
+   Delay:               0.199ns  (78.9% logic, 21.1% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.199ns physical path delay test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_99 to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_99 meets
+      0.031ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.031ns) by 0.168ns
+
+ Physical Path Details:
+
+      Data path test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_99 to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_99:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.099    R71C76B.CLK to     R71C76B.Q0 test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_99 (from jtaghub16_jtck)
+ROUTE        89     0.042     R71C76B.Q0 to     R71C76B.D0 test_dvi_reveal_coretop_instance/core0/tm_u/tm_rd_addr_cntr[7]
+CTOF_DEL    ---     0.058     R71C76B.D0 to     R71C76B.F0 test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_99
+ROUTE         1     0.000     R71C76B.F0 to    R71C76B.DI0 test_dvi_reveal_coretop_instance/core0/tm_u/n68_adj_1886 (to jtaghub16_jtck)
+                  --------
+                    0.199   (78.9% logic, 21.1% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ep5chub/genblk5_jtage_u to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_99:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       453     1.730      JTAG.JTCK to    R71C76B.CLK jtaghub16_jtck
+                  --------
+                    1.730   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ep5chub/genblk5_jtage_u to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_99:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       453     1.730      JTAG.JTCK to    R71C76B.CLK jtaghub16_jtck
+                  --------
+                    1.730   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.168ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              test_dvi_reveal_coretop_instance/core0/tm_u/tm_rd_addr_cntr_746__i13  (from jtaghub16_jtck -)
+   Destination:    FF         Data in        test_dvi_reveal_coretop_instance/core0/tm_u/tm_rd_addr_cntr_746__i13  (to jtaghub16_jtck -)
+
+   Delay:               0.199ns  (78.9% logic, 21.1% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.199ns physical path delay test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_96 to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_96 meets
+      0.031ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.031ns) by 0.168ns
+
+ Physical Path Details:
+
+      Data path test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_96 to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_96:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.099    R71C77B.CLK to     R71C77B.Q0 test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_96 (from jtaghub16_jtck)
+ROUTE        90     0.042     R71C77B.Q0 to     R71C77B.D0 test_dvi_reveal_coretop_instance/core0/tm_u/tm_rd_addr_cntr[13]
+CTOF_DEL    ---     0.058     R71C77B.D0 to     R71C77B.F0 test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_96
+ROUTE         1     0.000     R71C77B.F0 to    R71C77B.DI0 test_dvi_reveal_coretop_instance/core0/tm_u/n62_adj_1892 (to jtaghub16_jtck)
+                  --------
+                    0.199   (78.9% logic, 21.1% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ep5chub/genblk5_jtage_u to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_96:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       453     1.730      JTAG.JTCK to    R71C77B.CLK jtaghub16_jtck
+                  --------
+                    1.730   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ep5chub/genblk5_jtage_u to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_96:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       453     1.730      JTAG.JTCK to    R71C77B.CLK jtaghub16_jtck
+                  --------
+                    1.730   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.168ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              test_dvi_reveal_coretop_instance/core0/tm_u/tm_rd_addr_cntr_746__i1  (from jtaghub16_jtck -)
+   Destination:    FF         Data in        test_dvi_reveal_coretop_instance/core0/tm_u/tm_rd_addr_cntr_746__i1  (to jtaghub16_jtck -)
+
+   Delay:               0.199ns  (78.9% logic, 21.1% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.199ns physical path delay test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_102 to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_102 meets
+      0.031ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.031ns) by 0.168ns
+
+ Physical Path Details:
+
+      Data path test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_102 to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_102:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.099    R71C75B.CLK to     R71C75B.Q0 test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_102 (from jtaghub16_jtck)
+ROUTE        89     0.042     R71C75B.Q0 to     R71C75B.D0 test_dvi_reveal_coretop_instance/core0/tm_u/tm_rd_addr_cntr[1]
+CTOF_DEL    ---     0.058     R71C75B.D0 to     R71C75B.F0 test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_102
+ROUTE         1     0.000     R71C75B.F0 to    R71C75B.DI0 test_dvi_reveal_coretop_instance/core0/tm_u/n74 (to jtaghub16_jtck)
+                  --------
+                    0.199   (78.9% logic, 21.1% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ep5chub/genblk5_jtage_u to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_102:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       453     1.730      JTAG.JTCK to    R71C75B.CLK jtaghub16_jtck
+                  --------
+                    1.730   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ep5chub/genblk5_jtage_u to test_dvi_reveal_coretop_instance/core0/tm_u/SLICE_102:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       453     1.730      JTAG.JTCK to    R71C75B.CLK jtaghub16_jtck
+                  --------
+                    1.730   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.169ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              test_dvi_reveal_coretop_instance/core0/jtag_int_u/tr_dout_bit_cnt_i0_i2  (from jtaghub16_jtck -)
+   Destination:    FF         Data in        test_dvi_reveal_coretop_instance/core0/jtag_int_u/tr_dout_bit_cnt_i0_i2  (to jtaghub16_jtck -)
+
+   Delay:               0.200ns  (78.5% logic, 21.5% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.200ns physical path delay test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_277 to test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_277 meets
+      0.031ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.031ns) by 0.169ns
+
+ Physical Path Details:
+
+      Data path test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_277 to test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_277:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.099    R71C74B.CLK to     R71C74B.Q0 test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_277 (from jtaghub16_jtck)
+ROUTE         5     0.043     R71C74B.Q0 to     R71C74B.D0 test_dvi_reveal_coretop_instance/core0/jtag_int_u/tr_dout_bit_cnt[2]
+CTOF_DEL    ---     0.058     R71C74B.D0 to     R71C74B.F0 test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_277
+ROUTE         1     0.000     R71C74B.F0 to    R71C74B.DI0 test_dvi_reveal_coretop_instance/core0/jtag_int_u/tr_dout_bit_cnt_7__N_782[2] (to jtaghub16_jtck)
+                  --------
+                    0.200   (78.5% logic, 21.5% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ep5chub/genblk5_jtage_u to test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_277:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       453     1.730      JTAG.JTCK to    R71C74B.CLK jtaghub16_jtck
+                  --------
+                    1.730   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ep5chub/genblk5_jtage_u to test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_277:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       453     1.730      JTAG.JTCK to    R71C74B.CLK jtaghub16_jtck
+                  --------
+                    1.730   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.169ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              test_dvi_reveal_coretop_instance/core0/jtag_int_u/te_block_330  (from jtaghub16_jtck -)
+   Destination:    FF         Data in        test_dvi_reveal_coretop_instance/core0/jtag_int_u/te_block_330  (to jtaghub16_jtck -)
+
+   Delay:               0.200ns  (78.5% logic, 21.5% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.200ns physical path delay test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_315 to test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_315 meets
+      0.031ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.031ns) by 0.169ns
+
+ Physical Path Details:
+
+      Data path test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_315 to test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_315:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.099    R68C73A.CLK to     R68C73A.Q0 test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_315 (from jtaghub16_jtck)
+ROUTE         7     0.043     R68C73A.Q0 to     R68C73A.D0 test_dvi_reveal_coretop_instance/core0/te_block
+CTOF_DEL    ---     0.058     R68C73A.D0 to     R68C73A.F0 test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_315
+ROUTE         1     0.000     R68C73A.F0 to    R68C73A.DI0 test_dvi_reveal_coretop_instance/core0/jtag_int_u/n2691 (to jtaghub16_jtck)
+                  --------
+                    0.200   (78.5% logic, 21.5% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ep5chub/genblk5_jtage_u to test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_315:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       453     1.729      JTAG.JTCK to    R68C73A.CLK jtaghub16_jtck
+                  --------
+                    1.729   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ep5chub/genblk5_jtage_u to test_dvi_reveal_coretop_instance/core0/jtag_int_u/SLICE_315:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       453     1.729      JTAG.JTCK to    R68C73A.CLK jtaghub16_jtck
+                  --------
+                    1.729   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.196ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              ep5chub/er1_shift_reg_2  (from jtaghub16_jtck -)
+   Destination:    FF         Data in        ep5chub/er1_shift_reg_1  (to jtaghub16_jtck -)
+
+   Delay:               0.189ns  (52.4% logic, 47.6% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.189ns physical path delay ep5chub/SLICE_140 to ep5chub/SLICE_140 meets
+     -0.007ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.007ns) by 0.196ns
+
+ Physical Path Details:
+
+      Data path ep5chub/SLICE_140 to ep5chub/SLICE_140:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.099   R72C102A.CLK to    R72C102A.Q1 ep5chub/SLICE_140 (from jtaghub16_jtck)
+ROUTE         1     0.090    R72C102A.Q1 to    R72C102A.M0 ep5chub/er1_shift_reg_2 (to jtaghub16_jtck)
+                  --------
+                    0.189   (52.4% logic, 47.6% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ep5chub/genblk5_jtage_u to ep5chub/SLICE_140:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       453     1.730      JTAG.JTCK to   R72C102A.CLK jtaghub16_jtck
+                  --------
+                    1.730   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ep5chub/genblk5_jtage_u to ep5chub/SLICE_140:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       453     1.730      JTAG.JTCK to   R72C102A.CLK jtaghub16_jtck
+                  --------
+                    1.730   (0.0% logic, 100.0% route), 0 logic levels.
+
+<A name="ptwr_hold_rs"></A><B><U><big>Report Summary</big></U></B>
+--------------
+----------------------------------------------------------------------------
+Preference(MIN Delays)                  |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "ODCK_N" 305.904000 MHz ; |     0.000 ns|     0.046 ns|   1  
+                                        |             |             |
+FREQUENCY NET "jtaghub16_jtck"          |             |             |
+180.799000 MHz ;                        |     0.000 ns|     0.168 ns|   2  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+<A name="ptwr_hold_clkda"></A><B><U><big>Clock Domains Analysis</big></U></B>
+------------------------
+
+No clock domain analysis is done. To analyze clock domains, please remove the BLOCK INTERCLOCKDOMAIN PATHS preference.
+
+
+<A name="ptwr_hold_ts"></A><B><U><big>Timing summary (Hold):</big></U></B>
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 16378 paths, 2 nets, and 11751 connections (97.84% coverage)
+
+
+
+<A name="ptwr_ts"></A><B><U><big>Timing summary (Setup and Hold):</big></U></B>
+---------------
+
+Timing errors: 1578 (setup), 0 (hold)
+Score: 524013 (setup), 0 (hold)
+Cumulative negative slack: 524013 (524013+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

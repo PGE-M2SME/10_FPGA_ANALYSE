@@ -1,0 +1,35 @@
+#-- Lattice Semiconductor Corporation Ltd.
+#-- Bali Reveal project file
+
+#device options
+[Device]
+part = LFE3-70EA-7FN672C
+family = LatticeECP3
+device = LFE3-70EA
+speed = 7
+package = FPBGA672
+operation = Commercial
+
+#design options
+[Design]
+title = test403
+path = /home/diamond/SharedFolder/DiamondProjFolder/impl3
+core_generate = /home/diamond/SharedFolder/DiamondProjFolder/impl3
+search_path = /home/diamond/SharedFolder/DiamondProjFolder
+top = Top
+lpf = /home/diamond/SharedFolder/DiamondProjFolder/test403.lpf
+synthesis = lse
+
+#strategy options
+VHDL2008 = false
+
+#HDLs options
+[HDLs]
+/home/diamond/SharedFolder/DiamondProjFolder/TOP.vhd = VHDL, work
+[HDL_Defines]
+SBP_SYNTHESIS=
+[HDL_Param]
+[Generated]
+/home/diamond/SharedFolder/DiamondProjFolder/impl3/reveal_workspace/tmpreveal/top_la0_trig_gen.v=Verilog
+/home/diamond/SharedFolder/DiamondProjFolder/impl3/reveal_workspace/tmpreveal/top_la0_gen.v=Verilog
+/home/diamond/SharedFolder/DiamondProjFolder/impl3/reveal_workspace/tmpreveal/Top_rvl_top.vhd=VHDL,work

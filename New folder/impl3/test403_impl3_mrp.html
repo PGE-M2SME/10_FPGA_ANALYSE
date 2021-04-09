@@ -1,0 +1,715 @@
+<HTML>
+<HEAD><TITLE>Project Summary</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Mrp"></A>
+             Lattice Mapping Report File for Design Module 'Top'
+
+
+
+<A name="mrp_di"></A><B><U><big>Design Information</big></U></B>
+
+Command line:   map -a LatticeECP3 -p LFE3-70EA -t FPBGA672 -s 7 -oc Commercial
+     test403_impl3.ngd -o test403_impl3_map.ncd -pr test403_impl3.prf -mp
+     test403_impl3.mrp -lpf
+     /home/diamond/SharedFolder/DiamondProjFolder/impl3/test403_impl3.lpf -lpf
+     /home/diamond/SharedFolder/DiamondProjFolder/test403.lpf -gui -msgset
+     /home/diamond/SharedFolder/DiamondProjFolder/promote.xml 
+Target Vendor:  LATTICE
+Target Device:  LFE3-70EAFPBGA672
+Target Performance:   7
+Mapper:  ep5c00,  version:  Diamond (64-bit) 3.11.3.469
+Mapped on:  03/29/21  18:17:38
+
+
+<A name="mrp_ds"></A><B><U><big>Design Summary</big></U></B>
+   Number of registers:    433 out of 52176 (1%)
+      PFU registers:          433 out of 49896 (1%)
+      PIO registers:            0 out of  2280 (0%)
+   Number of SLICEs:       500 out of 33264 (2%)
+      SLICEs as Logic/ROM:    500 out of 33264 (2%)
+      SLICEs as RAM:            0 out of  6804 (0%)
+      SLICEs as Carry:         66 out of 33264 (0%)
+   Number of LUT4s:        701 out of 66528 (1%)
+      Number used as logic LUTs:        569
+      Number used as distributed RAM:     0
+      Number used as ripple logic:      132
+      Number used as shift registers:     0
+   Number of PIO sites used: 6 out of 380 (2%)
+   Number of PIO FIXEDDELAY:    0
+   Number of PCS (SerDes):  0 out of 2 (0%) with bonded PIO sites
+   Number of DQSDLLs:  0 out of 2 (0%)
+   Number of PLLs:  0 out of 10 (0%)
+   Number of DLLs:  0 out of 2 (0%)
+   Number of block RAMs:  4 out of 240 (2%)
+   Number of CLKDIVs:  0 out of 2 (0%)
+   Number of GSRs:  0 out of 1 (0%)
+   JTAG used :      Yes
+   Readback used :  No
+   Oscillator used :  No
+   Startup used :   No
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
+     distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and
+     ripple logic.
+
+        Number Of Mapped DSP Components:
+   --------------------------------
+   MULT18X18C          0
+   MULT9X9C            0
+   ALU54A              0
+   ALU24A              0
+   --------------------------------
+   Number of Used DSP MULT Sites:  0 out of 256 (0 %)
+   Number of Used DSP ALU Sites:  0 out of 128 (0 %)
+
+   Number of clocks:  3
+     Net Clk_FPGA_c: 14 loads, 14 rising, 0 falling (Driver: PIO Clk_FPGA )
+     Net Clk_N: 120 loads, 120 rising, 0 falling (Driver: PIO Clk )
+     Net jtaghub16_jtck: 146 loads, 0 rising, 146 falling (Driver:
+     ep5chub/genblk5_jtage_u )
+   Number of Clock Enables:  53
+     Net clk_N_keep_enable_37: 1 loads, 1 LSLICEs
+     Net top_reveal_coretop_instance/clk_N_keep_enable_32: 1 loads, 1 LSLICEs
+     Net top_reveal_coretop_instance/clk_N_keep_enable_130: 8 loads, 8 LSLICEs
+     Net top_reveal_coretop_instance/clk_N_keep_enable_35: 1 loads, 1 LSLICEs
+     Net top_reveal_coretop_instance/jtck_N_90_enable_42: 2 loads, 2 LSLICEs
+     Net top_reveal_coretop_instance/jtck_N_90_enable_48: 2 loads, 2 LSLICEs
+     Net top_reveal_coretop_instance/jtck_N_90_enable_40: 4 loads, 4 LSLICEs
+     Net jtaghub16_jupdate: 8 loads, 8 LSLICEs
+     Net jtaghub16_ip_enable0: 16 loads, 16 LSLICEs
+     Net top_reveal_coretop_instance/jtck_N_90_enable_34: 1 loads, 1 LSLICEs
+     Net top_reveal_coretop_instance/core0/trig_u/tu_0/clk_N_keep_enable_138: 1
+     loads, 1 LSLICEs
+     Net top_reveal_coretop_instance/core0/op_code_2__N_422: 3 loads, 3 LSLICEs
+     Net top_reveal_coretop_instance/core0/trig_u/tu_0/clk_N_keep_enable_34: 1
+     loads, 1 LSLICEs
+     Net top_reveal_coretop_instance/core0/trig_u/te_0/clk_N_keep_enable_133: 1
+     loads, 1 LSLICEs
+     Net top_reveal_coretop_instance/core0/trig_u/te_0/jtck_N_90_enable_77: 8
+     loads, 8 LSLICEs
+     Net top_reveal_coretop_instance/core0/trig_u/te_0/clk_N_keep_enable_30: 1
+     loads, 1 LSLICEs
+     Net top_reveal_coretop_instance/core0/trig_u/te_0/clk_N_keep_enable_137: 1
+     loads, 1 LSLICEs
+     Net top_reveal_coretop_instance/core0/trig_u/clk_N_keep_enable_134: 2
+     loads, 2 LSLICEs
+     Net top_reveal_coretop_instance/core0/clk_N_keep_enable_132: 3 loads, 3
+     LSLICEs
+     Net top_reveal_coretop_instance/core0/reg0_read_N_727: 1 loads, 1 LSLICEs
+     Net top_reveal_coretop_instance/core0/jtck_N_90_enable_5: 3 loads, 3
+     LSLICEs
+     Net top_reveal_coretop_instance/core0/tm_u/sample_en_d: 5 loads, 5 LSLICEs
+     Net top_reveal_coretop_instance/core0/tm_u/clk_N_keep_enable_136: 1 loads,
+     1 LSLICEs
+     Net top_reveal_coretop_instance/core0/clk_N_keep_enable_15: 8 loads, 8
+     LSLICEs
+     Net top_reveal_coretop_instance/core0/jtck_N_90_enable_33: 1 loads, 1
+     LSLICEs
+     Net top_reveal_coretop_instance/core0/tm_u/clk_N_keep_enable_50: 7 loads, 7
+     LSLICEs
+     Net top_reveal_coretop_instance/core0/tm_u/jtck_N_90_enable_11: 2 loads, 2
+     LSLICEs
+     Net top_reveal_coretop_instance/core0/tm_u/jtck_N_90_enable_14: 2 loads, 2
+     LSLICEs
+     Net top_reveal_coretop_instance/core0/tm_u/clk_N_keep_enable_63: 7 loads, 7
+     LSLICEs
+     Net top_reveal_coretop_instance/core0/tm_u/trace_dout_int_2__N_869: 7
+     loads, 7 LSLICEs
+     Net top_reveal_coretop_instance/core0/jtck_N_90_enable_62: 7 loads, 7
+     LSLICEs
+     Net top_reveal_coretop_instance/core0/tm_u/clk_N_keep_enable_76: 8 loads, 8
+
+     LSLICEs
+     Net top_reveal_coretop_instance/core0/tm_u/clk_N_keep_enable_89: 8 loads, 8
+     LSLICEs
+     Net top_reveal_coretop_instance/core0/tm_u/clk_N_keep_enable_102: 7 loads,
+     7 LSLICEs
+     Net top_reveal_coretop_instance/core0/tm_u/clk_N_keep_enable_115: 7 loads,
+     7 LSLICEs
+     Net top_reveal_coretop_instance/core0/tm_u/clk_N_keep_enable_24: 1 loads, 1
+     LSLICEs
+     Net top_reveal_coretop_instance/core0/tm_u/clk_N_keep_enable_25: 1 loads, 1
+     LSLICEs
+     Net top_reveal_coretop_instance/core0/tm_u/clk_N_keep_enable_135: 2 loads,
+     2 LSLICEs
+     Net top_reveal_coretop_instance/core0/tm_u/clk_N_keep_enable_29: 1 loads, 1
+     LSLICEs
+     Net top_reveal_coretop_instance/core0/tm_u/clk_N_keep_enable_33: 1 loads, 1
+     LSLICEs
+     Net top_reveal_coretop_instance/core0/tm_u/clk_N_keep_enable_36: 2 loads, 2
+     LSLICEs
+     Net top_reveal_coretop_instance/core0/jtck_N_90_enable_130: 1 loads, 1
+     LSLICEs
+     Net top_reveal_coretop_instance/core0/tm_u/clk_N_keep_enable_139: 1 loads,
+     1 LSLICEs
+     Net top_reveal_coretop_instance/core0/jtag_int_u/jtck_N_90_enable_32: 9
+     loads, 9 LSLICEs
+     Net top_reveal_coretop_instance/core0/jtag_int_u/jtck_N_90_enable_91: 15
+     loads, 15 LSLICEs
+     Net top_reveal_coretop_instance/core0/jtag_int_u/jtck_N_90_enable_127: 9
+     loads, 9 LSLICEs
+     Net top_reveal_coretop_instance/core0/jtag_int_u/jtck_N_90_enable_129: 2
+     loads, 2 LSLICEs
+     Net top_reveal_coretop_instance/core0/jtag_int_u/jupdate_d1: 1 loads, 1
+     LSLICEs
+     Net top_reveal_coretop_instance/core0/jtag_int_u/jtck_N_90_enable_46: 2
+     loads, 2 LSLICEs
+     Net top_reveal_coretop_instance/core0/jtag_int_u/jtck_N_90_enable_49: 1
+     loads, 1 LSLICEs
+     Net top_reveal_coretop_instance/core0/jtag_int_u/jtck_N_90_enable_112: 13
+     loads, 13 LSLICEs
+     Net ep5chub/id_enable_0_sqmuxa: 1 loads, 1 LSLICEs
+     Net ep5chub/N_5_i: 10 loads, 10 LSLICEs
+   Number of LSRs:  3
+     Net cpt_23__N_49: 13 loads, 13 LSLICEs
+     Net top_reveal_coretop_instance/reset_n_N_112: 113 loads, 107 LSLICEs
+     Net jtaghub16_jrstn: 137 loads, 137 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net jtaghub16_jrstn: 142 loads
+     Net top_reveal_coretop_instance/reset_n_N_112: 114 loads
+     Net VCC_net: 108 loads
+     Net addr[0]: 68 loads
+     Net addr[1]: 61 loads
+     Net top_reveal_coretop_instance/core0/tm_u/armed: 41 loads
+     Net top_reveal_coretop_instance/core0/addr_15: 36 loads
+     Net top_reveal_coretop_instance/addr[2]: 35 loads
+     Net jtaghub16_ip_enable0: 34 loads
+
+     Net jtaghub16_jshift: 34 loads
+
+
+
+
+   Number of warnings:  74
+   Number of errors:    0
+     
+
+
+
+
+<A name="mrp_dwe"></A><B><U><big>Design Errors/Warnings</big></U></B>
+
+WARNING - map: /home/diamond/SharedFolder/DiamondProjFolder/test403.lpf(15):
+     Semantic error in "LOCATE COMP "Clkn" SITE "U19" ;": COMP "Clkn" cannot be
+     found in design. This preference has been disabled.
+WARNING - map: /home/diamond/SharedFolder/DiamondProjFolder/test403.lpf(16):
+     Semantic error in "IOBUF PORT "Clkn" IO_TYPE=LVCMOS33 ;": Port "Clkn" does
+     not exist in the design. This preference has been disabled.
+WARNING - map: /home/diamond/SharedFolder/DiamondProjFolder/test403.lpf(35):
+     Semantic error in "IOBUF PORT "PinDat[0]" IO_TYPE=LVCMOS33 PULLMODE=UP ;":
+     Port "PinDat[0]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: /home/diamond/SharedFolder/DiamondProjFolder/test403.lpf(37):
+     Semantic error in "IOBUF PORT "PinDat[1]" IO_TYPE=LVCMOS33 PULLMODE=UP ;":
+     Port "PinDat[1]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: /home/diamond/SharedFolder/DiamondProjFolder/test403.lpf(39):
+     Semantic error in "IOBUF PORT "PinDat[2]" IO_TYPE=LVCMOS33 PULLMODE=UP ;":
+     Port "PinDat[2]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: /home/diamond/SharedFolder/DiamondProjFolder/test403.lpf(41):
+     Semantic error in "IOBUF PORT "PinDat[3]" IO_TYPE=LVCMOS33 PULLMODE=UP ;":
+     Port "PinDat[3]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: /home/diamond/SharedFolder/DiamondProjFolder/test403.lpf(43):
+     Semantic error in "IOBUF PORT "PinDat[4]" IO_TYPE=LVCMOS33 PULLMODE=UP ;":
+     Port "PinDat[4]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: /home/diamond/SharedFolder/DiamondProjFolder/test403.lpf(45):
+     Semantic error in "IOBUF PORT "PinDat[5]" IO_TYPE=LVCMOS33 PULLMODE=UP ;":
+     Port "PinDat[5]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: /home/diamond/SharedFolder/DiamondProjFolder/test403.lpf(47):
+     Semantic error in "IOBUF PORT "PinDat[6]" IO_TYPE=LVCMOS33 PULLMODE=UP ;":
+     Port "PinDat[6]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: /home/diamond/SharedFolder/DiamondProjFolder/test403.lpf(49):
+     Semantic error in "IOBUF PORT "PinDat[7]" IO_TYPE=LVCMOS33 PULLMODE=UP ;":
+     Port "PinDat[7]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: /home/diamond/SharedFolder/DiamondProjFolder/test403.lpf(51):
+     Semantic error in "IOBUF PORT "PinDat[8]" IO_TYPE=LVCMOS33 PULLMODE=UP ;":
+     Port "PinDat[8]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: /home/diamond/SharedFolder/DiamondProjFolder/test403.lpf(53):
+     Semantic error in "IOBUF PORT "PinDat[9]" IO_TYPE=LVCMOS33 PULLMODE=UP ;":
+
+     Port "PinDat[9]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: /home/diamond/SharedFolder/DiamondProjFolder/test403.lpf(55):
+     Semantic error in "IOBUF PORT "PinDat[10]" IO_TYPE=LVCMOS33 PULLMODE=UP ;":
+     Port "PinDat[10]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: /home/diamond/SharedFolder/DiamondProjFolder/test403.lpf(57):
+     Semantic error in "IOBUF PORT "PinDat[11]" IO_TYPE=LVCMOS33 PULLMODE=UP ;":
+     Port "PinDat[11]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: /home/diamond/SharedFolder/DiamondProjFolder/test403.lpf(59):
+     Semantic error in "IOBUF PORT "PinDat[12]" IO_TYPE=LVCMOS33 PULLMODE=UP ;":
+     Port "PinDat[12]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: /home/diamond/SharedFolder/DiamondProjFolder/test403.lpf(61):
+     Semantic error in "IOBUF PORT "PinDat[13]" IO_TYPE=LVCMOS33 PULLMODE=UP ;":
+     Port "PinDat[13]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: /home/diamond/SharedFolder/DiamondProjFolder/test403.lpf(63):
+     Semantic error in "IOBUF PORT "PinDat[14]" IO_TYPE=LVCMOS33 PULLMODE=UP ;":
+     Port "PinDat[14]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: /home/diamond/SharedFolder/DiamondProjFolder/test403.lpf(65):
+     Semantic error in "IOBUF PORT "PinDat[15]" IO_TYPE=LVCMOS33 PULLMODE=UP ;":
+     Port "PinDat[15]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: /home/diamond/SharedFolder/DiamondProjFolder/test403.lpf(71):
+     Semantic error in "IOBUF PORT "PinDat[16]" IO_TYPE=LVCMOS33 PULLMODE=UP ;":
+     Port "PinDat[16]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: /home/diamond/SharedFolder/DiamondProjFolder/test403.lpf(73):
+     Semantic error in "IOBUF PORT "PinDat[17]" IO_TYPE=LVCMOS33 PULLMODE=UP ;":
+     Port "PinDat[17]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: /home/diamond/SharedFolder/DiamondProjFolder/test403.lpf(75):
+     Semantic error in "IOBUF PORT "PinDat[18]" IO_TYPE=LVCMOS33 PULLMODE=UP ;":
+     Port "PinDat[18]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: /home/diamond/SharedFolder/DiamondProjFolder/test403.lpf(77):
+     Semantic error in "IOBUF PORT "PinDat[19]" IO_TYPE=LVCMOS33 PULLMODE=UP ;":
+     Port "PinDat[19]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: /home/diamond/SharedFolder/DiamondProjFolder/test403.lpf(79):
+     Semantic error in "IOBUF PORT "PinDat[20]" IO_TYPE=LVCMOS33 PULLMODE=UP ;":
+     Port "PinDat[20]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: /home/diamond/SharedFolder/DiamondProjFolder/test403.lpf(81):
+     Semantic error in "IOBUF PORT "PinDat[21]" IO_TYPE=LVCMOS33 PULLMODE=UP ;":
+     Port "PinDat[21]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: /home/diamond/SharedFolder/DiamondProjFolder/test403.lpf(83):
+     Semantic error in "IOBUF PORT "PinDat[22]" IO_TYPE=LVCMOS33 PULLMODE=UP ;":
+     Port "PinDat[22]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: /home/diamond/SharedFolder/DiamondProjFolder/test403.lpf(85):
+     Semantic error in "IOBUF PORT "PinDat[23]" IO_TYPE=LVCMOS33 PULLMODE=UP ;":
+
+     Port "PinDat[23]" does not exist in the design. This preference has been
+     disabled.
+WARNING - map: input pad net 'PinDat[23]' has no legal load.
+WARNING - map: input pad net 'PinDat[22]' has no legal load.
+WARNING - map: input pad net 'PinDat[21]' has no legal load.
+WARNING - map: input pad net 'PinDat[20]' has no legal load.
+WARNING - map: input pad net 'PinDat[19]' has no legal load.
+WARNING - map: input pad net 'PinDat[18]' has no legal load.
+WARNING - map: input pad net 'PinDat[17]' has no legal load.
+WARNING - map: input pad net 'PinDat[16]' has no legal load.
+WARNING - map: input pad net 'PinDat[15]' has no legal load.
+WARNING - map: input pad net 'PinDat[14]' has no legal load.
+WARNING - map: input pad net 'PinDat[13]' has no legal load.
+WARNING - map: input pad net 'PinDat[12]' has no legal load.
+WARNING - map: input pad net 'PinDat[11]' has no legal load.
+WARNING - map: input pad net 'PinDat[10]' has no legal load.
+WARNING - map: input pad net 'PinDat[9]' has no legal load.
+WARNING - map: input pad net 'PinDat[8]' has no legal load.
+WARNING - map: input pad net 'PinDat[7]' has no legal load.
+WARNING - map: input pad net 'PinDat[6]' has no legal load.
+WARNING - map: input pad net 'PinDat[5]' has no legal load.
+WARNING - map: input pad net 'PinDat[4]' has no legal load.
+WARNING - map: input pad net 'PinDat[3]' has no legal load.
+WARNING - map: input pad net 'PinDat[2]' has no legal load.
+WARNING - map: input pad net 'PinDat[1]' has no legal load.
+WARNING - map: input pad net 'PinDat[0]' has no legal load.
+WARNING - map: IO buffer missing for top level port PinDat[23:0](23)...logic
+     will be discarded.
+WARNING - map: IO buffer missing for top level port PinDat[23:0](22)...logic
+     will be discarded.
+WARNING - map: IO buffer missing for top level port PinDat[23:0](21)...logic
+     will be discarded.
+WARNING - map: IO buffer missing for top level port PinDat[23:0](20)...logic
+     will be discarded.
+WARNING - map: IO buffer missing for top level port PinDat[23:0](19)...logic
+     will be discarded.
+WARNING - map: IO buffer missing for top level port PinDat[23:0](18)...logic
+     will be discarded.
+WARNING - map: IO buffer missing for top level port PinDat[23:0](17)...logic
+     will be discarded.
+WARNING - map: IO buffer missing for top level port PinDat[23:0](16)...logic
+     will be discarded.
+WARNING - map: IO buffer missing for top level port PinDat[23:0](15)...logic
+     will be discarded.
+WARNING - map: IO buffer missing for top level port PinDat[23:0](14)...logic
+     will be discarded.
+WARNING - map: IO buffer missing for top level port PinDat[23:0](13)...logic
+     will be discarded.
+WARNING - map: IO buffer missing for top level port PinDat[23:0](12)...logic
+     will be discarded.
+WARNING - map: IO buffer missing for top level port PinDat[23:0](11)...logic
+     will be discarded.
+WARNING - map: IO buffer missing for top level port PinDat[23:0](10)...logic
+     will be discarded.
+WARNING - map: IO buffer missing for top level port PinDat[23:0](9)...logic will
+     be discarded.
+
+WARNING - map: IO buffer missing for top level port PinDat[23:0](8)...logic will
+     be discarded.
+WARNING - map: IO buffer missing for top level port PinDat[23:0](7)...logic will
+     be discarded.
+WARNING - map: IO buffer missing for top level port PinDat[23:0](6)...logic will
+     be discarded.
+WARNING - map: IO buffer missing for top level port PinDat[23:0](5)...logic will
+     be discarded.
+WARNING - map: IO buffer missing for top level port PinDat[23:0](4)...logic will
+     be discarded.
+WARNING - map: IO buffer missing for top level port PinDat[23:0](3)...logic will
+     be discarded.
+WARNING - map: IO buffer missing for top level port PinDat[23:0](2)...logic will
+     be discarded.
+WARNING - map: IO buffer missing for top level port PinDat[23:0](1)...logic will
+     be discarded.
+WARNING - map: IO buffer missing for top level port PinDat[23:0](0)...logic will
+     be discarded.
+
+
+
+<A name="mrp_ioa"></A><B><U><big>IO (PIO) Attributes</big></U></B>
+
++---------------------+-----------+-----------+------------+------------+
+| IO Name             | Direction | Levelmode | IO         | FIXEDDELAY |
+|                     |           |  IO_TYPE  | Register   |            |
++---------------------+-----------+-----------+------------+------------+
+| Vsync               | INPUT     | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| De                  | INPUT     | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| Hsync               | INPUT     | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| Clk                 | INPUT     | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| Clk_FPGA            | INPUT     | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| Led                 | OUTPUT    | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+
+
+
+<A name="mrp_rm"></A><B><U><big>Removed logic</big></U></B>
+
+Block ep5chub/ip_enable_14 undriven or does not drive anything - clipped.
+Block ep5chub/GSR_INST undriven or does not drive anything - clipped.
+Block GSR_INST undriven or does not drive anything - clipped.
+Block ep5chub/ip_enable_15 undriven or does not drive anything - clipped.
+Block ep5chub/cdn undriven or does not drive anything - clipped.
+Block top_reveal_coretop_instance/core0/tm_u/pmi_ram_dpECP3binarynonespeedasyncd
+     isablereg3141638431416384/scuba_vhi_inst undriven or does not drive
+     anything - clipped.
+Block top_reveal_coretop_instance/core0/trig_u/te_0/pmi_ram_dpECP3binarynonespee
+     dasyncdisablereg112112/scuba_vhi_inst undriven or does not drive anything -
+     clipped.
+Block top_reveal_coretop_instance/jtag0_lut_buf_5 undriven or does not drive
+     anything - clipped.
+Signal ep5chub/jrstn_i was merged into signal jtaghub16_jrstn
+
+Signal ep5chub/cdn_CN was merged into signal jtaghub16_jtck
+Signal ep5chub/jtdo2_0_a4_1_am_RNO_2 was merged into signal ep5chub/ip_enable_2
+Signal top_reveal_coretop_instance/jtck_N_90 was merged into signal
+     jtaghub16_jtck
+Signal top_reveal_coretop_instance/core0/jrstn_N_88 was merged into signal
+     jtaghub16_jrstn
+Signal ip_enable[0]_keep was merged into signal jtaghub16_ip_enable0
+Signal top_reveal_coretop_instance/jce2[0] was merged into signal jtaghub16_jce2
+     
+Signal top_reveal_coretop_instance/jrstn[0] was merged into signal
+     jtaghub16_jrstn
+Signal jshift[0]_keep was merged into signal jtaghub16_jshift
+Signal jtdi[0]_keep was merged into signal jtaghub16_jtdi
+Signal top_reveal_coretop_instance/jtck[0] was merged into signal jtaghub16_jtck
+     
+Signal jtaghub16_er2_tdo0 was merged into signal
+     top_reveal_coretop_instance/er2_tdo[0]
+Signal n9482 was merged into signal jshift[0]_keep
+Signal ep5chub/ip_enable_14 undriven or does not drive anything - clipped.
+Signal ep5chub/jtdo2_int_m5_d undriven or does not drive anything - clipped.
+Signal ep5chub/jtdo2_int_m0 undriven or does not drive anything - clipped.
+Signal ep5chub/jtdo2_int_m7 undriven or does not drive anything - clipped.
+Signal ep5chub/jtdo2_int_m10 undriven or does not drive anything - clipped.
+Signal ep5chub/jtdo2_int_m5_d_bm undriven or does not drive anything - clipped.
+Signal ep5chub/jtdo2_int_m5_d_am undriven or does not drive anything - clipped.
+Signal ep5chub/rom_rd_addr_cry_0_S0_0 undriven or does not drive anything -
+     clipped.
+Signal ep5chub/bit_count_cry_0_COUT_3 undriven or does not drive anything -
+     clipped.
+Signal ep5chub/bit_count_cry_0_S0_0 undriven or does not drive anything -
+     clipped.
+Signal ep5chub/er2_tdo_15 undriven or does not drive anything - clipped.
+Signal ep5chub/er2_tdo_14 undriven or does not drive anything - clipped.
+Signal ep5chub/er2_tdo_7 undriven or does not drive anything - clipped.
+Signal ep5chub/er2_tdo_6 undriven or does not drive anything - clipped.
+Signal ep5chub/er2_tdo_4 undriven or does not drive anything - clipped.
+Signal ep5chub/er2_tdo_3 undriven or does not drive anything - clipped.
+Signal ep5chub/er2_tdo_10 undriven or does not drive anything - clipped.
+Signal ep5chub/er2_tdo_9 undriven or does not drive anything - clipped.
+Signal ep5chub/er2_tdo_13 undriven or does not drive anything - clipped.
+Signal ep5chub/er2_tdo_12 undriven or does not drive anything - clipped.
+Signal ep5chub/er2_tdo_11 undriven or does not drive anything - clipped.
+Signal ep5chub/er2_tdo_1 undriven or does not drive anything - clipped.
+Signal ep5chub/er2_tdo_2 undriven or does not drive anything - clipped.
+Signal ep5chub/er2_tdo_8 undriven or does not drive anything - clipped.
+Signal ep5chub/er2_tdo_5 undriven or does not drive anything - clipped.
+Signal ep5chub/ip_enable_15 undriven or does not drive anything - clipped.
+Signal ep5chub/genblk5_un1_jtage_u undriven or does not drive anything -
+     clipped.
+Signal ep5chub/genblk5_un1_jtage_u_1 undriven or does not drive anything -
+     clipped.
+Signal ep5chub/tdoa undriven or does not drive anything - clipped.
+Signal ep5chub/tdia undriven or does not drive anything - clipped.
+Signal ep5chub/tmsa undriven or does not drive anything - clipped.
+Signal ep5chub/tcka undriven or does not drive anything - clipped.
+Signal ep5chub/cdn undriven or does not drive anything - clipped.
+
+Signal ep5chub/rom_rd_addr_s_0_S1_7 undriven or does not drive anything -
+     clipped.
+Signal ep5chub/rom_rd_addr_s_0_COUT_7 undriven or does not drive anything -
+     clipped.
+Signal top_reveal_coretop_instance/core0/jtag_int_u/bit_cnt_615_add_4_1/S0
+     undriven or does not drive anything - clipped.
+Signal top_reveal_coretop_instance/core0/jtag_int_u/bit_cnt_615_add_4_1/CI
+     undriven or does not drive anything - clipped.
+Signal top_reveal_coretop_instance/core0/jtag_int_u/bit_cnt_615_add_4_7/S1
+     undriven or does not drive anything - clipped.
+Signal top_reveal_coretop_instance/core0/jtag_int_u/bit_cnt_615_add_4_7/CO
+     undriven or does not drive anything - clipped.
+Signal top_reveal_coretop_instance/core0/tm_u/tm_wr_addr_cntr_620_add_4_15/S1
+     undriven or does not drive anything - clipped.
+Signal top_reveal_coretop_instance/core0/tm_u/tm_wr_addr_cntr_620_add_4_15/CO
+     undriven or does not drive anything - clipped.
+Signal top_reveal_coretop_instance/core0/tm_u/tm_rd_addr_cntr_622_add_4_1/S0
+     undriven or does not drive anything - clipped.
+Signal top_reveal_coretop_instance/core0/tm_u/tm_rd_addr_cntr_622_add_4_1/CI
+     undriven or does not drive anything - clipped.
+Signal top_reveal_coretop_instance/core0/tm_u/tm_wr_addr_cntr_620_add_4_1/S0
+     undriven or does not drive anything - clipped.
+Signal top_reveal_coretop_instance/core0/tm_u/tm_wr_addr_cntr_620_add_4_1/CI
+     undriven or does not drive anything - clipped.
+Signal top_reveal_coretop_instance/core0/tm_u/tm_rd_addr_cntr_622_add_4_15/S1
+     undriven or does not drive anything - clipped.
+Signal top_reveal_coretop_instance/core0/tm_u/tm_rd_addr_cntr_622_add_4_15/CO
+     undriven or does not drive anything - clipped.
+Signal top_reveal_coretop_instance/core0/tm_u/pmi_ram_dpECP3binarynonespeedasync
+     disablereg3141638431416384/scuba_vhi undriven or does not drive anything -
+     clipped.
+Signal top_reveal_coretop_instance/core0/trig_u/te_0/te_precnt_623_add_4_1/S0
+     undriven or does not drive anything - clipped.
+Signal top_reveal_coretop_instance/core0/trig_u/te_0/te_precnt_623_add_4_1/CI
+     undriven or does not drive anything - clipped.
+Signal top_reveal_coretop_instance/core0/trig_u/te_0/pmi_ram_dpECP3binarynonespe
+     edasyncdisablereg112112/scuba_vhi undriven or does not drive anything -
+     clipped.
+Signal top_reveal_coretop_instance/core0/trig_u/te_0/te_precnt_623_add_4_17/S1
+     undriven or does not drive anything - clipped.
+Signal top_reveal_coretop_instance/core0/trig_u/te_0/te_precnt_623_add_4_17/CO
+     undriven or does not drive anything - clipped.
+Signal top_reveal_coretop_instance/jupdate[0] undriven or does not drive
+     anything - clipped.
+Signal cpt_614_add_4_25/S1 undriven or does not drive anything - clipped.
+Signal cpt_614_add_4_25/CO undriven or does not drive anything - clipped.
+Signal _add_1_add_4_2/S0 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_2/CI undriven or does not drive anything - clipped.
+Signal _add_1_add_4_16/S1 undriven or does not drive anything - clipped.
+Signal _add_1_add_4_16/CO undriven or does not drive anything - clipped.
+Signal _add_1_1073_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal _add_1_1073_add_4_1/CI undriven or does not drive anything - clipped.
+Signal _add_1_1073_add_4_15/S1 undriven or does not drive anything - clipped.
+Signal _add_1_1073_add_4_15/CO undriven or does not drive anything - clipped.
+Signal cpt_614_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal cpt_614_add_4_1/CI undriven or does not drive anything - clipped.
+
+Block ep5chub/genblk5_jtage_u_RNI9U51 was optimized away.
+Block ep5chub/ip_enable_0__CN was optimized away.
+Block ep5chub/jtdo2_0_a4_1_am_RNO_2 was optimized away.
+Block top_reveal_coretop_instance/i8582 was optimized away.
+Block top_reveal_coretop_instance/core0/trig_u/te_0/jrstn_I_0_1_lut was
+     optimized away.
+Block top_reveal_coretop_instance/jtag0_lut_buf_8 was optimized away.
+Block top_reveal_coretop_instance/jtag0_lut_buf_7 was optimized away.
+Block top_reveal_coretop_instance/jtag0_lut_buf_6 was optimized away.
+Block top_reveal_coretop_instance/jtag0_lut_buf_4 was optimized away.
+Block top_reveal_coretop_instance/jtag0_lut_buf_3 was optimized away.
+Block top_reveal_coretop_instance/jtag0_lut_buf_2 was optimized away.
+Block top_reveal_coretop_instance/er2_tdo[0]_keep_buf_lut_buf_1 was optimized
+     away.
+Block i8050_4_lut_then_1_lut was optimized away.
+Block ep5chub/jtdo2_int_m5_d/GATE was optimized away.
+Block ep5chub/jtdo2_int_m0 was optimized away.
+Block ep5chub/jtdo2_int_m7 was optimized away.
+Block ep5chub/jtdo2_int_m10 was optimized away.
+Block ep5chub/jtdo2_int_m5_d_bm was optimized away.
+Block ep5chub/jtdo2_int_m5_d_am was optimized away.
+
+
+
+<A name="mrp_mem"></A><B><U><big>Memory Usage</big></U></B>
+
+/top_reveal_coretop_instance/core0/tm_u/pmi_ram_dpECP3binarynonespeedasyncdisabl
+     ereg3141638431416384:
+    EBRs: 3
+    RAM SLICEs: 0
+    Logic SLICEs: 1
+    PFU Registers: 0
+    -Contains EBR pmi_ram_dpEbnonesadr314163843141638412067ab1_0_2_0:  TYPE=
+         DP16KC,  Width_B= 1,  Depth_A= 16384,  Depth_B= 16384,  REGMODE_A=
+         OUTREG,  REGMODE_B= OUTREG,  WRITEMODE_A= NORMAL,  WRITEMODE_B= NORMAL,
+         GSR= DISABLED,  MEM_LPC_FILE=
+         pmi_ram_dpEbnonesadr314163843141638412067ab1__PMIP__16384__3__3B
+    -Contains EBR pmi_ram_dpEbnonesadr314163843141638412067ab1_0_0_2:  TYPE=
+         DP16KC,  Width_B= 1,  Depth_A= 16384,  Depth_B= 16384,  REGMODE_A=
+         OUTREG,  REGMODE_B= OUTREG,  WRITEMODE_A= NORMAL,  WRITEMODE_B= NORMAL,
+         GSR= DISABLED,  MEM_LPC_FILE=
+         pmi_ram_dpEbnonesadr314163843141638412067ab1__PMIP__16384__3__3B
+    -Contains EBR pmi_ram_dpEbnonesadr314163843141638412067ab1_0_1_1:  TYPE=
+         DP16KC,  Width_B= 1,  Depth_A= 16384,  Depth_B= 16384,  REGMODE_A=
+         OUTREG,  REGMODE_B= OUTREG,  WRITEMODE_A= NORMAL,  WRITEMODE_B= NORMAL,
+         GSR= DISABLED,  MEM_LPC_FILE=
+         pmi_ram_dpEbnonesadr314163843141638412067ab1__PMIP__16384__3__3B
+/top_reveal_coretop_instance/core0/trig_u/te_0/pmi_ram_dpECP3binarynonespeedasyn
+     cdisablereg112112:
+    EBRs: 1
+    RAM SLICEs: 0
+    Logic SLICEs: 1
+    PFU Registers: 0
+    -Contains EBR pmi_ram_dpEbnonesadr112112115216de_0_0_0:  TYPE= DP16KC,
+         Width_B= 1,  Depth_A= 2,  Depth_B= 2,  REGMODE_A= OUTREG,  REGMODE_B=
+         OUTREG,  WRITEMODE_A= NORMAL,  WRITEMODE_B= NORMAL,  GSR= DISABLED,
+         MEM_LPC_FILE= pmi_ram_dpEbnonesadr112112115216de__PMIP__2__1__1B
+
+
+
+
+<A name="mrp_asic"></A><B><U><big>ASIC Components</big></U></B>
+---------------
+
+Instance Name: top_reveal_coretop_instance/core0/trig_u/te_0/pmi_ram_dpECP3binar
+     ynonespeedasyncdisablereg112112/pmi_ram_dpEbnonesadr112112115216de_0_0_0
+         Type: DP16KC
+Instance Name: top_reveal_coretop_instance/core0/tm_u/pmi_ram_dpECP3binarynonesp
+     eedasyncdisablereg3141638431416384/pmi_ram_dpEbnonesadr31416384314163841206
+     7ab1_0_2_0
+         Type: DP16KC
+Instance Name: top_reveal_coretop_instance/core0/tm_u/pmi_ram_dpECP3binarynonesp
+     eedasyncdisablereg3141638431416384/pmi_ram_dpEbnonesadr31416384314163841206
+     7ab1_0_0_2
+         Type: DP16KC
+Instance Name: top_reveal_coretop_instance/core0/tm_u/pmi_ram_dpECP3binarynonesp
+     eedasyncdisablereg3141638431416384/pmi_ram_dpEbnonesadr31416384314163841206
+     7ab1_0_1_1
+         Type: DP16KC
+Instance Name: ep5chub/genblk5_jtage_u
+         Type: JTAGE
+
+
+
+<A name="mrp_runtime"></A><B><U><big>Run Time and Memory Usage</big></U></B>
+-------------------------
+
+   Total CPU Time: 2 secs  
+   Total REAL Time: 4 secs  
+   Peak Memory Usage: 559 MB
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+     Copyright (c) 1995 AT&T Corp.   All rights reserved.
+     Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+     Copyright (c) 2001 Agere Systems   All rights reserved.
+     Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights
+     reserved.
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

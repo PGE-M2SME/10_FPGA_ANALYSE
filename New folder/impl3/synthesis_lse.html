@@ -1,0 +1,395 @@
+<HTML>
+<HEAD><TITLE>Synthesis and Ngdbuild Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Syn"></A><B><U><big>Synthesis and Ngdbuild  Report</big></U></B>
+synthesis:  version Diamond (64-bit) 3.11.3.469
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+Mon Mar 29 18:17:29 2021
+
+
+Command Line:  synthesis -f test403_impl3_lattice.synproj -gui -msgset /home/diamond/SharedFolder/DiamondProjFolder/promote.xml 
+
+Synthesis options:
+The -a option is LatticeECP3.
+The -s option is 7.
+The -t option is FPBGA672.
+The -d option is LFE3-70EA.
+Using package FPBGA672.
+Using performance grade 7.
+                                                          
+
+##########################################################
+
+### Lattice Family : LatticeECP3
+
+### Device  : LFE3-70EA
+
+### Package : FPBGA672
+
+### Speed   : 7
+
+##########################################################
+
+                                                          
+
+INFO - synthesis: User-Selected Strategy Settings
+Optimization goal = Timing
+Top-level module name = Top.
+Target frequency = 200.000000 MHz.
+Maximum fanout = 1000.
+Timing path count = 3
+BRAM utilization = 100.000000 %
+DSP usage = true
+DSP utilization = 100.000000 %
+fsm_encoding_style = auto
+resolve_mixed_drivers = 0
+fix_gated_clocks = 1
+
+Mux style = Auto
+Use Carry Chain = true
+carry_chain_length = 0
+Loop Limit = 1950.
+Use IO Insertion = TRUE
+Use IO Reg = AUTO
+
+Resource Sharing = TRUE
+Propagate Constants = TRUE
+Remove Duplicate Registers = TRUE
+force_gsr = auto
+ROM style = auto
+RAM style = auto
+The -comp option is FALSE.
+The -syn option is FALSE.
+-p /usr/local/diamond/3.11_x64/ispfpga/ep5c00/data (searchpath added)
+-p /home/diamond/SharedFolder/DiamondProjFolder/impl3 (searchpath added)
+-p /home/diamond/SharedFolder/DiamondProjFolder (searchpath added)
+-p /home/diamond/SharedFolder/DiamondProjFolder/impl3/reveal_workspace/test43 (searchpath added)
+Key file = /usr/local/diamond/3.11_x64/module/reveal/document/reveal_test.dat
+Mixed language design
+File /usr/local/diamond/3.11_x64/module/reveal/src/ertl/ertl.v is encrypted
+
+File /usr/local/diamond/3.11_x64/module/reveal/src/rvl_j2w_module/rvl_j2w_module.v is encrypted
+
+File /usr/local/diamond/3.11_x64/module/reveal/src/ertl/JTAG_SOFT.v is encrypted
+
+Verilog design file = /usr/local/diamond/3.11_x64/cae_library/synthesis/verilog/pmi_def.v
+Verilog design file = /usr/local/diamond/3.11_x64/module/reveal/src/ertl/ertl.v
+Verilog design file = /usr/local/diamond/3.11_x64/module/reveal/src/rvl_j2w_module/rvl_j2w_module.v
+Verilog design file = /usr/local/diamond/3.11_x64/module/reveal/src/rvl_j2w_module/wb2sci.v
+Verilog design file = /usr/local/diamond/3.11_x64/module/reveal/src/ertl/JTAG_SOFT.v
+Verilog design file = /home/diamond/SharedFolder/DiamondProjFolder/impl3/reveal_workspace/tmpreveal/top_la0_trig_gen.v
+Verilog design file = /home/diamond/SharedFolder/DiamondProjFolder/impl3/reveal_workspace/tmpreveal/top_la0_gen.v
+VHDL library = work
+VHDL design file = /home/diamond/SharedFolder/DiamondProjFolder/impl3/reveal_workspace/tmpreveal/Top_rvl_top.vhd
+NGD file = test403_impl3.ngd
+-sdc option: SDC file input not used.
+-lpf option: Output file option is ON.
+Hardtimer checking is enabled (default). The -dt option is not used.
+The -r option is OFF. [ Remove LOC Properties is OFF. ]
+Analyzing Verilog file /usr/local/diamond/3.11_x64/ispfpga/userware/unix/SYNTHESIS_HEADERS/ecp3.v. VERI-1482
+Compile design.
+Compile Design Begin
+Analyzing Verilog file /usr/local/diamond/3.11_x64/cae_library/synthesis/verilog/pmi_def.v. VERI-1482
+Analyzing Verilog file /usr/local/diamond/3.11_x64/module/reveal/src/rvl_j2w_module/wb2sci.v. VERI-1482
+Analyzing Verilog file /home/diamond/SharedFolder/DiamondProjFolder/impl3/reveal_workspace/tmpreveal/top_la0_trig_gen.v. VERI-1482
+Analyzing Verilog file /home/diamond/SharedFolder/DiamondProjFolder/impl3/reveal_workspace/tmpreveal/top_la0_gen.v. VERI-1482
+Analyzing Verilog file .__ydixd0.v. VERI-1482
+Analyzing Verilog file .__ydixd0.v. VERI-1482
+Analyzing VHDL file /home/diamond/SharedFolder/DiamondProjFolder/impl3/reveal_workspace/tmpreveal/Top_rvl_top.vhd. VHDL-1481
+INFO - synthesis: /home/diamond/SharedFolder/DiamondProjFolder/impl3/reveal_workspace/tmpreveal/Top_rvl_top.vhd(4): analyzing entity reveal_coretop. VHDL-1012
+INFO - synthesis: /home/diamond/SharedFolder/DiamondProjFolder/impl3/reveal_workspace/tmpreveal/Top_rvl_top.vhd(18): analyzing architecture one. VHDL-1010
+INFO - synthesis: /home/diamond/SharedFolder/DiamondProjFolder/impl3/reveal_workspace/tmpreveal/Top_rvl_top.vhd(69): analyzing entity top. VHDL-1012
+INFO - synthesis: /home/diamond/SharedFolder/DiamondProjFolder/impl3/reveal_workspace/tmpreveal/Top_rvl_top.vhd(90): analyzing architecture rtl. VHDL-1010
+unit Top is not yet analyzed. VHDL-1485
+INFO - synthesis: The default VHDL library search path is now "/home/diamond/SharedFolder/DiamondProjFolder/impl3". VHDL-1504
+Top module language type = VHDL.
+unit Top is not yet analyzed. VHDL-1485
+/home/diamond/SharedFolder/DiamondProjFolder/impl3/reveal_workspace/tmpreveal/Top_rvl_top.vhd(69): executing Top(rtl)
+
+WARNING - synthesis: /home/diamond/SharedFolder/DiamondProjFolder/impl3/reveal_workspace/tmpreveal/Top_rvl_top.vhd(88): replacing existing netlist Top(rtl). VHDL-1205
+Top module name (VHDL, mixed language): Top
+Loading NGL library '/usr/local/diamond/3.11_x64/ispfpga/ep5c00a/data/ec5alib.ngl'...
+Loading NGL library '/usr/local/diamond/3.11_x64/ispfpga/ep5c00/data/ep5clib.ngl'...
+Loading NGL library '/usr/local/diamond/3.11_x64/ispfpga/ep5a00/data/ep5alib.ngl'...
+Loading NGL library '/usr/local/diamond/3.11_x64/ispfpga/ep5g00/data/ep5glib.ngl'...
+Loading NGL library '/usr/local/diamond/3.11_x64/ispfpga/or5g00/data/orc5glib.ngl'...
+Loading device for application map from file 'ec5a97x146.nph' in environment: /usr/local/diamond/3.11_x64/ispfpga.
+Package Status:                     Final          Version 1.3.
+Top-level module name = Top.
+WARNING - synthesis: I/O Port PinDat[23] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port PinDat[22] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port PinDat[21] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port PinDat[20] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port PinDat[19] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port PinDat[18] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port PinDat[17] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port PinDat[16] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port PinDat[15] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port PinDat[14] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port PinDat[13] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port PinDat[12] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port PinDat[11] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port PinDat[10] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port PinDat[9] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port PinDat[8] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port PinDat[7] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port PinDat[6] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port PinDat[5] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port PinDat[4] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port PinDat[3] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port PinDat[2] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port PinDat[1] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port PinDat[0] 's net has no driver and is unused.
+
+
+
+WARNING - synthesis: I/O Port PinDat[23] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port PinDat[22] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port PinDat[21] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port PinDat[20] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port PinDat[19] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port PinDat[18] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port PinDat[17] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port PinDat[16] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port PinDat[15] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port PinDat[14] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port PinDat[13] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port PinDat[12] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port PinDat[11] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port PinDat[10] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port PinDat[9] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port PinDat[8] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port PinDat[7] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port PinDat[6] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port PinDat[5] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port PinDat[4] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port PinDat[3] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port PinDat[2] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port PinDat[1] 's net has no driver and is unused.
+WARNING - synthesis: I/O Port PinDat[0] 's net has no driver and is unused.
+######## GSR will not be inferred because the gsr attribute is present in either the top or sub module or because an instantiated GSR is present.
+Applying 200.000000 MHz constraint to all clocks
+
+WARNING - synthesis: No user .sdc file.
+Top_prim.v file will not be written because encrypted design file is being used
+
+Results of NGD DRC are available in Top_drc.log.
+Loading NGL library '/usr/local/diamond/3.11_x64/ispfpga/ep5c00a/data/ec5alib.ngl'...
+Loading NGL library '/usr/local/diamond/3.11_x64/ispfpga/ep5c00/data/ep5clib.ngl'...
+Loading NGL library '/usr/local/diamond/3.11_x64/ispfpga/ep5a00/data/ep5alib.ngl'...
+Loading NGL library '/usr/local/diamond/3.11_x64/ispfpga/ep5g00/data/ep5glib.ngl'...
+Loading NGL library '/usr/local/diamond/3.11_x64/ispfpga/or5g00/data/orc5glib.ngl'...
+Loading NGL library '/usr/local/diamond/3.11_x64/ispfpga/data/neoprims.ngl'...
+Loading NGL library '/usr/local/diamond/3.11_x64/ispfpga/data/neomacro.ngl'...
+Loading NGO design 'lngotmp/pmi_ram_dpebnonesadr112112115216de.ngo'...
+Loading NGO design 'lngotmp/pmi_ram_dpebnonesadr314163843141638412067ab1.ngo'...
+Logic has been added to the IP to support JTAG capability.
+Loading NGO design '/usr/local/diamond/3.11_x64/ispfpga/ep5c00/data/ep5chub.ngl'...
+WARNING - synthesis: logical net 'PinDat[23]' has no load.
+WARNING - synthesis: input pad net 'PinDat[23]' has no legal load.
+WARNING - synthesis: logical net 'PinDat[22]' has no load.
+WARNING - synthesis: input pad net 'PinDat[22]' has no legal load.
+WARNING - synthesis: logical net 'PinDat[21]' has no load.
+WARNING - synthesis: input pad net 'PinDat[21]' has no legal load.
+WARNING - synthesis: logical net 'PinDat[20]' has no load.
+WARNING - synthesis: input pad net 'PinDat[20]' has no legal load.
+WARNING - synthesis: logical net 'PinDat[19]' has no load.
+WARNING - synthesis: input pad net 'PinDat[19]' has no legal load.
+WARNING - synthesis: logical net 'PinDat[18]' has no load.
+WARNING - synthesis: input pad net 'PinDat[18]' has no legal load.
+WARNING - synthesis: logical net 'PinDat[17]' has no load.
+WARNING - synthesis: input pad net 'PinDat[17]' has no legal load.
+WARNING - synthesis: logical net 'PinDat[16]' has no load.
+WARNING - synthesis: input pad net 'PinDat[16]' has no legal load.
+WARNING - synthesis: logical net 'PinDat[15]' has no load.
+WARNING - synthesis: input pad net 'PinDat[15]' has no legal load.
+WARNING - synthesis: logical net 'PinDat[14]' has no load.
+WARNING - synthesis: input pad net 'PinDat[14]' has no legal load.
+WARNING - synthesis: logical net 'PinDat[13]' has no load.
+WARNING - synthesis: input pad net 'PinDat[13]' has no legal load.
+WARNING - synthesis: logical net 'PinDat[12]' has no load.
+WARNING - synthesis: input pad net 'PinDat[12]' has no legal load.
+WARNING - synthesis: logical net 'PinDat[11]' has no load.
+WARNING - synthesis: input pad net 'PinDat[11]' has no legal load.
+WARNING - synthesis: logical net 'PinDat[10]' has no load.
+WARNING - synthesis: input pad net 'PinDat[10]' has no legal load.
+WARNING - synthesis: logical net 'PinDat[9]' has no load.
+WARNING - synthesis: input pad net 'PinDat[9]' has no legal load.
+WARNING - synthesis: logical net 'PinDat[8]' has no load.
+WARNING - synthesis: input pad net 'PinDat[8]' has no legal load.
+WARNING - synthesis: logical net 'PinDat[7]' has no load.
+WARNING - synthesis: input pad net 'PinDat[7]' has no legal load.
+WARNING - synthesis: logical net 'PinDat[6]' has no load.
+WARNING - synthesis: input pad net 'PinDat[6]' has no legal load.
+WARNING - synthesis: logical net 'PinDat[5]' has no load.
+WARNING - synthesis: input pad net 'PinDat[5]' has no legal load.
+WARNING - synthesis: logical net 'PinDat[4]' has no load.
+WARNING - synthesis: input pad net 'PinDat[4]' has no legal load.
+WARNING - synthesis: logical net 'PinDat[3]' has no load.
+WARNING - synthesis: input pad net 'PinDat[3]' has no legal load.
+WARNING - synthesis: logical net 'PinDat[2]' has no load.
+WARNING - synthesis: input pad net 'PinDat[2]' has no legal load.
+WARNING - synthesis: logical net 'PinDat[1]' has no load.
+WARNING - synthesis: input pad net 'PinDat[1]' has no legal load.
+WARNING - synthesis: logical net 'PinDat[0]' has no load.
+WARNING - synthesis: input pad net 'PinDat[0]' has no legal load.
+WARNING - synthesis: logical net 'top_reveal_coretop_instance/jupdate[0]' has no load.
+WARNING - synthesis: logical net 'ep5chub/tdoa' has no load.
+WARNING - synthesis: logical net 'ep5chub/cdn' has no load.
+WARNING - synthesis: logical net 'ep5chub/ip_enable_15' has no load.
+WARNING - synthesis: logical net 'ep5chub/genblk5_un1_jtage_u_1' has no load.
+WARNING - synthesis: logical net 'ep5chub/genblk5_un1_jtage_u' has no load.
+WARNING - synthesis: DRC complete with 54 warnings.
+All blocks are expanded and NGD expansion is successful.
+Writing NGD file test403_impl3.ngd.
+
+################### Begin Area Report (Top)######################
+Number of register bits => 383 of 52176 (0 % )
+CCU2C => 58
+FD1P3AX => 24
+FD1P3BX => 34
+FD1P3DX => 260
+FD1S3AX => 1
+FD1S3DX => 40
+FD1S3IX => 24
+GSR => 1
+IB => 5
+INV => 1
+L6MUX21 => 2
+LUT4 => 551
+OB => 1
+PFUMX => 37
+pmi_ram_dpEbnonesadr112112115216de => 1
+pmi_ram_dpEbnonesadr314163843141638412067ab1 => 1
+################### End Area Report ##################
+
+################### Begin BlackBox Report ######################
+jtagconn16 => 1
+################### End BlackBox Report ##################
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 3
+  Net : Clk_N, loads : 188
+  Net : Clk_FPGA_c, loads : 25
+  Net : top_reveal_coretop_instance/jtck[0], loads : 1
+Clock Enable Nets
+Number of Clock Enables: 50
+Top 10 highest fanout Clock Enables:
+  Net : top_reveal_coretop_instance/core0/jtag_int_u/jtck_N_90_enable_112, loads : 21
+  Net : top_reveal_coretop_instance/core0/tm_u/sample_en_d, loads : 18
+  Net : top_reveal_coretop_instance/core0/jtag_int_u/jtck_N_90_enable_32, loads : 16
+  Net : top_reveal_coretop_instance/core0/jtag_int_u/jtck_N_90_enable_127, loads : 16
+  Net : top_reveal_coretop_instance/core0/trig_u/te_0/jtck_N_90_enable_77, loads : 16
+  Net : top_reveal_coretop_instance/core0/tm_u/trace_dout_int_2__N_869, loads : 15
+  Net : top_reveal_coretop_instance/core0/jtag_int_u/jtck_N_90_enable_91, loads : 15
+  Net : top_reveal_coretop_instance/core0/tm_u/clk_N_keep_enable_89, loads : 14
+  Net : top_reveal_coretop_instance/core0/tm_u/clk_N_keep_enable_63, loads : 14
+  Net : top_reveal_coretop_instance/core0/tm_u/clk_N_keep_enable_76, loads : 14
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : top_reveal_coretop_instance/jtck_N_90, loads : 174
+  Net : top_reveal_coretop_instance/reset_n_N_112, loads : 171
+  Net : top_reveal_coretop_instance/core0/trig_u/te_0/jrstn_N_88, loads : 163
+  Net : top_reveal_coretop_instance/core0/jtag_int_u/addr[0], loads : 65
+  Net : top_reveal_coretop_instance/core0/jtag_int_u/addr[1], loads : 58
+  Net : top_reveal_coretop_instance/ip_enable[0], loads : 44
+  Net : top_reveal_coretop_instance/core0/tm_u/armed, loads : 41
+  Net : top_reveal_coretop_instance/core0/jtag_int_u/addr_15, loads : 35
+  Net : top_reveal_coretop_instance/core0/jtag_int_u/addr[2], loads : 33
+  Net : top_reveal_coretop_instance/n9428, loads : 30
+################### End Clock Report ##################
+
+<A name="lse_trs"></A><B><U><big>Timing Report Summary</big></U></B>
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk2 [get_nets Clk_FPGA_c]              |  200.000 MHz|  121.139 MHz|     6 *
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk1 [get_nets                          |             |             |
+\top_reveal_coretop_instance/jtck[0]]   |  200.000 MHz|   78.678 MHz|     9 *
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets Clk_N]                   |  200.000 MHz|  104.668 MHz|     6 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+3 constraints not met.
+
+
+Peak Memory Usage: 315.711  MB
+
+--------------------------------------------------------------
+Elapsed CPU time for LSE flow : 6.102  secs
+--------------------------------------------------------------
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

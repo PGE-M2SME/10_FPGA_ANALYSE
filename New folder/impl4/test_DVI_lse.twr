@@ -1,0 +1,332 @@
+--------------------------------------------------------------------------------
+Lattice Synthesis Timing Report, Version  
+Mon Mar 29 18:50:34 2021
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Design:     test_DVI
+Constraint file:  
+Report level:    verbose report, limited to 3 items per constraint
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk1 [get_nets \test_dvi_reveal_coretop_instance/jtck[0]]
+            3511 items scored, 3511 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 5.815ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3DX    CK             \test_dvi_reveal_coretop_instance/core0/jtag_int_u/shift_reg__i17  (from \test_dvi_reveal_coretop_instance/jtck[0] +)
+   Destination:    FD1P3DX    D              \test_dvi_reveal_coretop_instance/core0/jtag_int_u/parity_calc_300  (to \test_dvi_reveal_coretop_instance/jtck[0] +)
+
+   Delay:                  10.742ns  (16.8% logic, 83.2% route), 10 logic levels.
+
+ Constraint Details:
+
+     10.742ns data_path \test_dvi_reveal_coretop_instance/core0/jtag_int_u/shift_reg__i17 to \test_dvi_reveal_coretop_instance/core0/jtag_int_u/parity_calc_300 violates
+      5.000ns delay constraint less
+      0.073ns L_S requirement (totaling 4.927ns) by 5.815ns
+
+ Path Details: \test_dvi_reveal_coretop_instance/core0/jtag_int_u/shift_reg__i17 to \test_dvi_reveal_coretop_instance/core0/jtag_int_u/parity_calc_300
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.301             CK to Q              \test_dvi_reveal_coretop_instance/core0/jtag_int_u/shift_reg__i17 (from \test_dvi_reveal_coretop_instance/jtck[0])
+Route        55   e 1.921                                  \test_dvi_reveal_coretop_instance/core0/addr[0]
+LUT4        ---     0.176              A to Z              \test_dvi_reveal_coretop_instance/core0/jtag_int_u/i1_2_lut_adj_143
+Route         1   e 1.020                                  \test_dvi_reveal_coretop_instance/core0/jtag_int_u/n8814
+LUT4        ---     0.176              D to Z              \test_dvi_reveal_coretop_instance/core0/jtag_int_u/i1_4_lut_adj_142
+Route        16   e 1.574                                  n5634
+LUT4        ---     0.176              C to Z              \test_dvi_reveal_coretop_instance/core0/jtag_int_u/i4192_3_lut
+Route         1   e 0.020                                  \test_dvi_reveal_coretop_instance/core0/jtag_int_u/n5635
+MUXL5       ---     0.151           BLUT to Z              \test_dvi_reveal_coretop_instance/core0/jtag_int_u/i4193
+Route         1   e 1.020                                  \test_dvi_reveal_coretop_instance/core0/jtag_int_u/jtdo_first_bit_N_830
+LUT4        ---     0.176              C to Z              \test_dvi_reveal_coretop_instance/core0/jtag_int_u/jtdo_first_bit_I_17_4_lut_4_lut
+Route         1   e 0.020                                  \test_dvi_reveal_coretop_instance/core0/jtag_int_u/jtdo_first_bit_N_829
+MUXL5       ---     0.151           BLUT to Z              \test_dvi_reveal_coretop_instance/core0/jtag_int_u/i8181
+Route         1   e 1.020                                  \test_dvi_reveal_coretop_instance/core0/jtag_int_u/n9764
+LUT4        ---     0.176              C to Z              \test_dvi_reveal_coretop_instance/core0/jtag_int_u/i4182_4_lut
+Route         4   e 1.297                                  \test_dvi_reveal_coretop_instance/er2_tdo[0]
+LUT4        ---     0.176              B to Z              \test_dvi_reveal_coretop_instance/core0/jtag_int_u/parity_calc_I_0_2_lut
+Route         1   e 0.020                                  \test_dvi_reveal_coretop_instance/core0/jtag_int_u/parity_calc_N_863
+MUXL5       ---     0.151           BLUT to Z              \test_dvi_reveal_coretop_instance/core0/jtag_int_u/parity_calc_I_22
+Route         1   e 1.020                                  \test_dvi_reveal_coretop_instance/core0/jtag_int_u/parity_calc_N_861
+                  --------
+                   10.742  (16.8% logic, 83.2% route), 10 logic levels.
+
+
+Error:  The following path violates requirements by 5.815ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3DX    CK             \test_dvi_reveal_coretop_instance/core0/jtag_int_u/shift_reg__i17  (from \test_dvi_reveal_coretop_instance/jtck[0] +)
+   Destination:    FD1P3DX    D              \test_dvi_reveal_coretop_instance/core0/jtag_int_u/parity_calc_300  (to \test_dvi_reveal_coretop_instance/jtck[0] +)
+
+   Delay:                  10.742ns  (16.8% logic, 83.2% route), 10 logic levels.
+
+ Constraint Details:
+
+     10.742ns data_path \test_dvi_reveal_coretop_instance/core0/jtag_int_u/shift_reg__i17 to \test_dvi_reveal_coretop_instance/core0/jtag_int_u/parity_calc_300 violates
+      5.000ns delay constraint less
+      0.073ns L_S requirement (totaling 4.927ns) by 5.815ns
+
+ Path Details: \test_dvi_reveal_coretop_instance/core0/jtag_int_u/shift_reg__i17 to \test_dvi_reveal_coretop_instance/core0/jtag_int_u/parity_calc_300
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.301             CK to Q              \test_dvi_reveal_coretop_instance/core0/jtag_int_u/shift_reg__i17 (from \test_dvi_reveal_coretop_instance/jtck[0])
+Route        55   e 1.921                                  \test_dvi_reveal_coretop_instance/core0/addr[0]
+LUT4        ---     0.176              A to Z              \test_dvi_reveal_coretop_instance/core0/jtag_int_u/i1_2_lut_adj_143
+Route         1   e 1.020                                  \test_dvi_reveal_coretop_instance/core0/jtag_int_u/n8814
+LUT4        ---     0.176              D to Z              \test_dvi_reveal_coretop_instance/core0/jtag_int_u/i1_4_lut_adj_142
+Route        16   e 1.574                                  n5634
+LUT4        ---     0.176              C to Z              \test_dvi_reveal_coretop_instance/core0/jtag_int_u/i4192_3_lut
+Route         1   e 0.020                                  \test_dvi_reveal_coretop_instance/core0/jtag_int_u/n5635
+MUXL5       ---     0.151           BLUT to Z              \test_dvi_reveal_coretop_instance/core0/jtag_int_u/i4193
+Route         1   e 1.020                                  \test_dvi_reveal_coretop_instance/core0/jtag_int_u/jtdo_first_bit_N_830
+LUT4        ---     0.176              C to Z              \test_dvi_reveal_coretop_instance/core0/jtag_int_u/jtdo_first_bit_I_17_4_lut_4_lut
+Route         1   e 0.020                                  \test_dvi_reveal_coretop_instance/core0/jtag_int_u/jtdo_first_bit_N_829
+MUXL5       ---     0.151           BLUT to Z              \test_dvi_reveal_coretop_instance/core0/jtag_int_u/i8181
+Route         1   e 1.020                                  \test_dvi_reveal_coretop_instance/core0/jtag_int_u/n9764
+LUT4        ---     0.176              C to Z              \test_dvi_reveal_coretop_instance/core0/jtag_int_u/i4182_4_lut
+Route         4   e 1.297                                  \test_dvi_reveal_coretop_instance/er2_tdo[0]
+LUT4        ---     0.176              C to Z              \test_dvi_reveal_coretop_instance/core0/trig_u/te_0/i8_3_lut
+Route         1   e 0.020                                  \test_dvi_reveal_coretop_instance/core0/parity_calc_N_865
+MUXL5       ---     0.151           ALUT to Z              \test_dvi_reveal_coretop_instance/core0/jtag_int_u/parity_calc_I_22
+Route         1   e 1.020                                  \test_dvi_reveal_coretop_instance/core0/jtag_int_u/parity_calc_N_861
+                  --------
+                   10.742  (16.8% logic, 83.2% route), 10 logic levels.
+
+
+Error:  The following path violates requirements by 5.680ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3DX    CK             \test_dvi_reveal_coretop_instance/core0/jtag_int_u/shift_reg__i19  (from \test_dvi_reveal_coretop_instance/jtck[0] +)
+   Destination:    FD1P3DX    D              \test_dvi_reveal_coretop_instance/core0/jtag_int_u/parity_calc_300  (to \test_dvi_reveal_coretop_instance/jtck[0] +)
+
+   Delay:                  10.607ns  (17.1% logic, 82.9% route), 10 logic levels.
+
+ Constraint Details:
+
+     10.607ns data_path \test_dvi_reveal_coretop_instance/core0/jtag_int_u/shift_reg__i19 to \test_dvi_reveal_coretop_instance/core0/jtag_int_u/parity_calc_300 violates
+      5.000ns delay constraint less
+      0.073ns L_S requirement (totaling 4.927ns) by 5.680ns
+
+ Path Details: \test_dvi_reveal_coretop_instance/core0/jtag_int_u/shift_reg__i19 to \test_dvi_reveal_coretop_instance/core0/jtag_int_u/parity_calc_300
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.301             CK to Q              \test_dvi_reveal_coretop_instance/core0/jtag_int_u/shift_reg__i19 (from \test_dvi_reveal_coretop_instance/jtck[0])
+Route        28   e 1.786                                  \test_dvi_reveal_coretop_instance/core0/addr[2]
+LUT4        ---     0.176              B to Z              \test_dvi_reveal_coretop_instance/core0/jtag_int_u/i1_2_lut_adj_143
+Route         1   e 1.020                                  \test_dvi_reveal_coretop_instance/core0/jtag_int_u/n8814
+LUT4        ---     0.176              D to Z              \test_dvi_reveal_coretop_instance/core0/jtag_int_u/i1_4_lut_adj_142
+Route        16   e 1.574                                  n5634
+LUT4        ---     0.176              C to Z              \test_dvi_reveal_coretop_instance/core0/jtag_int_u/i4192_3_lut
+Route         1   e 0.020                                  \test_dvi_reveal_coretop_instance/core0/jtag_int_u/n5635
+MUXL5       ---     0.151           BLUT to Z              \test_dvi_reveal_coretop_instance/core0/jtag_int_u/i4193
+Route         1   e 1.020                                  \test_dvi_reveal_coretop_instance/core0/jtag_int_u/jtdo_first_bit_N_830
+LUT4        ---     0.176              C to Z              \test_dvi_reveal_coretop_instance/core0/jtag_int_u/jtdo_first_bit_I_17_4_lut_4_lut
+Route         1   e 0.020                                  \test_dvi_reveal_coretop_instance/core0/jtag_int_u/jtdo_first_bit_N_829
+MUXL5       ---     0.151           BLUT to Z              \test_dvi_reveal_coretop_instance/core0/jtag_int_u/i8181
+Route         1   e 1.020                                  \test_dvi_reveal_coretop_instance/core0/jtag_int_u/n9764
+LUT4        ---     0.176              C to Z              \test_dvi_reveal_coretop_instance/core0/jtag_int_u/i4182_4_lut
+Route         4   e 1.297                                  \test_dvi_reveal_coretop_instance/er2_tdo[0]
+LUT4        ---     0.176              B to Z              \test_dvi_reveal_coretop_instance/core0/jtag_int_u/parity_calc_I_0_2_lut
+Route         1   e 0.020                                  \test_dvi_reveal_coretop_instance/core0/jtag_int_u/parity_calc_N_863
+MUXL5       ---     0.151           BLUT to Z              \test_dvi_reveal_coretop_instance/core0/jtag_int_u/parity_calc_I_22
+Route         1   e 1.020                                  \test_dvi_reveal_coretop_instance/core0/jtag_int_u/parity_calc_N_861
+                  --------
+                   10.607  (17.1% logic, 82.9% route), 10 logic levels.
+
+Warning: 10.815 ns is the maximum delay for this constraint.
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk0 [get_nets ODCK_N]
+            1500 items scored, 1500 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 4.670ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3DX    CK             \test_dvi_reveal_coretop_instance/core0/tm_u/post_trig_cntr_i0_i4  (from ODCK_N +)
+   Destination:    FD1P3DX    SP             \test_dvi_reveal_coretop_instance/core0/tm_u/post_trig_cntr_i0_i1  (to ODCK_N +)
+
+   Delay:                   9.367ns  (12.6% logic, 87.4% route), 6 logic levels.
+
+ Constraint Details:
+
+      9.367ns data_path \test_dvi_reveal_coretop_instance/core0/tm_u/post_trig_cntr_i0_i4 to \test_dvi_reveal_coretop_instance/core0/tm_u/post_trig_cntr_i0_i1 violates
+      5.000ns delay constraint less
+      0.303ns LCE_S requirement (totaling 4.697ns) by 4.670ns
+
+ Path Details: \test_dvi_reveal_coretop_instance/core0/tm_u/post_trig_cntr_i0_i4 to \test_dvi_reveal_coretop_instance/core0/tm_u/post_trig_cntr_i0_i1
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.301             CK to Q              \test_dvi_reveal_coretop_instance/core0/tm_u/post_trig_cntr_i0_i4 (from ODCK_N)
+Route         6   e 1.478                                  post_trig_cntr[4]
+LUT4        ---     0.176              A to Z              \test_dvi_reveal_coretop_instance/core0/tm_u/i8035_2_lut
+Route         3   e 1.239                                  \test_dvi_reveal_coretop_instance/core0/tm_u/n9617
+LUT4        ---     0.176              C to Z              \test_dvi_reveal_coretop_instance/core0/tm_u/i1_3_lut_4_lut
+Route         1   e 1.020                                  \test_dvi_reveal_coretop_instance/core0/tm_u/n9052
+LUT4        ---     0.176              A to Z              \test_dvi_reveal_coretop_instance/core0/tm_u/i1_4_lut_adj_149
+Route         5   e 1.341                                  \test_dvi_reveal_coretop_instance/core0/tm_u/clear_N_1855
+LUT4        ---     0.176              C to Z              \test_dvi_reveal_coretop_instance/core0/tm_u/i1_2_lut_rep_185_3_lut
+Route        15   e 1.561                                  \test_dvi_reveal_coretop_instance/core0/tm_u/n10467
+LUT4        ---     0.176              C to Z              \test_dvi_reveal_coretop_instance/core0/tm_u/i1_3_lut_4_lut_adj_170
+Route        14   e 1.547                                  \test_dvi_reveal_coretop_instance/core0/tm_u/clk_N_keep_enable_115
+                  --------
+                    9.367  (12.6% logic, 87.4% route), 6 logic levels.
+
+
+Error:  The following path violates requirements by 4.670ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3DX    CK             \test_dvi_reveal_coretop_instance/core0/tm_u/post_trig_cntr_i0_i4  (from ODCK_N +)
+   Destination:    FD1P3DX    SP             \test_dvi_reveal_coretop_instance/core0/tm_u/post_trig_cntr_i0_i2  (to ODCK_N +)
+
+   Delay:                   9.367ns  (12.6% logic, 87.4% route), 6 logic levels.
+
+ Constraint Details:
+
+      9.367ns data_path \test_dvi_reveal_coretop_instance/core0/tm_u/post_trig_cntr_i0_i4 to \test_dvi_reveal_coretop_instance/core0/tm_u/post_trig_cntr_i0_i2 violates
+      5.000ns delay constraint less
+      0.303ns LCE_S requirement (totaling 4.697ns) by 4.670ns
+
+ Path Details: \test_dvi_reveal_coretop_instance/core0/tm_u/post_trig_cntr_i0_i4 to \test_dvi_reveal_coretop_instance/core0/tm_u/post_trig_cntr_i0_i2
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.301             CK to Q              \test_dvi_reveal_coretop_instance/core0/tm_u/post_trig_cntr_i0_i4 (from ODCK_N)
+Route         6   e 1.478                                  post_trig_cntr[4]
+LUT4        ---     0.176              A to Z              \test_dvi_reveal_coretop_instance/core0/tm_u/i8035_2_lut
+Route         3   e 1.239                                  \test_dvi_reveal_coretop_instance/core0/tm_u/n9617
+LUT4        ---     0.176              C to Z              \test_dvi_reveal_coretop_instance/core0/tm_u/i1_3_lut_4_lut
+Route         1   e 1.020                                  \test_dvi_reveal_coretop_instance/core0/tm_u/n9052
+LUT4        ---     0.176              A to Z              \test_dvi_reveal_coretop_instance/core0/tm_u/i1_4_lut_adj_149
+Route         5   e 1.341                                  \test_dvi_reveal_coretop_instance/core0/tm_u/clear_N_1855
+LUT4        ---     0.176              C to Z              \test_dvi_reveal_coretop_instance/core0/tm_u/i1_2_lut_rep_185_3_lut
+Route        15   e 1.561                                  \test_dvi_reveal_coretop_instance/core0/tm_u/n10467
+LUT4        ---     0.176              C to Z              \test_dvi_reveal_coretop_instance/core0/tm_u/i1_3_lut_4_lut_adj_170
+Route        14   e 1.547                                  \test_dvi_reveal_coretop_instance/core0/tm_u/clk_N_keep_enable_115
+                  --------
+                    9.367  (12.6% logic, 87.4% route), 6 logic levels.
+
+
+Error:  The following path violates requirements by 4.670ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3DX    CK             \test_dvi_reveal_coretop_instance/core0/tm_u/post_trig_cntr_i0_i4  (from ODCK_N +)
+   Destination:    FD1P3DX    SP             \test_dvi_reveal_coretop_instance/core0/tm_u/post_trig_cntr_i0_i3  (to ODCK_N +)
+
+   Delay:                   9.367ns  (12.6% logic, 87.4% route), 6 logic levels.
+
+ Constraint Details:
+
+      9.367ns data_path \test_dvi_reveal_coretop_instance/core0/tm_u/post_trig_cntr_i0_i4 to \test_dvi_reveal_coretop_instance/core0/tm_u/post_trig_cntr_i0_i3 violates
+      5.000ns delay constraint less
+      0.303ns LCE_S requirement (totaling 4.697ns) by 4.670ns
+
+ Path Details: \test_dvi_reveal_coretop_instance/core0/tm_u/post_trig_cntr_i0_i4 to \test_dvi_reveal_coretop_instance/core0/tm_u/post_trig_cntr_i0_i3
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.301             CK to Q              \test_dvi_reveal_coretop_instance/core0/tm_u/post_trig_cntr_i0_i4 (from ODCK_N)
+Route         6   e 1.478                                  post_trig_cntr[4]
+LUT4        ---     0.176              A to Z              \test_dvi_reveal_coretop_instance/core0/tm_u/i8035_2_lut
+Route         3   e 1.239                                  \test_dvi_reveal_coretop_instance/core0/tm_u/n9617
+LUT4        ---     0.176              C to Z              \test_dvi_reveal_coretop_instance/core0/tm_u/i1_3_lut_4_lut
+Route         1   e 1.020                                  \test_dvi_reveal_coretop_instance/core0/tm_u/n9052
+LUT4        ---     0.176              A to Z              \test_dvi_reveal_coretop_instance/core0/tm_u/i1_4_lut_adj_149
+Route         5   e 1.341                                  \test_dvi_reveal_coretop_instance/core0/tm_u/clear_N_1855
+LUT4        ---     0.176              C to Z              \test_dvi_reveal_coretop_instance/core0/tm_u/i1_2_lut_rep_185_3_lut
+Route        15   e 1.561                                  \test_dvi_reveal_coretop_instance/core0/tm_u/n10467
+LUT4        ---     0.176              C to Z              \test_dvi_reveal_coretop_instance/core0/tm_u/i1_3_lut_4_lut_adj_170
+Route        14   e 1.547                                  \test_dvi_reveal_coretop_instance/core0/tm_u/clk_N_keep_enable_115
+                  --------
+                    9.367  (12.6% logic, 87.4% route), 6 logic levels.
+
+Warning: 9.670 ns is the maximum delay for this constraint.
+
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk1 [get_nets                          |             |             |
+\test_dvi_reveal_coretop_instance/jtck[0|             |             |
+]]                                      |     5.000 ns|    10.815 ns|    10 *
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets ODCK_N]                  |     5.000 ns|     9.670 ns|     6 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+2 constraints not met.
+
+--------------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+--------------------------------------------------------------------------------
+\test_dvi_reveal_coretop_instance/core0/|        |        |
+tm_u/n4637                              |      13|    1748|     34.88%
+                                        |        |        |
+\test_dvi_reveal_coretop_instance/core0/|        |        |
+n35                                     |       5|    1127|     22.49%
+                                        |        |        |
+\test_dvi_reveal_coretop_instance/core0/|        |        |
+n1357                                   |       3|    1110|     22.15%
+                                        |        |        |
+\test_dvi_reveal_coretop_instance/core0/|        |        |
+tm_u/n7679                              |       1|     908|     18.12%
+                                        |        |        |
+\test_dvi_reveal_coretop_instance/core0/|        |        |
+tm_u/n7678                              |       1|     842|     16.80%
+                                        |        |        |
+\test_dvi_reveal_coretop_instance/core0/|        |        |
+tm_u/n7680                              |       1|     830|     16.56%
+                                        |        |        |
+\test_dvi_reveal_coretop_instance/core0/|        |        |
+jtag_int_u/n15                          |      99|     816|     16.28%
+                                        |        |        |
+\test_dvi_reveal_coretop_instance/core0/|        |        |
+jtag_int_u/n9030                        |       1|     668|     13.33%
+                                        |        |        |
+\test_dvi_reveal_coretop_instance/core0/|        |        |
+tm_u/n7677                              |       1|     632|     12.61%
+                                        |        |        |
+\test_dvi_reveal_coretop_instance/core0/|        |        |
+tm_u/n7681                              |       1|     608|     12.13%
+                                        |        |        |
+\test_dvi_reveal_coretop_instance/core0/|        |        |
+tm_u/clear_N_1855                       |       5|     534|     10.66%
+                                        |        |        |
+--------------------------------------------------------------------------------
+
+
+Timing summary:
+---------------
+
+Timing errors: 5011  Score: 15044507
+
+Constraints cover  12314 paths, 1632 nets, and 4401 connections (75.5% coverage)
+
+
+Peak memory: 337793024 bytes, TRCE: 2093056 bytes, DLYMAN: 0 bytes
+CPU_TIME_REPORT: 0 secs 
